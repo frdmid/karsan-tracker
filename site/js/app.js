@@ -40,16 +40,27 @@ async function load() {
     fetchText(base + "data/status.json").then(JSON.parse),
   ]);
   const meta = Object.fromEntries(seriesCfg.series.map((s) => [s.id, s]));
+  // Privat lokal visning: private/ finnes bare på egen maskin (scripts/lokal_visning.py), aldri på Pages.
+  const priv = await fetchText(base + "private/status.json").then(JSON.parse).catch(() => null);
+  const privateIds = new Set();
+  if (priv) {
+    for (const [id, st] of Object.entries(priv.series)) {
+      if (st.status !== "ok") continue;
+      status.series[id] = { ...status.series[id], ...st, private: true };
+      privateIds.add(id);
+    }
+  }
+  const dataPath = (id) => `${base}${privateIds.has(id) ? "private/" : ""}data/${id}.csv`;
   const data = {};
   await Promise.all(seriesCfg.series.map(async (s) => {
     const st = status.series[s.id];
     if (!st || !st.rows || st.status === "ikke_publisert") return;
-    try { data[s.id] = C.parseCsv(await fetchText(`${base}data/${s.id}.csv`)); } catch (e) { /* vises som manglende */ }
+    try { data[s.id] = C.parseCsv(await fetchText(dataPath(s.id))); } catch (e) { /* vises som manglende */ }
   }));
   // Nyheter er valgfrie: siden fungerer uten dem.
   const opt = (p) => fetchText(base + p).then(JSON.parse).catch(() => null);
   const [newsCfg, news, labels, summary] = await Promise.all([opt("config/news.json"), opt("data/news.json"), opt("config/news_labels.json"), opt("data/news_summary.json")]);
-  return { base, meta, signals, status, data, newsCfg, news, summary, labels: (labels && labels.labels) || {} };
+  return { base, meta, signals, status, data, dataPath, privateIds, privateGenerated: priv && priv.generated, newsCfg, news, summary, labels: (labels && labels.labels) || {} };
 }
 
 // ---------- Hjelpere ----------
@@ -412,7 +423,7 @@ function renderSources(ctx) {
     let s = st.status || "feilet";
     if (s === "ok" && C.isStale(st.last_observation, today, m.max_age_days)) s = "utdatert";
     const cls = { ok: "ok", utdatert: "bad", feilet: "bad", ikke_publisert: "na" }[s];
-    const link = ctx.data[m.id] ? `<a href="${ctx.base}data/${m.id}.csv">CSV</a>` : "";
+    const link = ctx.data[m.id] ? `<a href="${ctx.dataPath(m.id)}">CSV</a>${st.private ? '<br><span class="muted small">privat</span>' : ""}` : "";
     return `<tr><td>${esc(m.title)}<br><span class="muted small">${esc(m.frequency)}, maks ${m.max_age_days} dager. ${esc(m.license)}</span>${st.message ? `<br><span class="muted small">${esc(st.message)}</span>` : ""}</td>
       <td>${esc(SOURCE_LABEL[m.source])}${st.method ? `<br><span class="muted small">${esc(st.method)}</span>` : ""}</td>
       <td><a href="${esc(sourceUrl(m, st))}">${esc(m.source === "treasury" ? `${m.source_id}: ${m.column}` : m.source_id)}</a></td>
@@ -501,6 +512,11 @@ async function main() {
     return;
   }
   const s = ctx.signals;
+  if (ctx.privateIds.size) {
+    const names = [...ctx.privateIds].map((id) => ctx.meta[id].title).join(", ");
+    $("#private-banner").hidden = false;
+    $("#private-banner").textContent = `Privat lokal visning. Inkluderer lisensbegrensede serier som ikke publiseres: ${names}. Hentet ${C.fmtTimestamp(ctx.privateGenerated)}. Ikke del skjermbilder eller data videre.`;
+  }
   $("#thesis").textContent = `Tesen, slik den er gjengitt: ${s.thesis}`;
   const results = Object.fromEntries(s.signals.map((sig) => [sig.id, C.evaluateSignal(sig, ctx.data, today, s.recording_date)]));
   const regime = C.evaluateRegime(s.regime, ctx.data, s.recording_date);

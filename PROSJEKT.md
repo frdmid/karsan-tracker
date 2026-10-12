@@ -85,6 +85,8 @@ FREDs seriesider oppgir lisenskategori. Resultat:
 
 Beslutning: disse fem har `publish: false` og hentes ikke i et offentlig repo. Siden viser dem som "Ikke publisert (lisens)". Repo-variabelen `PUBLISH_RESTRICTED=true` slår dem på hvis tillatelse foreligger. Logikken er testet lokalt med dataene, som deretter ble slettet.
 
+Søk etter åpen S&P-kilde (12. oktober 2026): FREDs Nasdaq Composite, Nasdaq 100 og Dow Jones krever også forhåndsgodkjenning, Wilshire 5000 finnes ikke lenger hos FRED, Stooq er blokkert, Yahoo og Nasdaqs nettsted (SPY) er uoffisielle med vilkår mot videredistribusjon. Ingen helt åpen kilde finnes. Frode valgte privat lokal visning: `scripts/lokal_visning.py` (eller `Karsan lokal.cmd`) henter de fem seriene til `private/` (aldri committet), og siden leser `private/` bare når mappen finnes, med et banner om at visningen er privat. Forkastede alternativer: publisere bare utledet fall fra topp, bruke SPY fra Nasdaqs uoffisielle API, publisere alt.
+
 ## 7. Regler for signaler (config/signals.json)
 
 * `level_reach`: Oppfylt hvis høyeste observasjon fra opptaksdato til frist er minst terskel. Ikke oppfylt etter frist. Ellers Overvåkes.

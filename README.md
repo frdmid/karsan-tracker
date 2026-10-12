@@ -58,6 +58,16 @@ python -m http.server 8765
 
 Åpne http://127.0.0.1:8765/site/.
 
+## Privat lokal visning med S&P 500
+
+S&P 500, ICE OAS, MOVE og gull kan ikke publiseres (lisens). For å se dem selv: dobbeltklikk `Karsan lokal.cmd`, eller kjør
+
+```bash
+python scripts/lokal_visning.py
+```
+
+Scriptet henter siste offentlige data med `git pull`, henter de lisensbegrensede seriene til `private/` (står i `.gitignore`, committes aldri), starter en lokal server og åpner siden. Et banner øverst viser at visningen er privat. Pages-siden har aldri `private/` og viser seriene som ikke publisert.
+
 ## Mer
 
 Prosjektbeskrivelse og beslutninger: `PROSJEKT.md`. Endringslogg: `LOGG.md`.

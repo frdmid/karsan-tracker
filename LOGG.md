@@ -2,6 +2,12 @@
 
 Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
+## 2026-10-12 (forts.)
+
+* Søkte etter åpen kilde for S&P 500. Ingen funnet (se PROSJEKT.md avsnitt 6).
+* Etter valg fra Frode: privat lokal visning. Nytt `scripts/lokal_visning.py` og `Karsan lokal.cmd`, ny mappe `private/` i `.gitignore`, siden leser `private/` når den finnes og viser banner. Testet: alle fem seriene hentet, fase 2 kan nå vurderes lokalt (Ikke nådd).
+* `.gitattributes`: `.cmd` får CRLF.
+
 ## 2026-10-12
 
 * Opprettet prosjektet i `C:\Users\FrodeMidjo\kode\karsan-tracker`.

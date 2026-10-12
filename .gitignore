@@ -1,4 +1,5 @@
 build/
+private/
 __pycache__/
 *.tmp
 _site/
