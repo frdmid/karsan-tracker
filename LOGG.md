@@ -15,4 +15,8 @@ Nyeste øverst. Hver endring: dato, hva, hvorfor.
 * Etter ønske fra Frode: nyheter vises som 2 til 3 linjers oppsummering med lenke. Oppsummering med Claude API er valgfri (secret `ANTHROPIC_API_KEY`), uten den vises utgiverens beskrivelse og de nyeste overskriftene.
 * Testet siden lokalt med lisensbegrensede data for å verifisere S&P-graf, fall fra topp og signalstatus. Dataene ble slettet etterpå.
 * Testene kjørt i nettleser med shim (node mangler lokalt): 15 av 15 bestått.
-* Ikke gjort ennå: git, GitHub-repo og Pages. Git og GitHub CLI er ikke installert på maskinen.
+* Installerte Git 2.55.0 og GitHub CLI 2.102.0 med winget. Innlogget som frdmid, token med scope repo og workflow.
+* Opprettet offentlig repo https://github.com/frdmid/karsan-tracker, aktiverte Pages med kilde GitHub Actions.
+* Første manuelle kjøring av "Oppdater data": 27 serier ok, 5 ikke publisert (lisens), 15 av 15 tester bestått med node 22, data committet av github-actions[bot].
+* "Publiser side" startet via workflow_run og publiserte https://frdmid.github.io/karsan-tracker/. Siden laster med alle grafer og tabeller.
+* Publiserte et øyeblikksbilde som privat artifact i Claude: https://claude.ai/artifact/ABNKAktVN1XuxWQMmVB7Zj (oppdateres ikke automatisk).
