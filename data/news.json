@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12T08:38:01Z",
+  "generated": "2026-10-12T08:55:22Z",
   "sources": {
     "karsan_Google News": "https://news.google.com/rss/search?q=%22Cem+Karsan%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "karsan_Apple Podcasts": "https://itunes.apple.com/search?term=Cem+Karsan&entity=podcastEpisode&limit=50",
@@ -478,6 +478,13 @@
       },
       {
         "date": "2026-10-12",
+        "title": "Stock Market Crash Warning as Valuations Echo the Dot-Com Bubble",
+        "source": "Watcher Guru",
+        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQcTB2cnNUNUI4M19XWFNYSmNHTVUybENieEpFNFV0TGsyOHB1R3prd3dNVFRpLWoyWkFIa2ZIRmUyb2ZkOGYxTHlIZzdaelZGa1gxckNQVXh1OVIwVTNDLWdTQXhXREM1WFRCTlVDaFg1MllwWlJ4THV4dllRZV9wRGJiWkxyX2Rmc0xLb3BZQ3JkdkU4?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-10-12",
         "title": "Is the S&P 500 heading for a correction before 2027?",
         "source": "Yahoo Finance UK",
         "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZDZRQWVObG5SdzJrRkdGMmxBOVlDN1RqSGI4bk5LM1ByQTE4TEw0LWFabUlHTU1NQW8wMC0ybXN5WGRQZFlBZmF5bjFQN001d243NXd2Tkx4MnJmU0VYMGJMSGR5TzRTMFI4bVphNVZnXzVCc2VQeXBvbHhuLXFDRmhaMWo?oc=5",
@@ -530,6 +537,13 @@
         "title": "Stock Market Pattern Echoes the Dot-Com Era and History Points to 1 Move Investors Should Make Now",
         "source": "AOL.com",
         "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNc1pjRUFNV056VThTQlpubS05ZkJnbDFYcnlaa2lsckZUbWRzQm0tU1BGa0VndGJnQ0pzQTNqWXNTeU1mTGpJaUdUaXRVRzlIUklwZTJRRzFQVUZ5eWFUSGk4VkNHYWZyMGZrVHU2djM2NnhHc19XN2RyTGdIX1ZsbA?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-10-11",
+        "title": "Stock Market Crash Hits Nasdaq as Index Falls 10.6%",
+        "source": "JournalArta",
+        "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOd3BIakg5b2ZmZjJtcXQ3UFF5THdMLUZpcVdWbFVLSkJEaU9RWTI2Qkk3dU03ckRBNTR0UnJSU1UwVVBwdWVKVDBjZG56OG81bEZRSWw3bTZmOGFPOFBQQWh0NHRLX1IzX244T2MySWRsZzZxOEVMbEhFOXdlUVdHclNmc25oUTQ?oc=5",
         "kind": "nyhet"
       },
       {
@@ -734,20 +748,6 @@
         "source": "Benzinga",
         "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPcnFkT1NIbWRoWF9mODROeFVnakdJcm5CLVlidWJuM09NMzducno1cHgzVGRORGNtSGpzY1BNT3M3cFdPXzFJQmxBQ0ZtWURPOXZkU3hvTFlucE9CX0hhd1NzbWxneGRrUGJYTHZsWE42MkJlMk1vaWtsczl6Rk16dkw5S2FHYlF2SW1LRjNDWGZJX2tUZWw4ZlVta1Y?oc=5",
         "kind": "nyhet"
-      },
-      {
-        "date": "2026-10-06",
-        "title": "Robinhood Among S&P 500’s Worst Performers So Far This Year Amid Crypto, Tech Selloff",
-        "source": "Stocktwits",
-        "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOd2hoSzM0bldfNUpZREkzREMzT2hVSXVscmFOaUtxb0U5NFJCdnNpNS01YnZPQnIwLWoxbUhmWWVhZk5yZjlxRllJT2d0dUhQYi1MM29hSDVQbzJtSHpzSDd3MnVRYWFLRHdITVY5Q0ZHRDRNSUhaMlRXdmRMbDBTM2k4akU1UEt3RHhEUnRmYXVOcjA0U1dXZzNvTXVMX3l1UnBvQ2FmMzhuNmJpc3Q0SEs5dl9TWFQ5UndXTnRrZXZKY3FNWHBtY2dSaU50UVFr?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-10-06",
-        "title": "History Says This 1 Move Will Determine Whether Your Investments Survive a Bear Market",
-        "source": "The Motley Fool",
-        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNdGtabnA1N0VkUFlYcGV3M2t0Z2VPaEVzdHM4RGRlUGdrSC1McUFIem4yLXYyN3NjVzNVaUd3S2NPMTJUVkpROUxnNzRMUUtLQkhMbXdEY0Q3QTROdzRDUF96cVhkVTNKS0c3WkJDWVpjU1FRZ29uc2FDdHVCb2E2eWxsMUl1RmtoYlE1QWVSUU5EUVFE?oc=5",
-        "kind": "nyhet"
       }
     ],
     "qe": [
@@ -900,6 +900,13 @@
       },
       {
         "date": "2026-10-05",
+        "title": "What will Washington do next if U.S. bond yields keep rising?",
+        "source": "BNN Bloomberg",
+        "link": "https://news.google.com/rss/articles/CBMi1wJBVV95cUxNNDE4RFpLTmN2c1VGU1o2MDhfRlA1MDNhNkV1RFh0MWp4bjNXbTV4Mm54QmNwNC1aelZkUXRaUjFqZHdHa0kwWVhnYmVINkk5ZEJLNUNMczQtNnhJMlFXZEoyaEhlOVlEWkpaRHN0WU5TcVc1blNYSVc0X3c4a1kxUDE0RGNZMU9iNEpVMWRiaVZwMm1BTUZLV2VMYVp5T3lMbWZES2luamNJOUZfUTN0ai1uV0N0LTNsZ21UZjdPdFpzdVlOMkRrTmdweno3TUxzOHdXZkRsUDgtMXhOdktGdXNyalJ6dFhfWXNpdGxCSm44YVdOaVNwQXlvQkdmYjB5Nl9Wd0NDN3M3eWV0bGtYMlFWUjlpa19Wdkhsa3BINzhvaE1QX2o1VFhpU2VrM0RVUUlmTDZLQTgyR214Rk55MGhYQ0d3NWgyTDI1YTJrRGlaOEZZRDhV?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-10-05",
         "title": "Turning on the Spigot",
         "source": "Brownstone Research",
         "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5Qb3VqRlpvZFU1bkJXa2NJRm9SVWRGNF9NcEo3U002ODlEYkFqbnktbHNUTFhFU0hMZDJ5N25GaFVNckR0R2NOV3gwbXIyZUdEbXkwTENRcmxFQ05XR1FMeVExM0xadjRPeEFtSXJ0b1N2bnY1eDBtUlIwU2RYYTA?oc=5",
@@ -952,6 +959,13 @@
         "title": "U.S. Fed weekly balance sheet",
         "source": "marketscreener.com",
         "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPbUZSYndJay1GRWdRTWhLTlhnc2I2YlAySTRaenROcmhhekp6WFdHeG1wRFlZS0pGRmlXSEdiSzdmZkxuVktibkU4SHJmV29rUXNsS0NqY1hwdm83MDJyck1RaTJvM0Y2aE1iRXpRakMyc3RJNHp6REF6QlRtS2VaaTlJRF9SdDV3?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-10-01",
+        "title": "U.S. Fed weekly balance sheet",
+        "source": "TradingView",
+        "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOR2hLd3Y4Mm5GNmh5bjVkRlBOb1UxbXV3SnE5c1ZBWEE0TFpnTkEwUGVTSVlDU3NvRVZpc2U4a3B6eTIwd0Jad3JSY1NCZHl5aXhBMkZkRktBX2d1dkJoQjd3U1kydFRZUGJJUmdRa2Jza3BWVWdha1cyWEhxY0w3OWFIWl9DR25pc2RXZ2ZJS1dVZE8tRXc1N3ROZ2RWZWhEeHdNV2FjVQ?oc=5",
         "kind": "nyhet"
       },
       {
@@ -1016,13 +1030,6 @@
         "source": "TradingView",
         "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNRkhxUFBZMnVKZl9id2lHVVp6ZzdFUDJmUnM5aFBqa3lFdVhObXQyaXFUTFFmOU43ajNZTFlPNTVEUmtuVktMN3hnNTVfV1QycnFzSUNuY09odVJRellqX3RLeG5fZXJQT00zbVZpUnlwNXNUT2l5OVh1Y1lsMWlySUlmSE1RV01NUVVIQmVDT2hNSG95QzFLVEU1U1lLYmxiMDEzam5ib2NRaU1DQTVoUHVfbEVoQ0xzdmtGSkhxR3hlTzNuZ0t1bFFUMUE2ZTg2SmtFbWpYNjlYX0VPMjZmTDVocDFxU0NzUDF5UTFUbk96OURB?oc=5",
         "kind": "nyhet"
-      },
-      {
-        "date": "2026-09-28",
-        "title": "How Failed Fed Chair Candidate David Zervos Can Help Scott Bessent Rescue the Treasury Department’s Credibility",
-        "source": "inkl",
-        "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNUmRsQUw1cWdJZ2tWOFFFcUI4NzlIVVMyZEJRVF9IeDJnaFV4WWRENHJvSHpoTWdGaDVWZHVvbFlaV1EwZzZRYW1qUG1BRlBtRUdwVU1iUEtVenhoekZYbEw5LUhFR1J0Q2pHcmZzMDVubzBGdUdxRjlWVTlmTjJiSXFvaWRxLTU5eU9CUXlfM2hkZXloZG1lRjFneHFpN2JPTkVpSVQtNXExdEx4aGJSeHZtV1JkWWdlRlNSb191N056ejQwZnlpemc4M1lwR2U0ZlE?oc=5",
-        "kind": "nyhet"
       }
     ],
     "uavhengighet": [
@@ -1045,6 +1052,13 @@
         "title": "Is 100K Bitcoin Up Next? Bear Market Fades as Debasement Trade Begins",
         "source": "CoinMarketCap",
         "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNbHpvY0NTcEU0aGlzOF9EVjBFQzZnTk1qR1Q5TVhoUFRWNElnTGJ0LTlYczgyOEVtRDcwRkNxUFQ3QXprUXhzSzN5SlZQcWNMUXZrRHBKRTlSZDZUZ3MxQlA2Ny1Oak9xbXJ5Yk1vLTQ0MTJ2UVo4RjRIRXlXR1RIQ1FiMVUxR1hQd19oSFVxODNHdHNoTGNOR1AxQQ?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-10-03",
+        "title": "Kevin Warsh Was Confirmed as Fed Chair in the Most Divisive Vote in Federal Reserve History, 54-45. Here's Why That Split Still Matters Now That He's Raised Rates for the First Time Since 2023.",
+        "source": "AOL.ca",
+        "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB5NHMxb2FQU2ttc3lwY18zWF9EdWJ0UFB4YTRjZWg2YWJPMU9nWEtuZTZJNGJyWVYyOTJJZ3JaUkx5Q2JYUjBrLXBZNHRaVGdiNVZ3TTF6WFZzdFpVY0NqbmQ1WHZhV1BzY3FaT3NyeVA2bkNULWhHTWNtUGx3RHc?oc=5",
         "kind": "nyhet"
       },
       {
@@ -1128,6 +1142,13 @@
       }
     ],
     "inflasjon": [
+      {
+        "date": "2026-10-12",
+        "title": "US Stock Market Today: S&P 500 Futures Edge Up On Sticky Inflation Expectations",
+        "source": "Simply Wall Street",
+        "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPelJVSEgyMXVWX3p1T1VtV2p0Y0FJbkdsdk5sN3MxWnFUQUZab0M0YlROUjJ6VThMRXhQRll1eEtCa0ZPS2t3UjA4NUtkSnBDSjBSLXM1Sk5nNDBWUGEyOTFmWVdVMm9GdFRXd2xkMTdaNWdOSDJhSXpOc0VzNndMeWdtUHVwTkZyUUdCRVNUSTFTQlVNZmszeGo5c0N5X2pNZDB4Zk5CdnNEZE1sNHFPNlRMeVg4UGp6ZGVxMVlqZFJJSXp1eXZWQzU3b9IB0AFBVV95cUxPNWJPTEtOWmRSZkZQNi1ZemR1cXNuMGtCMF9LN1dETEp6aWphY3pnMTRHQzRBUGJHMkVhMXlIM2F2Vkp2V0p5ZUt4X0tiQUdvUk8zcVVCbkE1dl9GTUJLU01iTm5yaXBTTWhXUENkc05ibEVIVldkTjVQakRaeDBJR3JBVksxSjRPcGpYclU5TGZIanpkY1UyS1BxTWhEbkljdWVKS0IxdEJJMFp3SmwtSjZ2SVFTcVAwUENlYno0YzdQUHVKdE9pdHRpa2RLa09R?oc=5",
+        "kind": "nyhet"
+      },
       {
         "date": "2026-10-12",
         "title": "Gold Price Forecast: Gold Returns to $4,200 Ahead of US September CPI, Can the Rally Continue?",
@@ -1399,13 +1420,6 @@
         "title": "RBI expected to hike interest rate, but will it be an effective way to contain inflation?",
         "source": "The Times of India",
         "link": "https://news.google.com/rss/articles/CBMigwJBVV95cUxNU1VBSEVCOERtcXBzTHJMazdLSGloM2haaGFyazZBTmtpV1lRQTZhbjJyMHNXMjBlck5hT0RyeU5FQWtHTDZiQXhZZHJ5dkYzT0IyWW5HR0dsSklfRkJNcjQ3SU9JVEdwb1N3SnRmampxVU5WVUpRSnVqRTh3WEF0MXZFZ3VpdWtyTjFuNmdUeHlfSG1POU1IanNVQVdxVFhZOGduTVo2R0F6Y1R3Wld3dktYNm40Mjh4Sk5NcTU0S1J2cWtYSlpoVk93akkxckItYnMzMXlDV2lZMk5GMW5DUXhsWlRwUjJzMkc1VFBsS3VuZUJhWmxWbFdFS0JuN2VnYUFR0gGIAkFVX3lxTE90ekZoZWs1amR6RVJ2RHpQb0hrR29IU0VDTjZBQ0ZJWk9FZ2hTaVYwakRqd0lNVFRTWXhfSHlSY0pScGYwNHpLVkpkZElfRHZJOW5tTlNvbmxyOTZvRlZPakZTenFMVUJxYW00S1p0bzV3R0pSUFRCejNZNFFPaHJBaVF2Wk5SeDIzUjBham9fM3pOQnBLWlZkUXdRNGdfTjgxUXJUZU1kQk95a1N6MjNJYmV0R0pJcTlhWWt2Ums1QlBXb25mVTg0bUlIZEd4S3dGZ3otWmliZnFTTFpSVHQ4d3BHeVhVdlJCUWJmR1dRV0ZPVFIzM3Zqc0tESUJlRUFuWXBScU9hbQ?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-10-05",
-        "title": "RBI MPC begins 3-day meeting as crude, inflation put rate hike back on table",
-        "source": "Firstpost",
-        "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQUm9KaVBjY3J6QlBWRkxSall5YUo4WV9ScUw2LWRMV1BsVVNqUnNHNGhqTksyRFc0TzNDcXY2LTlNZVBIbS1HekY0a1VaR0dsN2ZjTjNyV1FvdDlaeWxVdXJ0S1NkNmsyUEtUX1NkdlZKUzJOSjhzLXYtc2JCQ1VIUWFHcDl2b3FrVXc4RmJPeG9YZURoXzNRNjVJUHFaSmFhSHI0NzJmU1hwSzRQX25aNkdwUVlyUFlPek9OWEhMYWdrd9IBxwFBVV95cUxOQVY2RW5rci1qbnkxWXo3cnUzTTVJd3BrLTNFci1vU2VLUThGLXRqN2wxTVRNMWc5MW5NVEg1TXpUUUVsY0t6elFfbEZpZ2ROQnBTRGo4Nkg1NjV5RV9WcS1fX3F5Vkhha1c4cTdoa21QWFhIOGJ3R3ZLTFlKNkVTNlF0d1kzVkstZ2c3SWdYb0J6LW81a1ZnWEk3NDRmRjk3V2otWTZUMmpBZnpMalBMbC1NV2pNTEUzQVVpR0taNjdMdUxyQk9J?oc=5",
         "kind": "nyhet"
       }
     ],
