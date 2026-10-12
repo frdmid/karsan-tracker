@@ -1,0 +1,4 @@
+{
+  "_merknad": "Manuelle vurderinger av nyheter. Nøkkel er lenken (link) slik den står i data/news.json. vurdering: bekrefter, avkrefter eller nøytral. Tomt betyr Ikke vurdert.",
+  "labels": {}
+}

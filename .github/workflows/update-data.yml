@@ -1,0 +1,77 @@
+name: Oppdater data
+
+on:
+  schedule:
+    # Hverdager 05:30 UTC: FRED og Treasury har da publisert forrige amerikanske handelsdag.
+    - cron: "30 5 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Installer Anthropic SDK (bare brukt hvis ANTHROPIC_API_KEY finnes)
+        run: pip install --quiet anthropic
+
+      - name: Hent Treasury
+        run: python scripts/fetch_treasury.py
+        continue-on-error: true
+
+      - name: Hent FRED
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          PUBLISH_RESTRICTED: ${{ vars.PUBLISH_RESTRICTED }}
+        run: python scripts/fetch_fred.py
+        continue-on-error: true
+
+      - name: Hent uoffisielle kilder
+        env:
+          PUBLISH_RESTRICTED: ${{ vars.PUBLISH_RESTRICTED }}
+        run: python scripts/fetch_other.py
+        continue-on-error: true
+
+      - name: Hent nyheter og podcaster
+        run: python scripts/fetch_news.py
+        continue-on-error: true
+
+      - name: Oppsummer nyheter med Claude
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/summarize_news.py
+        continue-on-error: true
+
+      # Feiler bare hvis alle serier feilet.
+      - name: Bygg status.json
+        run: python scripts/build_status.py
+
+      - name: Enhetstester
+        run: node --test tests/calc.test.js
+
+      - name: Commit og push hvis data er endret
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Ingen endringer i data/"
+          else
+            git commit -m "Oppdater data $(date -u +%F)"
+            git push
+          fi

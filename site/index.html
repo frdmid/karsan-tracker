@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Karsan tracker</title>
+  <meta name="description" content="Følger Cem Karsans makronarrativ mot faktiske markedsdata fra FRED og U.S. Treasury.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <main>
+    <header class="top">
+      <h1>Karsan tracker</h1>
+      <p id="summary" class="summary">Laster data.</p>
+      <p id="thesis" class="muted small"></p>
+    </header>
+
+    <section id="regime" aria-labelledby="regime-h">
+      <h2 id="regime-h">Hvor er vi i scenariet</h2>
+      <ol id="phases" class="phases"></ol>
+      <div id="phase-detail" class="phase-detail"></div>
+    </section>
+
+    <section aria-labelledby="overview-h">
+      <h2 id="overview-h">Nøkkeltall</h2>
+      <p id="overview-intro" class="muted small"></p>
+      <div id="tiles" class="tiles"></div>
+    </section>
+
+    <section aria-labelledby="signals-h">
+      <h2 id="signals-h">Signaler</h2>
+      <div class="table-wrap">
+        <table id="signals" class="data">
+          <thead><tr><th>Signal</th><th>Karsans krav</th><th class="num">Faktisk</th><th class="num">Avstand</th><th>Status</th><th>Sist oppdatert</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p id="signal-notes" class="muted small"></p>
+    </section>
+
+    <section aria-labelledby="karsan-h">
+      <h2 id="karsan-h">Karsan selv: podcaster og omtaler</h2>
+      <p id="karsan-intro" class="muted small"></p>
+      <ul id="karsan-list" class="news"></ul>
+    </section>
+
+    <section aria-labelledby="news-h">
+      <h2 id="news-h">Nyheter som berører narrativet</h2>
+      <p id="news-intro" class="muted small"></p>
+      <div id="news-topics" class="news-grid"></div>
+    </section>
+
+    <section aria-labelledby="charts-h">
+      <div class="charts-head">
+        <h2 id="charts-h">Grafer</h2>
+        <div id="range" class="range" role="group" aria-label="Tidsrom"></div>
+      </div>
+      <div id="charts" class="charts"></div>
+    </section>
+
+    <section aria-labelledby="since-h">
+      <h2 id="since-h">Tid siden opptak</h2>
+      <p id="since-intro" class="muted small"></p>
+      <div class="table-wrap">
+        <table id="since" class="data">
+          <thead><tr><th>Serie</th><th>Baseline dato</th><th class="num">Baseline</th><th>Siste dato</th><th class="num">Siste</th><th class="num">Endring</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="sources-h">
+      <h2 id="sources-h">Kilder og friskhet</h2>
+      <p id="sources-intro" class="muted small"></p>
+      <div class="table-wrap">
+        <table id="sources" class="data">
+          <thead><tr><th>Serie</th><th>Kilde</th><th>Serie-id</th><th>Siste observasjon</th><th>Hentet</th><th>Status</th><th>Data</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div id="warnings"></div>
+    </section>
+
+    <footer id="footnote" class="footnote"></footer>
+  </main>
+  <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+</body>
+</html>

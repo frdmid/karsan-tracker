@@ -1,0 +1,60 @@
+name: Publiser side
+
+# Push fra GITHUB_TOKEN i "Oppdater data" starter ikke andre workflows,
+# derfor også workflow_run når dataoppdateringen er ferdig.
+on:
+  push:
+    branches: [main]
+    paths: ["data/**", "site/**", "config/**"]
+  workflow_run:
+    workflows: ["Oppdater data"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Enhetstester
+        run: node --test tests/calc.test.js
+
+      - name: Sett sammen siden
+        run: |
+          mkdir -p _site
+          cp -r site/. _site/
+          cp -r data _site/data
+          cp -r config _site/config
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

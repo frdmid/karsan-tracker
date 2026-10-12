@@ -1,0 +1,24 @@
+{
+  "_merknad": "Nyheter hentes fra Google News RSS (søk, kun tittel, kilde, dato og lenke lagres) og podcastepisoder fra Apple iTunes Search API. Begge verifisert 2026-10-12. Vurdering (bekrefter/avkrefter) settes manuelt i config/news_labels.json, aldri automatisk.",
+  "lookback": "when:14d",
+  "keep_days": 120,
+  "max_per_topic": 40,
+  "karsan": {
+    "news_query": "\"Cem Karsan\"",
+    "itunes_term": "Cem Karsan",
+    "itunes_match": "karsan"
+  },
+  "social": {
+    "status": "Ikke dekket",
+    "reason": "Innlegg på X krever betalt API-tilgang (verifisert: API svarer 401 uten nøkkel). Manuell oppfølging."
+  },
+  "topics": [
+    { "id": "rente10", "title": "Lange renter", "query": "\"10-year Treasury yield\" OR \"30-year Treasury yield\"" },
+    { "id": "spx", "title": "Aksjemarkedet", "query": "stock market selloff OR correction OR \"bear market\" S&P" },
+    { "id": "qe", "title": "QE og Feds balanse", "query": "Fed \"quantitative easing\" OR \"balance sheet\" OR \"Treasury purchases\"" },
+    { "id": "uavhengighet", "title": "Fed, Warsh og Bessent", "query": "Warsh Bessent Fed independence" },
+    { "id": "formuesfond", "title": "Statlig formuefond og lange obligasjoner", "query": "\"sovereign wealth fund\" OR \"Treasury buyback\" Bessent" },
+    { "id": "inflasjon", "title": "Inflasjon", "query": "US inflation CPI \"rate hike\" OR \"inflation expectations\"" },
+    { "id": "ai_kreditt", "title": "AI, capex og kreditt", "query": "hyperscaler capex OR \"AI debt\" OR \"credit default swap\" Oracle OR Meta OR Microsoft" }
+  ]
+}
