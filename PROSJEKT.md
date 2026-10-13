@@ -117,7 +117,7 @@ Fem faser, operasjonalisert for denne siden (ikke Karsans definisjoner):
 3. Politikkskifte og QE (minst ett): WSHOTSL opp minst 5 % siden opptak, Fed øvre mål kuttet siden opptak
 4. Inflasjon (alle): KPI år/år minst 6 %, breakeven 10 år minst 3,00 %
 
-Gjeldende fase er den høyeste som er nådd. Vilkår uten data telles ikke og vises som Ikke dekket. Hver fase har implikasjoner (hva narrativet favoriserer og taler mot), utledet av tesen. De er merket som ikke investeringsråd og ikke Karsans anbefalinger.
+Gjeldende fase er den høyeste som er nådd. Under implikasjonene vises i tillegg "Karsan nevner selv" (`implications.karsan` per fase): hans egne eksempler fra Brunell-episoden 6. oktober 2026, med kilde, holdt adskilt fra sidens egne utledninger. Karsans eget brytningspunkt (`falsification` i config: krise startet innen 30. juni 2027, ellers slår scenariet ikke til slik han beskriver) vises med dager igjen i regimeboksen. Vilkår uten data telles ikke og vises som Ikke dekket. Hver fase har implikasjoner (hva narrativet favoriserer og taler mot), utledet av tesen. De er merket som ikke investeringsråd og ikke Karsans anbefalinger.
 
 ## 10. Nyheter
 

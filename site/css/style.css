@@ -216,6 +216,7 @@ td.nowrap { white-space: nowrap; }
 @media (max-width: 860px) { .news-grid { grid-template-columns: 1fr; } }
 @media (max-width: 480px) { .news li { flex-wrap: wrap; } }
 
+.falsification { background: var(--warn-bg); color: var(--ink); border-radius: 6px; padding: 6px 10px; }
 .agent { margin-bottom: 14px; }
 .agent .card { margin-bottom: 10px; }
 .agent .card p { margin: 0 0 6px; font-size: 14px; }

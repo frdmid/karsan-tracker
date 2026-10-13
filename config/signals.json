@@ -34,7 +34,7 @@
     {
       "id": "spx",
       "title": "S&P 500 fall fra topp",
-      "claim": "Ned 25 til 40 % fra topp i H1 2027, samtidig med rentetoppen. Mulig i Q4 2026 hvis mellomvalget bestrides.",
+      "claim": "Ned 25 til 40 % fra topp i H1 2027, hovedscenario 25 til 35 %, V-formet på en til to måneder. Kommer samtidig med rentetoppen. Mulig i Q4 2026 hvis mellomvalget bestrides, ellers holder markedet seg til en topp rundt desember eller januar.",
       "series": [
         "SP500"
       ],
@@ -105,7 +105,7 @@
     {
       "id": "formuesfond",
       "title": "Statlig formuefond",
-      "claim": "Etableres som del av politikken",
+      "claim": "Etableres og begynner å kjøpe aksjer innen 3 til 6 måneder (ca. april 2027), inntil 5 billioner USD på to år",
       "series": [],
       "rule": {
         "type": "not_covered"
@@ -208,15 +208,13 @@
         "mode": "pp",
         "direction": "up",
         "phase_directions": {
+          "1": "none",
           "3": "down",
           "4": "none"
         },
         "min_move": 1.0,
-        "why": "Fase 1 og 2: fallet fra topp øker mot 25 til 40 %. Fase 3: aksjene henter seg inn etter QE. Fase 4: ingen retning.",
+        "why": "Fase 1: ingen retning, markedet holder seg til en topp rundt desember eller januar (Karsan). Fase 2: fallet øker mot 25 til 35 % (hovedscenario). Fase 3: aksjene henter seg inn etter QE. Fase 4: ingen retning.",
         "phase_targets": {
-          "1": {
-            "level": 10
-          },
           "2": {
             "level": 25
           },
@@ -414,11 +412,27 @@
         "direction": "down",
         "phase_directions": {
           "1": "up",
-          "2": "none"
+          "2": "down"
         },
         "min_move": 0.5,
-        "why": "Fase 1: opp, sterk dollar er målet med Fed-hevingen på kort sikt (Karsan i SI420). Fase 2: ingen retning. Fase 3 og 4: ned, pengetrykking svekker dollaren.",
+        "why": "Fase 1: opp, sterk dollar er målet med Fed-hevingen på kort sikt (Karsan i SI420). Fase 2 til 4: ned, råvarevalutaer gjør det bedre i krisen og pengetrykking svekker dollaren (Karsan hos Brunell).",
         "phase_targets": {}
+      },
+      {
+        "id": "usdnok",
+        "title": "USD/NOK",
+        "series": [
+          "DEXNOUS"
+        ],
+        "transform": "level",
+        "mode": "pct",
+        "direction": "down",
+        "phase_directions": {
+          "1": "up"
+        },
+        "min_move": 0.5,
+        "phase_targets": {},
+        "why": "Fase 1: opp, sterk dollar på kort sikt. Fase 2 til 4: ned, Karsan nevner norsk krone blant råvarevalutaene han venter gjør det klart bedre enn dollar."
       },
       {
         "id": "gull",
@@ -468,7 +482,7 @@
   },
   "regime": {
     "_merknad": "Fasene og vilkårene er denne sidens operasjonalisering av tesen, ikke Karsans egne definisjoner. En fase regnes som nådd når vilkårene er oppfylt (require=all: alle, require=any: minst ett). Gjeldende fase er den høyeste fasen som er nådd. Vilkår uten data vises som Ikke dekket og telles ikke.",
-    "disclaimer": "Implikasjonene per fase er utledet av tesen slik den er gjengitt på denne siden. De er ikke investeringsråd, ikke tilpasset noens situasjon og ikke Karsans egne anbefalinger.",
+    "disclaimer": "Narrativet favoriserer og taler mot: utledet av tesen på denne siden, ikke Karsans egne ord. Karsan nevner selv: hans egne eksempler fra en podcast, med kilde. Ingenting her er investeringsråd eller tilpasset noens situasjon.",
     "phases": [
       {
         "id": 0,
@@ -535,7 +549,14 @@
             "Lange nominelle statsobligasjoner",
             "Rentesensitive vekstaksjer"
           ],
-          "rationale": "Stigende lange renter gir kurstap på lang durasjon og presser verdsettelsen av aksjer med lang kontantstrøm."
+          "rationale": "Stigende lange renter gir kurstap på lang durasjon og presser verdsettelsen av aksjer med lang kontantstrøm.",
+          "karsan": {
+            "favored": [
+              "Gull: kjøp på fallet, en mulighet senere i år"
+            ],
+            "disfavored": [],
+            "source": "Karsan i Coin Stories med Natalie Brunell, 6. oktober 2026"
+          }
         }
       },
       {
@@ -588,7 +609,19 @@
             "Aksjer, særlig AI-komplekset",
             "High yield kreditt"
           ],
-          "rationale": "Tesen er at aksjefallet er villet for å presse lange renter ned, med risiko konsentrert i AI og kreditt."
+          "rationale": "Tesen er at aksjefallet er villet for å presse lange renter ned, med risiko konsentrert i AI og kreditt.",
+          "karsan": {
+            "favored": [
+              "Puts i AI-navn, og cybersikkerhet mot annen teknologi",
+              "Kontanter i råvarevalutaer: sveitsisk franc, norsk krone, australsk og kanadisk dollar",
+              "Valutavolatilitet, som han mener er sterkt underpriset"
+            ],
+            "disfavored": [
+              "Kontanter i dollar",
+              "Krypto etter toppen rundt desember eller januar"
+            ],
+            "source": "Karsan i Coin Stories med Natalie Brunell, 6. oktober 2026"
+          }
         }
       },
       {
@@ -632,7 +665,15 @@
             "Dollar",
             "Kontanter over tid"
           ],
-          "rationale": "Pengetrykking og kunstig lave renter svekker valuta og løfter realaktiva."
+          "rationale": "Pengetrykking og kunstig lave renter svekker valuta og løfter realaktiva.",
+          "karsan": {
+            "favored": [
+              "Strategiske aksjer staten vil kjøpe",
+              "Krypto etter fallet, som del av pengeforringelseshandelen"
+            ],
+            "disfavored": [],
+            "source": "Karsan i Coin Stories med Natalie Brunell, 6. oktober 2026"
+          }
         }
       },
       {
@@ -676,7 +717,18 @@
             "Kontanter",
             "Dollar"
           ],
-          "rationale": "Å inflatere bort gjeld betyr negativ realavkastning på nominelle fordringer."
+          "rationale": "Å inflatere bort gjeld betyr negativ realavkastning på nominelle fordringer.",
+          "karsan": {
+            "favored": [
+              "Gull og harde eiendeler",
+              "Inflasjonsvinnere: selskaper med negativ arbeidskapital, meglere, banker, telekom, jernbane, kapitalforvaltere (ca. 25 % av S&P 500)"
+            ],
+            "disfavored": [
+              "Selskaper som avhenger av forbrukere med lav inntekt",
+              "Kostnadspressede selskaper"
+            ],
+            "source": "Karsan i Coin Stories med Natalie Brunell, 6. oktober 2026"
+          }
         }
       }
     ]
@@ -701,5 +753,10 @@
     "YF_GOLD",
     "DEXNOUS",
     "DTWEXBGS"
-  ]
+  ],
+  "falsification": {
+    "date": "2027-06-30",
+    "text": "Karsans eget brytningspunkt: har krisen ikke startet innen april til juni 2027, tror han ikke planen gjennomføres slik. Da kan staten i stedet kjøpe aksjer på toppnivå uten krise.",
+    "source": "Karsan i Coin Stories med Natalie Brunell, 6. oktober 2026"
+  }
 }

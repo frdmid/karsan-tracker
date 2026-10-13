@@ -132,11 +132,21 @@ function renderRegime(ctx, regime) {
     ? `<div class="impl"><div><strong>Narrativet favoriserer</strong>${list(im.favored)}</div><div><strong>Narrativet taler mot</strong>${list(im.disfavored)}</div></div>
        <p class="small">${esc(im.rationale)}</p>`
     : '<p class="small">Narrativet tilsier ingen bestemt posisjonering før fase 1 er nådd.</p>';
+  const k = im.karsan;
+  const karsanBlock = k && ((k.favored || []).length || (k.disfavored || []).length)
+    ? `<h3 style="margin-top:12px">Karsan nevner selv</h3><div class="impl"><div><strong>Vil ha</strong>${list(k.favored)}</div><div><strong>Unngår</strong>${list(k.disfavored)}</div></div>
+       <p class="muted small">Kilde: ${esc(k.source)}. Gjengitt fra en maskinlaget transkripsjon. Hans syn, ikke råd.</p>`
+    : "";
+  const fal = ctx.signals.falsification;
+  const falBlock = fal ? (() => {
+    const left = C.daysBetween(today, fal.date);
+    return `<p class="small falsification"><strong>Brytningspunkt ${C.fmtDate(fal.date)}${left >= 0 ? `, ${left} dager igjen` : ", passert"}.</strong> ${esc(fal.text)}</p>`;
+  })() : "";
 
   $("#phase-detail").innerHTML = `
-    <div class="card"><h3>Gjeldende fase: ${esc(cur.name)}</h3><p class="small">${esc(cur.description)}</p>${conds}
+    <div class="card"><h3>Gjeldende fase: ${esc(cur.name)}</h3><p class="small">${esc(cur.description)}</p>${falBlock}${conds}
       <p class="muted small">${esc(ctx.signals.regime._merknad)}</p></div>
-    <div class="card"><h3>Hva narrativet tilsier i denne fasen</h3>${impl}
+    <div class="card"><h3>Hva narrativet tilsier i denne fasen</h3>${impl}${karsanBlock}
       <p class="muted small">${esc(ctx.signals.regime.disclaimer)}</p></div>`;
 }
 

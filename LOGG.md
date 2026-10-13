@@ -4,6 +4,8 @@ Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
 ## 2026-10-13
 
+* Lagt inn endringer fra Brunell-episoden etter godkjenning fra Frode: S&P 500 ingen retning i fase 1 (markedet holder seg til desember eller januar) og kravtekst med hovedscenario 25 til 35 %, V-formet på en til to måneder. Karsans brytningspunkt 30. juni 2027 vises i regimeboksen (`falsification`). Formuefond med frist 3 til 6 måneder i kravteksten. Dollar ned i fase 2. Nytt nøkkeltall USD/NOK (opp i fase 1, ned i fase 2 til 4, ingen mål). Karsans egne eksempler per fase i `implications.karsan`, vist adskilt med kilde. Effekt nå: 7 av 11 nøkkeltall i retning narrativet, 13 bokser.
+
 * Brunell-episoden (Coin Stories 6. okt., på YouTube "They Have to Print Trillions") analysert manuelt fra YouTubes automatiske transkripsjon, lest i nettleseren (cookies avvist). 11 påstander, 6 forslag, ikke lagt inn i config. `lagre_analyse.py` støtter nå egen transkripsjonskilde (`transkripsjon_kilde`, `transkripsjon_url`).
 
 * Frode valgte manuell analyse i Claude Code i stedet for `ANTHROPIC_API_KEY`. Nytt `scripts/lagre_analyse.py`, ny `--list` i podcastagenten, ny README-del "Analyse av nye Karsan-episoder". Agenten finner fortsatt episoder og transkripsjoner hver morgen. Venter nå: Natalie Brunell 6. okt. (ingen transkripsjon i feeden).
