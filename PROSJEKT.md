@@ -10,7 +10,9 @@ Følge Cem Karsans makronarrativ mot faktiske markedsdata, slik at det er lett �
 
 ## 2. Bakgrunn og tese
 
-Kilde: Top Traders Unplugged med Cem Karsan, opptak ca. 25. september 2026. Episoden SI420 "The Market Might Be More Fragile Than It Looks ft. Cem Karsan" ble publisert 2. oktober 2026 (funnet via Apple Podcasts søk) og er trolig opptaket det gjelder.
+Kilde: Top Traders Unplugged, episode SI420 "The Market Might Be More Fragile Than It Looks ft. Cem Karsan", publisert 2. oktober 2026. Først antatt opptaksdato 25. september, korrigert 13. oktober til 29. september etter transkripsjonen (innspilt tirsdag, CTA-tall per 25. september omtales som forrige uke).
+
+Kontroll mot transkripsjonen 13. oktober 2026: kravene 1 til 4 under stemmer. Presiseringer derfra: renten får en rask V-topp og faller trolig mot 4 % etterpå, aksjefallet skjer samtidig med rentetoppen, QE kommer senest juni 2027, to sifret inflasjon kommer først sent 2027 til 2028, og sterk dollar og svakt gull er målet med Fed-hevingen på kort sikt.
 
 Tesen, slik den er gjengitt: Bessent og Warsh samkjører. Fed-hevingen 16. september 2026 til 3,75 til 4,00 % skulle gi bilde av en uavhengig Fed. Målet er å inflatere seg ut av statsgjelden, mens lange renter holdes nede ved å la aksjemarkedet falle.
 
@@ -93,6 +95,7 @@ Søk etter åpen S&P-kilde (12. oktober 2026): FREDs Nasdaq Composite, Nasdaq 10
 * `drawdown_reach`: fall fra løpende topp i prosent, samme logikk. Oppfylt-dato er første dato over terskel.
 * `yoy_reach`: år over år for månedsindeks, krever observasjon nøyaktig ett år før.
 * `change_reach`: prosentvis endring fra baseline (siste observasjon på eller før opptaksdato).
+* `final_deadline` (valgfri): ytre frist. Etter `deadline` men før ytre frist vises signalet som forsinket, først etter ytre frist blir det Ikke oppfylt. Brukes for QE (6 måneder, senest juni 2027).
 * `monitor`: ingen terskel. `not_covered`: ingen kilde.
 * Avstand = terskel minus faktisk verdi.
 * 10-årsrenten bruker den ferskeste av UST_10Y og DGS10 (samme mål).

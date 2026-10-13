@@ -4,6 +4,8 @@ Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
 ## 2026-10-13
 
+* Lagt inn endringer fra SI420 etter godkjenning fra Frode: opptaksdato 29. september (frist 10-årsrente 29. des. 2026, QE 29. mars 2027 med ytre frist 30. juni 2027), 10-årsrente mål 4 % i fase 2 og 3 (Karsans tall), dollar opp og gull ned i fase 1, inflasjon frist ut 2028, nye kravtekster og fotnote om at kravene er kontrollert mot transkripsjonen. Ny `final_deadline` i signalreglene med test, 19 av 19 bestått. Effekt nå: 6 av 11 nøkkeltall i retning narrativet (før 4), dollar og gull grønne.
+
 * Podcastagent etter ønske fra Frode: `scripts/podcast_agent.py`, nytt steg i "Oppdater data", ny seksjon under Karsan selv. Verifisert: Top Traders Unplugged har transkripsjon i feeden, Karsans egen serie U Got Options (UGO01 til UGO12) ligger der. "You've Got Options" fantes ikke under det navnet, riktig navn er U Got Options. Kai Media på YouTube lagt til som lenker via åpen RSS. Andre podkaster (Brunell, Taggart, David Lin, Forward Guidance) har ikke transkripsjon i feeden, lydtranskribering kan slås på med `TRANSCRIBE_AUDIO=true`. Analyse krever `ANTHROPIC_API_KEY`.
 * SI420 analysert manuelt i Claude Code mot transkripsjonen: 10-årsrente 5,5 til 6 % innen tre måneder, S&P 25 til 40 % i H1 2027 (mulig Q4 ved bestridt valg), QE innen seks måneder og senest juni 2027, formuefond og to sifret inflasjon bekreftet. Nytt: inflasjonen først sent 2027 og 2028, rentetopp og aksjefall samtidig, 10-årsrenten trolig til 4 % etterpå, sterk dollar og svakt gull er målet på kort sikt, opptaket var trolig 29. september. Seks forslag lagt inn i analysen, ikke i config.
 

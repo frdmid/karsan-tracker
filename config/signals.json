@@ -1,7 +1,7 @@
 {
-  "recording_date": "2026-09-25",
-  "recording": "Top Traders Unplugged, samtale med Cem Karsan, opptak ca. 25. september 2026",
-  "source_note": "Karsans krav er gjengitt fra sekundære kilder og hukommelse. De er ikke verifisert mot selve opptaket og kan være unøyaktig gjengitt. Tersklene under er slik de er gjengitt, ikke Karsans egne formuleringer.",
+  "recording_date": "2026-09-29",
+  "recording": "Top Traders Unplugged, episode SI420 med Cem Karsan, publisert 2. oktober 2026. Innspilt tirsdag ca. 29. september 2026 (CTA-tall per 25. september omtales som forrige uke).",
+  "source_note": "Kravene ble først gjengitt fra sekundære kilder og hukommelse. 13. oktober 2026 ble de kontrollert mot den maskinlagde transkripsjonen av SI420 fra Top Traders Unplugged, og tallene stemmer. Transkripsjonen har ikke talernavn, så hvem som sier hva er tolket ut fra sammenhengen. Tersklene for operasjonelle definisjoner og fasemål er denne sidens egne.",
   "thesis": "Bessent og Warsh samkjører. Fed-hevingen 16. september 2026 til 3,75 til 4,00 % skulle gi bilde av en uavhengig Fed. Målet er å inflatere seg ut av statsgjelden, mens lange renter holdes nede ved å la aksjemarkedet falle.",
   "rule_types": {
     "level_reach": "Oppfylt hvis høyeste observasjon fra opptaksdato til frist er minst threshold. Ikke oppfylt hvis fristen er passert uten det. Ellers Overvåkes.",
@@ -15,7 +15,7 @@
     {
       "id": "rente10",
       "title": "10-årsrenten",
-      "claim": "5,5 til 6 % innen ca. 3 måneder fra opptaket",
+      "claim": "5,5 til 6 % innen ca. 3 måneder fra opptaket, en rask V-topp. Deretter trolig ned mot 4 %.",
       "series": [
         "UST_10Y",
         "DGS10"
@@ -26,7 +26,7 @@
         "threshold": 5.5,
         "upper": 6.0,
         "unit": "%",
-        "deadline": "2026-12-25"
+        "deadline": "2026-12-29"
       },
       "series_note": "UST_10Y og DGS10 er samme mål (FRED henter fra Treasury). Den med nyeste observasjon brukes.",
       "key": true
@@ -34,7 +34,7 @@
     {
       "id": "spx",
       "title": "S&P 500 fall fra topp",
-      "claim": "Ned 25 til 40 % fra topp i H1 2027, muligens Q4 2026 hvis valget bestrides",
+      "claim": "Ned 25 til 40 % fra topp i H1 2027, samtidig med rentetoppen. Mulig i Q4 2026 hvis mellomvalget bestrides.",
       "series": [
         "SP500"
       ],
@@ -50,7 +50,7 @@
     {
       "id": "qe",
       "title": "QE, Fed kjøper statspapirer",
-      "claim": "QE innen ca. 6 måneder",
+      "claim": "QE innen ca. 6 måneder, senest juni 2027",
       "series": [
         "WSHOTSL"
       ],
@@ -58,14 +58,15 @@
         "type": "change_reach",
         "threshold": 5,
         "unit": "%",
-        "deadline": "2027-03-25"
+        "deadline": "2027-03-29",
+        "final_deadline": "2027-06-30"
       },
       "definition_note": "Operasjonell definisjon valgt for denne siden, ikke Karsans tall: Feds beholdning av statspapirer (WSHOTSL) øker minst 5 % fra nivået ved opptaket."
     },
     {
       "id": "inflasjon",
       "title": "Inflasjon",
-      "claim": "To sifret inflasjon",
+      "claim": "To sifret inflasjon, først sent 2027 til 2028",
       "series": [
         "CPIAUCSL"
       ],
@@ -73,7 +74,7 @@
         "type": "yoy_reach",
         "threshold": 10,
         "unit": "%",
-        "deadline": null
+        "deadline": "2028-12-31"
       },
       "definition_note": "Målt som KPI alle varer (CPIAUCSL), år over år."
     },
@@ -184,16 +185,16 @@
           "4": "none"
         },
         "min_move": 0.05,
-        "why": "Fase 1: opp mot 5,5 til 6 %. Fase 2 og 3: ned, aksjefall og oppkjøp holder lange renter nede. Fase 4: ingen retning, rentene holdes kunstig lave.",
+        "why": "Fase 1: opp mot 5,5 til 6 %. Fase 2 og 3: ned mot 4 % (Karsan). Fase 4: ingen retning, rentene holdes kunstig lave.",
         "phase_targets": {
           "1": {
             "level": 5.5
           },
           "2": {
-            "change": -0.5
+            "level": 4.0
           },
           "3": {
-            "change": -0.5
+            "level": 4.0
           }
         }
       },
@@ -412,10 +413,11 @@
         "mode": "pct",
         "direction": "down",
         "phase_directions": {
+          "1": "up",
           "2": "none"
         },
         "min_move": 0.5,
-        "why": "Dollaren svekkes når gjeld inflateres bort. Fase 2: ingen retning, flukt til dollar kan trekke motsatt vei.",
+        "why": "Fase 1: opp, sterk dollar er målet med Fed-hevingen på kort sikt (Karsan i SI420). Fase 2: ingen retning. Fase 3 og 4: ned, pengetrykking svekker dollaren.",
         "phase_targets": {}
       },
       {
@@ -428,8 +430,11 @@
         "mode": "pct",
         "direction": "up",
         "min_move": 1,
-        "why": "Alle faser: gull vinner ved finansiell undertrykkelse.",
-        "phase_targets": {}
+        "why": "Fase 1: ned, svakt gull er en del av målet med hevingen på kort sikt (Karsan i SI420). Fase 2 til 4: opp ved finansiell undertrykkelse.",
+        "phase_targets": {},
+        "phase_directions": {
+          "1": "down"
+        }
       },
       {
         "id": "move",
@@ -459,7 +464,7 @@
         }
       }
     ],
-    "_mal": "phase_targets er mål per fase for fargestyrken i fasestripene: level er et nivå, change er endring fra fasestart i prosentpoeng (mode pp) eller prosent (mode pct). Fremdrift regnes fra verdien da fasen startet. Mørk grønn: målet nådd. Middels grønn: minst halvveis. Lys grønn: på vei. Grå: stillestående. Hvit: ingen mål i denne fasen. Lys rød: beveget seg litt bort. Mørk rød: langt bort. Bare tre mål er Karsans egne tall: 10-årsrente 5,5 % i fase 1, S&P 500 fall 25 % i fase 2 og KPI 10 % i fase 4. Ikke alle nøkkeltall har mål, svakt begrunnede mål er fjernet. Resten er denne sidens operasjonalisering av tesen."
+    "_mal": "phase_targets er mål per fase for fargestyrken i fasestripene: level er et nivå, change er endring fra fasestart i prosentpoeng (mode pp) eller prosent (mode pct). Fremdrift regnes fra verdien da fasen startet. Mørk grønn: målet nådd. Middels grønn: minst halvveis. Lys grønn: på vei. Grå: stillestående. Hvit: ingen mål i denne fasen. Lys rød: beveget seg litt bort. Mørk rød: langt bort. Fire mål er Karsans egne tall: 10-årsrente 5,5 % i fase 1 og 4 % i fase 2 og 3, S&P 500 fall 25 % i fase 2 og KPI 10 % i fase 4. Ikke alle nøkkeltall har mål, svakt begrunnede mål er fjernet. Resten er denne sidens operasjonalisering av tesen."
   },
   "regime": {
     "_merknad": "Fasene og vilkårene er denne sidens operasjonalisering av tesen, ikke Karsans egne definisjoner. En fase regnes som nådd når vilkårene er oppfylt (require=all: alle, require=any: minst ett). Gjeldende fase er den høyeste fasen som er nådd. Vilkår uten data vises som Ikke dekket og telles ikke.",
@@ -536,7 +541,7 @@
       {
         "id": 2,
         "name": "Fase 2: Aksjefall",
-        "description": "Aksjemarkedet faller kraftig, noe som holder lange renter nede.",
+        "description": "Aksjemarkedet faller kraftig samtidig med rentetoppen, noe som holder lange renter nede.",
         "require": "any",
         "conditions": [
           {
@@ -633,7 +638,7 @@
       {
         "id": 4,
         "name": "Fase 4: Inflasjon",
-        "description": "Inflasjonen tar av mot to sifret, realrentene presses ned.",
+        "description": "Inflasjonen tar av mot to sifret, realrentene presses ned. Karsan venter dette sent 2027 til 2028.",
         "require": "all",
         "conditions": [
           {

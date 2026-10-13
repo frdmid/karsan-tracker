@@ -174,7 +174,8 @@ function phasebar(ctx, id, ind, states, phases) {
     const t = (ind.phase_targets || {})[String(s.phase)];
     const status = s.grade ? `${GRADE[s.grade]} (${Math.round(s.progress * 100)} %)` : t ? "ingen fremdrift å måle" : "ingen mål i denne fasen";
     const when = s.state === "frozen" ? `da regimet gikk videre ${C.fmtDate(s.date)}` : "nå";
-    const tip = `${name(s.phase)}, ${when}: ${status}. ${targetText(ctx, id, ind, t)}, fasestart ${C.fmtDate(s.start)}.`;
+    const tip = t ? `${name(s.phase)}, ${when}: ${status}. ${targetText(ctx, id, ind, t)}, fasestart ${C.fmtDate(s.start)}.`
+      : `${name(s.phase)}, ${when}: ingen mål i denne fasen.`;
     return `<span class="s-${s.state} g-${s.grade || "none"}" title="${esc(tip)}"></span>`;
   }).join("")}</div>`;
 }
@@ -240,8 +241,9 @@ function renderSignals(ctx, results) {
       dist = r.distance > 0 ? `${C.fmtNum(r.distance, 2)} pp igjen` : `passert med ${C.fmtNum(-r.distance, 2)} pp`;
     }
     const cls = { Oppfylt: "ok", "Ikke oppfylt": "bad", "Overvåkes": "no", "Ikke dekket": "na" }[r.status];
-    const met = r.metDate ? `<br><span class="muted small">nådd ${C.fmtDate(r.metDate)}</span>` : "";
-    const deadline = rule.deadline ? `<br><span class="muted small">frist ${C.fmtDate(rule.deadline)}</span>` : "";
+    const met = (r.metDate ? `<br><span class="muted small">nådd ${C.fmtDate(r.metDate)}</span>` : "")
+      + (r.late ? `<br><span class="stale">forsinket</span>` : "");
+    const deadline = rule.deadline ? `<br><span class="muted small">frist ${C.fmtDate(rule.deadline)}${rule.final_deadline ? `, ytre frist ${C.fmtDate(rule.final_deadline)}` : ""}</span>` : "";
     const note = s.definition_note ? `<br><span class="muted small">${esc(s.definition_note)}</span>` : "";
     const upd = r.asOf ? `${C.fmtDate(r.asOf)}${staleTag(ctx, r.seriesId, r.asOf)}<br><span class="muted small">${esc(sourceLine(ctx, r.seriesId))}</span>` : "";
     return `<tr><td>${esc(s.title)}</td><td>${esc(s.claim)}${deadline}${note}</td><td class="num">${actual}</td><td class="num">${dist}</td>

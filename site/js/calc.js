@@ -179,8 +179,10 @@ export function evaluateSignal(signal, data, today, recordingDate) {
   if (!now) return { ...out, status: STATUS.NOT_COVERED, reason: "For kort historikk" };
   if (rule.type === "monitor") return { ...out, status: STATUS.WATCH };
 
+  // deadline: fristen slik den er sagt. final_deadline: ytre frist. Mellom de to er signalet forsinket, ikke feilet.
   const deadline = rule.deadline || null;
-  const window = between(t, recordingDate, deadline);
+  const hardDeadline = rule.final_deadline || deadline;
+  const window = between(t, recordingDate, hardDeadline);
   let measured = window;
   if (rule.type === "change_reach") {
     const base = onOrBefore(t, recordingDate);
@@ -192,9 +194,9 @@ export function evaluateSignal(signal, data, today, recordingDate) {
   out.distance = distance(out.actual, rule.threshold);
   out.peak = maxIn(measured);
   const first = measured.find((r) => r.value >= rule.threshold);
-  if (first) return { ...out, status: STATUS.MET, metDate: first.date };
-  if (deadline && today > deadline) return { ...out, status: STATUS.NOT_MET };
-  return { ...out, status: STATUS.WATCH };
+  if (first) return { ...out, status: STATUS.MET, metDate: first.date, late: !!(deadline && first.date > deadline) };
+  if (hardDeadline && today > hardDeadline) return { ...out, status: STATUS.NOT_MET };
+  return { ...out, status: STATUS.WATCH, late: !!(deadline && today > deadline) };
 }
 
 // ---------- Regime ----------

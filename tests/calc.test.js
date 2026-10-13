@@ -76,6 +76,17 @@ test("signal level_reach: oppfylt, overvåkes, ikke oppfylt", () => {
   assert.equal(c.evaluateSignal(sig(6.0, "2026-10-05"), data, TODAY, REC).status, "Ikke oppfylt");
 });
 
+test("signal med ytre frist: forsinket mellom fristene, ikke oppfylt etter ytre frist", () => {
+  const sig = (deadline, final_deadline) => ({ series: ["R"], rule: { type: "level_reach", threshold: 6.0, deadline, final_deadline } });
+  const late = c.evaluateSignal(sig("2026-10-05", "2026-12-31"), { R: rente }, TODAY, REC);
+  assert.equal(late.status, "Overvåkes");
+  assert.equal(late.late, true);
+  assert.equal(c.evaluateSignal(sig("2026-10-05", "2026-10-10"), { R: rente }, TODAY, REC).status, "Ikke oppfylt");
+  const met = c.evaluateSignal({ series: ["R"], rule: { type: "level_reach", threshold: 5.5, deadline: "2026-10-05", final_deadline: "2026-12-31" } }, { R: rente }, TODAY, REC);
+  assert.equal(met.status, "Oppfylt");
+  assert.equal(met.late, true);
+});
+
 test("signal drawdown_reach bruker første dato over terskel", () => {
   const r = c.evaluateSignal({ series: ["I"], rule: { type: "drawdown_reach", threshold: 25, deadline: "2027-06-30" } }, { I: indeks }, TODAY, REC);
   assert.equal(r.status, "Oppfylt");
