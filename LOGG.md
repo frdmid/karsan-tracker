@@ -4,6 +4,8 @@ Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
 ## 2026-10-13
 
+* Fylte fasestriper får nå den sterke varianten av boksens retningsfarge (grønn, rød eller grå) i stedet for nøytral grå. Etter ønske fra Frode.
+
 * Nøkkeltallboksene: fjernet tekst om narrativet (retning og begrunnelse) fra boksene, ligger nå bare som tooltip og aria-label. Hele boksen har retningsfarge (grønn mot, rød bort, nøytral uendret). Ny list øverst i hver boks med én stripe per fase, fylt opp til gjeldende fase, pluss en fasenøkkel over boksene. Antall faser leses fra `regime` i config. Hvorfor: Frode ville se fasen i hver boks. Første forslag (fargefeltet delt i fire striper) svekket retningssignalet i tidlige faser, derfor valgte Frode alternativet med fasen som list øverst.
 
 ## 2026-10-12 (forts.)

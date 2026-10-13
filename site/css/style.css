@@ -126,8 +126,11 @@ a { color: var(--s1); }
     repeating-linear-gradient(90deg, transparent 0 calc(100% / var(--n) - 2px), var(--tile-bg) calc(100% / var(--n) - 2px) calc(100% / var(--n))),
     linear-gradient(90deg, var(--phase-on) 0 var(--fill), var(--phase-off) var(--fill) 100%);
 }
-.tile.mot { --tile-bg: var(--good-fill); }
-.tile.bort { --tile-bg: var(--bad-fill); }
+/* Fylte fasestriper får den sterke varianten av retningsfargen. */
+.tile { --stripe-on: var(--muted); }
+.tile::before { --phase-on: var(--stripe-on); }
+.tile.mot { --tile-bg: var(--good-fill); --stripe-on: var(--good); }
+.tile.bort { --tile-bg: var(--bad-fill); --stripe-on: var(--bad); }
 .tile.nodata::before { display: none; }
 .tile .tt { font-size: 13px; color: var(--ink-2); display: flex; justify-content: space-between; gap: 8px; }
 .tile .tv { font-size: 26px; font-weight: 600; line-height: 1.2; margin: 2px 0; font-variant-numeric: normal; }

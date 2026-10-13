@@ -163,7 +163,7 @@ function renderTiles(ctx, regime) {
   const n = phases.length;
   const filled = phases.filter((p) => p.id <= regime.current.id).length;
   const stripe = `style="--n:${n};--fill:${(filled / n) * 100}%"`;
-  $("#overview-intro").textContent = `Grønn boks: endringen siste ${ov.window_days} dager er i retning narrativet. Rød: bort fra narrativet. Nøytral: uendret eller ingen retning. Lista øverst i hver boks har ${n} striper, én per fase, fylt opp til fasen vi er i nå. Grafen viser siste ${ov.spark_days} dager, stiplet strek markerer startpunktet for endringen.`;
+  $("#overview-intro").textContent = `Grønn boks: endringen siste ${ov.window_days} dager er i retning narrativet. Rød: bort fra narrativet. Nøytral: uendret eller ingen retning. Lista øverst i hver boks har ${n} striper, én per fase, fylt opp til fasen vi er i nå i samme farge som boksen. Grafen viser siste ${ov.spark_days} dager, stiplet strek markerer startpunktet for endringen.`;
   $("#phase-key").style.gridTemplateColumns = `repeat(${n}, 1fr)`;
   $("#phase-key").innerHTML = phases.map((p) => `<span class="${p.id <= regime.current.id ? "on" : ""}">${esc(p.name.split(":")[0])}</span>`).join("");
   let toward = 0, counted = 0;
