@@ -59,8 +59,8 @@ async function load() {
   }));
   // Nyheter er valgfrie: siden fungerer uten dem.
   const opt = (p) => fetchText(base + p).then(JSON.parse).catch(() => null);
-  const [newsCfg, news, labels, summary] = await Promise.all([opt("config/news.json"), opt("data/news.json"), opt("config/news_labels.json"), opt("data/news_summary.json")]);
-  return { base, meta, signals, status, data, dataPath, privateIds, privateGenerated: priv && priv.generated, newsCfg, news, summary, labels: (labels && labels.labels) || {} };
+  const [newsCfg, news, labels, summary, episodes] = await Promise.all([opt("config/news.json"), opt("data/news.json"), opt("config/news_labels.json"), opt("data/news_summary.json"), opt("data/karsan_episodes.json")]);
+  return { base, meta, signals, status, data, dataPath, privateIds, privateGenerated: priv && priv.generated, newsCfg, news, summary, episodes, labels: (labels && labels.labels) || {} };
 }
 
 // ---------- Hjelpere ----------
@@ -524,6 +524,43 @@ function renderNews(ctx) {
   }).join("");
 }
 
+// ---------- Podcastagent ----------
+
+const RELATION = { bekrefter: ["ok", "Bekrefter"], endrer: ["na", "Endrer"], nytt: ["no", "Nytt"], motsier: ["bad", "Motsier"] };
+
+function mmss(sec) {
+  if (!sec) return "";
+  const m = Math.floor(sec / 60), s = Math.round(sec % 60);
+  return `${m}:${String(s).padStart(2, "0")}`;
+}
+
+function renderAgent(ctx) {
+  const el = $("#agent");
+  const eps = ctx.episodes ? Object.values(ctx.episodes.episodes) : [];
+  const since = ctx.newsCfg && ctx.newsCfg.karsan.analyze_since;
+  if (!eps.length) { el.innerHTML = ""; return; }
+  const titles = Object.fromEntries(ctx.signals.signals.map((s) => [s.id, s.title]));
+  const analyzed = eps.filter((e) => e.analysis && e.analysis.karsan_deltar);
+  const waiting = eps.filter((e) => !e.analysis && since && e.date >= since);
+  const cards = analyzed.map((e) => {
+    const a = e.analysis;
+    const claims = a.pastander.map((p) => {
+      const [cls, label] = RELATION[p.forhold] || ["no", p.forhold];
+      const meta = [p.tall, p.tidshorisont, p.gjelder_krav && titles[p.gjelder_krav] ? `gjelder: ${titles[p.gjelder_krav]}` : "", mmss(p.tid_sek)].filter(Boolean).join(", ");
+      return `<li><span class="tag ${cls}">${label}</span> <strong>${esc(p.tema)}:</strong> ${esc(p.pastand)}
+        ${meta ? `<br><span class="ns">${esc(meta)}</span>` : ""}${p.sitat ? `<br><span class="ns">«${esc(p.sitat)}»</span>` : ""}</li>`;
+    }).join("");
+    const props = a.forslag.length ? `<p class="small"><strong>Forslag til dashbordet</strong> (ikke lagt inn, må godkjennes):</p><ul class="small">${a.forslag.map((f) => `<li>${esc(f.hva)}. <span class="muted">${esc(f.begrunnelse)}</span></li>`).join("")}</ul>` : "";
+    return `<div class="card"><h3><a href="${esc(e.link)}" rel="noopener" target="_blank">${esc(e.title)}</a></h3>
+      <p class="ns">${esc(e.show)}, ${C.fmtDate(e.date)}. Analysert ${C.fmtTimestamp(e.analyzed_at)} av ${esc(e.model)} fra ${esc(e.transcript_source)}.</p>
+      <p>${esc(a.oppsummering)}</p><ul class="claims">${claims}</ul>${props}</div>`;
+  }).join("");
+  const wait = waiting.length ? `<p class="muted small">Venter: ${waiting.map((e) => `${esc(e.title)} (${esc(e.message || "")})`).join("; ")}</p>` : "";
+  el.innerHTML = `<h3>Podcastagent: hva Karsan sier nå</h3>
+    <p class="muted small">Agenten finner nye episoder med Karsan, henter transkripsjon og lar Claude sammenligne det han sier med kravene på siden. Transkripsjoner er maskinlaget og uten talernavn, sitatene er korte og på originalspråket. Forslag legges aldri inn automatisk.</p>
+    ${cards || '<p class="small">Ingen episoder analysert ennå.</p>'}${wait}`;
+}
+
 // ---------- Fotnote ----------
 
 function renderFootnote(ctx) {
@@ -565,6 +602,7 @@ async function main() {
   renderRegime(ctx, regime);
   renderSignals(ctx, results);
   renderNews(ctx);
+  renderAgent(ctx);
   renderRange(ctx);
   renderCharts(ctx);
   renderSince(ctx);

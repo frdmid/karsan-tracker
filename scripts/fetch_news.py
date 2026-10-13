@@ -47,6 +47,22 @@ def itunes(term, match):
     return out, url
 
 
+YOUTUBE = "https://www.youtube.com/feeds/videos.xml?channel_id={id}"
+
+
+def youtube(channel_id, name):
+    """Åpen RSS for en YouTube-kanal (Atom). Bare tittel, dato og lenke."""
+    url = YOUTUBE.format(id=channel_id)
+    ns = {"a": "http://www.w3.org/2005/Atom"}
+    root = ET.fromstring(http_get(url).encode("utf-8"))
+    out = []
+    for e in root.findall("a:entry", ns):
+        link = e.find("a:link", ns)
+        out.append({"date": (e.findtext("a:published", namespaces=ns) or "")[:10], "title": (e.findtext("a:title", namespaces=ns) or "").strip(),
+                    "source": name, "link": link.attrib.get("href") if link is not None else None, "kind": "video"})
+    return out, url
+
+
 def merge(old, new, keep_days, cap):
     by_link = {x["link"]: x for x in old}
     for x in new:
@@ -66,8 +82,11 @@ def main():
 
     k = cfg["karsan"]
     karsan_new = []
-    for name, fn in (("Google News", lambda: gnews(k["news_query"], cfg["lookback"])),
-                     ("Apple Podcasts", lambda: itunes(k["itunes_term"], k["itunes_match"]))):
+    sources = [("Google News", lambda: gnews(k["news_query"], cfg["lookback"])),
+               ("Apple Podcasts", lambda: itunes(k["itunes_term"], k["itunes_match"]))]
+    for yt in k.get("youtube", []):
+        sources.append((yt["name"], lambda yt=yt: youtube(yt["channel_id"], yt["name"])))
+    for name, fn in sources:
         try:
             items, url = fn()
             karsan_new += items
@@ -75,7 +94,7 @@ def main():
         except Exception as e:
             out["errors"].append(f"Karsan, {name}: {e}")
     # Podcaster beholdes lenger enn nyheter: 365 dager
-    out["karsan"] = merge(prev.get("karsan", []), karsan_new, 365, 60)
+    out["karsan"] = merge(prev.get("karsan", []), karsan_new, 365, 90)
 
     for t in cfg["topics"]:
         try:

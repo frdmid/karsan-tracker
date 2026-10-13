@@ -51,6 +51,18 @@ jobs:
         run: python scripts/fetch_news.py
         continue-on-error: true
 
+      - name: Installer faster-whisper (bare når TRANSCRIBE_AUDIO=true)
+        if: vars.TRANSCRIBE_AUDIO == 'true'
+        run: pip install --quiet faster-whisper
+
+      - name: Podcastagent (finn episoder, hent transkripsjon, analyser med Claude)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TRANSCRIBE_AUDIO: ${{ vars.TRANSCRIBE_AUDIO }}
+        run: python scripts/podcast_agent.py --max-new 3
+        continue-on-error: true
+        timeout-minutes: 45
+
       - name: Oppsummer nyheter med Claude
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

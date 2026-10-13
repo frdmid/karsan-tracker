@@ -6,7 +6,16 @@
   "karsan": {
     "news_query": "\"Cem Karsan\"",
     "itunes_term": "Cem Karsan",
-    "itunes_match": "karsan"
+    "itunes_match": "karsan",
+    "_feeds": "RSS-feeder podcastagenten leser i sin helhet. Episoder tas med når tittelen treffer match (regulært uttrykk, beskrivelsen brukes ikke fordi den ofte nevner Karsan uten at han deltar). Bare episoder fra og med analyze_since analyseres med Claude, også uten Karsans navn i tittelen. Verifisert 2026-10-13: Karsans egen serie U Got Options (UGO01 til UGO12) ligger i Top Traders Unplugged-feeden med transkripsjon.",
+    "analyze_since": "2026-09-01",
+    "feeds": [
+      { "name": "Top Traders Unplugged", "url": "https://feeds.captivate.fm/top-traders-unplugged/", "match": "UGO\\d|Karsan" }
+    ],
+    "_youtube": "Karsans YouTube-kanal Kai Media, åpen RSS uten nøkkel. Verifisert 2026-10-13. Vises som lenker under Karsan selv, uten transkripsjon.",
+    "youtube": [
+      { "name": "Kai Media (YouTube)", "channel_id": "UChrx0LQWgRhTuVqUXEbM6Cg" }
+    ]
   },
   "social": {
     "status": "Ikke dekket",

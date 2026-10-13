@@ -4,6 +4,9 @@ Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
 ## 2026-10-13
 
+* Podcastagent etter ønske fra Frode: `scripts/podcast_agent.py`, nytt steg i "Oppdater data", ny seksjon under Karsan selv. Verifisert: Top Traders Unplugged har transkripsjon i feeden, Karsans egen serie U Got Options (UGO01 til UGO12) ligger der. "You've Got Options" fantes ikke under det navnet, riktig navn er U Got Options. Kai Media på YouTube lagt til som lenker via åpen RSS. Andre podkaster (Brunell, Taggart, David Lin, Forward Guidance) har ikke transkripsjon i feeden, lydtranskribering kan slås på med `TRANSCRIBE_AUDIO=true`. Analyse krever `ANTHROPIC_API_KEY`.
+* SI420 analysert manuelt i Claude Code mot transkripsjonen: 10-årsrente 5,5 til 6 % innen tre måneder, S&P 25 til 40 % i H1 2027 (mulig Q4 ved bestridt valg), QE innen seks måneder og senest juni 2027, formuefond og to sifret inflasjon bekreftet. Nytt: inflasjonen først sent 2027 og 2028, rentetopp og aksjefall samtidig, 10-årsrenten trolig til 4 % etterpå, sterk dollar og svakt gull er målet på kort sikt, opptaket var trolig 29. september. Seks forslag lagt inn i analysen, ikke i config.
+
 * Fjernet de svakest begrunnede målene etter ønske fra Frode: 30-årsrente +0,4 pp i fase 1, gull +10 % i alle faser, dollar −5 % i alle faser, KPI 10 % i fase 1 til 3 (beholdt i fase 4). 40 til 29 mål. Fase uten mål vises som hvit stripe med tynn kant, ny forklaring for "ingen mål i fasen" og "fase ikke nådd".
 
 * Lokal visning sender nå `Cache-Control: no-store`, så nettleseren ikke viser gamle filer (Frode så ikke fasestripene lokalt). Artifact oppdatert til versjon 2 med versjonsstempel og offentlige data per 13. okt, uten private data. Artifact bygges i `build/artifact` (ikke committet).

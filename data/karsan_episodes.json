@@ -1,0 +1,727 @@
+{
+  "episodes": {
+    "3b2bd205c3ba": {
+      "id": "3b2bd205c3ba",
+      "date": "2026-10-06",
+      "show": "Natalie Brunell's Coin Stories",
+      "title": "Cem Karsan: The Big Print Is Coming and the Government Will Buy Stocks",
+      "link": "https://podcasts.apple.com/us/podcast/cem-karsan-the-big-print-is-coming-and-the/id1569130932?i=1000793460008&uo=4",
+      "audio": "https://cdn.simplecast.com/media/audio/transcoded/6e28cb79-1265-4e14-b535-8eab36347648/b0f95d3c-f69f-4e48-8c2c-eff3b94c2063/episodes/audio/group/b6b4ff5d-053a-468c-afe7-308ff5989a56/group-item/9b7a225b-0c2e-461f-8f39-61855240aa63/128_default_tc.mp3?aid=rss_feed&feed=760kY6cd",
+      "minutes": 70,
+      "collection_id": 1569130932,
+      "transcript_status": "mangler",
+      "message": "Ingen transkripsjon i feeden. Lydtranskribering er av (TRANSCRIBE_AUDIO)."
+    },
+    "b6e3a291047d": {
+      "id": "b6e3a291047d",
+      "date": "2026-10-02",
+      "show": "Top Traders Unplugged",
+      "title": "SI420: The Market Might Be More Fragile Than It Looks ft. Cem Karsan",
+      "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/si420-the-market-might-be-more-fragile-than-it-looks-ft-cem-karsan",
+      "audio": "https://episodes.captivate.fm/episode/2fa3defe-6e87-4c4e-bc49-ca770325e8ca.mp3",
+      "minutes": 64,
+      "collection_id": 888420325,
+      "feed_url": "https://feeds.captivate.fm/top-traders-unplugged/",
+      "transcript_status": "ok",
+      "transcript_source": "RSS podcast:transcript (application/json)",
+      "transcript_url": "https://transcripts.captivate.fm/transcript/1438b66c-e353-4084-92f9-89514c15c8cf/transcript.json",
+      "transcript_words": 9809,
+      "message": null,
+      "analysis": {
+        "karsan_deltar": true,
+        "oppsummering": "Karsan bekrefter hovedtesen: renten skal få en rask topp på 5,5 til 6 % innen tre måneder samtidig som aksjene faller 25 til 40 %, helst i første halvår 2027. Fallet gir påskudd for QE i lang ende innen seks måneder og et statlig formuefond som kjøper aksjer. Fed-hevingen kaller han teater for å vise uavhengighet og styrke dollaren. To sifret inflasjon kommer først sent 2027 og 2028. Han venter at mellomvalget blir bestridt, noe som kan fremskynde fallet til Q4.",
+        "pastander": [
+          {
+            "tema": "10-årsrenten",
+            "pastand": "Rask V-topp i renten: 10-årsrenten til 5,5 til 6 % innen tre måneder. Senere kan den falle mot 4 % før den ender rundt 5 %.",
+            "tall": "5,5 til 6 %, deretter 4 %, så 5 %",
+            "tidshorisont": "innen ca. 3 måneder",
+            "sitat": "somewhere between 5.5% and 6% in the 10-year, and it's going to be quick",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "rente10"
+          },
+          {
+            "tema": "Aksjefall",
+            "pastand": "S&P 500 faller 25 til 40 % i første halvår 2027. Det kan komme i Q4 etter mellomvalget, men det er lite sannsynlig. Rentetoppen og aksjefallet skjer samtidig.",
+            "tall": "25 til 40 %",
+            "tidshorisont": "H1 2027, mulig Q4 2026",
+            "sitat": "25% to 40% in the S&P in the first two quarters",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Mellomvalget",
+            "pastand": "Valget blir trolig bestridt, og administrasjonen vil styre utfallet, blant annet gjennom poststemmer. Det øker sjansen for fallet allerede i Q4.",
+            "tall": "",
+            "tidshorisont": "november 2026",
+            "sitat": "I'm very much of the view that this is going to be a contested election",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "QE",
+            "pastand": "QE kommer innen seks måneder og senest i juni 2027, utløst av en krise i statsobligasjoner. Warsh kommer da med en stor fasilitet i lang ende.",
+            "tall": "",
+            "tidshorisont": "innen 6 måneder, senest juni 2027",
+            "sitat": "We are within six months.",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "qe"
+          },
+          {
+            "tema": "Skjult QE allerede nå",
+            "pastand": "QE skjer allerede uten navnet: tilbakekjøp av statsobligasjoner (9 mrd. USD) og en fasilitet på 60 mrd. USD for å støtte yen.",
+            "tall": "9 mrd. og 60 mrd. USD",
+            "tidshorisont": "nå",
+            "sitat": "We have QE happening right now, just nobody calls it QE.",
+            "tid_sek": 0,
+            "forhold": "nytt",
+            "gjelder_krav": "lange_kjop"
+          },
+          {
+            "tema": "Statlig formuefond",
+            "pastand": "Aksjefallet gir påskuddet for et statlig formuefond som kjøper aksjer, kombinert med Trump-kontoer. Japan eier allerede 8 % av Nikkei.",
+            "tall": "",
+            "tidshorisont": "etter aksjefallet",
+            "sitat": "roll out the sovereign wealth fund to buy all the equities",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "formuesfond"
+          },
+          {
+            "tema": "Inflasjon",
+            "pastand": "To sifret inflasjon, like ille eller verre enn på 60- og 70-tallet, men først sent 2027 og 2028 når pengetrykkingen tar av.",
+            "tall": "to sifret",
+            "tidshorisont": "sent 2027 til 2028",
+            "sitat": "inflation, not tomorrow, but like after this refresh is going to scream, in '28",
+            "tid_sek": 0,
+            "forhold": "endrer",
+            "gjelder_krav": "inflasjon"
+          },
+          {
+            "tema": "Fed-hevingen",
+            "pastand": "Hevingen er kabuki-teater for å vise uavhengighet. Warsh og Bessent er i praksis én og samme. Målet på kort sikt er sterkere dollar og svakere gull.",
+            "tall": "",
+            "tidshorisont": "kort sikt",
+            "sitat": "dollar strength, gold weakness, this is the whole game.",
+            "tid_sek": 0,
+            "forhold": "endrer",
+            "gjelder_krav": "fedmal"
+          },
+          {
+            "tema": "Negativ beta",
+            "pastand": "Rundt 45 % av S&P 500 har negativ beta, som han kaller det beste målet på hvor skjørt markedet er.",
+            "tall": "45 %",
+            "tidshorisont": "",
+            "sitat": "45% of the S&P has a negative beta.",
+            "tid_sek": 0,
+            "forhold": "nytt",
+            "gjelder_krav": "negbeta"
+          },
+          {
+            "tema": "AI og kreditt",
+            "pastand": "Nesten all inntjeningsvekst kommer fra AI-komplekset og er drevet av gjeldsfinansiert capex med statlig støtte i ryggen. Risikoen synes i CDS.",
+            "tall": "",
+            "tidshorisont": "",
+            "sitat": "you're seeing it, by the way, in credit default swaps",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "ai_cds"
+          },
+          {
+            "tema": "Volatilitet",
+            "pastand": "Implisitt volatilitet, særlig i aksjer, er altfor billig fra januar til juni 2027. MOVE begynner å stige, noe han mener er riktig.",
+            "tall": "",
+            "tidshorisont": "januar til juni 2027",
+            "sitat": "vol across the board in the markets is way too cheap, particularly equity vol",
+            "tid_sek": 0,
+            "forhold": "nytt",
+            "gjelder_krav": "move"
+          },
+          {
+            "tema": "Varselsignaler",
+            "pastand": "Følg politikken, administrasjonens evne til å holde kontroll, og hva Kina gjør. Der ligger risikoen for at planen glipper.",
+            "tall": "",
+            "tidshorisont": "",
+            "sitat": "watch the politics, watch the ability and control of the administration",
+            "tid_sek": 0,
+            "forhold": "nytt",
+            "gjelder_krav": ""
+          }
+        ],
+        "forslag": [
+          {
+            "hva": "Endre opptaksdato fra 25. til 29. september 2026",
+            "begrunnelse": "Episoden ble spilt inn tirsdagen etter 25. september (CTA-tall per 25. september omtales som forrige uke). Påvirker baseline og frister."
+          },
+          {
+            "hva": "10-årsrenten: mål 4 % i fase 2 og 3 i stedet for −0,5 pp",
+            "begrunnelse": "Han sier renten trolig går til 6 % før den faller til 4 %."
+          },
+          {
+            "hva": "Dollar og gull i fase 1: snu retningen (dollar opp, gull ned)",
+            "begrunnelse": "Han sier sterkere dollar og svakere gull er målet med hevingen på kort sikt. Svekkelsen kommer senere."
+          },
+          {
+            "hva": "Inflasjon: frist sent 2027 til 2028",
+            "begrunnelse": "To sifret inflasjon kommer etter pengetrykkingen, ikke nå."
+          },
+          {
+            "hva": "QE: legg til ytre frist juni 2027",
+            "begrunnelse": "Han sier det ikke skjer senere enn juni neste år på grunn av valget i 2028."
+          },
+          {
+            "hva": "Oppdater fotnoten: kravene er nå kontrollert mot transkripsjonen",
+            "begrunnelse": "Tallene stemmer med det som var gjengitt fra sekundærkilder."
+          }
+        ]
+      },
+      "analyzed_at": "2026-10-13T08:00:00Z",
+      "model": "Claude Opus 5.5 i Claude Code (manuell kjøring, ikke agenten)"
+    },
+    "9350497b1f73": {
+      "id": "9350497b1f73",
+      "date": "2026-07-04",
+      "show": "Top Traders Unplugged",
+      "title": "SI407: Why America Is Rewriting the Rules of Capitalism ft. Cem Karsan",
+      "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/si407-why-america-is-rewriting-the-rules-of-capitalism-ft-cem-karsan",
+      "audio": "https://episodes.captivate.fm/episode/09dc4398-9ca4-4087-983f-914614b90c35.mp3",
+      "minutes": 62,
+      "collection_id": 888420325,
+      "feed_url": "https://feeds.captivate.fm/top-traders-unplugged/"
+    },
+    "823956ae6896": {
+      "id": "823956ae6896",
+      "date": "2026-06-10",
+      "show": "Top Traders Unplugged",
+      "title": "UGO12: Why the Next Financial Crisis Could Change America Forever ft. Danielle DiMartino Booth",
+      "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/ugo12-why-the-next-financial-crisis-could-change-america-forever-ft-danielle-dimartino-booth",
+      "audio": "https://episodes.captivate.fm/episode/ea0658e6-25e7-463e-8368-fa78a33181cc.mp3",
+      "feed_url": "https://feeds.captivate.fm/top-traders-unplugged/"
+    },
+    "1eb9e3113945": {
+      "id": "1eb9e3113945",
+      "date": "2026-05-24",
+      "show": "Thoughtful Money with Adam Taggart",
+      "title": "A Perfect Storm Of Troubles Is Brewing | Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/a-perfect-storm-of-troubles-is-brewing-cem-karsan/id1715910847?i=1000769402835&uo=4",
+      "audio": "https://anchor.fm/s/eca7b164/podcast/play/120486519/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-24%2F424814909-44100-2-df00c0b7e1026.mp3",
+      "minutes": 103,
+      "collection_id": 1715910847
+    },
+    "3f0d1b6b314e": {
+      "id": "3f0d1b6b314e",
+      "date": "2026-05-20",
+      "show": "Top Traders Unplugged",
+      "title": "GM101: When Passive Breaks the Market ft. Hari Krishnan & Cem Karsan",
+      "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/gm101-when-passive-breaks-the-market-ft-hari-krishnan-cem-karsan",
+      "audio": "https://episodes.captivate.fm/episode/affc036a-44c3-4107-8c1c-7c4aac115161.mp3",
+      "minutes": 74,
+      "collection_id": 888420325,
+      "feed_url": "https://feeds.captivate.fm/top-traders-unplugged/"
+    },
+    "a4c8f70987ee": {
+      "id": "a4c8f70987ee",
+      "date": "2026-05-14",
+      "show": "The David Lin Report",
+      "title": "This Market Is ‘Exceedingly Rare’; When Does The ‘Tipping Point’ Hit? | Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/this-market-is-exceedingly-rare-when-does-the-tipping/id1740654463?i=1000767794164&uo=4",
+      "audio": "https://anchor.fm/s/f37f9ba0/podcast/play/119990657/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-14%2F424153423-44100-2-67be2ddb93113.m4a",
+      "minutes": 35,
+      "collection_id": 1740654463
+    },
+    "f2238f80f9f0": {
+      "id": "f2238f80f9f0",
+      "date": "2026-04-29",
+      "show": "StocktwitsTV",
+      "title": "Cem Karsan: The Market Is Being Managed (And That Tells You Something)",
+      "link": "https://podcasts.apple.com/us/podcast/cem-karsan-the-market-is-being-managed-and-that-tells/id1872877337?i=1000764547521&uo=4",
+      "audio": "https://mcdn.podbean.com/mf/web/4ngtvijrdbqw568c/STTV_CemKarsan_042926.mp3",
+      "minutes": 47,
+      "collection_id": 1872877337
+    },
+    "cae607cfed87": {
+      "id": "cae607cfed87",
+      "date": "2026-04-25",
+      "show": "Top Traders Unplugged",
+      "title": "SI397: The Market Isn’t Free Anymore, It’s Being Managed ft. Cem Karsan",
+      "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/cem-karsan",
+      "audio": "https://episodes.captivate.fm/episode/767a5f0e-c28a-4fc1-9449-b03d0f8fb053.mp3",
+      "minutes": 72,
+      "collection_id": 888420325,
+      "feed_url": "https://feeds.captivate.fm/top-traders-unplugged/"
+    },
+    "61cb1465808b": {
+      "id": "61cb1465808b",
+      "date": "2026-04-22",
+      "show": "Top Traders Unplugged",
+      "title": "UGO11: Fiscal Dominance, Dollar Power, and the Politics Driving Markets ft. Lyn Alden",
+      "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/ugo11-fiscal-dominance-dollar-power-and-the-politics-driving-markets-ft-lyn-alden",
+      "audio": "https://episodes.captivate.fm/episode/11ecac62-7310-429d-8e74-3054f40c6f71.mp3",
+      "feed_url": "https://feeds.captivate.fm/top-traders-unplugged/"
+    },
+    "2bf3585fee1d": {
+      "id": "2bf3585fee1d",
+      "date": "2026-03-31",
+      "show": "StocktwitsTV",
+      "title": "Cem Karsan: Iran Headlines, Oil Control, and Why Markets Move in Stair Steps",
+      "link": "https://podcasts.apple.com/us/podcast/cem-karsan-iran-headlines-oil-control-and-why-markets/id1872877337?i=1000758512260&uo=4",
+      "audio": "https://mcdn.podbean.com/mf/web/632nsun3kunwp3mb/STTV_Cem_033126.mp3",
+      "minutes": 28,
+      "collection_id": 1872877337
+    },
+    "21ceef79327b": {
+      "id": "21ceef79327b",
+      "date": "2026-03-04",
+      "show": "Top Traders Unplugged",
+      "title": "UGO10: The Fourth Turning Is Here: How to Trade the Regime Shift ft. Neil Howe",
+      "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/ugo10-the-fourth-turning-is-here-how-to-trade-the-regime-shift-ft-neil-howe",
+      "audio": "https://episodes.captivate.fm/episode/f1b997e1-37c0-45cf-81ed-48f7e53c4b7a.mp3",
+      "feed_url": "https://feeds.captivate.fm/top-traders-unplugged/"
+    },
+    "bbe402099285": {
+      "id": "bbe402099285",
+      "date": "2026-02-28",
+      "show": "Top Traders Unplugged",
+      "title": "SI389: The Market Is Pinned, But Risk Is Growing ft. Cem Karsan & Alan Dunne",
+      "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/si389-the-market-is-pinned-but-risk-is-growing-ft-cem-karsan-alan-dunne",
+      "audio": "https://episodes.captivate.fm/episode/0d99abec-58b4-4bda-b08a-4607ed502fea.mp3",
+      "minutes": 63,
+      "collection_id": 888420325,
+      "feed_url": "https://feeds.captivate.fm/top-traders-unplugged/"
+    },
+    "fa5b34f929e8": {
+      "id": "fa5b34f929e8",
+      "date": "2026-02-04",
+      "show": "Top Traders Unplugged",
+      "title": "UGO09: Playing the Players in a Narrative Market ft. Ben Hunt",
+      "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/ugo09-playing-the-players-in-a-narrative-market-ft-ben-hunt",
+      "audio": "https://episodes.captivate.fm/episode/985124cd-93ed-4421-a47f-6782d0d2dd1a.mp3",
+      "feed_url": "https://feeds.captivate.fm/top-traders-unplugged/"
+    },
+    "dff451488920": {
+      "id": "dff451488920",
+      "date": "2026-01-22",
+      "show": "Natalie Brunell's Coin Stories",
+      "title": "Cem Karsan: Why the U.S. Dollar's Power Matters More Than Gold or Bitcoin",
+      "link": "https://podcasts.apple.com/us/podcast/cem-karsan-why-the-u-s-dollars-power-matters-more/id1569130932?i=1000746219223&uo=4",
+      "audio": "https://cdn.simplecast.com/audio/b0f95d3c-f69f-4e48-8c2c-eff3b94c2063/episodes/f9f549b0-0544-4c47-a4ad-0149df740a74/audio/fc316e97-bac9-4e15-b69d-d5ecef527d0c/default_tc.mp3?aid=rss_feed&feed=760kY6cd",
+      "minutes": 74,
+      "collection_id": 1569130932
+    },
+    "f919b882bca2": {
+      "id": "f919b882bca2",
+      "date": "2026-01-21",
+      "show": "Forward Guidance",
+      "title": "Markets Are Entering A Wartime Economy | Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/markets-are-entering-a-wartime-economy-cem-karsan/id1592743188?i=1000746069800&uo=4",
+      "audio": "https://traffic.megaphone.fm/BWG5285012183.mp3?updated=1769005994",
+      "minutes": 48,
+      "collection_id": 1592743188
+    },
+    "a7494c5a0992": {
+      "id": "a7494c5a0992",
+      "date": "2025-12-20",
+      "show": "Top Traders Unplugged",
+      "title": "SI379: The Illusion of Safety in a Fully Invested Market ft. Cem Karsan",
+      "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/si379-the-illusion-of-safety-in-a-fully-invested-market-ft-cem-karsan",
+      "audio": "https://episodes.captivate.fm/episode/d6b14976-e7c5-4423-9741-51ba648bb320.mp3",
+      "minutes": 71,
+      "collection_id": 888420325,
+      "feed_url": "https://feeds.captivate.fm/top-traders-unplugged/"
+    },
+    "bbba91d5955d": {
+      "id": "bbba91d5955d",
+      "date": "2025-12-04",
+      "show": "Thoughtful Money with Adam Taggart",
+      "title": "The Market Is In A Topping Process | Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/the-market-is-in-a-topping-process-cem-karsan/id1715910847?i=1000739698039&uo=4",
+      "audio": "https://traffic.megaphone.fm/APO5396962555.mp3",
+      "minutes": 91,
+      "collection_id": 1715910847
+    },
+    "67c6b79a608f": {
+      "id": "67c6b79a608f",
+      "date": "2025-11-24",
+      "show": "Maggie Lake Talking Markets",
+      "title": "109: Survival, Grief & Finding Meaning. Major Notes with Cem Karsan.",
+      "link": "https://podcasts.apple.com/us/podcast/109-survival-grief-finding-meaning-major-notes-with/id1793158525?i=1000738122023&uo=4",
+      "audio": "https://anchor.fm/s/fab7af70/podcast/play/111630683/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-10-24%2F877d5e70-9ef5-4d15-3cbc-a79d9a600348.mp3",
+      "minutes": 92,
+      "collection_id": 1793158525
+    },
+    "066fcf136116": {
+      "id": "066fcf136116",
+      "date": "2025-11-19",
+      "show": "Top Traders Unplugged",
+      "title": "UGO08: The Coming Hunger Games for Global Savings ft. David Dredge",
+      "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/ugo08-the-hunger-games-for-global-savings-ft-david-dredge",
+      "audio": "https://episodes.captivate.fm/episode/863ad2bd-4313-4583-a26a-cfc59579722e.mp3",
+      "feed_url": "https://feeds.captivate.fm/top-traders-unplugged/"
+    },
+    "fc0458e6cce0": {
+      "id": "fc0458e6cce0",
+      "date": "2025-11-05",
+      "show": "Top Traders Unplugged",
+      "title": "GM90: The Quiet Repricing of Reality ft. Adam Rozencwajg & Cem Karsan",
+      "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/gm90-the-quiet-repricing-of-reality-ft-adam-rozencwajg",
+      "audio": "https://episodes.captivate.fm/episode/8164db58-3e90-401c-bdc8-06f957dedf82.mp3",
+      "minutes": 71,
+      "collection_id": 888420325,
+      "feed_url": "https://feeds.captivate.fm/top-traders-unplugged/"
+    },
+    "b1b77aafb7b9": {
+      "id": "b1b77aafb7b9",
+      "date": "2025-10-31",
+      "show": "Excess Returns",
+      "title": "The Liquidity Trap Door | Cem Karsan on Why We Are Likely in a Bubble, It Could Get Bigger, And What Pops It",
+      "link": "https://podcasts.apple.com/us/podcast/the-liquidity-trap-door-cem-karsan-on-why-we-are/id1490296778?i=1000734444349&uo=4",
+      "audio": "https://traffic.megaphone.fm/APO6240306300.mp3",
+      "minutes": 65,
+      "collection_id": 1490296778
+    },
+    "b4efa23f76f8": {
+      "id": "b4efa23f76f8",
+      "date": "2025-10-22",
+      "show": "Top Traders Unplugged",
+      "title": "UGO07: The Illusion of Safety: How Markets Became the Economy ft. Keith DeCarlucci, Patrick Kazley & Hari Krishnan",
+      "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/ugo07-the-illusion-of-safety-how-markets-became-the-economy-ft-keith-decarlucci-patrick-kazley-hari-krishnan",
+      "audio": "https://episodes.captivate.fm/episode/610e544f-90b1-4d82-b6e5-43dd0410740d.mp3",
+      "feed_url": "https://feeds.captivate.fm/top-traders-unplugged/"
+    },
+    "1a80274bd981": {
+      "id": "1a80274bd981",
+      "date": "2025-04-13",
+      "show": "Thoughtful Money with Adam Taggart",
+      "title": "Wild Volatility To Send Stocks Down 35-45% This Year | Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/wild-volatility-to-send-stocks-down-35-45-this-year/id1715910847?i=1000703352843&uo=4",
+      "audio": "https://traffic.megaphone.fm/APO1572132685.mp3",
+      "minutes": 89,
+      "collection_id": 1715910847
+    },
+    "0fa20aed0488": {
+      "id": "0fa20aed0488",
+      "date": "2025-02-17",
+      "show": "Two Quants and a Financial Planner",
+      "title": "Practical Lessons from Cem Karsan | Inside the Hidden Forces Moving Markets",
+      "link": "https://podcasts.apple.com/us/podcast/practical-lessons-from-cem-karsan-inside-the-hidden/id1670513515?i=1000693021517&uo=4",
+      "audio": "https://anchor.fm/s/d9f6e850/podcast/play/98614005/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-1-17%2F395021405-44100-2-0740c6c5c7273.mp3",
+      "minutes": 64,
+      "collection_id": 1670513515
+    },
+    "8cbb4b2095dc": {
+      "id": "8cbb4b2095dc",
+      "date": "2025-01-28",
+      "show": "Thoughtful Money with Adam Taggart",
+      "title": "Get Ready For A Wild Time In The Markets As Volatility Increases | Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/get-ready-for-a-wild-time-in-the-markets-as/id1715910847?i=1000686309654&uo=4",
+      "audio": "https://traffic.megaphone.fm/APO4818656942.mp3",
+      "minutes": 64,
+      "collection_id": 1715910847
+    },
+    "a3564ac9b19d": {
+      "id": "a3564ac9b19d",
+      "date": "2025-01-25",
+      "show": "Words of Rizdom - Trading Podcast",
+      "title": "Cem Karsan UNCOVERS the Real Market Algorithm That Has Precise ACCURACY | 2025 Predictions",
+      "link": "https://podcasts.apple.com/us/podcast/cem-karsan-uncovers-the-real-market-algorithm-that/id1780241706?i=1000685414467&uo=4",
+      "audio": "https://traffic.megaphone.fm/APO8432647755.mp3",
+      "minutes": 101,
+      "collection_id": 1780241706
+    },
+    "8926f8acb887": {
+      "id": "8926f8acb887",
+      "date": "2025-01-22",
+      "show": "Top Traders Unplugged",
+      "title": "GM 78: The Market Risk Nobody’s Watching ft. Dave Dredge & Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/gm-78-the-market-risk-nobodys-watching-ft-dave-dredge/id888420325?i=1000684958384&uo=4",
+      "audio": "https://podcasts.captivate.fm/media/4924de7c-d6b8-4ac0-84c9-b34d31bd9c22/TTU-Global-Macro-Episode-78-Dave-Dredge-Niels-Cem.mp3",
+      "minutes": 92,
+      "collection_id": 888420325
+    },
+    "d5f45428e717": {
+      "id": "d5f45428e717",
+      "date": "2025-01-11",
+      "show": "Top Traders Unplugged",
+      "title": "SI330: Yield Storm Ahead: Preparing for a New Era ft. Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/si330-yield-storm-ahead-preparing-for-a-new-era-ft-cem-karsan/id888420325?i=1000683558055&uo=4",
+      "audio": "https://podcasts.captivate.fm/media/b4c9ec32-6038-4076-a354-8ec9d611c553/Systematic-Investor-Episode-330-ft-Cem-Karsan.mp3",
+      "minutes": 61,
+      "collection_id": 888420325
+    },
+    "80643ed33df0": {
+      "id": "80643ed33df0",
+      "date": "2024-12-03",
+      "show": "Gamma On",
+      "title": "Gamma On EP4: Gamma Godfather Cem Karsan's Second-Derivative Philosophy",
+      "link": "https://podcasts.apple.com/us/podcast/gamma-on-ep4-gamma-godfather-cem-karsans-second-derivative/id1781930129?i=1000678982625&uo=4",
+      "audio": "https://anchor.fm/s/fd4b54f8/podcast/play/95260213/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-11-2%2F390852502-44100-2-caf079fb15abd.mp3",
+      "minutes": 46,
+      "collection_id": 1781930129
+    },
+    "cda16bb19f3b": {
+      "id": "cda16bb19f3b",
+      "date": "2024-11-23",
+      "show": "Top Traders Unplugged",
+      "title": "SI323: From Politics to Profits: How Regime Changes Affect Your Portfolio ft. Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/si323-from-politics-to-profits-how-regime-changes-affect/id888420325?i=1000677983535&uo=4",
+      "audio": "https://podcasts.captivate.fm/media/caff2fb0-307b-486e-bb9a-b68b36add8f2/Systematic-Investor-Episode-323-ft-Cem-Karsan.mp3",
+      "minutes": 73,
+      "collection_id": 888420325
+    },
+    "a6747ea7cab6": {
+      "id": "a6747ea7cab6",
+      "date": "2024-11-19",
+      "show": "Real Vision: Finance & Investing",
+      "title": "Cem Karsan: What’s Really Driving This Market Boom?",
+      "link": "https://podcasts.apple.com/us/podcast/cem-karsan-whats-really-driving-this-market-boom/id1210383304?i=1000677513786&uo=4",
+      "audio": "https://pdst.fm/e/chtbl.com/track/1B146C/traffic.megaphone.fm/ADV8887285613.mp3?updated=1732041157",
+      "minutes": 61,
+      "collection_id": 1210383304
+    },
+    "b77dad4bca42": {
+      "id": "b77dad4bca42",
+      "date": "2024-09-28",
+      "show": "Top Traders Unplugged",
+      "title": "SI315: Preparing for a Pivotal Time in Global Markets ft. Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/si315-preparing-for-a-pivotal-time-in-global/id888420325?i=1000671102292&uo=4",
+      "audio": "https://podcasts.captivate.fm/media/3ddf6d6c-c9db-4b7e-ac7d-4ac8d3525c8f/Systematic-Investor-Episode-315-ft-Cem-Karsan.mp3",
+      "minutes": 64,
+      "collection_id": 888420325
+    },
+    "1c633c2ea4ea": {
+      "id": "1c633c2ea4ea",
+      "date": "2024-07-17",
+      "show": "Real Vision: Finance & Investing",
+      "title": "Cem Karsan on The Economy's Path Forward (2024)",
+      "link": "https://podcasts.apple.com/us/podcast/cem-karsan-on-the-economys-path-forward-2024/id1210383304?i=1000662506278&uo=4",
+      "audio": "https://pdst.fm/e/chtbl.com/track/1B146C/traffic.megaphone.fm/ADV1054824463.mp3?updated=1721069439",
+      "minutes": 59,
+      "collection_id": 1210383304
+    },
+    "14941ce017d0": {
+      "id": "14941ce017d0",
+      "date": "2024-07-06",
+      "show": "Top Traders Unplugged",
+      "title": "SI303: The Unstoppable Volpocalypse ft. Cem Karsan & Alan Dunne",
+      "link": "https://podcasts.apple.com/us/podcast/si303-the-unstoppable-volpocalypse-ft-cem-karsan-alan/id888420325?i=1000661302944&uo=4",
+      "audio": "https://podcasts.captivate.fm/media/5dc5b877-ff93-466b-8e63-98bc8968028c/Systematic-Investor-Episode-303-ft-Alan-Dunne.mp3",
+      "minutes": 61,
+      "collection_id": 888420325
+    },
+    "318f58192aa1": {
+      "id": "318f58192aa1",
+      "date": "2024-04-27",
+      "show": "Top Traders Unplugged",
+      "title": "SI293: Market Outlook for the Rest of 2024 & EOY S&P500 level ft. Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/si293-market-outlook-for-the-rest-of-2024-eoy-s/id888420325?i=1000653762292&uo=4",
+      "audio": "https://podcasts.captivate.fm/media/a2088dc1-ce68-4f2e-8fd4-50f8d4750417/Systematic-Investor-Episode-293-ft-Cem-Karsan.mp3",
+      "minutes": 59,
+      "collection_id": 888420325
+    },
+    "2951b223cde1": {
+      "id": "2951b223cde1",
+      "date": "2024-03-14",
+      "show": "Real Vision: Finance & Investing",
+      "title": "#994 - Does Inflation Matter to the Fed? | with Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/994-does-inflation-matter-to-the-fed-with-cem-karsan/id1210383304?i=1000649250355&uo=4",
+      "audio": "https://pdst.fm/e/chtbl.com/track/1B146C/traffic.megaphone.fm/ADV9275416955.mp3?updated=1710456557",
+      "minutes": 39,
+      "collection_id": 1210383304
+    },
+    "e6182048c001": {
+      "id": "e6182048c001",
+      "date": "2024-03-02",
+      "show": "Top Traders Unplugged",
+      "title": "SI285: Elections Ahead & What this Mean for Investors ft. Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/si285-elections-ahead-what-this-mean-for-investors/id888420325?i=1000647746097&uo=4",
+      "audio": "https://podcasts.captivate.fm/media/42a2c32f-8211-4bc9-81e7-534dd0723ad2/Systematic-Investor-Episode-285-ft-Cem-Karsan.mp3",
+      "minutes": 68,
+      "collection_id": 888420325
+    },
+    "a9cda998e3dd": {
+      "id": "a9cda998e3dd",
+      "date": "2024-02-14",
+      "show": "Real Vision: Finance & Investing",
+      "title": "Sell the Stock Rally? with Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/sell-the-stock-rally-with-cem-karsan/id1210383304?i=1000645372418&uo=4",
+      "audio": "https://pdst.fm/e/chtbl.com/track/1B146C/traffic.megaphone.fm/ADV5949285369.mp3?updated=1707949327",
+      "minutes": 38,
+      "collection_id": 1210383304
+    },
+    "f313532edcda": {
+      "id": "f313532edcda",
+      "date": "2024-02-08",
+      "show": "Natalie Brunell's Coin Stories",
+      "title": "Cem Karsan: Stagflation vs 'Soft Landing', Populism & Bitcoin, Can U.S. Empire Prevent Collapse?",
+      "link": "https://podcasts.apple.com/us/podcast/cem-karsan-stagflation-vs-soft-landing-populism-bitcoin/id1569130932?i=1000644636466&uo=4",
+      "audio": "https://cdn.simplecast.com/audio/b0f95d3c-f69f-4e48-8c2c-eff3b94c2063/episodes/4df43760-d22a-45c6-b74e-c6b1c05b5650/audio/cc43cde1-5742-4d95-9325-9a62532a153b/default_tc.mp3?aid=rss_feed&feed=760kY6cd",
+      "minutes": 65,
+      "collection_id": 1569130932
+    },
+    "eddcb6e752c9": {
+      "id": "eddcb6e752c9",
+      "date": "2024-01-24",
+      "show": "The Market Huddle",
+      "title": "MH+ Ep. 26 Gamma Loop (guest: Cem Karsan)",
+      "link": "https://podcasts.apple.com/us/podcast/mh-ep-26-gamma-loop-guest-cem-karsan/id1444520320?i=1000642773042&uo=4",
+      "audio": "https://markethuddle.com/podcast-download/2638/mh-ep-26-gamma-loop-guest-cem-karsan.mp3",
+      "minutes": 40,
+      "collection_id": 1444520320
+    },
+    "8b870748fb54": {
+      "id": "8b870748fb54",
+      "date": "2024-01-18",
+      "show": "Real Vision: Finance & Investing",
+      "title": "Is The Options Market Flashing Bear Signals? With Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/is-the-options-market-flashing-bear-signals-with-cem-karsan/id1210383304?i=1000642034739&uo=4",
+      "audio": "https://pdst.fm/e/chtbl.com/track/1B146C/traffic.megaphone.fm/ADV7188701019.mp3?updated=1705597854",
+      "minutes": 42,
+      "collection_id": 1210383304
+    },
+    "f9350669985a": {
+      "id": "f9350669985a",
+      "date": "2024-01-17",
+      "show": "Top Traders Unplugged",
+      "title": "GM55: What Investors Need to Know about 2024 ft. Dave Dredge & Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/gm55-what-investors-need-to-know-about-2024-ft-dave/id888420325?i=1000641966206&uo=4",
+      "audio": "https://podcasts.captivate.fm/media/dceba7a3-dfcc-406b-b782-777876de6ef2/TTU-Global-Macro-Episode-55-Dave-Dredge-Alan-Niels.mp3",
+      "minutes": 82,
+      "collection_id": 888420325
+    },
+    "0aa5d6e1cd41": {
+      "id": "0aa5d6e1cd41",
+      "date": "2023-12-07",
+      "show": "Futures Radio Show",
+      "title": "Options Flow Vs. Macro | Cem Karsan and Andy Constan",
+      "link": "https://podcasts.apple.com/us/podcast/options-flow-vs-macro-cem-karsan-and-andy-constan/id1017809838?i=1000637796392&uo=4",
+      "audio": "https://cdn.simplecast.com/audio/2d7d26a6-8ae7-4be7-acc4-f646b91283fc/episodes/6984298e-2076-493a-890e-6aa078d3e4a7/audio/81f5f045-87e9-4406-a2ff-700bbbbdd3b2/default_tc.mp3?aid=rss_feed&feed=LxugnAMf",
+      "minutes": 90,
+      "collection_id": 1017809838
+    },
+    "0c45c7db1df5": {
+      "id": "0c45c7db1df5",
+      "date": "2023-11-16",
+      "show": "Real Vision: Finance & Investing",
+      "title": "Is the Goldilocks Forecast Too Good to be True?",
+      "link": "https://podcasts.apple.com/us/podcast/is-the-goldilocks-forecast-too-good-to-be-true/id1210383304?i=1000635104657&uo=4",
+      "audio": "https://pdst.fm/e/chtbl.com/track/1B146C/traffic.megaphone.fm/ADV3582574879.mp3?updated=1700178401",
+      "minutes": 41,
+      "collection_id": 1210383304
+    },
+    "48416a9d9566": {
+      "id": "48416a9d9566",
+      "date": "2023-08-19",
+      "show": "Top Traders Unplugged",
+      "title": "SI257: Preparing for a Volatile Future ft. Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/si257-preparing-for-a-volatile-future-ft-cem-karsan/id888420325?i=1000624951236&uo=4",
+      "audio": "https://podcasts.captivate.fm/media/4d6ea523-31a9-4e2d-9237-8f038c42c0a5/Systematic-Investor-Episode-257-ft-Cem-Karsan.mp3",
+      "minutes": 68,
+      "collection_id": 888420325
+    },
+    "c798f9a7fb50": {
+      "id": "c798f9a7fb50",
+      "date": "2023-07-27",
+      "show": "Real Vision: Finance & Investing",
+      "title": "The Risk of Being Bearish on Stocks with Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/the-risk-of-being-bearish-on-stocks-with-cem-karsan/id1210383304?i=1000622571772&uo=4",
+      "audio": "https://pdst.fm/e/chtbl.com/track/1B146C/traffic.megaphone.fm/ADV7374417152.mp3?updated=1690494154",
+      "minutes": 42,
+      "collection_id": 1210383304
+    },
+    "90ac48b40aa6": {
+      "id": "90ac48b40aa6",
+      "date": "2023-05-31",
+      "show": "Real Vision: Finance & Investing",
+      "title": "Has the Equity Market Rally Run Its Course? w/ Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/has-the-equity-market-rally-run-its-course-w-cem-karsan/id1210383304?i=1000615203562&uo=4",
+      "audio": "https://pdst.fm/e/chtbl.com/track/1B146C/traffic.megaphone.fm/ADV6477391466.mp3?updated=1750354098",
+      "minutes": 41,
+      "collection_id": 1210383304
+    },
+    "5ef25090a0ae": {
+      "id": "5ef25090a0ae",
+      "date": "2023-04-20",
+      "show": "Real Vision: Finance & Investing",
+      "title": "Should Investors Still Be Afraid of the Fed?",
+      "link": "https://podcasts.apple.com/us/podcast/should-investors-still-be-afraid-of-the-fed/id1210383304?i=1000610013394&uo=4",
+      "audio": "https://pdst.fm/e/chtbl.com/track/1B146C/traffic.megaphone.fm/ADV6264774608.mp3?updated=1750354814",
+      "minutes": 36,
+      "collection_id": 1210383304
+    },
+    "7d3a3d3cee21": {
+      "id": "7d3a3d3cee21",
+      "date": "2022-11-19",
+      "show": "Top Traders Unplugged",
+      "title": "SI219: The Impact of Secular Inflation ft. Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/si219-the-impact-of-secular-inflation-ft-cem-karsan/id888420325?i=1000586806594&uo=4",
+      "audio": "https://podcasts.captivate.fm/media/21540820-ee6e-4409-b653-a1332b06f865/Systematic-20Investor-20Episode-20219-20ft-20Cem-20Karsan.mp3",
+      "minutes": 70,
+      "collection_id": 888420325
+    },
+    "3ac44ac40e5e": {
+      "id": "3ac44ac40e5e",
+      "date": "2022-10-22",
+      "show": "Top Traders Unplugged",
+      "title": "SI215: Trend Following vs Volatility to Protect Your Portfolio ft. Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/si215-trend-following-vs-volatility-to-protect-your/id888420325?i=1000583511374&uo=4",
+      "audio": "https://podcasts.captivate.fm/media/e0a724e1-ead9-4952-94a4-83121d93975e/Systematic-20Investor-20Episode-20215-20ft-20Cem-20Karsan.mp3",
+      "minutes": 63,
+      "collection_id": 888420325
+    },
+    "1a892131540e": {
+      "id": "1a892131540e",
+      "date": "2022-09-20",
+      "show": "Natalie Brunell's Coin Stories",
+      "title": "Cem Karsan: Fed is Making Huge Policy Error",
+      "link": "https://podcasts.apple.com/us/podcast/cem-karsan-fed-is-making-huge-policy-error/id1569130932?i=1000580064394&uo=4",
+      "audio": "https://cdn.simplecast.com/audio/b0f95d3c-f69f-4e48-8c2c-eff3b94c2063/episodes/264d7a30-b841-4779-ad77-1c3a461d011b/audio/278922c0-9b3f-44e7-b7b5-ae4196ace7f3/default_tc.mp3?aid=rss_feed&feed=760kY6cd",
+      "minutes": 94,
+      "collection_id": 1569130932
+    },
+    "cb6f03a68d33": {
+      "id": "cb6f03a68d33",
+      "date": "2022-08-24",
+      "show": "Top Traders Unplugged",
+      "title": "GM22: Investing through a Fourth Turning ft. Niels Kaastrup-Larsen & Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/gm22-investing-through-a-fourth-turning-ft-niels/id888420325?i=1000577208809&uo=4",
+      "audio": "https://podcasts.captivate.fm/media/7b6f3430-6cda-4552-8eeb-15a6cb59912d/TTU-20Global-20Macro-20Episode-2022-20-20Niels-20Kaastrup-Larse.mp3",
+      "minutes": 75,
+      "collection_id": 888420325
+    },
+    "25da8fc6303c": {
+      "id": "25da8fc6303c",
+      "date": "2022-02-02",
+      "show": "Top Traders Unplugged",
+      "title": "VOL10: Why We All Need Volatility ft. Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/vol10-why-we-all-need-volatility-ft-cem-karsan/id888420325?i=1000549747048&uo=4",
+      "audio": "https://podcasts.captivate.fm/media/658e08ad-0ea0-4cd6-8e9c-445405a737ca/vol-10-ft-cem-karsan.mp3",
+      "minutes": 83,
+      "collection_id": 888420325
+    },
+    "9e465d6ae264": {
+      "id": "9e465d6ae264",
+      "date": "2021-05-03",
+      "show": "Flirting with Models",
+      "title": "Cem Karsan - The Market Voting Machine (S4E1)",
+      "link": "https://podcasts.apple.com/us/podcast/cem-karsan-the-market-voting-machine-s4e1/id1402620531?i=1000519863960&uo=4",
+      "audio": "https://episodes.captivate.fm/episode/4782cc0e-0381-4e27-aa30-4ad124eebe22.mp3",
+      "minutes": 45,
+      "collection_id": 1402620531
+    },
+    "7d8963735a63": {
+      "id": "7d8963735a63",
+      "date": "2020-09-30",
+      "show": "The Meb Faber Show - Better Investing",
+      "title": "#252 - Cem Karsan, Aegea Capital - 30 Day Vol Tends To Be Overbid And You Have Extended Supply In The Back Of The Curve Historically",
+      "link": "https://podcasts.apple.com/us/podcast/252-cem-karsan-aegea-capital-30-day-vol-tends-to-be/id1128955736?i=1000493111440&uo=4",
+      "audio": "https://traffic.megaphone.fm/TIFM7136313716.mp3?updated=1706729904",
+      "minutes": 56,
+      "collection_id": 1128955736
+    }
+  },
+  "generated": "2026-10-13T09:23:50Z"
+}

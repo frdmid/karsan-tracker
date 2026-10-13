@@ -120,6 +120,12 @@ Gjeldende fase er den høyeste som er nådd. Vilkår uten data telles ikke og vi
 
 Google News RSS per tema (siste 14 dager per kjøring, beholdes 120 dager) og Apple Podcasts søk på Karsan (beholdes 365 dager). Bare tittel, kilde, dato, lenke og inntil 600 tegn av utgiverens episodebeskrivelse lagres. Hvis `ANTHROPIC_API_KEY` er satt, lager `summarize_news.py` med modellen claude-opus-5-5 (lav effort, strukturert JSON, server-side fallback) 2 til 3 setninger per tema ut fra overskriftene, med automatisk retning (bekrefter, avkrefter, blandet, uklart), og 2 til 3 setninger per podcast ut fra beskrivelsen. Oppsummeringer lages bare på nytt når grunnlaget endres. Manuelle vurderinger kan legges i `config/news_labels.json`. Sosiale medier er ikke dekket (X krever betalt API).
 
+## 10b. Podcastagent
+
+`scripts/podcast_agent.py` kjører daglig i "Oppdater data". Den finner episoder med Karsan via Apple-søk og feedene i `config/news.json` (`karsan.feeds`, i dag Top Traders Unplugged med tittelmatch `UGO\d|Karsan`, som fanger hans egen serie U Got Options). Transkripsjon hentes fra `<podcast:transcript>` i feeden (TTU har JSON med ord og tid for 773 av 973 episoder). Andre podkaster kan transkriberes med faster-whisper når repo-variabelen `TRANSCRIBE_AUDIO=true`. Med `ANTHROPIC_API_KEY` analyserer Claude (claude-opus-5-5, middels effort, strukturert JSON, server-side fallback) inntil tre nye episoder per kjøring fra og med `analyze_since` (2026-09-01): sammendrag, påstander med tall, tidshorisont, kort sitat (maks 15 ord) og forhold til kravene (bekrefter, endrer, nytt, motsier), pluss forslag til endringer. Forslag legges aldri inn automatisk. Transkripsjoner lagres aldri i repoet (opphavsrett), bare i `build/transcripts/`. Resultat i `data/karsan_episodes.json`, vist under Karsan selv. Karsans YouTube-kanal Kai Media (åpen RSS) vises som lenker.
+
+SI420 (opptaket tesen bygger på) ble analysert manuelt i Claude Code 13. oktober 2026 og er merket slik. Hovedkravene stemmer med transkripsjonen.
+
 ## 11. Siden
 
 Rekkefølge: overskrift og generert oppsummering, regimetracker med implikasjoner, nøkkeltall, signaltabell, Karsan selv, nyheter, grafer (a til g), tid siden opptak, kilder og friskhet, fotnote.

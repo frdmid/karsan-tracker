@@ -216,6 +216,13 @@ td.nowrap { white-space: nowrap; }
 @media (max-width: 860px) { .news-grid { grid-template-columns: 1fr; } }
 @media (max-width: 480px) { .news li { flex-wrap: wrap; } }
 
+.agent { margin-bottom: 14px; }
+.agent .card { margin-bottom: 10px; }
+.agent .card p { margin: 0 0 6px; font-size: 14px; }
+.agent .claims { list-style: none; padding: 0; margin: 4px 0 8px; font-size: 14px; }
+.agent .claims li { padding: 6px 0; border-top: 1px solid var(--grid); }
+.agent .ns { color: var(--muted); font-size: 12px; }
+
 .warning { margin-top: 10px; background: var(--warn-bg); color: var(--warn); border-radius: 8px; padding: 8px 12px; font-size: 13px; }
 .footnote { margin-top: 40px; border-top: 1px solid var(--grid); padding-top: 14px; font-size: 13px; color: var(--ink-2); }
 .footnote p { margin: 0 0 8px; max-width: 90ch; }
