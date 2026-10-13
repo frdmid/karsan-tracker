@@ -9,8 +9,154 @@
       "audio": "https://cdn.simplecast.com/media/audio/transcoded/6e28cb79-1265-4e14-b535-8eab36347648/b0f95d3c-f69f-4e48-8c2c-eff3b94c2063/episodes/audio/group/b6b4ff5d-053a-468c-afe7-308ff5989a56/group-item/9b7a225b-0c2e-461f-8f39-61855240aa63/128_default_tc.mp3?aid=rss_feed&feed=760kY6cd",
       "minutes": 70,
       "collection_id": 1569130932,
-      "transcript_status": "mangler",
-      "message": "Ingen transkripsjon i feeden. Lydtranskribering er av (TRANSCRIBE_AUDIO)."
+      "transcript_status": "ok",
+      "message": null,
+      "analysis": {
+        "karsan_deltar": true,
+        "oppsummering": "Karsan gjentar tesen fra SI420, men snevrer inn hovedscenariet: et V-formet fall på 25 til 35 % som varer en til to måneder, mellom Liberation Day og covid i størrelse. Krisen skal komme etter mellomvalget og før juni 2027, og gi påskudd for et rentetak i lang ende og statlige aksjekjøp gjennom et formuefond, som han mener starter innen tre til seks måneder. Fram til toppen, kanskje desember eller januar, venter han at markedene holder seg. Han setter selv et brytningspunkt: har det ikke startet innen april til juni 2027, tror han ikke planen gjennomføres slik.",
+        "pastander": [
+          {
+            "tema": "Aksjefall",
+            "pastand": "Hovedscenario 25 til 35 % fall, et V-formet forløp mellom Liberation Day og covid i størrelse. Fallet varer tre måneder eller mindre, trolig en til to.",
+            "tall": "25 til 35 %, 1 til 2 måneder",
+            "tidshorisont": "etter mellomvalget, før juni 2027",
+            "sitat": "closer to 25 35 as my base case",
+            "tid_sek": 3270,
+            "forhold": "endrer",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Brytningspunkt",
+            "pastand": "Har krisen ikke startet innen april, mai eller juni 2027, tror han ikke planen gjennomføres slik. Da kan de i stedet kjøpe aksjer på toppnivå uten krise.",
+            "tall": "",
+            "tidshorisont": "april til juni 2027",
+            "sitat": "I don't believe they're going to try and execute this plan by then.",
+            "tid_sek": 3894,
+            "forhold": "nytt",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Fram til toppen",
+            "pastand": "Myndighetene vil ikke ha krise før mellomvalget. Markedene, også krypto, kan gå bra fram til en topp rundt desember eller januar.",
+            "tall": "",
+            "tidshorisont": "til desember 2026 eller januar 2027",
+            "sitat": "maybe it's till December end of the year January",
+            "tid_sek": 4082,
+            "forhold": "nytt",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Statlige aksjekjøp",
+            "pastand": "Staten begynner å kjøpe aksjer innen tre til seks måneder via et formuefond og Trump-kontoer. Fondet kan være på 5 billioner USD innen to år.",
+            "tall": "inntil 5 billioner USD på to år",
+            "tidshorisont": "innen 3 til 6 måneder",
+            "sitat": "It's coming in the next three to six months like the US government buying stocks",
+            "tid_sek": 1010,
+            "forhold": "endrer",
+            "gjelder_krav": "formuesfond"
+          },
+          {
+            "tema": "Negative realrenter",
+            "pastand": "Hele poenget er å skape negative realrenter for å monetisere gjelden, med et hardere tak på lange renter. Til slutt gir det en inflasjonsspiral.",
+            "tall": "",
+            "tidshorisont": "etter krisen",
+            "sitat": "The whole game is to create negative real rates.",
+            "tid_sek": 2273,
+            "forhold": "bekrefter",
+            "gjelder_krav": "inflasjon"
+          },
+          {
+            "tema": "Rentetak og QE",
+            "pastand": "En krise i statsobligasjonsmarkedet, varslet av Hank Paulson som prøveballong, er påskuddet for en fasilitet som setter tak på lang ende. Tilbakekjøpene nå er å koke frosken sakte.",
+            "tall": "",
+            "tidshorisont": "etter mellomvalget",
+            "sitat": "That's an excuse for the big print.",
+            "tid_sek": 2273,
+            "forhold": "bekrefter",
+            "gjelder_krav": "qe"
+          },
+          {
+            "tema": "Gull",
+            "pastand": "Gull blir den beste eiendelen over tid, som på 70-tallet, men svært volatilt. Fallet nå er en kjøpsmulighet senere i år.",
+            "tall": "",
+            "tidshorisont": "senere i år og flere år",
+            "sitat": "you want to be buying into this dip",
+            "tid_sek": 2149,
+            "forhold": "bekrefter",
+            "gjelder_krav": ""
+          },
+          {
+            "tema": "Valuta",
+            "pastand": "Kontanter bør ikke ligge i dollar. Råvarevalutaer som sveitsisk franc, norsk krone, australsk og kanadisk dollar venter han vil gjøre det mye bedre. Valutavolatilitet er sterkt underpriset.",
+            "tall": "",
+            "tidshorisont": "i krisen",
+            "sitat": "commodity backed currencies that are likely to dramatically outperform",
+            "tid_sek": 4065,
+            "forhold": "nytt",
+            "gjelder_krav": ""
+          },
+          {
+            "tema": "Inflasjonsvinnere",
+            "pastand": "Rundt 25 % av S&P 500 får bedre marginer når inflasjonen stiger: selskaper med negativ arbeidskapital, meglere, banker, telekom, jernbane og kapitalforvaltere. Unngå selskaper som avhenger av forbrukere med lav inntekt.",
+            "tall": "ca. 25 % av S&P 500",
+            "tidshorisont": "5 til 10 år",
+            "sitat": "about 25% of the S&P that have profit margins expand",
+            "tid_sek": 2506,
+            "forhold": "nytt",
+            "gjelder_krav": ""
+          },
+          {
+            "tema": "Skjørhet",
+            "pastand": "45 % av S&P 500 har negativ ettårs beta, 60 % av selskapene er i bjørnemarked mens indeksen er på toppen, og 90 % har negativ inntjeningsvekst.",
+            "tall": "45 %, 60 %, 90 %",
+            "tidshorisont": "",
+            "sitat": "45% of the S&P has a negative one-year beta to the S&P itself",
+            "tid_sek": 571,
+            "forhold": "bekrefter",
+            "gjelder_krav": "negbeta"
+          },
+          {
+            "tema": "AI og cyber",
+            "pastand": "En utløsende krise kan komme fra AI eller et cyberangrep. Han tolker at AI-lederne gikk sammen om å bremse utviklingen som et tegn på at staten vil ta kontroll over selskapene.",
+            "tall": "",
+            "tidshorisont": "neste år",
+            "sitat": "could really come from cyber digital breakdown things happening as a function of AI",
+            "tid_sek": 3574,
+            "forhold": "nytt",
+            "gjelder_krav": "ai_cds"
+          }
+        ],
+        "forslag": [
+          {
+            "hva": "S&P 500: legg til Karsans hovedscenario 25 til 35 % og at fallet er V-formet på en til to måneder",
+            "begrunnelse": "Han snevrer inn spennet fra 25 til 40 % i SI420 til 25 til 35 % som hovedscenario."
+          },
+          {
+            "hva": "S&P 500 i fase 1: endre retning fra opp (økende fall) til ingen retning",
+            "begrunnelse": "Han venter at markedene holder seg fram til en topp rundt desember eller januar. Rød boks nå er derfor misvisende."
+          },
+          {
+            "hva": "Legg inn Karsans eget brytningspunkt: krise startet innen juni 2027, ellers er scenariet feil",
+            "begrunnelse": "Han sier selv at planen trolig ikke gjennomføres slik hvis den ikke har startet innen april til juni 2027."
+          },
+          {
+            "hva": "Statlig formuefond: tidsfrist 3 til 6 måneder fra opptaket (ca. april 2027) i kravteksten",
+            "begrunnelse": "Han tidfester statlige aksjekjøp mer presist enn i SI420."
+          },
+          {
+            "hva": "Dollar i fase 2: endre fra ingen retning til ned, og følg USD/NOK som eget nøkkeltall",
+            "begrunnelse": "Han venter at råvarevalutaer, blant dem norsk krone, gjør det mye bedre enn dollar i krisen."
+          },
+          {
+            "hva": "Implikasjoner per fase: legg til Karsans egne eksempler (råvarevalutaer, gull, inflasjonsvinnere, puts i AI-navn), tydelig merket som hans syn",
+            "begrunnelse": "Han nevner konkrete eksponeringer. De bør merkes som hans, ikke som råd."
+          }
+        ]
+      },
+      "analyzed_at": "2026-10-13T10:15:26Z",
+      "model": "Claude Opus 5.5 i Claude Code (manuell analyse)",
+      "transcript_source": "YouTube automatisk transkripsjon, lest i nettleser",
+      "transcript_url": "https://www.youtube.com/watch?v=Jtd2bUnK4-Q"
     },
     "b6e3a291047d": {
       "id": "b6e3a291047d",

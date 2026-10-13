@@ -4,6 +4,8 @@ Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
 ## 2026-10-13
 
+* Brunell-episoden (Coin Stories 6. okt., på YouTube "They Have to Print Trillions") analysert manuelt fra YouTubes automatiske transkripsjon, lest i nettleseren (cookies avvist). 11 påstander, 6 forslag, ikke lagt inn i config. `lagre_analyse.py` støtter nå egen transkripsjonskilde (`transkripsjon_kilde`, `transkripsjon_url`).
+
 * Frode valgte manuell analyse i Claude Code i stedet for `ANTHROPIC_API_KEY`. Nytt `scripts/lagre_analyse.py`, ny `--list` i podcastagenten, ny README-del "Analyse av nye Karsan-episoder". Agenten finner fortsatt episoder og transkripsjoner hver morgen. Venter nå: Natalie Brunell 6. okt. (ingen transkripsjon i feeden).
 
 * Lagt inn endringer fra SI420 etter godkjenning fra Frode: opptaksdato 29. september (frist 10-årsrente 29. des. 2026, QE 29. mars 2027 med ytre frist 30. juni 2027), 10-årsrente mål 4 % i fase 2 og 3 (Karsans tall), dollar opp og gull ned i fase 1, inflasjon frist ut 2028, nye kravtekster og fotnote om at kravene er kontrollert mot transkripsjonen. Ny `final_deadline` i signalreglene med test, 19 av 19 bestått. Effekt nå: 6 av 11 nøkkeltall i retning narrativet (før 4), dollar og gull grønne.

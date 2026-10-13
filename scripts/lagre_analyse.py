@@ -32,6 +32,8 @@ def main():
     if eid not in state["episodes"]:
         sys.exit(f"Fant ikke episode {eid}")
     a = json.loads(open(src, encoding="utf-8").read())
+    # Valgfritt: annen transkripsjonskilde enn feeden, for eksempel YouTube lest i nettleser.
+    source, source_url = a.pop("transkripsjon_kilde", None), a.pop("transkripsjon_url", None)
     for k in ("karsan_deltar", "oppsummering", "pastander", "forslag"):
         if k not in a:
             sys.exit(f"Mangler felt: {k}")
@@ -49,6 +51,8 @@ def main():
         f["hva"], f["begrunnelse"] = clean(f["hva"]), clean(f["begrunnelse"])
     ep = state["episodes"][eid]
     ep.update(analysis=a, analyzed_at=now_iso(), model=model, message=None)
+    if source:
+        ep.update(transcript_status="ok", transcript_source=source, transcript_url=source_url)
     path.write_text(json.dumps(state, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Lagret analyse for {ep['title']}: {len(a['pastander'])} påstander, {len(a['forslag'])} forslag")
 
