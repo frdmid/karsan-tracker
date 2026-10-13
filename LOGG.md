@@ -4,6 +4,8 @@ Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
 ## 2026-10-13
 
+* Lokal visning sender nå `Cache-Control: no-store`, så nettleseren ikke viser gamle filer (Frode så ikke fasestripene lokalt). Artifact oppdatert til versjon 2 med versjonsstempel og offentlige data per 13. okt, uten private data. Artifact bygges i `build/artifact` (ikke committet).
+
 * Gradert farge i fasestripene, etter valg fra Frode: styrken viser fremdrift mot et mål for fasen siden fasestart (seks trinn fra mørk grønn til mørk rød), bare i stripene. Boksen beholder 30-dagers retning. Nye `phase_targets` for alle tolv nøkkeltall (40 mål), tre er Karsans tall, resten sidens operasjonalisering. Nye funksjoner i `calc.js`: `phaseStartDate`, `targetProgress`, `progressGrade`. 18 av 18 tester bestått. Fargeforklaring under fasenøkkelen, stripelista har egen nøytral bakgrunn for kontrast. Status nå (fase 1): 10-årsrente 21 % av veien mot 5,5 %, gull 26 % bort fra målet.
 
 * Fasestriper som logg, etter ønske fra Frode: stripen for en passert fase fryses på datoen regimet gikk videre og viser om tallet da var i retning den fasen (grønn, rød eller grå). Boksen og stripen for gjeldende fase vurderes mot retningen i gjeldende fase.
