@@ -61,8 +61,16 @@ def fetch_private():
     (PRIVATE / "status.json").write_text(json.dumps(status, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
+class NoCacheHandler(http.server.SimpleHTTPRequestHandler):
+    """Ber nettleseren alltid hente filene på nytt, så endringer synes uten Ctrl+F5."""
+
+    def end_headers(self):
+        self.send_header("Cache-Control", "no-store")
+        super().end_headers()
+
+
 def serve():
-    handler = partial(http.server.SimpleHTTPRequestHandler, directory=str(ROOT))
+    handler = partial(NoCacheHandler, directory=str(ROOT))
     try:
         httpd = http.server.ThreadingHTTPServer(("127.0.0.1", PORT), handler)
     except OSError:
