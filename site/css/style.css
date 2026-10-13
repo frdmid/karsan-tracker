@@ -22,6 +22,12 @@
   --flat-bg: #f0efec;
   --warn: #8a5a00;
   --warn-bg: #fdf3dc;
+  --good-fill: #cdebcd;
+  --bad-fill: #f6d0d0;
+  --flat-fill: #e6e5e0;
+  --stripe-line: rgba(11, 11, 11, 0.12);
+  --phase-on: #52514e;
+  --phase-off: rgba(11, 11, 11, 0.10);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -46,6 +52,12 @@
     --flat-bg: #262624;
     --warn: #f0c060;
     --warn-bg: #33290f;
+    --good-fill: #1f4d29;
+    --bad-fill: #5a2323;
+    --flat-fill: #33332f;
+    --stripe-line: rgba(255, 255, 255, 0.14);
+    --phase-on: #c3c2b7;
+    --phase-off: rgba(255, 255, 255, 0.12);
   }
 }
 :root[data-theme="dark"] {
@@ -55,6 +67,8 @@
   --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --ref: #c3c2b7;
   --good-bg: #13301a; --good-ink: #5fd35f; --bad-bg: #3a1717; --bad-ink: #f08a8a; --flat-bg: #262624;
   --warn: #f0c060; --warn-bg: #33290f;
+  --good-fill: #1f4d29; --bad-fill: #5a2323; --flat-fill: #33332f; --stripe-line: rgba(255, 255, 255, 0.14);
+  --phase-on: #c3c2b7; --phase-off: rgba(255, 255, 255, 0.12);
 }
 
 * { box-sizing: border-box; }
@@ -100,18 +114,30 @@ a { color: var(--s1); }
 
 /* Tiles */
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
-.tile { background: var(--surface); border: 1px solid var(--border); border-left: 5px solid var(--axis); border-radius: 8px; padding: 12px 14px 10px; min-width: 0; }
-.tile.mot { background: var(--good-bg); border-left-color: var(--good); }
-.tile.bort { background: var(--bad-bg); border-left-color: var(--bad); }
+/* Hele boksen har retningsfargen. Lista øverst har --n fasestriper, fylt fra venstre til --fill. */
+.tile {
+  --n: 4; --fill: 0%; --tile-bg: var(--surface);
+  position: relative; overflow: hidden;
+  background: var(--tile-bg); border: 1px solid var(--border); border-radius: 8px; padding: 17px 14px 10px; min-width: 0;
+}
+.tile::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 6px;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 calc(100% / var(--n) - 2px), var(--tile-bg) calc(100% / var(--n) - 2px) calc(100% / var(--n))),
+    linear-gradient(90deg, var(--phase-on) 0 var(--fill), var(--phase-off) var(--fill) 100%);
+}
+.tile.mot { --tile-bg: var(--good-fill); }
+.tile.bort { --tile-bg: var(--bad-fill); }
+.tile.nodata::before { display: none; }
 .tile .tt { font-size: 13px; color: var(--ink-2); display: flex; justify-content: space-between; gap: 8px; }
 .tile .tv { font-size: 26px; font-weight: 600; line-height: 1.2; margin: 2px 0; font-variant-numeric: normal; }
 .tile .tc { font-size: 13px; }
-.tile .verdict { font-weight: 600; }
-.tile.mot .verdict { color: var(--good-ink); }
-.tile.bort .verdict { color: var(--bad-ink); }
-.tile .meta { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.tile .meta { font-size: 12px; color: var(--ink-2); margin-top: 4px; }
 .tile svg { display: block; width: 100%; height: 44px; margin-top: 6px; }
-.tile.nodata { border-left-color: var(--axis); }
+.phase-key { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 0 0 8px; max-width: 260px; font-size: 11px; color: var(--muted); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+.phase-key span { text-align: center; padding: 2px 0; border-left: 1px solid var(--stripe-line); }
+.phase-key span:first-child { border-left: 0; }
+.phase-key span.on { background: var(--phase-on); color: var(--surface); font-weight: 600; }
 
 /* Tables */
 .table-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }

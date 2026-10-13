@@ -156,9 +156,16 @@ function sparkline(rows, baseDate) {
     <circle cx="${x(toDate(l.date))}" cy="${y(l.value)}" r="2.5" fill="var(--s1)"/></svg>`;
 }
 
-function renderTiles(ctx) {
+// Fargefeltet er delt i én stripe per fase. Stripene fylles opp til gjeldende fase.
+function renderTiles(ctx, regime) {
   const ov = ctx.signals.overview;
-  $("#overview-intro").textContent = `Endring siste ${ov.window_days} dager. Grønn: i retning narrativet. Rød: bort fra narrativet. Grå: uendret eller ingen retning. Grafen viser siste ${ov.spark_days} dager, stiplet strek markerer startpunktet for endringen.`;
+  const phases = regime.phases.filter((p) => p.conditions.length);
+  const n = phases.length;
+  const filled = phases.filter((p) => p.id <= regime.current.id).length;
+  const stripe = `style="--n:${n};--fill:${(filled / n) * 100}%"`;
+  $("#overview-intro").textContent = `Grønn boks: endringen siste ${ov.window_days} dager er i retning narrativet. Rød: bort fra narrativet. Nøytral: uendret eller ingen retning. Lista øverst i hver boks har ${n} striper, én per fase, fylt opp til fasen vi er i nå. Grafen viser siste ${ov.spark_days} dager, stiplet strek markerer startpunktet for endringen.`;
+  $("#phase-key").style.gridTemplateColumns = `repeat(${n}, 1fr)`;
+  $("#phase-key").innerHTML = phases.map((p) => `<span class="${p.id <= regime.current.id ? "on" : ""}">${esc(p.name.split(":")[0])}</span>`).join("");
   let toward = 0, counted = 0;
   $("#tiles").innerHTML = ov.indicators.map((ind) => {
     const picked = C.pickSeries(ind.series, ctx.data, ind.pick || "freshest");
@@ -172,13 +179,13 @@ function renderTiles(ctx) {
     if (m && ind.direction !== "none") { counted++; if (m.verdict === "mot") toward++; }
     const spark = C.between(t, C.addDays(lastObs.date, -ov.spark_days), null);
     const cls = m ? m.verdict : "";
-    return `<div class="tile ${cls}" title="${esc(ind.why)}">
+    const label = `${m ? VERDICT[m.verdict] + ". " : ""}${ind.why}`;
+    return `<div class="tile ${cls}" ${stripe} title="${esc(label)}" aria-label="${esc(ind.title)}: ${esc(label)}">
       <div class="tt"><span>${esc(ind.title)}</span></div>
       <div class="tv">${valueText(ctx, picked.id, ind.transform, lastObs.value)}</div>
-      <div class="tc">${m ? `<span class="verdict">${VERDICT[m.verdict]}</span>, ${changeText(m.change, ind.mode)} siden ${C.fmtDate(m.baseDate)}` : "For kort historikk"}</div>
+      <div class="tc">${m ? `${changeText(m.change, ind.mode)} siden ${C.fmtDate(m.baseDate)}` : "For kort historikk"}</div>
       ${spark.length > 1 ? sparkline(spark, m && m.baseDate) : ""}
-      <div class="meta">${C.fmtDate(lastObs.date)}${staleTag(ctx, picked.id, lastObs.date)}, ${esc(sourceLine(ctx, picked.id))}</div>
-      <div class="meta">${esc(ind.why)}</div></div>`;
+      <div class="meta">${C.fmtDate(lastObs.date)}${staleTag(ctx, picked.id, lastObs.date)}, ${esc(sourceLine(ctx, picked.id))}</div></div>`;
   }).join("");
   return { toward, counted };
 }
@@ -523,7 +530,7 @@ async function main() {
   const rules = Object.fromEntries(s.signals.map((x) => [x.id, x.rule]));
   const rate = results.rente10.actual !== undefined ? { ...rules.rente10, actual: results.rente10.actual } : null;
   const spx = results.spx.status !== C.STATUS.NOT_COVERED ? { ...rules.spx, actual: results.spx.actual } : null;
-  const counts = renderTiles(ctx);
+  const counts = renderTiles(ctx, regime);
   $("#summary").textContent = C.summarySentence(rate, spx, regime.current.name)
     + ` ${counts.toward} av ${counts.counted} nøkkeltall med data har beveget seg i retning narrativet siste ${s.overview.window_days} dager.`;
   renderRegime(ctx, regime);

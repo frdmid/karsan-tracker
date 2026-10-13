@@ -100,7 +100,7 @@ Søk etter åpen S&P-kilde (12. oktober 2026): FREDs Nasdaq Composite, Nasdaq 10
 
 ## 8. Nøkkeltall øverst
 
-Hvert nøkkeltall har en retning (opp, ned eller ingen) som er sidens tolkning av tesen, og en minste bevegelse. Endring siste 30 dager: grønn i retning narrativet, rød bort fra, grå hvis mindre enn minste bevegelse eller uten retning. Minigraf viser 120 dager med stiplet strek der endringen måles fra. Alt i `overview` i `config/signals.json`.
+Hvert nøkkeltall har en retning (opp, ned eller ingen) som er sidens tolkning av tesen, og en minste bevegelse. Endring siste 30 dager: hele boksen grønn i retning narrativet, rød bort fra, nøytral hvis mindre enn minste bevegelse eller uten retning. En list øverst i hver boks har én stripe per fase, fylt opp til gjeldende fase fra regimetrackeren, og en fasenøkkel over boksene viser hvilke stripene er. Boksene har ingen tekst om narrativet, retning og begrunnelse ligger som tooltip og aria-label. Minigraf viser 120 dager med stiplet strek der endringen måles fra. Alt i `overview` i `config/signals.json`.
 
 ## 9. Regimetracker
 
