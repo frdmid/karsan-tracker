@@ -4,6 +4,8 @@ Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
 ## 2026-10-13
 
+* Gradert farge i fasestripene, etter valg fra Frode: styrken viser fremdrift mot et mål for fasen siden fasestart (seks trinn fra mørk grønn til mørk rød), bare i stripene. Boksen beholder 30-dagers retning. Nye `phase_targets` for alle tolv nøkkeltall (40 mål), tre er Karsans tall, resten sidens operasjonalisering. Nye funksjoner i `calc.js`: `phaseStartDate`, `targetProgress`, `progressGrade`. 18 av 18 tester bestått. Fargeforklaring under fasenøkkelen, stripelista har egen nøytral bakgrunn for kontrast. Status nå (fase 1): 10-årsrente 21 % av veien mot 5,5 %, gull 26 % bort fra målet.
+
 * Fasestriper som logg, etter ønske fra Frode: stripen for en passert fase fryses på datoen regimet gikk videre og viser om tallet da var i retning den fasen (grønn, rød eller grå). Boksen og stripen for gjeldende fase vurderes mot retningen i gjeldende fase.
 * Ny `phase_directions` per nøkkeltall i `config/signals.json`. Fase 1 er uendret, fase 2 til 4 lagt inn etter tesen (se `why` per nøkkeltall).
 * Nye funksjoner i `calc.js`: `truncate`, `regimeHistory`, `phaseExitDate`, `directionFor`, `stripeStates`. To nye tester, 17 av 17 bestått.

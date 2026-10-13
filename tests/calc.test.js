@@ -161,6 +161,29 @@ test("fasestriper fryses ved faseskifte", () => {
   assert.equal(s2[0].verdict, "uendret");
 });
 
+test("fremdrift mot fasemål og fargetrinn", () => {
+  // Nivåmål opp: start 24. sep. 5,1, mål 5,5.
+  near(c.targetProgress(rente, REC, "2026-10-01", { level: 5.5 }, "up", "pp"), (5.4 - 5.1) / 0.4);
+  assert.equal(c.targetProgress(rente, REC, "2026-10-09", { level: 5.5 }, "up", "pp"), 1);
+  // Nivåmål ned: 5,1 mot 4,5, men renten steg til 5,6.
+  near(c.targetProgress(rente, REC, "2026-10-09", { level: 4.5 }, "down", "pp"), -0.5 / 0.6);
+  // Endringsmål i prosent: indeks 110 til 60, mål -20 %.
+  near(c.targetProgress(indeks, REC, "2026-10-09", { change: -20 }, "down", "pct"), ((60 / 110 - 1) * 100) / -20);
+  // Uten mål eller retning: ingen fremdrift.
+  assert.equal(c.targetProgress(rente, REC, "2026-10-09", undefined, "up", "pp"), null);
+  assert.equal(c.targetProgress(rente, REC, "2026-10-09", { level: 6 }, "none", "pp"), null);
+  // Startet allerede forbi målet uten å være der nå: regnes som bort.
+  assert.equal(c.targetProgress(indeks, REC, "2026-10-09", { level: 100 }, "up", "pct"), -1);
+  assert.deepEqual([1.2, 1, 0.6, 0.3, 0, -0.2, -0.8, null].map(c.progressGrade), ["g3", "g3", "g2", "g1", "n", "r1", "r2", null]);
+  const h = [{ date: "2026-09-25", phase: 1 }, { date: "2026-10-09", phase: 2 }];
+  const ind = { direction: "up", phase_directions: { 2: "down" }, phase_targets: { 1: { level: 5.5 }, 2: { change: -0.5 } }, min_move: 0.05, mode: "pp" };
+  const s = c.stripeStates(ind, rente, [1, 2], 2, h, 30);
+  assert.equal(s[0].start, "2026-09-25");
+  assert.equal(s[0].grade, "g3");
+  assert.equal(s[1].start, "2026-10-09");
+  assert.equal(s[1].grade, "n");
+});
+
 test("norsk formatering", () => {
   assert.equal(c.fmtNum(6747560, 0), "6 747 560");
   assert.equal(c.fmtNum(5.24, 2), "5,24");

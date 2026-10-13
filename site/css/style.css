@@ -28,6 +28,11 @@
   --stripe-line: rgba(11, 11, 11, 0.12);
   --phase-on: #52514e;
   --phase-off: rgba(11, 11, 11, 0.10);
+  --grade-g3: #0a6e0a;
+  --grade-g2: #3aa83a;
+  --grade-g1: #9fd89f;
+  --grade-r1: #f0a0a0;
+  --grade-r2: #c02a2a;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -58,6 +63,11 @@
     --stripe-line: rgba(255, 255, 255, 0.14);
     --phase-on: #c3c2b7;
     --phase-off: rgba(255, 255, 255, 0.12);
+    --grade-g3: #6fe06f;
+    --grade-g2: #3f9f48;
+    --grade-g1: #295c30;
+    --grade-r1: #6e2c2c;
+    --grade-r2: #f06a6a;
   }
 }
 :root[data-theme="dark"] {
@@ -69,6 +79,7 @@
   --warn: #f0c060; --warn-bg: #33290f;
   --good-fill: #1f4d29; --bad-fill: #5a2323; --flat-fill: #33332f; --stripe-line: rgba(255, 255, 255, 0.14);
   --phase-on: #c3c2b7; --phase-off: rgba(255, 255, 255, 0.12);
+  --grade-g3: #6fe06f; --grade-g2: #3f9f48; --grade-g1: #295c30; --grade-r1: #6e2c2c; --grade-r2: #f06a6a;
 }
 
 * { box-sizing: border-box; }
@@ -118,16 +129,21 @@ a { color: var(--s1); }
 .tile {
   --tile-bg: var(--surface);
   position: relative; overflow: hidden;
-  background: var(--tile-bg); border: 1px solid var(--border); border-radius: 8px; padding: 17px 14px 10px; min-width: 0;
+  background: var(--tile-bg); border: 1px solid var(--border); border-radius: 8px; padding: 19px 14px 10px; min-width: 0;
 }
 .tile.mot { --tile-bg: var(--good-fill); }
 .tile.bort { --tile-bg: var(--bad-fill); }
-.phasebar { position: absolute; top: 0; left: 0; right: 0; height: 6px; display: flex; gap: 2px; }
+.phasebar { position: absolute; top: 0; left: 0; right: 0; height: 8px; display: flex; gap: 2px; padding: 0 0 2px; background: var(--surface); border-bottom: 1px solid var(--border); }
 .phasebar span { flex: 1; background: var(--phase-off); }
-.phasebar span.v-mot { background: var(--good); }
-.phasebar span.v-bort { background: var(--bad); }
-.phasebar span.v-uendret, .phasebar span.v-ingen_retning, .phasebar span.v-none { background: var(--muted); }
+.phasebar span.g-g3 { background: var(--grade-g3); }
+.phasebar span.g-g2 { background: var(--grade-g2); }
+.phasebar span.g-g1 { background: var(--grade-g1); }
+.phasebar span.g-n, .phasebar span.g-none { background: var(--muted); }
+.phasebar span.g-r1 { background: var(--grade-r1); }
+.phasebar span.g-r2 { background: var(--grade-r2); }
 .phasebar span.s-empty { background: var(--phase-off); }
+.phase-grades { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 11px; color: var(--muted); margin: -2px 0 10px; }
+.phase-grades i { display: inline-block; width: 14px; height: 6px; margin-right: 4px; vertical-align: middle; }
 .tile .tt { font-size: 13px; color: var(--ink-2); display: flex; justify-content: space-between; gap: 8px; }
 .tile .tv { font-size: 26px; font-weight: 600; line-height: 1.2; margin: 2px 0; font-variant-numeric: normal; }
 .tile .tc { font-size: 13px; }

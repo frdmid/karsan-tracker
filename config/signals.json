@@ -16,9 +16,18 @@
       "id": "rente10",
       "title": "10-årsrenten",
       "claim": "5,5 til 6 % innen ca. 3 måneder fra opptaket",
-      "series": ["UST_10Y", "DGS10"],
+      "series": [
+        "UST_10Y",
+        "DGS10"
+      ],
       "pick": "freshest",
-      "rule": { "type": "level_reach", "threshold": 5.5, "upper": 6.0, "unit": "%", "deadline": "2026-12-25" },
+      "rule": {
+        "type": "level_reach",
+        "threshold": 5.5,
+        "upper": 6.0,
+        "unit": "%",
+        "deadline": "2026-12-25"
+      },
       "series_note": "UST_10Y og DGS10 er samme mål (FRED henter fra Treasury). Den med nyeste observasjon brukes.",
       "key": true
     },
@@ -26,46 +35,80 @@
       "id": "spx",
       "title": "S&P 500 fall fra topp",
       "claim": "Ned 25 til 40 % fra topp i H1 2027, muligens Q4 2026 hvis valget bestrides",
-      "series": ["SP500"],
-      "rule": { "type": "drawdown_reach", "threshold": 25, "upper": 40, "unit": "%", "deadline": "2027-06-30" },
+      "series": [
+        "SP500"
+      ],
+      "rule": {
+        "type": "drawdown_reach",
+        "threshold": 25,
+        "upper": 40,
+        "unit": "%",
+        "deadline": "2027-06-30"
+      },
       "key": true
     },
     {
       "id": "qe",
       "title": "QE, Fed kjøper statspapirer",
       "claim": "QE innen ca. 6 måneder",
-      "series": ["WSHOTSL"],
-      "rule": { "type": "change_reach", "threshold": 5, "unit": "%", "deadline": "2027-03-25" },
+      "series": [
+        "WSHOTSL"
+      ],
+      "rule": {
+        "type": "change_reach",
+        "threshold": 5,
+        "unit": "%",
+        "deadline": "2027-03-25"
+      },
       "definition_note": "Operasjonell definisjon valgt for denne siden, ikke Karsans tall: Feds beholdning av statspapirer (WSHOTSL) øker minst 5 % fra nivået ved opptaket."
     },
     {
       "id": "inflasjon",
       "title": "Inflasjon",
       "claim": "To sifret inflasjon",
-      "series": ["CPIAUCSL"],
-      "rule": { "type": "yoy_reach", "threshold": 10, "unit": "%", "deadline": null },
+      "series": [
+        "CPIAUCSL"
+      ],
+      "rule": {
+        "type": "yoy_reach",
+        "threshold": 10,
+        "unit": "%",
+        "deadline": null
+      },
       "definition_note": "Målt som KPI alle varer (CPIAUCSL), år over år."
     },
     {
       "id": "fedmal",
       "title": "Fed funds mål, øvre grense",
       "claim": "Bakgrunn: hevet 16. september 2026 til 3,75 til 4,00 %",
-      "series": ["DFEDTARU"],
-      "rule": { "type": "monitor", "unit": "%" }
+      "series": [
+        "DFEDTARU"
+      ],
+      "rule": {
+        "type": "monitor",
+        "unit": "%"
+      }
     },
     {
       "id": "move",
       "title": "MOVE, renteopsjonsvolatilitet",
       "claim": "Følges som signal",
-      "series": ["YF_MOVE"],
-      "rule": { "type": "monitor", "unit": "" }
+      "series": [
+        "YF_MOVE"
+      ],
+      "rule": {
+        "type": "monitor",
+        "unit": ""
+      }
     },
     {
       "id": "formuesfond",
       "title": "Statlig formuefond",
       "claim": "Etableres som del av politikken",
       "series": [],
-      "rule": { "type": "not_covered" },
+      "rule": {
+        "type": "not_covered"
+      },
       "not_covered_reason": "Politisk hendelse, ingen dataserie. Manuell oppfølging."
     },
     {
@@ -73,7 +116,9 @@
       "title": "Oppkjøp av lange statsobligasjoner",
       "claim": "Staten eller Fed kjøper lange statsobligasjoner",
       "series": [],
-      "rule": { "type": "not_covered" },
+      "rule": {
+        "type": "not_covered"
+      },
       "not_covered_reason": "Løpetidsfordeling i Feds beholdning finnes i H.4.1 tabell 2, men er ikke lagt inn. Manuell oppfølging."
     },
     {
@@ -81,7 +126,9 @@
       "title": "Kredittspreader (CDS) i AI-komplekset",
       "claim": "Følges som signal",
       "series": [],
-      "rule": { "type": "not_covered" },
+      "rule": {
+        "type": "not_covered"
+      },
       "not_covered_reason": "Enkelt-CDS finnes ikke gratis. Manuell oppfølging."
     },
     {
@@ -89,7 +136,9 @@
       "title": "Hyperscaler capex",
       "claim": "Følges som signal",
       "series": [],
-      "rule": { "type": "not_covered" },
+      "rule": {
+        "type": "not_covered"
+      },
       "not_covered_reason": "Finnes bare i selskapsrapporter, ingen gratis tidsserie. Manuell oppfølging."
     },
     {
@@ -97,7 +146,9 @@
       "title": "Andel S&P 500 med negativ beta",
       "claim": "Følges som signal",
       "series": [],
-      "rule": { "type": "not_covered" },
+      "rule": {
+        "type": "not_covered"
+      },
       "not_covered_reason": "Krever betaberegning på enkeltaksjer med lisensierte kursdata. Manuell oppfølging."
     },
     {
@@ -105,7 +156,9 @@
       "title": "CTA-indeks",
       "claim": "Følges som signal",
       "series": [],
-      "rule": { "type": "not_covered" },
+      "rule": {
+        "type": "not_covered"
+      },
       "not_covered_reason": "SG CTA og lignende indekser er ikke fritt tilgjengelige. Manuell oppfølging."
     }
   ],
@@ -114,89 +167,569 @@
     "window_days": 30,
     "spark_days": 120,
     "indicators": [
-      { "id": "rente10", "title": "10-årsrente", "series": ["UST_10Y", "DGS10"], "pick": "freshest", "transform": "level", "mode": "pp", "direction": "up", "phase_directions": { "2": "down", "3": "down", "4": "none" }, "min_move": 0.05, "why": "Fase 1: opp mot 5,5 til 6 %. Fase 2 og 3: ned, aksjefall og oppkjøp holder lange renter nede. Fase 4: ingen retning, rentene holdes kunstig lave." },
-      { "id": "spx_dd", "title": "S&P 500 fall fra topp", "series": ["SP500"], "transform": "drawdown", "mode": "pp", "direction": "up", "phase_directions": { "3": "down", "4": "none" }, "min_move": 1.0, "why": "Fase 1 og 2: fallet fra topp øker mot 25 til 40 %. Fase 3: aksjene henter seg inn etter QE. Fase 4: ingen retning." },
-      { "id": "realrente", "title": "Lang realrente, Treasury", "series": ["UST_REAL_LT"], "transform": "level", "mode": "pp", "direction": "none", "phase_directions": { "2": "down", "3": "down", "4": "down" }, "min_move": 0.05, "why": "Fase 1: ingen retning. Fase 2 til 4: ned, finansiell undertrykkelse presser realrentene." },
-      { "id": "rente30", "title": "30-årsrente", "series": ["UST_30Y", "DGS30"], "pick": "freshest", "transform": "level", "mode": "pp", "direction": "up", "phase_directions": { "2": "down", "3": "down", "4": "none" }, "min_move": 0.05, "why": "Fase 1: opp. Fase 2 og 3: ned. Fase 4: ingen retning." },
-      { "id": "breakeven", "title": "Breakeven inflasjon 10 år", "series": ["T10YIE"], "transform": "level", "mode": "pp", "direction": "up", "min_move": 0.05, "why": "Alle faser: inflasjonsforventningene skal opp." },
-      { "id": "kpi", "title": "KPI år/år", "series": ["CPIAUCSL"], "transform": "yoy", "mode": "pp", "direction": "up", "min_move": 0.1, "why": "Alle faser: inflasjonen skal mot to sifret." },
-      { "id": "fedpapirer", "title": "Feds statspapirer", "series": ["WSHOTSL"], "transform": "level", "mode": "pct", "direction": "up", "min_move": 0.5, "why": "Alle faser: Fed skal kjøpe statspapirer (QE)." },
-      { "id": "vix", "title": "VIX", "series": ["VIXCLS"], "transform": "level", "mode": "pct", "direction": "up", "phase_directions": { "3": "down", "4": "none" }, "min_move": 5, "why": "Fase 1 og 2: opp. Fase 3: ned når QE demper markedet. Fase 4: ingen retning." },
-      { "id": "hy", "title": "High yield OAS", "series": ["BAMLH0A0HYM2"], "transform": "level", "mode": "pp", "direction": "up", "phase_directions": { "3": "down", "4": "none" }, "min_move": 0.1, "why": "Fase 1 og 2: bredere spreader. Fase 3: smalere etter QE. Fase 4: ingen retning." },
-      { "id": "dollar", "title": "Bred dollarindeks", "series": ["DTWEXBGS"], "transform": "level", "mode": "pct", "direction": "down", "phase_directions": { "2": "none" }, "min_move": 0.5, "why": "Dollaren svekkes når gjeld inflateres bort. Fase 2: ingen retning, flukt til dollar kan trekke motsatt vei." },
-      { "id": "gull", "title": "Gull", "series": ["YF_GOLD"], "transform": "level", "mode": "pct", "direction": "up", "min_move": 1, "why": "Alle faser: gull vinner ved finansiell undertrykkelse." },
-      { "id": "move", "title": "MOVE", "series": ["YF_MOVE"], "transform": "level", "mode": "pct", "direction": "up", "phase_directions": { "3": "down", "4": "none" }, "min_move": 5, "why": "Fase 1 og 2: rentevolatiliteten stiger. Fase 3: ned når Fed griper inn. Fase 4: ingen retning." }
-    ]
+      {
+        "id": "rente10",
+        "title": "10-årsrente",
+        "series": [
+          "UST_10Y",
+          "DGS10"
+        ],
+        "pick": "freshest",
+        "transform": "level",
+        "mode": "pp",
+        "direction": "up",
+        "phase_directions": {
+          "2": "down",
+          "3": "down",
+          "4": "none"
+        },
+        "min_move": 0.05,
+        "why": "Fase 1: opp mot 5,5 til 6 %. Fase 2 og 3: ned, aksjefall og oppkjøp holder lange renter nede. Fase 4: ingen retning, rentene holdes kunstig lave.",
+        "phase_targets": {
+          "1": {
+            "level": 5.5
+          },
+          "2": {
+            "change": -0.5
+          },
+          "3": {
+            "change": -0.5
+          }
+        }
+      },
+      {
+        "id": "spx_dd",
+        "title": "S&P 500 fall fra topp",
+        "series": [
+          "SP500"
+        ],
+        "transform": "drawdown",
+        "mode": "pp",
+        "direction": "up",
+        "phase_directions": {
+          "3": "down",
+          "4": "none"
+        },
+        "min_move": 1.0,
+        "why": "Fase 1 og 2: fallet fra topp øker mot 25 til 40 %. Fase 3: aksjene henter seg inn etter QE. Fase 4: ingen retning.",
+        "phase_targets": {
+          "1": {
+            "level": 10
+          },
+          "2": {
+            "level": 25
+          },
+          "3": {
+            "change": -10
+          }
+        }
+      },
+      {
+        "id": "realrente",
+        "title": "Lang realrente, Treasury",
+        "series": [
+          "UST_REAL_LT"
+        ],
+        "transform": "level",
+        "mode": "pp",
+        "direction": "none",
+        "phase_directions": {
+          "2": "down",
+          "3": "down",
+          "4": "down"
+        },
+        "min_move": 0.05,
+        "why": "Fase 1: ingen retning. Fase 2 til 4: ned, finansiell undertrykkelse presser realrentene.",
+        "phase_targets": {
+          "2": {
+            "change": -0.5
+          },
+          "3": {
+            "change": -0.5
+          },
+          "4": {
+            "change": -0.5
+          }
+        }
+      },
+      {
+        "id": "rente30",
+        "title": "30-årsrente",
+        "series": [
+          "UST_30Y",
+          "DGS30"
+        ],
+        "pick": "freshest",
+        "transform": "level",
+        "mode": "pp",
+        "direction": "up",
+        "phase_directions": {
+          "2": "down",
+          "3": "down",
+          "4": "none"
+        },
+        "min_move": 0.05,
+        "why": "Fase 1: opp. Fase 2 og 3: ned. Fase 4: ingen retning.",
+        "phase_targets": {
+          "1": {
+            "change": 0.4
+          },
+          "2": {
+            "change": -0.5
+          },
+          "3": {
+            "change": -0.5
+          }
+        }
+      },
+      {
+        "id": "breakeven",
+        "title": "Breakeven inflasjon 10 år",
+        "series": [
+          "T10YIE"
+        ],
+        "transform": "level",
+        "mode": "pp",
+        "direction": "up",
+        "min_move": 0.05,
+        "why": "Alle faser: inflasjonsforventningene skal opp.",
+        "phase_targets": {
+          "1": {
+            "level": 3.0
+          },
+          "2": {
+            "level": 3.0
+          },
+          "3": {
+            "level": 3.0
+          },
+          "4": {
+            "level": 3.0
+          }
+        }
+      },
+      {
+        "id": "kpi",
+        "title": "KPI år/år",
+        "series": [
+          "CPIAUCSL"
+        ],
+        "transform": "yoy",
+        "mode": "pp",
+        "direction": "up",
+        "min_move": 0.1,
+        "why": "Alle faser: inflasjonen skal mot to sifret.",
+        "phase_targets": {
+          "1": {
+            "level": 10
+          },
+          "2": {
+            "level": 10
+          },
+          "3": {
+            "level": 10
+          },
+          "4": {
+            "level": 10
+          }
+        }
+      },
+      {
+        "id": "fedpapirer",
+        "title": "Feds statspapirer",
+        "series": [
+          "WSHOTSL"
+        ],
+        "transform": "level",
+        "mode": "pct",
+        "direction": "up",
+        "min_move": 0.5,
+        "why": "Alle faser: Fed skal kjøpe statspapirer (QE).",
+        "phase_targets": {
+          "1": {
+            "change": 5
+          },
+          "2": {
+            "change": 5
+          },
+          "3": {
+            "change": 5
+          },
+          "4": {
+            "change": 5
+          }
+        }
+      },
+      {
+        "id": "vix",
+        "title": "VIX",
+        "series": [
+          "VIXCLS"
+        ],
+        "transform": "level",
+        "mode": "pct",
+        "direction": "up",
+        "phase_directions": {
+          "3": "down",
+          "4": "none"
+        },
+        "min_move": 5,
+        "why": "Fase 1 og 2: opp. Fase 3: ned når QE demper markedet. Fase 4: ingen retning.",
+        "phase_targets": {
+          "1": {
+            "level": 20
+          },
+          "2": {
+            "level": 25
+          },
+          "3": {
+            "change": -30
+          }
+        }
+      },
+      {
+        "id": "hy",
+        "title": "High yield OAS",
+        "series": [
+          "BAMLH0A0HYM2"
+        ],
+        "transform": "level",
+        "mode": "pp",
+        "direction": "up",
+        "phase_directions": {
+          "3": "down",
+          "4": "none"
+        },
+        "min_move": 0.1,
+        "why": "Fase 1 og 2: bredere spreader. Fase 3: smalere etter QE. Fase 4: ingen retning.",
+        "phase_targets": {
+          "1": {
+            "level": 4
+          },
+          "2": {
+            "level": 5
+          },
+          "3": {
+            "change": -1
+          }
+        }
+      },
+      {
+        "id": "dollar",
+        "title": "Bred dollarindeks",
+        "series": [
+          "DTWEXBGS"
+        ],
+        "transform": "level",
+        "mode": "pct",
+        "direction": "down",
+        "phase_directions": {
+          "2": "none"
+        },
+        "min_move": 0.5,
+        "why": "Dollaren svekkes når gjeld inflateres bort. Fase 2: ingen retning, flukt til dollar kan trekke motsatt vei.",
+        "phase_targets": {
+          "1": {
+            "change": -5
+          },
+          "3": {
+            "change": -5
+          },
+          "4": {
+            "change": -5
+          }
+        }
+      },
+      {
+        "id": "gull",
+        "title": "Gull",
+        "series": [
+          "YF_GOLD"
+        ],
+        "transform": "level",
+        "mode": "pct",
+        "direction": "up",
+        "min_move": 1,
+        "why": "Alle faser: gull vinner ved finansiell undertrykkelse.",
+        "phase_targets": {
+          "1": {
+            "change": 10
+          },
+          "2": {
+            "change": 10
+          },
+          "3": {
+            "change": 10
+          },
+          "4": {
+            "change": 10
+          }
+        }
+      },
+      {
+        "id": "move",
+        "title": "MOVE",
+        "series": [
+          "YF_MOVE"
+        ],
+        "transform": "level",
+        "mode": "pct",
+        "direction": "up",
+        "phase_directions": {
+          "3": "down",
+          "4": "none"
+        },
+        "min_move": 5,
+        "why": "Fase 1 og 2: rentevolatiliteten stiger. Fase 3: ned når Fed griper inn. Fase 4: ingen retning.",
+        "phase_targets": {
+          "1": {
+            "level": 120
+          },
+          "2": {
+            "level": 120
+          },
+          "3": {
+            "change": -20
+          }
+        }
+      }
+    ],
+    "_mal": "phase_targets er mål per fase for fargestyrken i fasestripene: level er et nivå, change er endring fra fasestart i prosentpoeng (mode pp) eller prosent (mode pct). Fremdrift regnes fra verdien da fasen startet. Mørk grønn: målet nådd. Middels grønn: minst halvveis. Lys grønn: på vei. Grå: stillestående eller uten mål. Lys rød: beveget seg litt bort. Mørk rød: langt bort. Bare tre mål er Karsans egne tall: 10-årsrente 5,5 % i fase 1, S&P 500 fall 25 % i fase 2 og KPI 10 %. Resten er denne sidens operasjonalisering av tesen."
   },
   "regime": {
     "_merknad": "Fasene og vilkårene er denne sidens operasjonalisering av tesen, ikke Karsans egne definisjoner. En fase regnes som nådd når vilkårene er oppfylt (require=all: alle, require=any: minst ett). Gjeldende fase er den høyeste fasen som er nådd. Vilkår uten data vises som Ikke dekket og telles ikke.",
     "disclaimer": "Implikasjonene per fase er utledet av tesen slik den er gjengitt på denne siden. De er ikke investeringsråd, ikke tilpasset noens situasjon og ikke Karsans egne anbefalinger.",
     "phases": [
       {
-        "id": 0, "name": "Før scenariet",
+        "id": 0,
+        "name": "Før scenariet",
         "description": "Ingen av fasene i narrativet er nådd.",
-        "require": "all", "conditions": [],
-        "implications": { "favored": [], "disfavored": [], "rationale": "" }
+        "require": "all",
+        "conditions": [],
+        "implications": {
+          "favored": [],
+          "disfavored": [],
+          "rationale": ""
+        }
       },
       {
-        "id": 1, "name": "Fase 1: Rentesjokk",
+        "id": 1,
+        "name": "Fase 1: Rentesjokk",
         "description": "Fed hever for å vise uavhengighet. Lange renter stiger mot 5,5 til 6 %, aksjene holder seg foreløpig.",
         "require": "all",
         "conditions": [
-          { "label": "Fed øvre mål minst 4,00 %", "series": ["DFEDTARU"], "metric": "last", "transform": "level", "op": ">=", "value": 4.0, "unit": "%" },
-          { "label": "10-årsrenten minst 5,00 %", "series": ["UST_10Y", "DGS10"], "metric": "last", "transform": "level", "op": ">=", "value": 5.0, "unit": "%" },
-          { "label": "10-årsrenten steget siste 90 dager", "series": ["UST_10Y", "DGS10"], "metric": "change_days", "days": 90, "mode": "pp", "transform": "level", "op": ">", "value": 0, "unit": "pp" }
+          {
+            "label": "Fed øvre mål minst 4,00 %",
+            "series": [
+              "DFEDTARU"
+            ],
+            "metric": "last",
+            "transform": "level",
+            "op": ">=",
+            "value": 4.0,
+            "unit": "%"
+          },
+          {
+            "label": "10-årsrenten minst 5,00 %",
+            "series": [
+              "UST_10Y",
+              "DGS10"
+            ],
+            "metric": "last",
+            "transform": "level",
+            "op": ">=",
+            "value": 5.0,
+            "unit": "%"
+          },
+          {
+            "label": "10-årsrenten steget siste 90 dager",
+            "series": [
+              "UST_10Y",
+              "DGS10"
+            ],
+            "metric": "change_days",
+            "days": 90,
+            "mode": "pp",
+            "transform": "level",
+            "op": ">",
+            "value": 0,
+            "unit": "pp"
+          }
         ],
         "implications": {
-          "favored": ["Kort rente og pengemarked", "Korte TIPS"],
-          "disfavored": ["Lange nominelle statsobligasjoner", "Rentesensitive vekstaksjer"],
+          "favored": [
+            "Kort rente og pengemarked",
+            "Korte TIPS"
+          ],
+          "disfavored": [
+            "Lange nominelle statsobligasjoner",
+            "Rentesensitive vekstaksjer"
+          ],
           "rationale": "Stigende lange renter gir kurstap på lang durasjon og presser verdsettelsen av aksjer med lang kontantstrøm."
         }
       },
       {
-        "id": 2, "name": "Fase 2: Aksjefall",
+        "id": 2,
+        "name": "Fase 2: Aksjefall",
         "description": "Aksjemarkedet faller kraftig, noe som holder lange renter nede.",
         "require": "any",
         "conditions": [
-          { "label": "S&P 500 minst 10 % under topp", "series": ["SP500"], "metric": "last", "transform": "drawdown", "op": ">=", "value": 10, "unit": "%" },
-          { "label": "VIX minst 25", "series": ["VIXCLS"], "metric": "last", "transform": "level", "op": ">=", "value": 25, "unit": "" },
-          { "label": "High yield OAS minst 5 %", "series": ["BAMLH0A0HYM2"], "metric": "last", "transform": "level", "op": ">=", "value": 5, "unit": "%" }
+          {
+            "label": "S&P 500 minst 10 % under topp",
+            "series": [
+              "SP500"
+            ],
+            "metric": "last",
+            "transform": "drawdown",
+            "op": ">=",
+            "value": 10,
+            "unit": "%"
+          },
+          {
+            "label": "VIX minst 25",
+            "series": [
+              "VIXCLS"
+            ],
+            "metric": "last",
+            "transform": "level",
+            "op": ">=",
+            "value": 25,
+            "unit": ""
+          },
+          {
+            "label": "High yield OAS minst 5 %",
+            "series": [
+              "BAMLH0A0HYM2"
+            ],
+            "metric": "last",
+            "transform": "level",
+            "op": ">=",
+            "value": 5,
+            "unit": "%"
+          }
         ],
         "implications": {
-          "favored": ["Kontanter", "Lange statsobligasjoner etter rentetopp", "Volatilitet og sikring"],
-          "disfavored": ["Aksjer, særlig AI-komplekset", "High yield kreditt"],
+          "favored": [
+            "Kontanter",
+            "Lange statsobligasjoner etter rentetopp",
+            "Volatilitet og sikring"
+          ],
+          "disfavored": [
+            "Aksjer, særlig AI-komplekset",
+            "High yield kreditt"
+          ],
           "rationale": "Tesen er at aksjefallet er villet for å presse lange renter ned, med risiko konsentrert i AI og kreditt."
         }
       },
       {
-        "id": 3, "name": "Fase 3: Politikkskifte og QE",
+        "id": 3,
+        "name": "Fase 3: Politikkskifte og QE",
         "description": "Fed og staten snur: QE, kutt og oppkjøp av lange statsobligasjoner.",
         "require": "any",
         "conditions": [
-          { "label": "Feds statspapirer økt minst 5 % siden opptak", "series": ["WSHOTSL"], "metric": "change_since_recording", "mode": "pct", "transform": "level", "op": ">=", "value": 5, "unit": "%" },
-          { "label": "Fed øvre mål kuttet siden opptak", "series": ["DFEDTARU"], "metric": "change_since_recording", "mode": "pp", "transform": "level", "op": "<=", "value": -0.25, "unit": "pp" }
+          {
+            "label": "Feds statspapirer økt minst 5 % siden opptak",
+            "series": [
+              "WSHOTSL"
+            ],
+            "metric": "change_since_recording",
+            "mode": "pct",
+            "transform": "level",
+            "op": ">=",
+            "value": 5,
+            "unit": "%"
+          },
+          {
+            "label": "Fed øvre mål kuttet siden opptak",
+            "series": [
+              "DFEDTARU"
+            ],
+            "metric": "change_since_recording",
+            "mode": "pp",
+            "transform": "level",
+            "op": "<=",
+            "value": -0.25,
+            "unit": "pp"
+          }
         ],
         "implications": {
-          "favored": ["Gull", "Realaktiva", "Aksjer etter bunn"],
-          "disfavored": ["Dollar", "Kontanter over tid"],
+          "favored": [
+            "Gull",
+            "Realaktiva",
+            "Aksjer etter bunn"
+          ],
+          "disfavored": [
+            "Dollar",
+            "Kontanter over tid"
+          ],
           "rationale": "Pengetrykking og kunstig lave renter svekker valuta og løfter realaktiva."
         }
       },
       {
-        "id": 4, "name": "Fase 4: Inflasjon",
+        "id": 4,
+        "name": "Fase 4: Inflasjon",
         "description": "Inflasjonen tar av mot to sifret, realrentene presses ned.",
         "require": "all",
         "conditions": [
-          { "label": "KPI år/år minst 6 %", "series": ["CPIAUCSL"], "metric": "last", "transform": "yoy", "op": ">=", "value": 6, "unit": "%" },
-          { "label": "Breakeven 10 år minst 3,00 %", "series": ["T10YIE"], "metric": "last", "transform": "level", "op": ">=", "value": 3.0, "unit": "%" }
+          {
+            "label": "KPI år/år minst 6 %",
+            "series": [
+              "CPIAUCSL"
+            ],
+            "metric": "last",
+            "transform": "yoy",
+            "op": ">=",
+            "value": 6,
+            "unit": "%"
+          },
+          {
+            "label": "Breakeven 10 år minst 3,00 %",
+            "series": [
+              "T10YIE"
+            ],
+            "metric": "last",
+            "transform": "level",
+            "op": ">=",
+            "value": 3.0,
+            "unit": "%"
+          }
         ],
         "implications": {
-          "favored": ["Gull", "Råvarer", "TIPS", "Realaktiva"],
-          "disfavored": ["Nominelle obligasjoner", "Kontanter", "Dollar"],
+          "favored": [
+            "Gull",
+            "Råvarer",
+            "TIPS",
+            "Realaktiva"
+          ],
+          "disfavored": [
+            "Nominelle obligasjoner",
+            "Kontanter",
+            "Dollar"
+          ],
           "rationale": "Å inflatere bort gjeld betyr negativ realavkastning på nominelle fordringer."
         }
       }
     ]
   },
-  "since_recording": ["UST_10Y", "UST_30Y", "UST_2Y", "DFII10", "UST_REAL_LT", "T10YIE", "DFEDTARU", "SP500", "WALCL", "WSHOTSL", "WRESBAL", "WTREGEN", "VIXCLS", "BAMLH0A0HYM2", "BAMLC0A0CM", "YF_MOVE", "YF_GOLD", "DEXNOUS", "DTWEXBGS"]
+  "since_recording": [
+    "UST_10Y",
+    "UST_30Y",
+    "UST_2Y",
+    "DFII10",
+    "UST_REAL_LT",
+    "T10YIE",
+    "DFEDTARU",
+    "SP500",
+    "WALCL",
+    "WSHOTSL",
+    "WRESBAL",
+    "WTREGEN",
+    "VIXCLS",
+    "BAMLH0A0HYM2",
+    "BAMLC0A0CM",
+    "YF_MOVE",
+    "YF_GOLD",
+    "DEXNOUS",
+    "DTWEXBGS"
+  ]
 }

@@ -158,14 +158,24 @@ function sparkline(rows, baseDate) {
 
 // Boksens farge: retning i gjeldende fase. Fasestripene øverst er en logg: passerte
 // faser er frosset på datoen regimet gikk videre, gjeldende fase er levende.
-function phasebar(ind, states, phases) {
-  const name = (id) => phases.find((p) => p.id === id).name.split(":")[0];
+const GRADE = { g3: "målet nådd", g2: "minst halvveis til målet", g1: "på vei mot målet", n: "stillestående", r1: "litt bort fra målet", r2: "langt bort fra målet" };
+
+function targetText(ctx, id, ind, t) {
+  if (!t) return "ingen mål i denne fasen";
+  if (t.change !== undefined) return `mål ${changeText(t.change, ind.mode)} fra fasestart`;
+  return `mål ${valueText(ctx, id, ind.transform, t.level)}`;
+}
+
+// Fargestyrken viser fremdrift mot fasens mål. Passerte faser er frosset på faseskiftet.
+function phasebar(ctx, id, ind, states, phases) {
+  const name = (pid) => phases.find((p) => p.id === pid).name.split(":")[0];
   return `<div class="phasebar">${states.map((s) => {
-    const v = s.verdict || "none";
-    const tip = s.state === "empty" ? `${name(s.phase)}: ikke nådd`
-      : s.state === "frozen" ? `${name(s.phase)}: ${s.verdict ? VERDICT[s.verdict] : "ingen data"} da regimet gikk videre ${C.fmtDate(s.date)}`
-      : `${name(s.phase)} (nå): ${s.verdict ? VERDICT[s.verdict] : "ingen data"}`;
-    return `<span class="s-${s.state} v-${v}" title="${esc(tip)}"></span>`;
+    if (s.state === "empty") return `<span class="s-empty" title="${esc(name(s.phase))}: ikke nådd"></span>`;
+    const t = (ind.phase_targets || {})[String(s.phase)];
+    const status = s.grade ? `${GRADE[s.grade]} (${Math.round(s.progress * 100)} %)` : "ingen fremdrift å måle";
+    const when = s.state === "frozen" ? `da regimet gikk videre ${C.fmtDate(s.date)}` : "nå";
+    const tip = `${name(s.phase)}, ${when}: ${status}. ${targetText(ctx, id, ind, t)}, fasestart ${C.fmtDate(s.start)}.`;
+    return `<span class="s-${s.state} g-${s.grade || "none"}" title="${esc(tip)}"></span>`;
   }).join("")}</div>`;
 }
 
@@ -175,9 +185,11 @@ function renderTiles(ctx, regime, history) {
   const phaseIds = phases.map((p) => p.id);
   const cur = regime.current.id;
   const n = phases.length;
-  $("#overview-intro").textContent = `Boksens farge viser om endringen siste ${ov.window_days} dager er i retning narrativet for fasen vi er i nå. Grønn: i retning. Rød: bort fra. Nøytral: uendret eller ingen retning i denne fasen. Lista øverst har ${n} striper, én per fase. Stripen for en passert fase er frosset og viser hvordan tallet sto da regimet gikk videre. Stripen for gjeldende fase følger boksen. Grafen viser siste ${ov.spark_days} dager, stiplet strek markerer startpunktet for endringen.`;
+  $("#overview-intro").textContent = `Boksens farge viser om endringen siste ${ov.window_days} dager er i retning narrativet for fasen vi er i nå. Grønn: i retning. Rød: bort fra. Nøytral: uendret eller ingen retning i denne fasen. Lista øverst har ${n} striper, én per fase, og viser fremdrift mot fasens mål siden fasen startet, se fargeforklaringen under. Stripen for en passert fase er frosset på datoen regimet gikk videre. Hold musen over en stripe for mål og fremdrift. Grafen viser siste ${ov.spark_days} dager, stiplet strek markerer startpunktet for endringen.`;
   $("#phase-key").style.gridTemplateColumns = `repeat(${n}, 1fr)`;
   $("#phase-key").innerHTML = phases.map((p) => `<span class="${p.id <= cur ? "on" : ""}">${esc(p.name.split(":")[0])}</span>`).join("");
+  $("#phase-grades").innerHTML = "<span>Fasestripe:</span>" + ["g3", "g2", "g1", "n", "r1", "r2"]
+    .map((g) => `<span><i class="g-${g}" style="background:var(${g === "n" ? "--muted" : "--grade-" + g})"></i>${GRADE[g]}</span>`).join("");
   let toward = 0, counted = 0;
   $("#tiles").innerHTML = ov.indicators.map((ind) => {
     const picked = C.pickSeries(ind.series, ctx.data, ind.pick || "freshest");
@@ -195,7 +207,7 @@ function renderTiles(ctx, regime, history) {
     const cls = m ? m.verdict : "";
     const label = `${m ? VERDICT[m.verdict] + ". " : ""}${ind.why}`;
     return `<div class="tile ${cls}" title="${esc(label)}" aria-label="${esc(ind.title)}: ${esc(label)}">
-      ${phasebar(ind, states, phases)}
+      ${phasebar(ctx, picked.id, ind, states, phases)}
       <div class="tt"><span>${esc(ind.title)}</span></div>
       <div class="tv">${valueText(ctx, picked.id, ind.transform, lastObs.value)}</div>
       <div class="tc">${m ? `${changeText(m.change, ind.mode)} siden ${C.fmtDate(m.baseDate)}` : "For kort historikk"}</div>

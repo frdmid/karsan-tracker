@@ -288,16 +288,59 @@ export function directionFor(ind, phaseId) {
   return pd[String(phaseId)] ?? ind.direction;
 }
 
+// Datoen regimet første gang nådde fasen (eller en høyere).
+export function phaseStartDate(history, phaseId) {
+  const hit = history.find((h) => h.phase >= phaseId);
+  return hit ? hit.date : null;
+}
+
+// Fremdrift mot fasens mål, regnet fra verdien ved fasestart til verdien på atDate.
+// target: { level: x } (nivå) eller { change: x } (endring i ind.mode, pp eller pct, med fortegn).
+// 1 eller mer = nådd. Mellom 0 og 1 = andel av veien. Under 0 = beveget seg motsatt vei.
+export function targetProgress(rows, startDate, atDate, target, direction, mode) {
+  if (!target || direction === "none") return null;
+  const base = onOrBefore(rows, startDate);
+  const now = onOrBefore(rows, atDate);
+  if (!base || !now) return null;
+  if (target.change !== undefined) {
+    const ch = change(base.value, now.value, mode);
+    return ch === null || target.change === 0 ? null : ch / target.change;
+  }
+  const sign = direction === "down" ? -1 : 1;
+  const ahead = (target.level - base.value) * sign;
+  const moved = (now.value - base.value) * sign;
+  if ((now.value - target.level) * sign >= 0) return 1;
+  if (ahead <= 0) return moved >= 0 ? 0 : -1;
+  return moved / ahead;
+}
+
+// Fargetrinn: g3 nådd, g2 minst halvveis, g1 på vei, n stillestående, r1 litt bort, r2 langt bort.
+export function progressGrade(p) {
+  if (p === null || p === undefined) return null;
+  if (p >= 1) return "g3";
+  if (p >= 0.5) return "g2";
+  if (p > 0.05) return "g1";
+  if (p >= -0.05) return "n";
+  if (p > -0.5) return "r1";
+  return "r2";
+}
+
 // Én stripe per fase. Passerte faser fryses på datoen regimet gikk videre,
-// gjeldende fase er levende, senere faser er tomme.
+// gjeldende fase er levende, senere faser er tomme. verdict er 30-dagers retning,
+// grade er fremdrift mot fasens mål siden fasestart.
 export function stripeStates(ind, rows, phaseIds, currentId, history, windowDays) {
   return phaseIds.map((p) => {
-    if (p > currentId) return { phase: p, state: "empty", verdict: null, date: null };
+    if (p > currentId) return { phase: p, state: "empty", verdict: null, date: null, progress: null, grade: null };
     const live = p === currentId;
     const date = live ? null : phaseExitDate(history, p);
     const basis = live ? rows : date ? truncate(rows, date) : [];
-    const m = momentum(basis, windowDays, directionFor(ind, p), ind.min_move, ind.mode);
-    return { phase: p, state: live ? "current" : "frozen", verdict: m ? m.verdict : null, date: live ? (m && m.lastDate) : date };
+    const dir = directionFor(ind, p);
+    const m = momentum(basis, windowDays, dir, ind.min_move, ind.mode);
+    const at = live ? (last(rows) || {}).date : date;
+    const start = phaseStartDate(history, p);
+    const progress = at && start ? targetProgress(rows, start, at, (ind.phase_targets || {})[String(p)], dir, ind.mode) : null;
+    return { phase: p, state: live ? "current" : "frozen", verdict: m ? m.verdict : null, date: live ? (m && m.lastDate) : date,
+             start, progress, grade: progressGrade(progress) };
   });
 }
 
