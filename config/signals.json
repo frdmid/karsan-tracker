@@ -271,9 +271,6 @@
         "min_move": 0.05,
         "why": "Fase 1: opp. Fase 2 og 3: ned. Fase 4: ingen retning.",
         "phase_targets": {
-          "1": {
-            "change": 0.4
-          },
           "2": {
             "change": -0.5
           },
@@ -320,15 +317,6 @@
         "min_move": 0.1,
         "why": "Alle faser: inflasjonen skal mot to sifret.",
         "phase_targets": {
-          "1": {
-            "level": 10
-          },
-          "2": {
-            "level": 10
-          },
-          "3": {
-            "level": 10
-          },
           "4": {
             "level": 10
           }
@@ -428,17 +416,7 @@
         },
         "min_move": 0.5,
         "why": "Dollaren svekkes når gjeld inflateres bort. Fase 2: ingen retning, flukt til dollar kan trekke motsatt vei.",
-        "phase_targets": {
-          "1": {
-            "change": -5
-          },
-          "3": {
-            "change": -5
-          },
-          "4": {
-            "change": -5
-          }
-        }
+        "phase_targets": {}
       },
       {
         "id": "gull",
@@ -451,20 +429,7 @@
         "direction": "up",
         "min_move": 1,
         "why": "Alle faser: gull vinner ved finansiell undertrykkelse.",
-        "phase_targets": {
-          "1": {
-            "change": 10
-          },
-          "2": {
-            "change": 10
-          },
-          "3": {
-            "change": 10
-          },
-          "4": {
-            "change": 10
-          }
-        }
+        "phase_targets": {}
       },
       {
         "id": "move",
@@ -494,7 +459,7 @@
         }
       }
     ],
-    "_mal": "phase_targets er mål per fase for fargestyrken i fasestripene: level er et nivå, change er endring fra fasestart i prosentpoeng (mode pp) eller prosent (mode pct). Fremdrift regnes fra verdien da fasen startet. Mørk grønn: målet nådd. Middels grønn: minst halvveis. Lys grønn: på vei. Grå: stillestående eller uten mål. Lys rød: beveget seg litt bort. Mørk rød: langt bort. Bare tre mål er Karsans egne tall: 10-årsrente 5,5 % i fase 1, S&P 500 fall 25 % i fase 2 og KPI 10 %. Resten er denne sidens operasjonalisering av tesen."
+    "_mal": "phase_targets er mål per fase for fargestyrken i fasestripene: level er et nivå, change er endring fra fasestart i prosentpoeng (mode pp) eller prosent (mode pct). Fremdrift regnes fra verdien da fasen startet. Mørk grønn: målet nådd. Middels grønn: minst halvveis. Lys grønn: på vei. Grå: stillestående. Hvit: ingen mål i denne fasen. Lys rød: beveget seg litt bort. Mørk rød: langt bort. Bare tre mål er Karsans egne tall: 10-årsrente 5,5 % i fase 1, S&P 500 fall 25 % i fase 2 og KPI 10 % i fase 4. Ikke alle nøkkeltall har mål, svakt begrunnede mål er fjernet. Resten er denne sidens operasjonalisering av tesen."
   },
   "regime": {
     "_merknad": "Fasene og vilkårene er denne sidens operasjonalisering av tesen, ikke Karsans egne definisjoner. En fase regnes som nådd når vilkårene er oppfylt (require=all: alle, require=any: minst ett). Gjeldende fase er den høyeste fasen som er nådd. Vilkår uten data vises som Ikke dekket og telles ikke.",

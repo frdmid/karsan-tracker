@@ -172,7 +172,7 @@ function phasebar(ctx, id, ind, states, phases) {
   return `<div class="phasebar">${states.map((s) => {
     if (s.state === "empty") return `<span class="s-empty" title="${esc(name(s.phase))}: ikke nådd"></span>`;
     const t = (ind.phase_targets || {})[String(s.phase)];
-    const status = s.grade ? `${GRADE[s.grade]} (${Math.round(s.progress * 100)} %)` : "ingen fremdrift å måle";
+    const status = s.grade ? `${GRADE[s.grade]} (${Math.round(s.progress * 100)} %)` : t ? "ingen fremdrift å måle" : "ingen mål i denne fasen";
     const when = s.state === "frozen" ? `da regimet gikk videre ${C.fmtDate(s.date)}` : "nå";
     const tip = `${name(s.phase)}, ${when}: ${status}. ${targetText(ctx, id, ind, t)}, fasestart ${C.fmtDate(s.start)}.`;
     return `<span class="s-${s.state} g-${s.grade || "none"}" title="${esc(tip)}"></span>`;
@@ -189,7 +189,8 @@ function renderTiles(ctx, regime, history) {
   $("#phase-key").style.gridTemplateColumns = `repeat(${n}, 1fr)`;
   $("#phase-key").innerHTML = phases.map((p) => `<span class="${p.id <= cur ? "on" : ""}">${esc(p.name.split(":")[0])}</span>`).join("");
   $("#phase-grades").innerHTML = "<span>Fasestripe:</span>" + ["g3", "g2", "g1", "n", "r1", "r2"]
-    .map((g) => `<span><i class="g-${g}" style="background:var(${g === "n" ? "--muted" : "--grade-" + g})"></i>${GRADE[g]}</span>`).join("");
+    .map((g) => `<span><i class="g-${g}" style="background:var(${g === "n" ? "--muted" : "--grade-" + g})"></i>${GRADE[g]}</span>`).join("")
+    + '<span><i class="g-none"></i>ingen mål i fasen</span><span><i class="s-empty"></i>fase ikke nådd</span>';
   let toward = 0, counted = 0;
   $("#tiles").innerHTML = ov.indicators.map((ind) => {
     const picked = C.pickSeries(ind.series, ctx.data, ind.pick || "freshest");

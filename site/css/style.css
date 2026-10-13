@@ -33,6 +33,8 @@
   --grade-g1: #9fd89f;
   --grade-r1: #f0a0a0;
   --grade-r2: #c02a2a;
+  --grade-none: #ffffff;
+  --grade-none-edge: rgba(11, 11, 11, 0.35);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -68,6 +70,8 @@
     --grade-g1: #295c30;
     --grade-r1: #6e2c2c;
     --grade-r2: #f06a6a;
+    --grade-none: #f2f1ec;
+    --grade-none-edge: rgba(255, 255, 255, 0.5);
   }
 }
 :root[data-theme="dark"] {
@@ -80,6 +84,7 @@
   --good-fill: #1f4d29; --bad-fill: #5a2323; --flat-fill: #33332f; --stripe-line: rgba(255, 255, 255, 0.14);
   --phase-on: #c3c2b7; --phase-off: rgba(255, 255, 255, 0.12);
   --grade-g3: #6fe06f; --grade-g2: #3f9f48; --grade-g1: #295c30; --grade-r1: #6e2c2c; --grade-r2: #f06a6a;
+  --grade-none: #f2f1ec; --grade-none-edge: rgba(255, 255, 255, 0.5);
 }
 
 * { box-sizing: border-box; }
@@ -138,7 +143,9 @@ a { color: var(--s1); }
 .phasebar span.g-g3 { background: var(--grade-g3); }
 .phasebar span.g-g2 { background: var(--grade-g2); }
 .phasebar span.g-g1 { background: var(--grade-g1); }
-.phasebar span.g-n, .phasebar span.g-none { background: var(--muted); }
+.phasebar span.g-n { background: var(--muted); }
+.phasebar span.g-none, .phase-grades i.g-none { background: var(--grade-none); box-shadow: inset 0 0 0 1px var(--grade-none-edge); }
+.phase-grades i.s-empty { background: var(--phase-off); }
 .phasebar span.g-r1 { background: var(--grade-r1); }
 .phasebar span.g-r2 { background: var(--grade-r2); }
 .phasebar span.s-empty { background: var(--phase-off); }

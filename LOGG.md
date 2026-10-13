@@ -4,6 +4,8 @@ Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
 ## 2026-10-13
 
+* Fjernet de svakest begrunnede målene etter ønske fra Frode: 30-årsrente +0,4 pp i fase 1, gull +10 % i alle faser, dollar −5 % i alle faser, KPI 10 % i fase 1 til 3 (beholdt i fase 4). 40 til 29 mål. Fase uten mål vises som hvit stripe med tynn kant, ny forklaring for "ingen mål i fasen" og "fase ikke nådd".
+
 * Lokal visning sender nå `Cache-Control: no-store`, så nettleseren ikke viser gamle filer (Frode så ikke fasestripene lokalt). Artifact oppdatert til versjon 2 med versjonsstempel og offentlige data per 13. okt, uten private data. Artifact bygges i `build/artifact` (ikke committet).
 
 * Gradert farge i fasestripene, etter valg fra Frode: styrken viser fremdrift mot et mål for fasen siden fasestart (seks trinn fra mørk grønn til mørk rød), bare i stripene. Boksen beholder 30-dagers retning. Nye `phase_targets` for alle tolv nøkkeltall (40 mål), tre er Karsans tall, resten sidens operasjonalisering. Nye funksjoner i `calc.js`: `phaseStartDate`, `targetProgress`, `progressGrade`. 18 av 18 tester bestått. Fargeforklaring under fasenøkkelen, stripelista har egen nøytral bakgrunn for kontrast. Status nå (fase 1): 10-årsrente 21 % av veien mot 5,5 %, gull 26 % bort fra målet.
