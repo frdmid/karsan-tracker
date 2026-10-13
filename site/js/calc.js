@@ -248,6 +248,59 @@ export function evaluateRegime(regime, data, recordingDate) {
   return { phases, current };
 }
 
+// ---------- Regimehistorikk og fasestriper ----------
+
+// Observasjoner til og med datoen.
+export function truncate(rows, date) {
+  let lo = 0, hi = rows.length;
+  while (lo < hi) {
+    const mid = (lo + hi) >> 1;
+    if (rows[mid].date <= date) lo = mid + 1; else hi = mid;
+  }
+  return lo === rows.length ? rows : rows.slice(0, lo);
+}
+
+// Gjeldende fase dag for dag fra fromDate til toDate, bare med data kjent den dagen.
+// Svar: endringspunkter [{ date, phase }].
+export function regimeHistory(regime, data, recordingDate, fromDate, toDate) {
+  const ids = [...new Set(regime.phases.flatMap((p) => p.conditions.flatMap((c) => c.series)))].filter((id) => data[id]);
+  const out = [];
+  let prev = null;
+  for (let d = fromDate; d <= toDate; d = addDays(d, 1)) {
+    const sub = {};
+    for (const id of ids) sub[id] = truncate(data[id], d);
+    const phase = evaluateRegime(regime, sub, recordingDate).current.id;
+    if (phase !== prev) { out.push({ date: d, phase }); prev = phase; }
+  }
+  return out;
+}
+
+// Datoen regimet første gang gikk forbi fasen. Er fasen aldri sett (regimet
+// startet over den), brukes første dato i historikken.
+export function phaseExitDate(history, phaseId) {
+  const hit = history.find((h) => h.phase > phaseId);
+  return hit ? hit.date : null;
+}
+
+// Retning for et nøkkeltall i en gitt fase: phase_directions overstyrer direction.
+export function directionFor(ind, phaseId) {
+  const pd = ind.phase_directions || {};
+  return pd[String(phaseId)] ?? ind.direction;
+}
+
+// Én stripe per fase. Passerte faser fryses på datoen regimet gikk videre,
+// gjeldende fase er levende, senere faser er tomme.
+export function stripeStates(ind, rows, phaseIds, currentId, history, windowDays) {
+  return phaseIds.map((p) => {
+    if (p > currentId) return { phase: p, state: "empty", verdict: null, date: null };
+    const live = p === currentId;
+    const date = live ? null : phaseExitDate(history, p);
+    const basis = live ? rows : date ? truncate(rows, date) : [];
+    const m = momentum(basis, windowDays, directionFor(ind, p), ind.min_move, ind.mode);
+    return { phase: p, state: live ? "current" : "frozen", verdict: m ? m.verdict : null, date: live ? (m && m.lastDate) : date };
+  });
+}
+
 // ---------- Formatering (norsk) ----------
 
 const MONTHS = ["jan.", "feb.", "mars", "apr.", "mai", "juni", "juli", "aug.", "sep.", "okt.", "nov.", "des."];

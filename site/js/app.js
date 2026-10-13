@@ -1,6 +1,6 @@
 // Karsan tracker: henter config og CSV, regner via calc.js og tegner siden.
 // Ingen tall er hardkodet her. Terskler kommer fra config/signals.json.
-import * as C from "./calc.js";
+import * as C from "./calc.js?v=__VERSION__";
 
 const $ = (sel) => document.querySelector(sel);
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]));
@@ -156,16 +156,28 @@ function sparkline(rows, baseDate) {
     <circle cx="${x(toDate(l.date))}" cy="${y(l.value)}" r="2.5" fill="var(--s1)"/></svg>`;
 }
 
-// Fargefeltet er delt i én stripe per fase. Stripene fylles opp til gjeldende fase.
-function renderTiles(ctx, regime) {
+// Boksens farge: retning i gjeldende fase. Fasestripene øverst er en logg: passerte
+// faser er frosset på datoen regimet gikk videre, gjeldende fase er levende.
+function phasebar(ind, states, phases) {
+  const name = (id) => phases.find((p) => p.id === id).name.split(":")[0];
+  return `<div class="phasebar">${states.map((s) => {
+    const v = s.verdict || "none";
+    const tip = s.state === "empty" ? `${name(s.phase)}: ikke nådd`
+      : s.state === "frozen" ? `${name(s.phase)}: ${s.verdict ? VERDICT[s.verdict] : "ingen data"} da regimet gikk videre ${C.fmtDate(s.date)}`
+      : `${name(s.phase)} (nå): ${s.verdict ? VERDICT[s.verdict] : "ingen data"}`;
+    return `<span class="s-${s.state} v-${v}" title="${esc(tip)}"></span>`;
+  }).join("")}</div>`;
+}
+
+function renderTiles(ctx, regime, history) {
   const ov = ctx.signals.overview;
   const phases = regime.phases.filter((p) => p.conditions.length);
+  const phaseIds = phases.map((p) => p.id);
+  const cur = regime.current.id;
   const n = phases.length;
-  const filled = phases.filter((p) => p.id <= regime.current.id).length;
-  const stripe = `style="--n:${n};--fill:${(filled / n) * 100}%"`;
-  $("#overview-intro").textContent = `Grønn boks: endringen siste ${ov.window_days} dager er i retning narrativet. Rød: bort fra narrativet. Nøytral: uendret eller ingen retning. Lista øverst i hver boks har ${n} striper, én per fase, fylt opp til fasen vi er i nå i samme farge som boksen. Grafen viser siste ${ov.spark_days} dager, stiplet strek markerer startpunktet for endringen.`;
+  $("#overview-intro").textContent = `Boksens farge viser om endringen siste ${ov.window_days} dager er i retning narrativet for fasen vi er i nå. Grønn: i retning. Rød: bort fra. Nøytral: uendret eller ingen retning i denne fasen. Lista øverst har ${n} striper, én per fase. Stripen for en passert fase er frosset og viser hvordan tallet sto da regimet gikk videre. Stripen for gjeldende fase følger boksen. Grafen viser siste ${ov.spark_days} dager, stiplet strek markerer startpunktet for endringen.`;
   $("#phase-key").style.gridTemplateColumns = `repeat(${n}, 1fr)`;
-  $("#phase-key").innerHTML = phases.map((p) => `<span class="${p.id <= regime.current.id ? "on" : ""}">${esc(p.name.split(":")[0])}</span>`).join("");
+  $("#phase-key").innerHTML = phases.map((p) => `<span class="${p.id <= cur ? "on" : ""}">${esc(p.name.split(":")[0])}</span>`).join("");
   let toward = 0, counted = 0;
   $("#tiles").innerHTML = ov.indicators.map((ind) => {
     const picked = C.pickSeries(ind.series, ctx.data, ind.pick || "freshest");
@@ -174,13 +186,16 @@ function renderTiles(ctx, regime) {
         <div class="tv muted">Ikke dekket</div><div class="meta">${esc(missingReason(ctx, ind.series))}</div></div>`;
     }
     const t = C.transform(picked.rows, ind.transform);
-    const m = C.momentum(t, ov.window_days, ind.direction, ind.min_move, ind.mode);
+    const dir = C.directionFor(ind, cur);
+    const m = C.momentum(t, ov.window_days, dir, ind.min_move, ind.mode);
     const lastObs = C.last(t);
-    if (m && ind.direction !== "none") { counted++; if (m.verdict === "mot") toward++; }
+    if (m && dir !== "none") { counted++; if (m.verdict === "mot") toward++; }
     const spark = C.between(t, C.addDays(lastObs.date, -ov.spark_days), null);
+    const states = C.stripeStates(ind, t, phaseIds, cur, history, ov.window_days);
     const cls = m ? m.verdict : "";
     const label = `${m ? VERDICT[m.verdict] + ". " : ""}${ind.why}`;
-    return `<div class="tile ${cls}" ${stripe} title="${esc(label)}" aria-label="${esc(ind.title)}: ${esc(label)}">
+    return `<div class="tile ${cls}" title="${esc(label)}" aria-label="${esc(ind.title)}: ${esc(label)}">
+      ${phasebar(ind, states, phases)}
       <div class="tt"><span>${esc(ind.title)}</span></div>
       <div class="tv">${valueText(ctx, picked.id, ind.transform, lastObs.value)}</div>
       <div class="tc">${m ? `${changeText(m.change, ind.mode)} siden ${C.fmtDate(m.baseDate)}` : "For kort historikk"}</div>
@@ -530,7 +545,8 @@ async function main() {
   const rules = Object.fromEntries(s.signals.map((x) => [x.id, x.rule]));
   const rate = results.rente10.actual !== undefined ? { ...rules.rente10, actual: results.rente10.actual } : null;
   const spx = results.spx.status !== C.STATUS.NOT_COVERED ? { ...rules.spx, actual: results.spx.actual } : null;
-  const counts = renderTiles(ctx, regime);
+  const history = C.regimeHistory(s.regime, ctx.data, s.recording_date, s.recording_date, today);
+  const counts = renderTiles(ctx, regime, history);
   $("#summary").textContent = C.summarySentence(rate, spx, regime.current.name)
     + ` ${counts.toward} av ${counts.counted} nøkkeltall med data har beveget seg i retning narrativet siste ${s.overview.window_days} dager.`;
   renderRegime(ctx, regime);

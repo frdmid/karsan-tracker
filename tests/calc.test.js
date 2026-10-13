@@ -127,6 +127,40 @@ test("regime: faser og vilkår", () => {
   assert.equal(c.evaluateRegime(regime, data, REC).current.id, 1);
 });
 
+test("truncate og regimehistorikk", () => {
+  assert.equal(c.truncate(rente, "2026-09-25").length, 3);
+  assert.equal(c.truncate(rente, "2026-07-01").length, 0);
+  assert.equal(c.truncate(rente, "2026-12-31").length, 6);
+  const regime = { phases: [
+    { id: 0, require: "all", conditions: [] },
+    { id: 1, require: "all", conditions: [{ series: ["R"], metric: "last", transform: "level", op: ">=", value: 5.0 }] },
+    { id: 2, require: "all", conditions: [{ series: ["I"], metric: "last", transform: "drawdown", op: ">=", value: 40 }] },
+  ] };
+  const h = c.regimeHistory(regime, { R: rente, I: indeks }, REC, REC, TODAY);
+  assert.deepEqual(h, [{ date: "2026-09-25", phase: 1 }, { date: "2026-10-09", phase: 2 }]);
+  assert.equal(c.phaseExitDate(h, 1), "2026-10-09");
+  assert.equal(c.phaseExitDate(h, 2), null);
+  assert.equal(c.phaseExitDate([{ date: "2026-09-25", phase: 3 }], 1), "2026-09-25");
+});
+
+test("fasestriper fryses ved faseskifte", () => {
+  const h = [{ date: "2026-09-25", phase: 1 }, { date: "2026-10-09", phase: 2 }];
+  const ind = { direction: "up", phase_directions: { 2: "down" }, min_move: 0.05, mode: "pp" };
+  assert.equal(c.directionFor(ind, 1), "up");
+  assert.equal(c.directionFor(ind, 2), "down");
+  const s = c.stripeStates(ind, rente, [1, 2, 3, 4], 2, h, 30);
+  assert.deepEqual(s.map((x) => [x.state, x.verdict, x.date]), [
+    ["frozen", "mot", "2026-10-09"],
+    ["current", "bort", "2026-10-09"],
+    ["empty", null, null],
+    ["empty", null, null],
+  ]);
+  // Frosset stripe bruker bare data kjent på skiftedatoen.
+  const early = [{ date: "2026-09-25", phase: 1 }, { date: "2026-10-01", phase: 2 }];
+  const s2 = c.stripeStates({ ...ind, min_move: 0.5 }, rente, [1, 2], 2, early, 30);
+  assert.equal(s2[0].verdict, "uendret");
+});
+
 test("norsk formatering", () => {
   assert.equal(c.fmtNum(6747560, 0), "6 747 560");
   assert.equal(c.fmtNum(5.24, 2), "5,24");

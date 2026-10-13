@@ -100,7 +100,9 @@ Søk etter åpen S&P-kilde (12. oktober 2026): FREDs Nasdaq Composite, Nasdaq 10
 
 ## 8. Nøkkeltall øverst
 
-Hvert nøkkeltall har en retning (opp, ned eller ingen) som er sidens tolkning av tesen, og en minste bevegelse. Endring siste 30 dager: hele boksen grønn i retning narrativet, rød bort fra, nøytral hvis mindre enn minste bevegelse eller uten retning. En list øverst i hver boks har én stripe per fase, fylt opp til gjeldende fase fra regimetrackeren i den sterke varianten av boksens retningsfarge, og en fasenøkkel over boksene viser hvilke stripene er. Boksene har ingen tekst om narrativet, retning og begrunnelse ligger som tooltip og aria-label. Minigraf viser 120 dager med stiplet strek der endringen måles fra. Alt i `overview` i `config/signals.json`.
+Hvert nøkkeltall har en retning per fase (opp, ned eller ingen) som er sidens tolkning av tesen: `direction` gjelder alle faser, `phase_directions` overstyrer enkeltfaser. For eksempel skal 10-årsrenten opp i fase 1 og ned i fase 2 og 3. Endring siste 30 dager vurdert mot retningen for gjeldende fase: hele boksen grønn i retning narrativet, rød bort fra, nøytral hvis mindre enn minste bevegelse eller uten retning.
+
+En list øverst i hver boks har én stripe per fase og fungerer som logg. Stripen for gjeldende fase følger boksen. Stripen for en passert fase fryses: den viser vurderingen på datoen regimet første gang gikk forbi fasen, med retningen for den fasen og bare data kjent den dagen. Senere faser er tomme. Regimehistorikken regnes i `calc.js` (`regimeHistory`) ved å evaluere regimet dag for dag fra opptaksdatoen med data avkortet til hver dag, så loggen er reproduserbar fra CSV-filene. Revisjoner i data kan i sjeldne tilfeller endre en frosset farge litt. En fasenøkkel over boksene viser hvilke stripene er. Boksene har ingen tekst om narrativet, retning og begrunnelse ligger som tooltip og aria-label. Minigraf viser 120 dager med stiplet strek der endringen måles fra. Alt i `overview` i `config/signals.json`.
 
 ## 9. Regimetracker
 

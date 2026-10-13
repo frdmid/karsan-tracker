@@ -4,6 +4,12 @@ Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
 ## 2026-10-13
 
+* Fasestriper som logg, etter ønske fra Frode: stripen for en passert fase fryses på datoen regimet gikk videre og viser om tallet da var i retning den fasen (grønn, rød eller grå). Boksen og stripen for gjeldende fase vurderes mot retningen i gjeldende fase.
+* Ny `phase_directions` per nøkkeltall i `config/signals.json`. Fase 1 er uendret, fase 2 til 4 lagt inn etter tesen (se `why` per nøkkeltall).
+* Nye funksjoner i `calc.js`: `truncate`, `regimeHistory`, `phaseExitDate`, `directionFor`, `stripeStates`. To nye tester, 17 av 17 bestått.
+* Testet visuelt ved å senke VIX-terskelen for fase 2 midlertidig til 15,3: fase 2 inntraff 28. sep., 10-årsrentens fase 1-stripe ble frosset grønn mens boksen ble rød. Terskelen satt tilbake til 25.
+* Versjonsstempel på filene ved publisering (`__VERSION__` byttes med commit-id i `pages.yml`), så nettleseren ikke blander gammel `calc.js` med ny `app.js`.
+
 * Fylte fasestriper får nå den sterke varianten av boksens retningsfarge (grønn, rød eller grå) i stedet for nøytral grå. Etter ønske fra Frode.
 
 * Nøkkeltallboksene: fjernet tekst om narrativet (retning og begrunnelse) fra boksene, ligger nå bare som tooltip og aria-label. Hele boksen har retningsfarge (grønn mot, rød bort, nøytral uendret). Ny list øverst i hver boks med én stripe per fase, fylt opp til gjeldende fase, pluss en fasenøkkel over boksene. Antall faser leses fra `regime` i config. Hvorfor: Frode ville se fasen i hver boks. Første forslag (fargefeltet delt i fire striper) svekket retningssignalet i tidlige faser, derfor valgte Frode alternativet med fasen som list øverst.

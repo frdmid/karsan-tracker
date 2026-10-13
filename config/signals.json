@@ -110,22 +110,22 @@
     }
   ],
   "overview": {
-    "_merknad": "Retning er hvilken vei serien må bevege seg for å peke i retning Karsans narrativ. Grønn: endringen siste window_days er i narrativets retning og større enn min_move. Rød: motsatt retning og større enn min_move. Grå: mindre enn min_move. Retningene er denne sidens tolkning av tesen.",
+    "_merknad": "Retning er hvilken vei serien må bevege seg for å peke i retning Karsans narrativ. direction gjelder alle faser, phase_directions overstyrer for enkeltfaser (up, down eller none). Boksens farge bruker retningen for gjeldende fase. Stripen for en passert fase fryses på datoen regimet gikk videre og bruker retningen for den fasen. Grønn: endringen siste window_days er i narrativets retning og større enn min_move. Rød: motsatt retning og større enn min_move. Grå: mindre enn min_move eller ingen retning. Retningene er denne sidens tolkning av tesen.",
     "window_days": 30,
     "spark_days": 120,
     "indicators": [
-      { "id": "rente10", "title": "10-årsrente", "series": ["UST_10Y", "DGS10"], "pick": "freshest", "transform": "level", "mode": "pp", "direction": "up", "min_move": 0.05, "why": "Narrativet: 10-årsrenten mot 5,5 til 6 %." },
-      { "id": "spx_dd", "title": "S&P 500 fall fra topp", "series": ["SP500"], "transform": "drawdown", "mode": "pp", "direction": "up", "min_move": 1.0, "why": "Narrativet: fall på 25 til 40 % fra topp." },
-      { "id": "realrente", "title": "Lang realrente, Treasury", "series": ["UST_REAL_LT"], "transform": "level", "mode": "pp", "direction": "none", "min_move": 0.05, "why": "Ingen entydig retning i narrativet: stiger i rentesjokket, presses ned ved finansiell undertrykkelse." },
-      { "id": "rente30", "title": "30-årsrente", "series": ["UST_30Y", "DGS30"], "pick": "freshest", "transform": "level", "mode": "pp", "direction": "up", "min_move": 0.05, "why": "Lange renter stiger i første fase." },
-      { "id": "breakeven", "title": "Breakeven inflasjon 10 år", "series": ["T10YIE"], "transform": "level", "mode": "pp", "direction": "up", "min_move": 0.05, "why": "Narrativet: inflasjonen skal opp." },
-      { "id": "kpi", "title": "KPI år/år", "series": ["CPIAUCSL"], "transform": "yoy", "mode": "pp", "direction": "up", "min_move": 0.1, "why": "Narrativet: to sifret inflasjon." },
-      { "id": "fedpapirer", "title": "Feds statspapirer", "series": ["WSHOTSL"], "transform": "level", "mode": "pct", "direction": "up", "min_move": 0.5, "why": "Narrativet: QE innen ca. 6 måneder." },
-      { "id": "vix", "title": "VIX", "series": ["VIXCLS"], "transform": "level", "mode": "pct", "direction": "up", "min_move": 5, "why": "Aksjefall gir høyere volatilitet." },
-      { "id": "hy", "title": "High yield OAS", "series": ["BAMLH0A0HYM2"], "transform": "level", "mode": "pp", "direction": "up", "min_move": 0.1, "why": "Aksjefall gir bredere kredittspreader." },
-      { "id": "dollar", "title": "Bred dollarindeks", "series": ["DTWEXBGS"], "transform": "level", "mode": "pct", "direction": "down", "min_move": 0.5, "why": "Å inflatere bort gjeld svekker dollaren over tid." },
-      { "id": "gull", "title": "Gull", "series": ["YF_GOLD"], "transform": "level", "mode": "pct", "direction": "up", "min_move": 1, "why": "Gull er klassisk vinner ved finansiell undertrykkelse." },
-      { "id": "move", "title": "MOVE", "series": ["YF_MOVE"], "transform": "level", "mode": "pct", "direction": "up", "min_move": 5, "why": "Rentevolatilitet stiger i rentesjokket." }
+      { "id": "rente10", "title": "10-årsrente", "series": ["UST_10Y", "DGS10"], "pick": "freshest", "transform": "level", "mode": "pp", "direction": "up", "phase_directions": { "2": "down", "3": "down", "4": "none" }, "min_move": 0.05, "why": "Fase 1: opp mot 5,5 til 6 %. Fase 2 og 3: ned, aksjefall og oppkjøp holder lange renter nede. Fase 4: ingen retning, rentene holdes kunstig lave." },
+      { "id": "spx_dd", "title": "S&P 500 fall fra topp", "series": ["SP500"], "transform": "drawdown", "mode": "pp", "direction": "up", "phase_directions": { "3": "down", "4": "none" }, "min_move": 1.0, "why": "Fase 1 og 2: fallet fra topp øker mot 25 til 40 %. Fase 3: aksjene henter seg inn etter QE. Fase 4: ingen retning." },
+      { "id": "realrente", "title": "Lang realrente, Treasury", "series": ["UST_REAL_LT"], "transform": "level", "mode": "pp", "direction": "none", "phase_directions": { "2": "down", "3": "down", "4": "down" }, "min_move": 0.05, "why": "Fase 1: ingen retning. Fase 2 til 4: ned, finansiell undertrykkelse presser realrentene." },
+      { "id": "rente30", "title": "30-årsrente", "series": ["UST_30Y", "DGS30"], "pick": "freshest", "transform": "level", "mode": "pp", "direction": "up", "phase_directions": { "2": "down", "3": "down", "4": "none" }, "min_move": 0.05, "why": "Fase 1: opp. Fase 2 og 3: ned. Fase 4: ingen retning." },
+      { "id": "breakeven", "title": "Breakeven inflasjon 10 år", "series": ["T10YIE"], "transform": "level", "mode": "pp", "direction": "up", "min_move": 0.05, "why": "Alle faser: inflasjonsforventningene skal opp." },
+      { "id": "kpi", "title": "KPI år/år", "series": ["CPIAUCSL"], "transform": "yoy", "mode": "pp", "direction": "up", "min_move": 0.1, "why": "Alle faser: inflasjonen skal mot to sifret." },
+      { "id": "fedpapirer", "title": "Feds statspapirer", "series": ["WSHOTSL"], "transform": "level", "mode": "pct", "direction": "up", "min_move": 0.5, "why": "Alle faser: Fed skal kjøpe statspapirer (QE)." },
+      { "id": "vix", "title": "VIX", "series": ["VIXCLS"], "transform": "level", "mode": "pct", "direction": "up", "phase_directions": { "3": "down", "4": "none" }, "min_move": 5, "why": "Fase 1 og 2: opp. Fase 3: ned når QE demper markedet. Fase 4: ingen retning." },
+      { "id": "hy", "title": "High yield OAS", "series": ["BAMLH0A0HYM2"], "transform": "level", "mode": "pp", "direction": "up", "phase_directions": { "3": "down", "4": "none" }, "min_move": 0.1, "why": "Fase 1 og 2: bredere spreader. Fase 3: smalere etter QE. Fase 4: ingen retning." },
+      { "id": "dollar", "title": "Bred dollarindeks", "series": ["DTWEXBGS"], "transform": "level", "mode": "pct", "direction": "down", "phase_directions": { "2": "none" }, "min_move": 0.5, "why": "Dollaren svekkes når gjeld inflateres bort. Fase 2: ingen retning, flukt til dollar kan trekke motsatt vei." },
+      { "id": "gull", "title": "Gull", "series": ["YF_GOLD"], "transform": "level", "mode": "pct", "direction": "up", "min_move": 1, "why": "Alle faser: gull vinner ved finansiell undertrykkelse." },
+      { "id": "move", "title": "MOVE", "series": ["YF_MOVE"], "transform": "level", "mode": "pct", "direction": "up", "phase_directions": { "3": "down", "4": "none" }, "min_move": 5, "why": "Fase 1 og 2: rentevolatiliteten stiger. Fase 3: ned når Fed griper inn. Fase 4: ingen retning." }
     ]
   },
   "regime": {
