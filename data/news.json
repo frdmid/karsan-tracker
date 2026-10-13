@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13T09:23:09Z",
+  "generated": "2026-10-13T09:27:51Z",
   "sources": {
     "karsan_Google News": "https://news.google.com/rss/search?q=%22Cem+Karsan%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "karsan_Apple Podcasts": "https://itunes.apple.com/search?term=Cem+Karsan&entity=podcastEpisode&limit=50",
@@ -577,6 +577,13 @@
     "spx": [
       {
         "date": "2026-10-13",
+        "title": "S&P 500, Nasdaq, Dow Drop As Broader Tech And AI Selloff Continues — SPCX, BLZE, WMT, WEN, MU In Focus",
+        "source": "Stocktwits",
+        "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQcEVBX1FjWFJmM2QyRHdtOTlXaTZXbF95ZEE3b2ZpVXJQMS1ZNWVHRlAzSTdaX2k2NXluM18xbEF6R1VuVWdkRFRqNmZtX3ZySjNuZnZ5NnlYUmNqeWlEa1p4TkZxenlPM01memVyUWZuNnBadFBfd2daNkV3WWhHZ3JPV01hMjJOZlhCWEFoZTJSWFI1VHE1N3BZSDNqQVktaHIwMUUxb0FkaWVtOXQwUTdneDBSc0RjVGFISjg1eVFMYzY5a3ljNFFkWE4?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-10-13",
         "title": "Prediction: A Stock Market Crash Is Coming. Here's What Investors Should Do Based on Almost 7 Decades' Worth of History.",
         "source": "The Motley Fool",
         "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQZUdMLXJXWVEtUXBLYTI0NGE3X0RaQU5qR3VaWDBGazVjNlNmVjc2dHI1cEVxaWVxZDNSMjI1TjF0UnhzSV9CY2xjc0NxTVJkc2RESnhTTTJVbktWVTQ2a2xEQmRmTFJoMmZBWUZNVV9tcEFxU3ZkUXVwVHRpRGx4c0dzVnpnTGxiLThBUXI2Q213U0RmRGxDTQ?oc=5",
@@ -846,13 +853,6 @@
         "title": "AI Bubble Risks Worst S&P 500 Crash Since 2008, Strategist Says",
         "source": "Insurance Journal",
         "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1ZYjdhRnd4LVdHd0JSX0s2MXNZWS10Vmd5bndDaEFDTFBDU29WNVl2blc0RWhMNk5QR2psTlN2RVZIaVZsZjFna3hRSVpPZ190QnF4a1ozWGUtcFplUGRSc3VRS3pqU2U1S2Z0MEwtT1hNaWxhQTRsRFJ3dzU2QQ?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-10-08",
-        "title": "Warren Buffett's Top Strategy for Navigating a Market Crash",
-        "source": "The Globe and Mail",
-        "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNU19KbXVFdW5ab05qM2lGMjdZQzNfTnphRlF0TFZGaFBwVjZvb05CY3hWTHp4M2FmTjJQeUMtZXRtdDN2MUlMOER3dFlvY0FOMGlzbFVibGpCMnUyWkQ0UzJhb1g4dEF0ZFdYcDhUOElzQ0d2elhsaXpVSnpwcG5YbU81dU1aX0ZRcDRYMjRwMXJqUTJiNGFTSjNHci0tdkZmVjZvaWpaMmc4QllqRnBUUnlxRTg1ZHVaTXVNUUFjelFMV2lQYlhEMXRmSlhiZTF1TWpGTFVSb3NRY1U?oc=5",
         "kind": "nyhet"
       }
     ],
@@ -1175,6 +1175,13 @@
         "kind": "nyhet"
       },
       {
+        "date": "2026-10-03",
+        "title": "Kevin Warsh Was Confirmed as Fed Chair in the Most Divisive Vote in Federal Reserve History, 54-45. Here's Why That Split Still Matters Now That He's Raised Rates for the First Time Since 2023.",
+        "source": "AOL.com",
+        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPdUlwcmxHSGR6YUtaTTRlaFpnaDVpd2w4UzJDdXByYXBHaWhDekU3Qk1EM1pXbmtTUXdxVU1rZnpUU1h3azY1SmNPZ3h2bWNhQnJyeWRuSjNZT0xfX3E2QW1QT0tnOTA3b0NDY2RUX2dpby1FcjNEd3hYYVY1SFlaMA?oc=5",
+        "kind": "nyhet"
+      },
+      {
         "date": "2026-10-02",
         "title": "Trump just soft-launched higher inflation as the new solution for rebalancing the $40 trillion U.S. national debt",
         "source": "Fortune",
@@ -1267,6 +1274,20 @@
         "title": "Platinum Price Forecast: China Car Sales Slump Clouds $1,900 Target",
         "source": "FXEmpire",
         "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPS0NJbEd6dnlIZ2J4dklGYTJ5VXh4MnNGU1dtN0Q4X2Fib0R5NnB6NXhGQ0xQR0ZucU5nZ3RNX2luZXVqUkRVY1llUy0wY3hRUVVGZlV6TDFTN2FjR29NWHhLUlBTSWo4MWJ1LWFodDRRNWFCbnRkSmY0bVNhdG5SRm5XVDBnUkdYdC1ITi1YS09PLVdubmVXR200TEJfVG1mcEd2cFlVWVhMZ0F2Q00wZnFFV29pODlkS1JWa0RlRzE?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-10-13",
+        "title": "Platinum Price Forecast: China Car Sales Slump Clouds $1,900 Target",
+        "source": "FXEmpire",
+        "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQZG0yZGprMU5PckFESXpna3MxbnVleGdGa0w4U3NJMDladGJyNi1SZ2pmTU8wdGl4dHA1TWl2VW5VQXJaaGxlT2VrWDhGeGJjeG05dE5ITnZOUVNuNmFjYjd1Zll6RDEzQVdBaUhIVFVXLWdUUUV5NkxLV0Z3WVpFbFM2N3VkQUV5Y3A0Qmwxc2dUajNfNDAtZmhtWElJWWV2cGNDNjFLNmw5OXdHZmVKRzR3NDdvUnlFcFZyMURncXliTzZ6dnJCM2lNM0VFQQ?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-10-13",
+        "title": "Gold Price Today, October 13: Bullion holds above $4,150 as markets await US inflation data",
+        "source": "ET Now",
+        "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNQmU5a0x2ei1MN1hTNngtenZnT21peUpEdml5QW1DLW5SMmwwRkZib0MxQVBGVnBNTG9rQmU2M2dtS084M092d1R5a2VzUDNDODhqNU1rS25LVDdPenM2dW9pbVA3c1Zybk9iNUFocFNjd0k3SjhpS211SklJcnB5OEs0dHpDbVlWeDd0dFU0ei1GelA5M1UwRjFCeUNWSEowVkFKS19zRVNzMXZ3TGZwZGpvZjlWMGxjVHVaNjVtR2FRandUcjhYa19Ud0g2dlpGQjBpZFFB0gHbAUFVX3lxTFBhdU5kVXJub0szdWtOeE11dW50eEMtd2tQU1RWVlhSWTR4Z2hQRVpBZnJ3R1NkM0FkekZXZVZaNWNWLUM3RjhnNkQwX21JSkFVNEtLblJSbkVCS2poOW55U3J4dFlYSE05ZXFVMDRtLTJWZC1Od0xfOUhCZmVqREQtVXJQbmFtVjdEWERJM0RQek1OanZqaXJfRXBaOEstVnRIODhEQXZTLXRtOG4xbnk3Y3I4LVFFdGIzcFZFOUxoTUFTdDFUanFpNVNqeEVLZXc0dW92d3JmVVg0SQ?oc=5",
         "kind": "nyhet"
       },
       {
@@ -1520,20 +1541,6 @@
         "source": "BigGo Finance",
         "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1JY00wT1FXalhud1M0elFqbDdybEkyWFl4Sm1oQ1VLcnlRSThLS2dpN05fanE0aV9BM0RwbXBMVzlZLWxUaG02OXV0X0dYVzRKVGtqVXM2bVVzOWtEaW5iMGl6ZExBYmlEZGtEMjBPeUo2d2Y2TWc?oc=5",
         "kind": "nyhet"
-      },
-      {
-        "date": "2026-10-08",
-        "title": "Why Jefferies prefers large caps as RBI hikes rates; favours HDFC Bank, RIL, Airtel",
-        "source": "The Financial Express",
-        "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPVmJBUzh3cTUxZGFRbl9QN3dWMHhZbmhhLWNlR3YyWDRFTGlfUzk5MGg4ZEV2THJjSlB0NjhPc0R0dHlnYzJZRWJfMV8tTXZiZnFTSGxsX194Y3VkdllKQTk2UGoycGV5d2dVa3B6Rk5QVkZOajlCejFvazBMbWZ1SlJodEwtNkp4VG5RQzFrYml5VF9NUElRSU9YUXd3QVBaOTBmejFEOXhGcU1nNUJuOU5fekc3U19lVVgtOTFoVWRiVmdEbVk4etIBzwFBVV95cUxQeFZqLS1sak9ISEd5NlZxWTFiSm9GR2ZWeGt4T2lKYS1OWldvZnBNSVdQeW85THlUVnhzcTMyVlA2UzNjRTRSVU5ld3h2UUdnZnVkems4YmlSMjlfZDhhNUF5QV9sQ0o0ZnBkek5LYjdYN2Nhemo0b3huSk1ZM08ydVlya3dLMkxYUWlfU3o4MG1FcXlmcG1vM2x4YkxQVXp6cGdtMFpKM1NQU1dQVnpzejA4OElQdlYwVGFsVDhRaFFGVDNCY2lVU0VCOUVXRTQ?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-10-08",
-        "title": "US Consumer Sentiment Preview: Will Rising Inflation Expectations Keep the Fed Hawkish?",
-        "source": "Markets.com",
-        "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBqeDdmcFA5bW10TkxZaGR4TGFTNUY3MDZFRFlKdGVWNEhpRXVjZ0FnOVVqZ2hDdDZfajgwTzN2cVZmNHJoeGRYekpGY1JSYnRscmNXZ3haX3MxYi1VVU5FZXRIaTlmOGRTYmZpVDMxLURuOTdsQ1BN?oc=5",
-        "kind": "nyhet"
       }
     ],
     "ai_kreditt": [
@@ -1563,6 +1570,13 @@
         "title": "Big Tech’s AI debt binge puts it in competition with governments for capital",
         "source": "Crypto Briefing",
         "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9NNi1zWkFxU3hOWW1pYVlJRVJacC01eDRUcE01cWxNaUJoQV9PakZ1bS1ocWQ2SFIyaUNta1ZaSXZ6bFJLczB0TjIxRjV4QUN6OFZ6YUZVcU4tdFZTOUtpYkxtdUl1ekNuclVWVmZoaXlxNDYzLUtEbzdqNTZhZw?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-10-12",
+        "title": "The huge lurking leverage of AI hyperscalers",
+        "source": "Financial Times",
+        "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNaHFkSlBubzdPS0Z4ZmlyV1lpOVZ0WkZ4bGJNMVNPQTctNnpJR3ZSSl9QNWpkUHU5YnJwZGFTb2NnNnVCVk9Ja1ZUcWFfVzY1RW82bFVMd09EdFJCU1JwdGFEQ0pHZ25YZF9MUFJFLUx6U0VwS1VLYzd3VHZmUUFkSWxlMks?oc=5",
         "kind": "nyhet"
       },
       {
@@ -1808,13 +1822,6 @@
         "title": "By 1873, The Railroad Boom Had Built Some Of The Largest Fortunes In American History. Then A Brutal Crash Bankrupted More Than 100 Railroads And Brought A 5-Year Depression. Now, Brookings Projects The AI Buildout Will Be An Even Larger Share",
         "source": "24/7 Wall St.",
         "link": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxPQU9FbGkweGRvUGlvcFRyVUQ1aTU4VUUtNWxxZkt2bzlSOWl6VlZlWXhHY1g3THpXWmNnaThiejVKc0Q2VWRzUUtBSkR5NDc3UXVqWXdDZDFiVllFazlZSlp6TlhvTnRUZXRJdGt6ZHNGOHJIZm5lMVVIcEF0Ni11cjRsakt3ZlZlVnlmOWJhaVViVzhvS1RNUk01b1ZHeGN2V2RvMFhmZ0JnczY0aXcxX3NMcHNMaXEyYTl4eEVYOWliWFYwcEVzQW1tSWhOSGZGMTNnbXMwZFZrMFJraHRNVjNaeVpMZmkzeWxfMk1hVzNmQm9CV2pzWWU0SWtTeml3YUp6T1ZpR01taWxLaDZ5dWFnX3gzMWEySkgxMlRnY1VLRFo4elZBanhwcGZBeXpmdXBoSjV5ZExYT0ZyYWZsUGgzVlZZeUh0ZjRzVEZKR25RZVhRRW9kbGQ2ejg?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-10-07",
-        "title": "By 1873, The Railroad Boom Had Built Some Of The Largest Fortunes In American History. Then A Brutal Crash Bankrupted More Than 100 Railroads And Brought A 5-Year Depression. Now, Brookings Projects The AI Buildout Will Be An Even Larger Share",
-        "source": "AOL.ca",
-        "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1ROU5FcGpnOXhtSkFIWDBWNjN5ZkRNS2xlYmFLV1Qyb1BWdTZmTTZwOVFrS1Jna2JnMEhGaEQ4eGViY0JOOFlEWWpKSGFWeGtna1ZwbE9YdUZiWXNmZ2pnSFh0eTFPLWpUeEVHMkNYNW5oWmNleFQ1eXpFZw?oc=5",
         "kind": "nyhet"
       }
     ]
