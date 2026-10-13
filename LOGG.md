@@ -4,6 +4,8 @@ Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
 ## 2026-10-13
 
+* Frode valgte manuell analyse i Claude Code i stedet for `ANTHROPIC_API_KEY`. Nytt `scripts/lagre_analyse.py`, ny `--list` i podcastagenten, ny README-del "Analyse av nye Karsan-episoder". Agenten finner fortsatt episoder og transkripsjoner hver morgen. Venter nå: Natalie Brunell 6. okt. (ingen transkripsjon i feeden).
+
 * Lagt inn endringer fra SI420 etter godkjenning fra Frode: opptaksdato 29. september (frist 10-årsrente 29. des. 2026, QE 29. mars 2027 med ytre frist 30. juni 2027), 10-årsrente mål 4 % i fase 2 og 3 (Karsans tall), dollar opp og gull ned i fase 1, inflasjon frist ut 2028, nye kravtekster og fotnote om at kravene er kontrollert mot transkripsjonen. Ny `final_deadline` i signalreglene med test, 19 av 19 bestått. Effekt nå: 6 av 11 nøkkeltall i retning narrativet (før 4), dollar og gull grønne.
 
 * Podcastagent etter ønske fra Frode: `scripts/podcast_agent.py`, nytt steg i "Oppdater data", ny seksjon under Karsan selv. Verifisert: Top Traders Unplugged har transkripsjon i feeden, Karsans egen serie U Got Options (UGO01 til UGO12) ligger der. "You've Got Options" fantes ikke under det navnet, riktig navn er U Got Options. Kai Media på YouTube lagt til som lenker via åpen RSS. Andre podkaster (Brunell, Taggart, David Lin, Forward Guidance) har ikke transkripsjon i feeden, lydtranskribering kan slås på med `TRANSCRIBE_AUDIO=true`. Analyse krever `ANTHROPIC_API_KEY`.

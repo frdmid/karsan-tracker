@@ -288,6 +288,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--max-new", type=int, default=3, help="maks antall episoder som analyseres per kjøring")
     ap.add_argument("--reanalyze", default=None, help="episode-id som skal analyseres på nytt")
+    ap.add_argument("--list", action="store_true", help="vis episoder som venter på analyse, med sti til transkripsjonen")
     args = ap.parse_args()
 
     state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {"episodes": {}}
@@ -321,7 +322,7 @@ def main():
         (CACHE / f"{ep['id']}.txt").write_text(text, encoding="utf-8")
         ep.update(transcript_status="ok", transcript_source=source, transcript_url=url, transcript_words=len(text.split()))
         if not has_key:
-            ep["message"] = "Transkripsjon funnet. Analyse venter på ANTHROPIC_API_KEY."
+            ep["message"] = "Transkripsjon funnet. Venter på analyse i Claude Code (be om å analysere nye Karsan-episoder)."
             continue
         try:
             res, served = analyze(ep, text)
@@ -338,6 +339,13 @@ def main():
     n_ok = sum(1 for e in eps.values() if e.get("transcript_status") == "ok")
     n_an = sum(1 for e in eps.values() if e.get("analysis"))
     print(f"Podcastagent: {len(eps)} episoder, {n_ok} med transkripsjon, {n_an} analysert")
+    if args.list:
+        waiting = [e for e in eps.values() if e["date"] >= since and not e.get("analysis")]
+        print(f"\nVenter på analyse (fra {since}): {len(waiting)}")
+        for e in sorted(waiting, key=lambda e: e["date"]):
+            tx = CACHE / f"{e['id']}.txt"
+            print(f"  {e['id']}  {e['date']}  {e['show']}: {e['title']}")
+            print(f"     transkripsjon: {tx if tx.exists() else 'mangler (' + (e.get('message') or '') + ')'}")
 
 
 if __name__ == "__main__":

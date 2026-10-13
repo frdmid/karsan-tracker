@@ -68,6 +68,17 @@ python scripts/lokal_visning.py
 
 Scriptet henter siste offentlige data med `git pull`, henter de lisensbegrensede seriene til `private/` (står i `.gitignore`, committes aldri), starter en lokal server og åpner siden. Et banner øverst viser at visningen er privat. Pages-siden har aldri `private/` og viser seriene som ikke publisert.
 
+## Analyse av nye Karsan-episoder
+
+Podcastagenten (`scripts/podcast_agent.py`) kjører hver morgen og finner nye episoder med Karsan og transkripsjonen deres. Analysen gjøres manuelt i Claude Code, uten API-nøkkel. Be Claude om å "analysere nye Karsan-episoder" i prosjektmappen. Claude gjør da dette:
+
+1. `git pull`, deretter `python scripts/podcast_agent.py --list` for å se hva som venter og hente transkripsjonene til `build/transcripts/` (lagres aldri i repoet).
+2. Leser transkripsjonen og skriver analysen som JSON med feltene `karsan_deltar`, `oppsummering`, `pastander` (tema, pastand, tall, tidshorisont, sitat maks 15 ord på originalspråket, tid_sek, forhold: bekrefter, endrer, nytt eller motsier, gjelder_krav) og `forslag` (hva, begrunnelse). Sammenligner med kravene i `config/signals.json`.
+3. `python scripts/lagre_analyse.py <id> <analyse.json>`, commit og push. Siden viser analysen under Karsan selv.
+4. Forslag til endringer i dashbordet legges bare inn etter godkjenning.
+
+Settes `ANTHROPIC_API_KEY` som secret, gjør agenten analysen automatisk i stedet.
+
 ## Mer
 
 Prosjektbeskrivelse og beslutninger: `PROSJEKT.md`. Endringslogg: `LOGG.md`.
