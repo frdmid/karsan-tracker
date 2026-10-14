@@ -1,5 +1,19 @@
 {
   "episodes": {
+    "32cca3ae7d91": {
+      "id": "32cca3ae7d91",
+      "date": "2026-10-14",
+      "show": "Top Traders Unplugged",
+      "title": "UGO13: How Much Longer Can AI Carry the Market ft. Christian Mueller-Glissmann",
+      "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/ugo13-how-much-longer-can-ai-carry-the-market-ft-christian-mueller-glissmann",
+      "audio": "https://episodes.captivate.fm/episode/f7ca5200-c3c9-4a47-b986-756cf8db9024.mp3",
+      "feed_url": "https://feeds.captivate.fm/top-traders-unplugged/",
+      "transcript_status": "ok",
+      "transcript_source": "RSS podcast:transcript (application/json)",
+      "transcript_url": "https://transcripts.captivate.fm/transcript/31792dbf-421b-4b81-ae98-dfd73ac0483e/transcript.json",
+      "transcript_words": 11989,
+      "message": "Transkripsjon funnet. Venter på analyse i Claude Code (be om å analysere nye Karsan-episoder)."
+    },
     "3b2bd205c3ba": {
       "id": "3b2bd205c3ba",
       "date": "2026-10-06",
@@ -798,6 +812,16 @@
       "minutes": 36,
       "collection_id": 1210383304
     },
+    "8a4c35f3f65f": {
+      "id": "8a4c35f3f65f",
+      "date": "2023-04-13",
+      "show": "Excess Returns",
+      "title": "Show Us Your Portfolio: Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/show-us-your-portfolio-cem-karsan/id1490296778?i=1000608764677&uo=4",
+      "audio": "https://anchor.fm/s/9a1dfac/podcast/play/68509524/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2023-3-13%2F323706608-44100-2-4dbe703e366b7.mp3",
+      "minutes": 76,
+      "collection_id": 1490296778
+    },
     "7d3a3d3cee21": {
       "id": "7d3a3d3cee21",
       "date": "2022-11-19",
@@ -869,5 +893,5 @@
       "collection_id": 1128955736
     }
   },
-  "generated": "2026-10-13T12:50:31Z"
+  "generated": "2026-10-14T10:23:55Z"
 }
