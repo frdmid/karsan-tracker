@@ -257,8 +257,9 @@ function renderSignals(ctx, results) {
       + (r.late ? `<br><span class="stale">forsinket</span>` : "");
     const deadline = rule.deadline ? `<br><span class="muted small">frist ${C.fmtDate(rule.deadline)}${rule.final_deadline ? `, ytre frist ${C.fmtDate(rule.final_deadline)}` : ""}</span>` : "";
     const note = s.definition_note ? `<br><span class="muted small">${esc(s.definition_note)}</span>` : "";
+    const check = s.checkpoint ? `<br><span class="small checkpoint">${esc(s.checkpoint)}</span>` : "";
     const upd = r.asOf ? `${C.fmtDate(r.asOf)}${staleTag(ctx, r.seriesId, r.asOf)}<br><span class="muted small">${esc(sourceLine(ctx, r.seriesId))}</span>` : "";
-    return `<tr><td>${esc(s.title)}</td><td>${esc(s.claim)}${deadline}${note}</td><td class="num">${actual}</td><td class="num">${dist}</td>
+    return `<tr><td>${esc(s.title)}</td><td>${esc(s.claim)}${deadline}${note}${check}</td><td class="num">${actual}</td><td class="num">${dist}</td>
       <td><span class="tag ${cls}">${r.status}</span>${met}</td><td class="nowrap">${upd}</td></tr>`;
   });
   $("#signals tbody").innerHTML = rows.join("");
@@ -584,6 +585,38 @@ function renderAgent(ctx) {
     ${cards || '<p class="small">Ingen episoder analysert ennå.</p>'}${wait}`;
 }
 
+// ---------- Motargumenter ----------
+
+// Datapunktene regnes fra dataene på siden, tekstpunktene har kilde i config.
+function counterData(ctx, item) {
+  if (item.metric === "decomp_10y") {
+    const nom = ctx.data.DGS10, real = ctx.data.DFII10, be = ctx.data.T10YIE;
+    if (!nom || !real || !be) return null;
+    const c1 = C.changeOverDays(nom, item.days, "pp"), c2 = C.changeOverDays(real, item.days, "pp"), c3 = C.changeOverDays(be, item.days, "pp");
+    if (!c1 || !c2 || !c3) return null;
+    return { text: `Renteoppgangen er realrente, ikke inflasjonsforventning: siste ${item.days} dager har 10-årsrenten endret seg ${C.fmtSigned(c1.change, 2)} pp, `
+      + `av det realrente ${C.fmtSigned(c2.change, 2)} pp og breakeven ${C.fmtSigned(c3.change, 2)} pp. Å inflatere bort gjeld krever lavere realrenter, ikke høyere.`,
+      source: `Beregnet fra FRED DGS10, DFII10 og T10YIE, ${C.fmtDate(c1.baseDate)} til ${C.fmtDate(c1.lastDate)}` };
+  }
+  if (item.metric === "core_cpi_trend") {
+    const y = ctx.data.CPILFESL ? C.yoySeries(ctx.data.CPILFESL) : [];
+    if (y.length <= item.months) return null;
+    const now = y[y.length - 1], then = y[y.length - 1 - item.months];
+    const falling = now.value < then.value;
+    return { text: `Kjerneinflasjonen faller: ${C.fmtNum(now.value, 2)} % år over år, mot ${C.fmtNum(then.value, 2)} % ${item.months} måneder før.`,
+      source: `Beregnet fra FRED CPILFESL, ${C.fmtDate(then.date)} og ${C.fmtDate(now.date)}`, hide: !falling };
+  }
+  return null;
+}
+
+function renderCounter(ctx) {
+  const ca = ctx.signals.counterarguments;
+  const el = $("#counter");
+  if (!ca || !el) return;
+  const items = ca.items.map((it) => (it.type === "data" ? counterData(ctx, it) : it)).filter((x) => x && !x.hide);
+  el.innerHTML = `<ul class="counter-list">${items.map((x) => `<li>${esc(x.text)}<br><span class="muted small">${esc(x.source)}</span></li>`).join("")}</ul>`;
+}
+
 // ---------- Fotnote ----------
 
 function renderFootnote(ctx) {
@@ -623,6 +656,7 @@ async function main() {
   $("#summary").textContent = C.summarySentence(rate, spx, regime.current.name)
     + ` ${counts.toward} av ${counts.counted} nøkkeltall med data har beveget seg i retning narrativet siste ${s.overview.window_days} dager.`;
   renderRegime(ctx, regime);
+  renderCounter(ctx);
   renderSignals(ctx, results);
   renderNews(ctx);
   renderAgent(ctx);

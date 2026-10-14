@@ -140,17 +140,18 @@
       "rule": {
         "type": "not_covered"
       },
-      "not_covered_reason": "Finnes bare i selskapsrapporter, ingen gratis tidsserie. Manuell oppfølging."
+      "not_covered_reason": "Finnes bare i selskapsrapporter, ingen gratis tidsserie. Manuell oppfølging.",
+      "checkpoint": "Neste kontrollpunkt: Q3-rapportene fra hyperscalerne i slutten av oktober 2026. Viser de inntekter fra AI, tåler aksjene høyere renter lenger (Mueller-Glissmann i UGO13). Gjør de ikke det, styrker det Karsans tese."
     },
     {
       "id": "negbeta",
       "title": "Andel S&P 500 med negativ beta",
-      "claim": "Følges som signal",
+      "claim": "Høy andel aksjer med negativ beta er tegn på et skjørt, konsentrert marked",
       "series": [],
       "rule": {
         "type": "not_covered"
       },
-      "not_covered_reason": "Krever betaberegning på enkeltaksjer med lisensierte kursdata. Manuell oppfølging."
+      "not_covered_reason": "Goldman Sachs (Mueller-Glissmann i UGO13): nesten 40 % av S&P 500 hadde negativ beta siste tre måneder, 20 til 25 % siste år, aldri sett før og sist nær dette under IT-boblen. Karsan oppga 45 % på ettårs beta, som er høyere enn Goldmans tall. Krever kursdata for hver aksje. Manuell oppfølging."
     },
     {
       "id": "cta",
@@ -741,10 +742,12 @@
           "karsan": {
             "favored": [
               "Strategiske aksjer staten vil kjøpe",
-              "Krypto etter fallet, som del av pengeforringelseshandelen"
+              "Krypto etter fallet, som del av pengeforringelseshandelen",
+              "Jordbruksland",
+              "Lån i eiendom, for eksempel boliglån, fordi inflasjonen spiser opp gjelden (samme posisjon som staten). Forutsetter fast rente som i USA"
             ],
             "disfavored": [],
-            "source": "Karsan i Coin Stories med Natalie Brunell, 6. oktober 2026"
+            "source": "Karsan i Coin Stories med Natalie Brunell (6. oktober 2026) og i U Got Options UGO13 (14. oktober 2026)"
           }
         }
       },
@@ -793,13 +796,15 @@
           "karsan": {
             "favored": [
               "Gull og harde eiendeler",
-              "Inflasjonsvinnere: selskaper med negativ arbeidskapital, meglere, banker, telekom, jernbane, kapitalforvaltere (ca. 25 % av S&P 500)"
+              "Inflasjonsvinnere: selskaper med negativ arbeidskapital, meglere, banker, telekom, jernbane, kapitalforvaltere (ca. 25 % av S&P 500)",
+              "Jordbruksland",
+              "Lån i eiendom, for eksempel boliglån, fordi inflasjonen spiser opp gjelden (samme posisjon som staten). Forutsetter fast rente som i USA"
             ],
             "disfavored": [
               "Selskaper som avhenger av forbrukere med lav inntekt",
               "Kostnadspressede selskaper"
             ],
-            "source": "Karsan i Coin Stories med Natalie Brunell, 6. oktober 2026"
+            "source": "Karsan i Coin Stories med Natalie Brunell (6. oktober 2026) og i U Got Options UGO13 (14. oktober 2026)"
           }
         }
       }
@@ -834,5 +839,40 @@
     "date": "2027-06-30",
     "text": "Karsans eget brytningspunkt: har krisen ikke startet innen april til juni 2027, tror han ikke planen gjennomføres slik. Da kan staten i stedet kjøpe aksjer på toppnivå uten krise.",
     "source": "Karsan i Coin Stories med Natalie Brunell, 6. oktober 2026"
+  },
+  "counterarguments": {
+    "_merknad": "Motargumenter mot tesen. type text: med kilde. type data: regnes fra dataene på siden hver gang den lastes.",
+    "items": [
+      {
+        "type": "data",
+        "metric": "decomp_10y",
+        "days": 365
+      },
+      {
+        "type": "data",
+        "metric": "core_cpi_trend",
+        "months": 3
+      },
+      {
+        "type": "text",
+        "text": "Det er en inntjeningsboble i deler av markedet, ikke en verdsettelsesboble. En slik boble tømmes gradvis over år, ikke brått som i 2000.",
+        "source": "Christian Mueller-Glissmann, Goldman Sachs, i U Got Options UGO13 (14. oktober 2026)"
+      },
+      {
+        "type": "text",
+        "text": "Markedet priser allerede inn skepsis: forward P/E for S&P 500 har falt fra 23 til 19 i år, og for MSCI World med rundt 15 %.",
+        "source": "Christian Mueller-Glissmann, Goldman Sachs, i U Got Options UGO13 (14. oktober 2026)"
+      },
+      {
+        "type": "text",
+        "text": "Oppsiden i aksjer er billig inn mot nyttår. Bekymringsmuren (mellomvalg, Midtøsten, renter, AI) kan klatres, særlig hvis Q3-rapportene viser inntekter fra AI.",
+        "source": "Christian Mueller-Glissmann, Goldman Sachs, i U Got Options UGO13 (14. oktober 2026)"
+      },
+      {
+        "type": "text",
+        "text": "Fed hevet enstemmig 16. september, og de fleste i komiteen mener en ny heving trolig er riktig innen nyttår. Det ligner en Fed som faktisk bekjemper inflasjon, ikke en som samkjører med Treasury.",
+        "source": "FOMC-referatet fra september, publisert 7. oktober 2026"
+      }
+    ]
   }
 }

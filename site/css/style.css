@@ -218,6 +218,9 @@ td.nowrap { white-space: nowrap; }
 
 .falsification { background: var(--warn-bg); color: var(--ink); border-radius: 6px; padding: 6px 10px; }
 .agent { margin-bottom: 14px; }
+.counter-list { margin: 0; padding-left: 18px; font-size: 14px; }
+.counter-list li { margin: 0 0 8px; }
+.checkpoint { color: var(--warn); }
 .agent .card { margin-bottom: 10px; }
 .agent .card p { margin: 0 0 6px; font-size: 14px; }
 .agent .claims { list-style: none; padding: 0; margin: 4px 0 8px; font-size: 14px; }
