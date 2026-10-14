@@ -279,6 +279,78 @@
         }
       },
       {
+        "id": "termpremie",
+        "title": "Term premium 10 år",
+        "series": [
+          "THREEFYTP10"
+        ],
+        "transform": "level",
+        "mode": "pp",
+        "direction": "up",
+        "phase_directions": {
+          "2": "down",
+          "3": "down",
+          "4": "none"
+        },
+        "min_move": 0.05,
+        "phase_targets": {},
+        "why": "Fase 1: opp, investorene krever mer for å holde lange obligasjoner (fortrengning, Karsan og Mueller-Glissmann i UGO13). Fase 2 og 3: ned når aksjefall og QE presser lange renter. Fase 4: ingen retning."
+      },
+      {
+        "id": "rentefart",
+        "title": "Rentefart 10 år (standardavvik, 3 mnd)",
+        "series": [
+          "UST_10Y",
+          "DGS10"
+        ],
+        "pick": "freshest",
+        "transform": "speed_z",
+        "mode": "abs",
+        "direction": "up",
+        "phase_directions": {
+          "2": "none",
+          "3": "none",
+          "4": "none"
+        },
+        "min_move": 0.3,
+        "phase_targets": {},
+        "why": "Hvor raskt 10-årsrenten stiger, i standardavvik over tre måneder mot historikken siden 2015. Over 2 (stiplet linje i grafen) gir historisk problemer for aksjer (Mueller-Glissmann i UGO13). Fase 1: opp, Karsan venter en rask V-topp."
+      },
+      {
+        "id": "husholdninger",
+        "title": "Husholdningenes aksjeandel",
+        "series": [
+          "BOGZ1FL153064486Q"
+        ],
+        "transform": "level",
+        "mode": "pp",
+        "direction": "none",
+        "phase_directions": {
+          "2": "down",
+          "3": "up"
+        },
+        "min_move": 0.3,
+        "phase_targets": {},
+        "why": "Hvor avhengig økonomien er av aksjemarkedet, rekordhøy (Mueller-Glissmann og Karsan i UGO13). Fase 1: ingen retning. Fase 2: ned i fallet. Fase 3: opp når staten kjøper aksjer. Kvartalsvis med etterslep."
+      },
+      {
+        "id": "ovx",
+        "title": "OVX, oljevolatilitet",
+        "series": [
+          "OVXCLS"
+        ],
+        "transform": "level",
+        "mode": "pct",
+        "direction": "up",
+        "phase_directions": {
+          "3": "none",
+          "4": "up"
+        },
+        "min_move": 5,
+        "phase_targets": {},
+        "why": "Energisjokket fra Hormuz er Karsans viktigste inflasjonsdriver. Opp i fase 1, 2 og 4."
+      },
+      {
         "id": "breakeven",
         "title": "Breakeven inflasjon 10 år",
         "series": [
@@ -752,7 +824,11 @@
     "YF_MOVE",
     "YF_GOLD",
     "DEXNOUS",
-    "DTWEXBGS"
+    "DTWEXBGS",
+    "THREEFYTP10",
+    "OVXCLS",
+    "GVZCLS",
+    "BOGZ1FL153064486Q"
   ],
   "falsification": {
     "date": "2027-06-30",

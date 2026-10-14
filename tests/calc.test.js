@@ -195,6 +195,23 @@ test("fremdrift mot fasemål og fargetrinn", () => {
   assert.equal(s[1].grade, "n");
 });
 
+test("rentefart i standardavvik og rebase", () => {
+  // Endringer over 30 dager i rente.csv: 09-01 (5,0 mot 4,8) +0,2, 10-01 (5,4 mot 5,0) +0,4, 10-09 (5,6 mot 5,0) +0,6.
+  // 09-24 og 09-26 sammenlignes med 08-01: +0,3 og +0,4.
+  const z = c.speedZ(rente, 30);
+  assert.equal(z.length, 5);
+  const vals = [0.2, 0.3, 0.4, 0.4, 0.6];
+  const mean = vals.reduce((a, b) => a + b) / 5;
+  const sd = Math.sqrt(vals.reduce((a, b) => a + (b - mean) ** 2, 0) / 5);
+  near(c.last(z).value, (0.6 - mean) / sd);
+  assert.deepEqual(c.speedZ(rente.slice(0, 1), 30), []);
+  const rb = c.rebase(rente, "2026-09-25");
+  assert.equal(rb[0].date, "2026-09-24");
+  near(rb[0].value, 0);
+  near(c.last(rb).value, 0.5);
+  assert.equal(c.rebase(rente, null)[0].date, "2026-08-01");
+});
+
 test("norsk formatering", () => {
   assert.equal(c.fmtNum(6747560, 0), "6 747 560");
   assert.equal(c.fmtNum(5.24, 2), "5,24");

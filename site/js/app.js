@@ -89,6 +89,7 @@ function staleTag(ctx, id, date) {
 function valueText(ctx, id, transform, v) {
   if (transform === "drawdown") return `${C.fmtNum(v, 1)} % under topp`;
   if (transform === "yoy") return `${C.fmtNum(v, 1)} %`;
+  if (transform === "speed_z") return `${C.fmtSigned(v, 2)} sd`;
   const sc = C.displayScale(unitOf(ctx.meta, id));
   const dec = sc.decimals ?? ctx.meta[id].decimals;
   const u = sc.unit === "%" ? " %" : sc.unit && !sc.unit.startsWith("indeks") ? ` ${sc.unit}` : "";
@@ -96,6 +97,7 @@ function valueText(ctx, id, transform, v) {
 }
 
 function changeText(v, mode) {
+  if (mode === "abs") return C.fmtSigned(v, 2);
   return mode === "pct" ? `${C.fmtSigned(v, 1)} %` : `${C.fmtSigned(v, 2)} pp`;
 }
 
@@ -274,7 +276,12 @@ function chartDefs(ctx) {
   const r10 = sig.rente10, spx = sig.spx, inf = sig.inflasjon;
   return [
     { title: "Nominelle renter 10 og 30 år", panels: [{ unit: "%", series: [{ id: "UST_10Y", label: "10 år" }, { id: "UST_30Y", label: "30 år" }],
-      refs: [{ y: r10.threshold, label: `${C.fmtNum(r10.threshold, 1)} %` }, { y: r10.upper, label: `${C.fmtNum(r10.upper, 1)} %` }] }] },
+      refs: [{ y: r10.threshold, label: `${C.fmtNum(r10.threshold, 1)} %` }, { y: r10.upper, label: `${C.fmtNum(r10.upper, 1)} %` }] },
+      { unit: "%", height: 120, series: [{ id: "THREEFYTP10", label: "Term premium 10 år" }] }] },
+    { title: "Hva driver 10-årsrenten: endring fra start av perioden", panels: [{ unit: "pp", series: [
+      { id: "DGS10", label: "Nominell 10 år", transform: "rebase" }, { id: "DFII10", label: "Realrente 10 år", transform: "rebase" }, { id: "T10YIE", label: "Breakeven 10 år", transform: "rebase" }],
+      refs: [{ y: 0, label: "0" }] },
+      { unit: "sd", height: 120, series: [{ id: "UST_10Y", label: "Rentefart, sd over 3 mnd", transform: "speed_z" }], refs: [{ y: 2, label: "2 sd" }] }] },
     { title: "Realrenter (TIPS) og 10 års breakeven", panels: [{ unit: "%", series: [{ id: "DFII5", label: "Real 5 år" }, { id: "DFII10", label: "Real 10 år" }, { id: "DFII30", label: "Real 30 år" }, { id: "T10YIE", label: "Breakeven 10 år" }] }] },
     { title: "S&P 500 og fall fra topp", panels: [
       { unit: "indekspoeng", series: [{ id: "SP500", label: "S&P 500" }] },
@@ -289,6 +296,8 @@ function chartDefs(ctx) {
       { unit: "indeks", height: 130, series: [{ id: "DTWEXBGS", label: "Dollarindeks" }] }] },
     { title: "Inflasjon år/år", panels: [{ unit: "%", series: [{ id: "CPIAUCSL", label: "KPI", transform: "yoy" }, { id: "CPILFESL", label: "Kjerne KPI", transform: "yoy" }],
       refs: [{ y: inf.threshold, label: `${C.fmtNum(inf.threshold, 0)} %` }] }] },
+    { title: "Volatilitet i olje og gull", panels: [{ unit: "indeks", series: [{ id: "OVXCLS", label: "OVX olje" }, { id: "GVZCLS", label: "GVZ gull" }, { id: "VIXCLS", label: "VIX aksjer" }] }] },
+    { title: "Husholdningenes aksjeandel av finansielle eiendeler", panels: [{ unit: "%", series: [{ id: "BOGZ1FL153064486Q", label: "Aksjeandel" }] }] },
   ];
 }
 
@@ -301,7 +310,8 @@ function prepPanel(ctx, panel, from, colorStart) {
     const rows = ctx.data[s.id];
     if (!rows || !rows.length) { missing.push(s); return; }
     const sc = C.displayScale(unitOf(ctx.meta, s.id));
-    const all = C.transform(rows, s.transform || "level").map((r) => ({ date: r.date, value: r.value * sc.factor }));
+    const base = s.transform === "rebase" ? C.rebase(rows, from) : C.transform(rows, s.transform || "level");
+    const all = base.map((r) => ({ date: r.date, value: r.value * sc.factor }));
     lines.push({ ...s, color: COLORS[(colorStart + i) % COLORS.length], all, rows: C.between(all, from, null) });
   });
   return { ...panel, lines, missing };
@@ -408,6 +418,7 @@ function renderChart(ctx, el, def) {
 function decFor(line, panel) {
   if (panel.unit === "mrd. USD") return 0;
   if (line.transform === "drawdown" || line.transform === "yoy") return 1;
+  if (panel.unit === "%" && line.id === "BOGZ1FL153064486Q") return 1;
   return panel.unit === "NOK" ? 3 : 2;
 }
 

@@ -100,9 +100,32 @@ export function yoySeries(rows) {
   return out;
 }
 
+// Rentefart: endringen over `days` dager målt i standardavvik mot alle slike
+// endringer i serien. 2 betyr at oppgangen er uvanlig rask.
+export function speedZ(rows, days = 91) {
+  const ch = [];
+  for (const r of rows) {
+    const b = onOrBefore(rows, addDays(r.date, -days));
+    if (b && b.date !== r.date) ch.push({ date: r.date, value: r.value - b.value });
+  }
+  if (ch.length < 2) return [];
+  const mean = ch.reduce((s, x) => s + x.value, 0) / ch.length;
+  const sd = Math.sqrt(ch.reduce((s, x) => s + (x.value - mean) ** 2, 0) / ch.length);
+  return sd === 0 ? [] : ch.map((x) => ({ date: x.date, value: (x.value - mean) / sd }));
+}
+
+// Endring fra siste observasjon på eller før fromDate. Brukes for å tegne
+// nominell rente, realrente og breakeven på samme skala.
+export function rebase(rows, fromDate) {
+  const b = (fromDate && onOrBefore(rows, fromDate)) || rows[0];
+  if (!b) return [];
+  return rows.filter((r) => r.date >= b.date).map((r) => ({ date: r.date, value: r.value - b.value }));
+}
+
 export function transform(rows, kind) {
   if (kind === "drawdown") return drawdownSeries(rows);
   if (kind === "yoy") return yoySeries(rows);
+  if (kind === "speed_z") return speedZ(rows, 91);
   return rows;
 }
 
