@@ -12,7 +12,153 @@
       "transcript_source": "RSS podcast:transcript (application/json)",
       "transcript_url": "https://transcripts.captivate.fm/transcript/31792dbf-421b-4b81-ae98-dfd73ac0483e/transcript.json",
       "transcript_words": 11989,
-      "message": "Transkripsjon funnet. Venter på analyse i Claude Code (be om å analysere nye Karsan-episoder)."
+      "message": null,
+      "analysis": {
+        "karsan_deltar": true,
+        "oppsummering": "Karsan er vert og gjentar kjernen i tesen uten nye tall: pengeforringelsen kommer i løpet av neste år, krisen i statsobligasjoner møtes med QE og tak på lang ende, og staten ruller ut formuefond og Trump-kontoer. Gjesten Christian Mueller-Glissmann fra Goldman Sachs er motstemmen: han ser en inntjeningsboble i deler av markedet, ikke en verdsettelsesboble, og venter en gradvis nedtur heller enn et brått fall. Han peker på Q3-rapporteringen som neste test og heller mot billig oppside inn mot nyttår. Begge mener aksjevolatilitet og valutavolatilitet er billig og at gull er en god diversifisering.",
+        "pastander": [
+          {
+            "tema": "Pengeforringelse",
+            "pastand": "Pengeforringelsen er ikke lenger år unna, den kommer i løpet av neste år og blir et jordskjelv gjennom markedene.",
+            "tall": "",
+            "tidshorisont": "neste år",
+            "sitat": "is no longer 2, 5, 10 years away, it's coming in the next year",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "inflasjon"
+          },
+          {
+            "tema": "QE med rentetak",
+            "pastand": "Den kommende krisen i statsobligasjoner møtes med massiv QE, denne gangen med tak på lang ende, noe som gir en strukturell inflasjonsspiral.",
+            "tall": "",
+            "tidshorisont": "ved neste krise",
+            "sitat": "this time with a cap on the long end of the curve",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "qe"
+          },
+          {
+            "tema": "Formuefond",
+            "pastand": "Staten ruller ut formuefond og Trump-kontoer i stor skala, en kinesisk modell med direkte investeringer i selskaper.",
+            "tall": "",
+            "tidshorisont": "etter neste krise",
+            "sitat": "we are going to start rolling out a sovereign wealth fund at scale",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "formuesfond"
+          },
+          {
+            "tema": "Kreditt og MOVE",
+            "pastand": "CDS og MOVE er i ferd med å bryte ut, mens VIX ikke reagerer.",
+            "tall": "",
+            "tidshorisont": "nå",
+            "sitat": "CDS are starting to break out",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "ai_cds"
+          },
+          {
+            "tema": "Karsans posisjonering",
+            "pastand": "Eie gull og jordbruksland, og ha gjeld i eiendom, altså samme posisjon som staten. Den største risikoen kan være å ikke ha nok gjeld.",
+            "tall": "",
+            "tidshorisont": "før pengeforringelsen",
+            "sitat": "You have to own gold, you have to own farmland",
+            "tid_sek": 0,
+            "forhold": "nytt",
+            "gjelder_krav": ""
+          },
+          {
+            "tema": "Motstemme: boble",
+            "pastand": "Mueller-Glissmann (Goldman Sachs): ikke en verdsettelsesboble, men en inntjeningsboble i deler av markedet. En slik boble tømmes gradvis, ikke brått som i 2000.",
+            "tall": "",
+            "tidshorisont": "flere år",
+            "sitat": "We would say we're certainly not in a valuation bubble.",
+            "tid_sek": 0,
+            "forhold": "motsier",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Motstemme: verdsettelse",
+            "pastand": "Mueller-Glissmann: forward P/E for S&P 500 har falt fra 23 til 19 i år og for MSCI World med rundt 15 %, så markedet priser allerede inn mye skepsis.",
+            "tall": "P/E 23 til 19",
+            "tidshorisont": "i år",
+            "sitat": "",
+            "tid_sek": 0,
+            "forhold": "motsier",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Motstemme: oppside",
+            "pastand": "Mueller-Glissmann heller mot at oppsiden er billig inn mot nyttår, og at bekymringsmuren kan klatres. Q3-rapporteringen er nøkkelen: viser hyperscalerne inntekter fra AI, tåler aksjene høyere renter.",
+            "tall": "",
+            "tidshorisont": "til nyttår",
+            "sitat": "I'm leaning more towards the upside convexity being cheap into year end.",
+            "tid_sek": 0,
+            "forhold": "motsier",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Renten, gjestens syn",
+            "pastand": "Mueller-Glissmann: snittet for 10-årsrenten over 300 år er 4,7 %. Oppgangen til 5,1 til 5,2 % gikk mer enn to standardavvik på tre måneder, som historisk gir fordøyelsesproblemer for aksjer. Rentesensitive deler som små og mellomstore selskaper, eiendom og boligbyggere lider allerede.",
+            "tall": "4,7 %, over 2 standardavvik",
+            "tidshorisont": "nå",
+            "sitat": "We are more than two standard deviations now over three months.",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "rente10"
+          },
+          {
+            "tema": "Realrenter driver renten",
+            "pastand": "Mueller-Glissmann: renteoppgangen er drevet av realrenter, også i kort ende, altså knyttet til pengepolitikken. Det er normalt ikke bra for aksjer.",
+            "tall": "",
+            "tidshorisont": "nå",
+            "sitat": "the drivers so far have been real yields and front end real yields",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "rente10"
+          },
+          {
+            "tema": "Negativ beta",
+            "pastand": "Mueller-Glissmann oppgir at nesten 40 % av S&P 500 har hatt negativ beta siste tre måneder, og 20 til 25 % siste år. Karsan sa 45 % på ettårs beta i Brunell-episoden.",
+            "tall": "40 % (3 mnd), 20 til 25 % (1 år)",
+            "tidshorisont": "",
+            "sitat": "nearly 40% within the S&P 500, 40% of stocks had a negative beta",
+            "tid_sek": 0,
+            "forhold": "endrer",
+            "gjelder_krav": "negbeta"
+          },
+          {
+            "tema": "Volatilitet og gull",
+            "pastand": "Begge mener aksjevolatilitet og valutavolatilitet er billig, og at gull er en god diversifisering når tilliten til myndigheter svikter.",
+            "tall": "",
+            "tidshorisont": "",
+            "sitat": "",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "move"
+          }
+        ],
+        "forslag": [
+          {
+            "hva": "Negativ beta: skriv inn begge tallene i teksten for signalet (Goldman 40 % på tre måneder og 20 til 25 % på ett år, Karsan 45 %)",
+            "begrunnelse": "Tallene spriker. Det bør stå at Karsans 45 % trolig er for høyt eller gjelder en annen måling."
+          },
+          {
+            "hva": "Hyperscaler capex: legg inn Q3-rapporteringen (slutten av oktober) som neste kontrollpunkt",
+            "begrunnelse": "Gjesten peker på den som det som avgjør om aksjene tåler høyere renter."
+          },
+          {
+            "hva": "Fase 3 og 4, Karsan nevner selv: legg til jordbruksland og gjeld i eiendom",
+            "begrunnelse": "Karsan nevner dette eksplisitt som posisjonering før pengeforringelsen."
+          },
+          {
+            "hva": "Vis motstemmen: en kort boks med de sterkeste motargumentene mot tesen",
+            "begrunnelse": "Siden mangler et sted for motargumenter. Goldman-synet om gradvis nedtur er det beste vi har så langt."
+          }
+        ]
+      },
+      "analyzed_at": "2026-10-14T10:45:08Z",
+      "model": "Claude Opus 5.5 i Claude Code (manuell analyse)"
     },
     "3b2bd205c3ba": {
       "id": "3b2bd205c3ba",
@@ -893,5 +1039,5 @@
       "collection_id": 1128955736
     }
   },
-  "generated": "2026-10-14T10:23:55Z"
+  "generated": "2026-10-14T10:44:09Z"
 }
