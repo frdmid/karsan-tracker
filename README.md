@@ -6,7 +6,7 @@ Karsans krav er gjengitt fra sekundære kilder og kan være unøyaktig gjengitt.
 
 ## Slik fungerer det
 
-1. `.github/workflows/update-data.yml` kjører hverdager 05:30 UTC (og manuelt):
+1. `.github/workflows/update-data.yml` kjører hverdager 05:30 og 14:00 UTC (og manuelt). GitHub kan forsinke planlagte kjøringer med flere timer:
    * `scripts/fetch_treasury.py` henter par yields og lang realrente fra home.treasury.gov
    * `scripts/fetch_fred.py` henter FRED serier (API med `FRED_API_KEY`, ellers FREDs åpne CSV)
    * `scripts/fetch_other.py` henter uoffisielle kilder (Yahoo), bare når publisering er tillatt

@@ -4,6 +4,9 @@ on:
   schedule:
     # Hverdager 05:30 UTC: FRED og Treasury har da publisert forrige amerikanske handelsdag.
     - cron: "30 5 * * 1-5"
+    # Hverdager 14:00 UTC: etter amerikanske tall kl. 12:30 UTC (KPI, sysselsetting) samme dag.
+    # GitHub kan forsinke planlagte kjøringer med flere timer, derfor to kjøringer.
+    - cron: "0 14 * * 1-5"
   workflow_dispatch:
 
 permissions:

@@ -2,6 +2,10 @@
 
 Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
+## 2026-10-15
+
+* KPI for september (publisert 14. okt. kl. 12:30 UTC) manglet på siden. Årsak: planlagte kjøringer startet flere timer for sent (10:22 og 12:48 UTC i stedet for 05:30), og kjøringen 14. okt. var ferdig før tallene kom. Startet kjøring manuelt kl. 07:41 UTC, KPI og kjerne-KPI for september er inne. Lagt til ny planlagt kjøring hverdager 14:00 UTC, etter amerikanske tall kl. 12:30 UTC. Tallene: KPI 3,72 % år over år (+0,65 % fra august), kjerne-KPI 2,57 % (+0,33 %). Motargumentet om fallende kjerneinflasjon skjules nå automatisk, siden kjerne-KPI er lik nivået tre måneder før.
+
 ## 2026-10-14
 
 * Lagt inn alle fire forslag fra UGO13 etter godkjenning fra Frode: negativ beta med Goldmans tall (nesten 40 % siste tre måneder, 20 til 25 % siste år, Karsans 45 % nevnt som høyere), Q3-rapportene som kontrollpunkt for hyperscaler capex (nytt felt `checkpoint`), jordbruksland og lån i eiendom under Karsan nevner selv i fase 3 og 4 (med merknad om at argumentet forutsetter fast rente som i USA), ny seksjon Motargumenter mot tesen (`counterarguments`, fire tekstpunkter med kilde og to datapunkter som regnes fra dataene).
