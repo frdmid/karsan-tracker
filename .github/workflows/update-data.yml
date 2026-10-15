@@ -44,6 +44,10 @@ jobs:
         run: python scripts/fetch_fred.py
         continue-on-error: true
 
+      - name: Hent direkte fra Cboe og Norges Bank
+        run: python scripts/fetch_direct.py
+        continue-on-error: true
+
       - name: Hent uoffisielle kilder
         env:
           PUBLISH_RESTRICTED: ${{ vars.PUBLISH_RESTRICTED }}

@@ -7,7 +7,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "
 const today = new Date().toISOString().slice(0, 10);
 
 const STATUS_LABEL = { ok: "OK", utdatert: "Utdatert", feilet: "Feilet", ikke_publisert: "Ikke publisert (lisens)" };
-const SOURCE_LABEL = { fred: "FRED", treasury: "U.S. Treasury", yahoo: "Yahoo (uoffisiell)" };
+const SOURCE_LABEL = { fred: "FRED", treasury: "U.S. Treasury", yahoo: "Yahoo (uoffisiell)", cboe: "Cboe", norgesbank: "Norges Bank" };
 const VERDICT = {
   mot: "I retning narrativet",
   bort: "Bort fra narrativet",
@@ -280,10 +280,10 @@ function chartDefs(ctx) {
       refs: [{ y: r10.threshold, label: `${C.fmtNum(r10.threshold, 1)} %` }, { y: r10.upper, label: `${C.fmtNum(r10.upper, 1)} %` }] },
       { unit: "%", height: 120, series: [{ id: "THREEFYTP10", label: "Term premium 10 år" }] }] },
     { title: "Hva driver 10-årsrenten: endring fra start av perioden", panels: [{ unit: "pp", series: [
-      { id: "DGS10", label: "Nominell 10 år", transform: "rebase" }, { id: "DFII10", label: "Realrente 10 år", transform: "rebase" }, { id: "T10YIE", label: "Breakeven 10 år", transform: "rebase" }],
+      { id: "UST_10Y", label: "Nominell 10 år", transform: "rebase" }, { id: "UST_REAL_10Y", label: "Realrente 10 år", transform: "rebase" }, { id: "T10YIE", label: "Breakeven 10 år", transform: "rebase" }],
       refs: [{ y: 0, label: "0" }] },
       { unit: "sd", height: 120, series: [{ id: "UST_10Y", label: "Rentefart, sd over 3 mnd", transform: "speed_z" }], refs: [{ y: 2, label: "2 sd" }] }] },
-    { title: "Realrenter (TIPS) og 10 års breakeven", panels: [{ unit: "%", series: [{ id: "DFII5", label: "Real 5 år" }, { id: "DFII10", label: "Real 10 år" }, { id: "DFII30", label: "Real 30 år" }, { id: "T10YIE", label: "Breakeven 10 år" }] }] },
+    { title: "Realrenter (TIPS) og 10 års breakeven", panels: [{ unit: "%", series: [{ id: "UST_REAL_5Y", label: "Real 5 år" }, { id: "UST_REAL_10Y", label: "Real 10 år" }, { id: "UST_REAL_30Y", label: "Real 30 år" }, { id: "T10YIE", label: "Breakeven 10 år" }] }] },
     { title: "S&P 500 og fall fra topp", panels: [
       { unit: "indekspoeng", series: [{ id: "SP500", label: "S&P 500" }] },
       { unit: "% under topp", invert: true, height: 130, series: [{ id: "SP500", label: "Fall fra topp", transform: "drawdown" }],
@@ -291,13 +291,13 @@ function chartDefs(ctx) {
     { title: "Fed balanse, reserver og TGA", panels: [{ unit: "mrd. USD", series: [{ id: "WALCL", label: "Totale eiendeler" }, { id: "WRESBAL", label: "Reserver" }, { id: "WTREGEN", label: "TGA" }] }] },
     { title: "Kredittspreader og VIX", panels: [
       { unit: "%", height: 150, series: [{ id: "BAMLH0A0HYM2", label: "HY OAS" }, { id: "BAMLC0A0CM", label: "IG OAS" }] },
-      { unit: "indeks", height: 130, series: [{ id: "VIXCLS", label: "VIX" }] }] },
+      { unit: "indeks", height: 130, series: [{ id: "CBOE_VIX", label: "VIX" }] }] },
     { title: "USD/NOK og bred dollarindeks", panels: [
-      { unit: "NOK", height: 150, series: [{ id: "DEXNOUS", label: "USD/NOK" }] },
+      { unit: "NOK", height: 150, series: [{ id: "NB_USDNOK", label: "USD/NOK" }] },
       { unit: "indeks", height: 130, series: [{ id: "DTWEXBGS", label: "Dollarindeks" }] }] },
     { title: "Inflasjon år/år", panels: [{ unit: "%", series: [{ id: "CPIAUCSL", label: "KPI", transform: "yoy" }, { id: "CPILFESL", label: "Kjerne KPI", transform: "yoy" }],
       refs: [{ y: inf.threshold, label: `${C.fmtNum(inf.threshold, 0)} %` }] }] },
-    { title: "Volatilitet i olje og gull", panels: [{ unit: "indeks", series: [{ id: "OVXCLS", label: "OVX olje" }, { id: "GVZCLS", label: "GVZ gull" }, { id: "VIXCLS", label: "VIX aksjer" }] }] },
+    { title: "Volatilitet i olje og gull", panels: [{ unit: "indeks", series: [{ id: "CBOE_OVX", label: "OVX olje" }, { id: "CBOE_GVZ", label: "GVZ gull" }, { id: "CBOE_VIX", label: "VIX aksjer" }] }] },
     { title: "Husholdningenes aksjeandel av finansielle eiendeler", panels: [{ unit: "%", series: [{ id: "BOGZ1FL153064486Q", label: "Aksjeandel" }] }] },
   ];
 }
@@ -491,7 +491,7 @@ function renderSources(ctx) {
   }).join("");
   const cc = ctx.status.crosscheck || [];
   const w = ctx.status.warnings || [];
-  $("#warnings").innerHTML = (cc.length ? `<p class="small muted">Kryssjekk FRED mot Treasury, siste felles datoer: ${cc.map((k) => `${k.fred} mot ${k.treasury}: ${k.dates_checked} datoer, ${k.deviations} avvik`).join("; ")}. Grense 0,01 prosentpoeng.</p>` : "")
+  $("#warnings").innerHTML = (cc.length ? `<p class="small muted">Kryssjekk FRED mot originalkilden (Treasury og Cboe), siste felles datoer: ${cc.map((k) => `${k.fred} mot ${k.treasury}: ${k.dates_checked} datoer, ${k.deviations} avvik`).join("; ")}. Grense 0,01 prosentpoeng.</p>` : "")
     + w.map((x) => `<div class="warning">${esc(x.message)}</div>`).join("");
 }
 
@@ -590,13 +590,13 @@ function renderAgent(ctx) {
 // Datapunktene regnes fra dataene på siden, tekstpunktene har kilde i config.
 function counterData(ctx, item) {
   if (item.metric === "decomp_10y") {
-    const nom = ctx.data.DGS10, real = ctx.data.DFII10, be = ctx.data.T10YIE;
+    const nom = ctx.data.UST_10Y, real = ctx.data.UST_REAL_10Y, be = ctx.data.T10YIE;
     if (!nom || !real || !be) return null;
     const c1 = C.changeOverDays(nom, item.days, "pp"), c2 = C.changeOverDays(real, item.days, "pp"), c3 = C.changeOverDays(be, item.days, "pp");
     if (!c1 || !c2 || !c3) return null;
     return { text: `Renteoppgangen er realrente, ikke inflasjonsforventning: siste ${item.days} dager har 10-årsrenten endret seg ${C.fmtSigned(c1.change, 2)} pp, `
       + `av det realrente ${C.fmtSigned(c2.change, 2)} pp og breakeven ${C.fmtSigned(c3.change, 2)} pp. Å inflatere bort gjeld krever lavere realrenter, ikke høyere.`,
-      source: `Beregnet fra FRED DGS10, DFII10 og T10YIE, ${C.fmtDate(c1.baseDate)} til ${C.fmtDate(c1.lastDate)}` };
+      source: `Beregnet fra U.S. Treasury (10 år nominell og real) og FRED T10YIE, ${C.fmtDate(c1.baseDate)} til ${C.fmtDate(c1.lastDate)}` };
   }
   if (item.metric === "core_cpi_trend") {
     const y = ctx.data.CPILFESL ? C.yoySeries(ctx.data.CPILFESL) : [];

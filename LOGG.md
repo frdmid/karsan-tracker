@@ -4,6 +4,7 @@ Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
 ## 2026-10-15
 
+* Gikk gjennom alle serier etter spørsmål fra Frode om gamle tall: alle var like ferske som kildene tillater. Lagt til ferskere originalkilder: Treasurys realrentekurve (5, 10, 20, 30 år, en dag før FRED DFII), Cboe direkte for VIX, OVX og GVZ (en dag før FRED) og Norges Bank for USD/NOK (fem dager før FRED DEXNOUS, som publiseres ukentlig). Nytt `scripts/fetch_direct.py`, nytt steg i workflow, kryssjekk utvidet til realrenter og Cboe (0 avvik). Nøkkeltall, VIX-vilkåret i fase 2, grafer og motargumentet om realrente bruker nå originalkilden. 39 serier ok.
 * KPI for september (publisert 14. okt. kl. 12:30 UTC) manglet på siden. Årsak: planlagte kjøringer startet flere timer for sent (10:22 og 12:48 UTC i stedet for 05:30), og kjøringen 14. okt. var ferdig før tallene kom. Startet kjøring manuelt kl. 07:41 UTC, KPI og kjerne-KPI for september er inne. Lagt til ny planlagt kjøring hverdager 14:00 UTC, etter amerikanske tall kl. 12:30 UTC. Tallene: KPI 3,72 % år over år (+0,65 % fra august), kjerne-KPI 2,57 % (+0,33 %). Motargumentet om fallende kjerneinflasjon skjules nå automatisk, siden kjerne-KPI er lik nivået tre måneder før.
 
 ## 2026-10-14
