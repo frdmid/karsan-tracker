@@ -708,6 +708,16 @@
       "minutes": 89,
       "collection_id": 1715910847
     },
+    "8bb634312000": {
+      "id": "8bb634312000",
+      "date": "2025-03-08",
+      "show": "Top Traders Unplugged",
+      "title": "SI338: Politics, Markets & Power Plays: An Unfiltered Look ft. Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/si338-politics-markets-power-plays-an-unfiltered/id888420325?i=1000698355016&uo=4",
+      "audio": "https://podcasts.captivate.fm/media/46cc194b-517a-456f-85b6-abec15ca3939/Systematic-Investor-Episode-338-ft-Cem-Karsan.mp3",
+      "minutes": 69,
+      "collection_id": 888420325
+    },
     "0fa20aed0488": {
       "id": "0fa20aed0488",
       "date": "2025-02-17",
@@ -1039,5 +1049,5 @@
       "collection_id": 1128955736
     }
   },
-  "generated": "2026-10-16T17:56:22Z"
+  "generated": "2026-10-19T07:14:53Z"
 }
