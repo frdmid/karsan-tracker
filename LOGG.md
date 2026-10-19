@@ -2,6 +2,10 @@
 
 Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
+## 2026-10-19
+
+* Fredagens sluttkurser (16. okt.) manglet mandag morgen. Årsak: Treasury og Cboe publiserer om kvelden i USA, siste kjøring fredag var 17:53 UTC, det var ingen kjøring i helgen, og mandagens morgenkjøring var ikke startet av GitHub. Startet kjøring manuelt 07:14 UTC: Treasury, Cboe og Norges Bank har nå 16. okt. Morgenkjøringen går nå hver dag (`30 5 * * *`), også lørdag, så fredagens tall kommer inn lørdag morgen.
+
 ## 2026-10-15
 
 * Gikk gjennom alle serier etter spørsmål fra Frode om gamle tall: alle var like ferske som kildene tillater. Lagt til ferskere originalkilder: Treasurys realrentekurve (5, 10, 20, 30 år, en dag før FRED DFII), Cboe direkte for VIX, OVX og GVZ (en dag før FRED) og Norges Bank for USD/NOK (fem dager før FRED DEXNOUS, som publiseres ukentlig). Nytt `scripts/fetch_direct.py`, nytt steg i workflow, kryssjekk utvidet til realrenter og Cboe (0 avvik). Nøkkeltall, VIX-vilkåret i fase 2, grafer og motargumentet om realrente bruker nå originalkilden. 39 serier ok.
