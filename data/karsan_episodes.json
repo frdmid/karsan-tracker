@@ -488,6 +488,18 @@
       "analyzed_at": "2026-10-13T08:00:00Z",
       "model": "Claude Opus 5.5 i Claude Code (manuell kjøring, ikke agenten)"
     },
+    "451b767caa12": {
+      "id": "451b767caa12",
+      "date": "2026-09-21",
+      "show": "The tastylive network",
+      "title": "tasty Crumbs with Cem Karsan - September 21, 2026",
+      "link": "https://podcasts.apple.com/us/podcast/tasty-crumbs-with-cem-karsan-september-21-2026/id496019927?i=1000791523442&uo=4",
+      "audio": "https://feeds.tastylive.com/media/hTvdOe5e/hTvdOe5e.mp4",
+      "minutes": 25,
+      "collection_id": 496019927,
+      "transcript_status": "mangler",
+      "message": "Ingen transkripsjon i feeden. Lydtranskribering er av (TRANSCRIBE_AUDIO)."
+    },
     "9350497b1f73": {
       "id": "9350497b1f73",
       "date": "2026-07-04",
@@ -818,6 +830,16 @@
       "minutes": 59,
       "collection_id": 1210383304
     },
+    "4aa6b3fe829a": {
+      "id": "4aa6b3fe829a",
+      "date": "2024-07-16",
+      "show": "The Grant Williams Podcast",
+      "title": "The End Game Ep. 51 - Cem Karsan PREVIEW",
+      "link": "https://podcasts.apple.com/us/podcast/the-end-game-ep-51-cem-karsan-preview/id1508585135?i=1000662369935&uo=4",
+      "audio": "https://mcdn.podbean.com/mf/web/m969ymwujf24h3nc/TEG_0051-CEM_KARSAN-PROMO-V_1.mp3",
+      "minutes": 13,
+      "collection_id": 1508585135
+    },
     "14941ce017d0": {
       "id": "14941ce017d0",
       "date": "2024-07-06",
@@ -1049,5 +1071,5 @@
       "collection_id": 1128955736
     }
   },
-  "generated": "2026-10-21T10:23:37Z"
+  "generated": "2026-10-21T18:32:34Z"
 }

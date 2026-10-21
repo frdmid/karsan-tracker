@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21T10:23:37Z",
+  "generated": "2026-10-21T18:32:34Z",
   "series": {
     "DGS2": {
       "source": "fred",
@@ -14,8 +14,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "DGS5": {
       "source": "fred",
@@ -30,8 +30,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "DGS10": {
       "source": "fred",
@@ -46,8 +46,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "DGS20": {
       "source": "fred",
@@ -62,8 +62,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "DGS30": {
       "source": "fred",
@@ -78,8 +78,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "DFII5": {
       "source": "fred",
@@ -94,8 +94,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "DFII10": {
       "source": "fred",
@@ -110,8 +110,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "DFII20": {
       "source": "fred",
@@ -126,8 +126,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "DFII30": {
       "source": "fred",
@@ -142,8 +142,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "T10YIE": {
       "source": "fred",
@@ -158,8 +158,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Krever kildehenvisning (Federal Reserve Bank of St. Louis)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "DFEDTARU": {
       "source": "fred",
@@ -174,8 +174,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "DFEDTARL": {
       "source": "fred",
@@ -190,8 +190,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "WALCL": {
       "source": "fred",
@@ -206,8 +206,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "WSHOTSL": {
       "source": "fred",
@@ -222,8 +222,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "WRESBAL": {
       "source": "fred",
@@ -238,8 +238,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "WTREGEN": {
       "source": "fred",
@@ -254,8 +254,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "SP500": {
       "source": "fred",
@@ -286,8 +286,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Krever kildehenvisning (Chicago Board Options Exchange)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "THREEFYTP10": {
       "source": "fred",
@@ -302,8 +302,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "BOGZ1FL153064486Q": {
       "source": "fred",
@@ -318,8 +318,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "OVXCLS": {
       "source": "fred",
@@ -334,8 +334,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Krever kildehenvisning (Chicago Board Options Exchange)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "GVZCLS": {
       "source": "fred",
@@ -350,8 +350,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Krever kildehenvisning (Chicago Board Options Exchange)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "BAMLH0A0HYM2": {
       "source": "fred",
@@ -398,8 +398,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "CPILFESL": {
       "source": "fred",
@@ -414,8 +414,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "DEXNOUS": {
       "source": "fred",
@@ -430,8 +430,8 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "DTWEXBGS": {
       "source": "fred",
@@ -446,14 +446,14 @@
       "method": "FRED fredgraph.csv (uten API-nøkkel)",
       "license": "Offentlig (public domain)",
       "unofficial": false,
-      "message": null,
-      "status": "ok"
+      "message": "Siste henting feilet, forrige fil er beholdt: Tomt svar",
+      "status": "utdatert"
     },
     "UST_2Y": {
       "source": "treasury",
       "source_id": "daily_treasury_yield_curve",
       "title": "Treasury par yield 2 år",
-      "last_fetched": "2026-10-21T10:23:17Z",
+      "last_fetched": "2026-10-21T18:32:24Z",
       "last_observation": "2026-10-20",
       "age_days": 1,
       "max_age_days": 5,
@@ -469,7 +469,7 @@
       "source": "treasury",
       "source_id": "daily_treasury_yield_curve",
       "title": "Treasury par yield 5 år",
-      "last_fetched": "2026-10-21T10:23:17Z",
+      "last_fetched": "2026-10-21T18:32:24Z",
       "last_observation": "2026-10-20",
       "age_days": 1,
       "max_age_days": 5,
@@ -485,7 +485,7 @@
       "source": "treasury",
       "source_id": "daily_treasury_yield_curve",
       "title": "Treasury par yield 10 år",
-      "last_fetched": "2026-10-21T10:23:17Z",
+      "last_fetched": "2026-10-21T18:32:24Z",
       "last_observation": "2026-10-20",
       "age_days": 1,
       "max_age_days": 5,
@@ -501,7 +501,7 @@
       "source": "treasury",
       "source_id": "daily_treasury_yield_curve",
       "title": "Treasury par yield 20 år",
-      "last_fetched": "2026-10-21T10:23:17Z",
+      "last_fetched": "2026-10-21T18:32:24Z",
       "last_observation": "2026-10-20",
       "age_days": 1,
       "max_age_days": 5,
@@ -517,7 +517,7 @@
       "source": "treasury",
       "source_id": "daily_treasury_yield_curve",
       "title": "Treasury par yield 30 år",
-      "last_fetched": "2026-10-21T10:23:17Z",
+      "last_fetched": "2026-10-21T18:32:24Z",
       "last_observation": "2026-10-20",
       "age_days": 1,
       "max_age_days": 5,
@@ -533,7 +533,7 @@
       "source": "treasury",
       "source_id": "daily_treasury_real_long_term",
       "title": "Treasury lang realrente, snitt over 10 år",
-      "last_fetched": "2026-10-21T10:23:17Z",
+      "last_fetched": "2026-10-21T18:32:24Z",
       "last_observation": "2026-10-20",
       "age_days": 1,
       "max_age_days": 5,
@@ -581,7 +581,7 @@
       "source": "treasury",
       "source_id": "daily_treasury_real_yield_curve",
       "title": "Treasury realrente 5 år (TIPS)",
-      "last_fetched": "2026-10-21T10:23:17Z",
+      "last_fetched": "2026-10-21T18:32:24Z",
       "last_observation": "2026-10-20",
       "age_days": 1,
       "max_age_days": 5,
@@ -597,7 +597,7 @@
       "source": "treasury",
       "source_id": "daily_treasury_real_yield_curve",
       "title": "Treasury realrente 10 år (TIPS)",
-      "last_fetched": "2026-10-21T10:23:17Z",
+      "last_fetched": "2026-10-21T18:32:24Z",
       "last_observation": "2026-10-20",
       "age_days": 1,
       "max_age_days": 5,
@@ -613,7 +613,7 @@
       "source": "treasury",
       "source_id": "daily_treasury_real_yield_curve",
       "title": "Treasury realrente 20 år (TIPS)",
-      "last_fetched": "2026-10-21T10:23:17Z",
+      "last_fetched": "2026-10-21T18:32:24Z",
       "last_observation": "2026-10-20",
       "age_days": 1,
       "max_age_days": 5,
@@ -629,7 +629,7 @@
       "source": "treasury",
       "source_id": "daily_treasury_real_yield_curve",
       "title": "Treasury realrente 30 år (TIPS)",
-      "last_fetched": "2026-10-21T10:23:17Z",
+      "last_fetched": "2026-10-21T18:32:24Z",
       "last_observation": "2026-10-20",
       "age_days": 1,
       "max_age_days": 5,
@@ -645,7 +645,7 @@
       "source": "cboe",
       "source_id": "VIX",
       "title": "VIX (Cboe direkte)",
-      "last_fetched": "2026-10-21T10:23:30Z",
+      "last_fetched": "2026-10-21T18:32:27Z",
       "last_observation": "2026-10-20",
       "age_days": 1,
       "max_age_days": 5,
@@ -661,7 +661,7 @@
       "source": "cboe",
       "source_id": "OVX",
       "title": "OVX, volatilitet i olje (Cboe direkte)",
-      "last_fetched": "2026-10-21T10:23:31Z",
+      "last_fetched": "2026-10-21T18:32:27Z",
       "last_observation": "2026-10-20",
       "age_days": 1,
       "max_age_days": 5,
@@ -677,7 +677,7 @@
       "source": "cboe",
       "source_id": "GVZ",
       "title": "GVZ, volatilitet i gull (Cboe direkte)",
-      "last_fetched": "2026-10-21T10:23:31Z",
+      "last_fetched": "2026-10-21T18:32:27Z",
       "last_observation": "2026-10-20",
       "age_days": 1,
       "max_age_days": 5,
@@ -693,11 +693,11 @@
       "source": "norgesbank",
       "source_id": "B.USD.NOK.SP",
       "title": "USD/NOK (Norges Bank)",
-      "last_fetched": "2026-10-21T10:23:32Z",
-      "last_observation": "2026-10-20",
-      "age_days": 1,
+      "last_fetched": "2026-10-21T18:32:28Z",
+      "last_observation": "2026-10-21",
+      "age_days": 0,
       "max_age_days": 5,
-      "rows": 2970,
+      "rows": 2971,
       "source_url": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?format=csv&startPeriod=2015-01-01&locale=en",
       "method": "Norges Bank API",
       "license": "Åpne data fra Norges Bank, kildehenvisning",
