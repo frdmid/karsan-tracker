@@ -34,6 +34,8 @@ def main():
     a = json.loads(open(src, encoding="utf-8").read())
     # Valgfritt: annen transkripsjonskilde enn feeden, for eksempel YouTube lest i nettleser.
     source, source_url = a.pop("transkripsjon_kilde", None), a.pop("transkripsjon_url", None)
+    # Valgfritt: ny tittel og lenke, for eksempel når flere klipp analyseres samlet.
+    title, link = a.pop("tittel", None), a.pop("lenke", None)
     for k in ("karsan_deltar", "oppsummering", "pastander", "forslag"):
         if k not in a:
             sys.exit(f"Mangler felt: {k}")
@@ -53,8 +55,13 @@ def main():
     ep.update(analysis=a, analyzed_at=now_iso(), model=model, message=None)
     if source:
         ep.update(transcript_status="ok", transcript_source=source, transcript_url=source_url)
+    # Egne felt, så agentens oppdagelse (som skriver title og link fra Apple) ikke overskriver dem.
+    if title:
+        ep["display_title"] = title
+    if link:
+        ep["display_link"] = link
     path.write_text(json.dumps(state, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"Lagret analyse for {ep['title']}: {len(a['pastander'])} påstander, {len(a['forslag'])} forslag")
+    print(f"Lagret analyse for {ep.get('display_title') or ep['title']}: {len(a['pastander'])} påstander, {len(a['forslag'])} forslag")
 
 
 if __name__ == "__main__":

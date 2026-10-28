@@ -9,8 +9,182 @@
       "audio": "https://feeds.tastylive.com/media/kxL0aQNv/kxL0aQNv.mp4",
       "minutes": 26,
       "collection_id": 496019927,
-      "transcript_status": "mangler",
-      "message": "Ingen transkripsjon i feeden. Lydtranskribering er av (TRANSCRIBE_AUDIO)."
+      "transcript_status": "ok",
+      "message": null,
+      "analysis": {
+        "karsan_deltar": true,
+        "oppsummering": "Karsan holder fast ved et stort fall, men skyver hovedbanen ut i tid: etter mellomvalget holdes markedet oppe av støttende flyt og lav volatilitet, med topp mest sannsynlig rundt opsjonsforfallet i januar, ellers desember. Alternativet er et trappetrinnsfall under 10 % ut året før det akselererer i januar. Rentefallet fra 5,3 % kaller han risk-off og flukt til sikkerhet, ikke friskmelding, siden CDS og franske renter ikke har bedret seg. Fed lot renten ligge 28. oktober, han kaller hauk-retorikken kabuki-teater og tror ikke på heving i desember. Administrasjonen har gått stille, nesten la det brenne, og han løfter Treasurys låneplan 4. november som viktigere enn Fed.",
+        "pastander": [
+          {
+            "tema": "Toppen",
+            "pastand": "Mest sannsynlig topp rundt opsjonsforfallet i januar, ellers i desember. Etter mellomvalget er flyten svært støttende og volatiliteten komprimert, så markedet kan holde seg oppe til da.",
+            "tall": "",
+            "tidshorisont": "desember 2026 eller januar 2027",
+            "sitat": "best case January top",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Alternativ bane",
+            "pastand": "Et trappetrinnsfall som startet i oktober og varer ut året, under 10 % fra topp til bunn, før det akselererer i begynnelsen av januar. Ikke et krakk i år.",
+            "tall": "under 10 % ut året",
+            "tidshorisont": "oktober til januar",
+            "sitat": "think about less than 10% uh you know into the end of the year",
+            "tid_sek": 0,
+            "forhold": "nytt",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Størrelsen på fallet",
+            "pastand": "Han venter fortsatt et stort fall, minst rundt 20 %, og nevner igjen 25 til 40 %. Ny tanke: krisen kan komme uten at markedet faller mer enn 20 %, for eksempel om markedene stenges en kort periode.",
+            "tall": "minst ca. 20 %, 25 til 40 %",
+            "tidshorisont": "etter mellomvalget",
+            "sitat": "I'm calling for a big decline and I'm giving you two or three paths.",
+            "tid_sek": 0,
+            "forhold": "endrer",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Fed 28. oktober",
+            "pastand": "Fed lot renten ligge. Warshs harde ord om inflasjon er kabuki-teater for troverdighet, slik at QE senere ikke ser ut som en bananrepublikk. Han tror ikke på heving i desember, selv om markedet priser rundt 84 %.",
+            "tall": "ca. 84 % priset for desember (ifølge programlederen)",
+            "tidshorisont": "desember 2026",
+            "sitat": "I'm here to tell you they are not going to raise in December either.",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "fedmal"
+          },
+          {
+            "tema": "Rentefallet",
+            "pastand": "Fallet i lange renter etter toppen rundt 5,3 % er risk-off og flukt til sikkerhet før mellomvalget. CDS og franske statsrenter har ikke bedret seg. Går det bedre i aksjemarkedet, stiger rentene igjen.",
+            "tall": "topp ca. 5,3 %",
+            "tidshorisont": "før mellomvalget",
+            "sitat": "This to me is very much a a riskoff move.",
+            "tid_sek": 0,
+            "forhold": "endrer",
+            "gjelder_krav": "rente10"
+          },
+          {
+            "tema": "Lang ende ned",
+            "pastand": "Lange renter kommer bare ned på to måter: resesjon eller aksjefall, og at Fed kjøper. Begge vil skje.",
+            "tall": "",
+            "tidshorisont": "",
+            "sitat": "Fed buys that. And both are going to happen.",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "qe"
+          },
+          {
+            "tema": "Administrasjonen",
+            "pastand": "Etter å ha støttet markedet fra mars til september har administrasjonen gått stille. Trump snakker om depresjon hvis Demokratene vinner, Bessent intervenerer ikke lenger i obligasjonsmarkedet. Han leser det som at de er villige til å la markedet falle.",
+            "tall": "",
+            "tidshorisont": "nå",
+            "sitat": "almost let it burn",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Treasurys låneplan",
+            "pastand": "Treasurys kvartalsvise låneplan 4. november er viktigere enn Fed-møtet: den viser hva staten gjør med løpetider og utstedelse.",
+            "tall": "",
+            "tidshorisont": "4. november 2026",
+            "sitat": "I actually think that's going to be way more important than the Fed meeting today.",
+            "tid_sek": 0,
+            "forhold": "nytt",
+            "gjelder_krav": "lange_kjop"
+          },
+          {
+            "tema": "Skew som varsel",
+            "pastand": "Endringen i skew over 10 uker er på et nivå bare sett sent 2019 og sent 2021. Begge ganger kom et større fall en til fire måneder senere, etter en periode der markedet holdt seg.",
+            "tall": "1 til 4 måneder",
+            "tidshorisont": "",
+            "sitat": "within months not days or weeks within months of some bigger decline",
+            "tid_sek": 0,
+            "forhold": "nytt",
+            "gjelder_krav": ""
+          },
+          {
+            "tema": "Olje, rente og dollar",
+            "pastand": "Samlet press fra oljepris, 10-årsrente og dollarindeks er det høyeste siden 2008. Det virker med forsinkelse over måneder og kvartaler.",
+            "tall": "høyeste siden 2008",
+            "tidshorisont": "måneder",
+            "sitat": "we are now at 2008 levels",
+            "tid_sek": 0,
+            "forhold": "nytt",
+            "gjelder_krav": ""
+          },
+          {
+            "tema": "Statlige aksjer",
+            "pastand": "Trump-kontoene er gjort obligatoriske og utvidet til tenåringer, og Musk, Anthropic og andre snakker om å gi aksjer til folket. Han ser det som forberedelse til at staten kjøper aksjer etter valget.",
+            "tall": "",
+            "tidshorisont": "etter mellomvalget",
+            "sitat": "The Trump accounts have become if you haven't noticed uh required",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "formuesfond"
+          },
+          {
+            "tema": "Sektorer i fallet",
+            "pastand": "Som i 2000 kan store deler av markedet stige i det første fallet: helse og energi spesielt, også finans. Han advarer mot forsyning og dagligvare på grunn av energikostnader og presset forbruker.",
+            "tall": "",
+            "tidshorisont": "første del av fallet",
+            "sitat": "Healthcare and energy in particular have not only started to perform well already",
+            "tid_sek": 0,
+            "forhold": "nytt",
+            "gjelder_krav": ""
+          },
+          {
+            "tema": "Kreditt",
+            "pastand": "CDS i hyperscalerne og spreaden mellom franske og tyske statsrenter blåser ut samtidig, tegn på at høye renter har begynt å knekke ting.",
+            "tall": "",
+            "tidshorisont": "nå",
+            "sitat": "CDS are blowing out across multiple avenues.",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "ai_cds"
+          },
+          {
+            "tema": "Halerisiko",
+            "pastand": "Cyberangrep uken før valget, Lula-seieren i Brasil, eskalering i Iran og så nye våpenhvilesamtaler, olje over 102 dollar: en sesong for overraskelser. Ekstreme utfall er billige å sikre seg mot.",
+            "tall": "olje over 102 USD",
+            "tidshorisont": "rundt mellomvalget",
+            "sitat": "We are in this season of surprises of potential tail risk.",
+            "tid_sek": 0,
+            "forhold": "nytt",
+            "gjelder_krav": ""
+          }
+        ],
+        "forslag": [
+          {
+            "hva": "Legg inn Treasurys kvartalsvise låneplan 4. november som kontrollpunkt for signalet om oppkjøp av lange statsobligasjoner",
+            "begrunnelse": "Karsan kaller den viktigere enn Fed-møtet."
+          },
+          {
+            "hva": "Legg inn Karsans prediksjon om ingen Fed-heving i desember som et signal som kan kontrolleres mot Fed-målet etter desembermøtet",
+            "begrunnelse": "Konkret og etterprøvbar påstand."
+          },
+          {
+            "hva": "S&P 500: oppdater kravteksten med topp i januar (ellers desember), alternativt trappetrinn under 10 % ut året, og minst ca. 20 % fall",
+            "begrunnelse": "Han presiserer banene og senker nedre grense for fallet."
+          },
+          {
+            "hva": "Nytt nøkkeltall for oljepris, og en samleindikator for olje, 10-årsrente og dollar",
+            "begrunnelse": "Han sier det samlede presset er det høyeste siden 2008. Kan beregnes fra åpne data hvis oljeprisen finnes gratis."
+          },
+          {
+            "hva": "Nytt nøkkeltall: OFR Financial Stress Index",
+            "begrunnelse": "Programlederen omtaler den som Karsans favorittmål på risiko. Publiseres åpent av Office of Financial Research."
+          }
+        ]
+      },
+      "analyzed_at": "2026-10-28T23:53:41Z",
+      "model": "Claude Opus 5.5 i Claude Code (manuell analyse)",
+      "transcript_source": "YouTube automatisk transkripsjon av fem klipp (19., 21., 23., 26. og 28. okt.), lest i nettleser",
+      "transcript_url": "https://www.youtube.com/@tastyliveshow/search?query=Cem%20Karsan",
+      "display_title": "tasty Crumbs with Cem Karsan, 19. til 28. oktober 2026 (fem klipp)",
+      "display_link": "https://www.youtube.com/watch?v=bI7T340kq3s"
     },
     "32cca3ae7d91": {
       "id": "32cca3ae7d91",
@@ -1093,5 +1267,5 @@
       "collection_id": 1128955736
     }
   },
-  "generated": "2026-10-28T19:26:28Z"
+  "generated": "2026-10-28T23:43:57Z"
 }

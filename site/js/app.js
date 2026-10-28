@@ -575,7 +575,7 @@ function renderAgent(ctx) {
         ${meta ? `<br><span class="ns">${esc(meta)}</span>` : ""}${p.sitat ? `<br><span class="ns">«${esc(p.sitat)}»</span>` : ""}</li>`;
     }).join("");
     const props = a.forslag.length ? `<p class="small"><strong>Forslag til dashbordet</strong> (ikke lagt inn, må godkjennes):</p><ul class="small">${a.forslag.map((f) => `<li>${esc(f.hva)}. <span class="muted">${esc(f.begrunnelse)}</span></li>`).join("")}</ul>` : "";
-    return `<div class="card"><h3><a href="${esc(e.link)}" rel="noopener" target="_blank">${esc(e.title)}</a></h3>
+    return `<div class="card"><h3><a href="${esc(e.display_link || e.link)}" rel="noopener" target="_blank">${esc(e.display_title || e.title)}</a></h3>
       <p class="ns">${esc(e.show)}, ${C.fmtDate(e.date)}. Analysert ${C.fmtTimestamp(e.analyzed_at)} av ${esc(e.model)} fra ${esc(e.transcript_source)}.</p>
       <p>${esc(a.oppsummering)}</p><ul class="claims">${claims}</ul>${props}</div>`;
   }).join("");

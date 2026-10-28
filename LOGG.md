@@ -2,6 +2,10 @@
 
 Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
+## 2026-10-28
+
+* Sjekk for nye podcaster: fem tasty Crumbs-klipp (tastylive, 19., 21., 23., 26. og 28. okt.) analysert samlet fra YouTubes automatiske transkripsjon. CNBC-klippet 28. okt. blokkerer automatisk henting (403) og er ikke analysert. Nytt fra Karsan: topp mest sannsynlig rundt opsjonsforfallet i januar, ellers desember; alternativt trappetrinnsfall under 10 % ut året; minst ca. 20 % fall; Fed lot renten ligge 28. okt., han tror ikke på heving i desember; rentefallet fra 5,3 % er risk-off; administrasjonen har gått stille; Treasurys låneplan 4. nov. viktigere enn Fed. 14 påstander, 5 forslag, ikke lagt inn i config. `lagre_analyse.py` støtter `tittel` og `lenke` (lagres som `display_title` og `display_link` så agenten ikke overskriver dem).
+
 ## 2026-10-19
 
 * Fredagens sluttkurser (16. okt.) manglet mandag morgen. Årsak: Treasury og Cboe publiserer om kvelden i USA, siste kjøring fredag var 17:53 UTC, det var ingen kjøring i helgen, og mandagens morgenkjøring var ikke startet av GitHub. Startet kjøring manuelt 07:14 UTC: Treasury, Cboe og Norges Bank har nå 16. okt. Morgenkjøringen går nå hver dag (`30 5 * * *`), også lørdag, så fredagens tall kommer inn lørdag morgen.
