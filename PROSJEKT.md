@@ -2,7 +2,7 @@
 
 Dette dokumentet beskriver formål, krav, arkitektur og beslutninger. Sammen med `LOGG.md` og koden skal det være nok til å gjenskape hele prosjektet.
 
-Eier: Frode (strategiplanlegger). Startet 12. oktober 2026.
+Eier: Frode (strategiplanlegger). Startet 12. oktober 2026. Oversikt i Notion: "Karsan tracker: prosjektbeskrivelse og status" (https://app.notion.com/p/40865d3cd3458155b852e29ac92a9d54).
 
 ## 1. Formål
 

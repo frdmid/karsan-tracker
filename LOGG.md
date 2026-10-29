@@ -2,6 +2,11 @@
 
 Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
+## 2026-10-29
+
+* Ny Notion-side "Karsan tracker: prosjektbeskrivelse og status" (https://app.notion.com/p/40865d3cd3458155b852e29ac92a9d54), privat, i samme stil som Syklusbordet-siden: hva prosjektet er, tesen og kravene med frister, status, kontrollpunkter, slik det virker, analyserte episoder, datakilder, fallgruver og gjenoppretting. Oppdateres manuelt når Frode ber om det.
+* Regimet falt tilbake til Før scenariet: 10-årsrenten 4,99 % 27. okt., under vilkåret 5,00 % for fase 1.
+
 ## 2026-10-28
 
 * Cboe SKEW-indeksen lagt inn etter ønske fra Frode: ny serie CBOE_SKEW (cdn.cboe.com/api/global/us_indices/daily_prices/SKEW_History.csv, kolonnene DATE,SKEW, videresendes til cdn-api.cboe.com), nytt nøkkeltall med synlig kort forklaring (nytt felt `note`), egen graf med forklaringstekst (nytt felt `desc` i grafdefinisjonen) og referanselinjer ved 100 og 150. Nå 149,2 (27. okt.), snitt fra 2015 135, topp 183 i februar 2025. Referanselinjer som ikke er Karsans terskler merkes nå "Referanselinje" i grafforklaringen i stedet for "Karsans terskel".
