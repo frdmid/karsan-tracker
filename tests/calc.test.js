@@ -229,6 +229,25 @@ test("samleindikator og prediksjon om ingen heving", () => {
   assert.equal(sig([...fed.slice(0, 1), { date: "2026-12-20", value: 4.25 }], "2026-12-20").status, "Ikke oppfylt");
 });
 
+test("regime med toleranse holder en nådd fase", () => {
+  const rows = [
+    { date: "2026-10-01", value: 4.9 }, { date: "2026-10-02", value: 5.05 },
+    { date: "2026-10-05", value: 4.99 }, { date: "2026-10-08", value: 4.7 },
+  ];
+  const regime = { phases: [
+    { id: 0, require: "all", conditions: [] },
+    { id: 1, require: "all", conditions: [{ series: ["R"], metric: "last", transform: "level", op: ">=", value: 5.0, tolerance: 0.25 }] },
+  ] };
+  const run = c.regimeRun(regime, { R: rows }, "2026-10-01", "2026-10-01", "2026-10-09");
+  // Nådd 2. okt., holdt 5. okt. (4,99 innenfor 0,25), falt 8. okt. (4,70 under 4,75).
+  assert.deepEqual(run.history, [{ date: "2026-10-01", phase: 0 }, { date: "2026-10-02", phase: 1 }, { date: "2026-10-08", phase: 0 }]);
+  const mid = c.regimeRun(regime, { R: rows }, "2026-10-01", "2026-10-01", "2026-10-06");
+  assert.equal(mid.current.current.id, 1);
+  assert.equal(mid.current.phases[1].eval.held, true);
+  // Uten tidligere nådd fase gjelder ikke toleransen.
+  assert.equal(c.evaluateRegime(regime, { R: rows.slice(0, 3) }, "2026-10-01").current.id, 0);
+});
+
 test("norsk formatering", () => {
   assert.equal(c.fmtNum(6747560, 0), "6 747 560");
   assert.equal(c.fmtNum(5.24, 2), "5,24");

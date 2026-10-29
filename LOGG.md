@@ -4,6 +4,7 @@ Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
 ## 2026-10-29
 
+* Toleransebelte i regimet etter valg fra Frode: en nådd fase holdes til et vilkår er brutt med mer enn toleransen. Ny `regimeRun`, `evaluateRegime` med `prevReached`, `metRelaxed` per vilkår, `tolerance` i config for alle ti vilkår, ny test (22 av 22). Effekt nå: fase 1 holdes, 10-årsrenten 4,99 % er innenfor toleransen (faller under 4,75 %).
 * Ny Notion-side "Karsan tracker: prosjektbeskrivelse og status" (https://app.notion.com/p/40865d3cd3458155b852e29ac92a9d54), privat, i samme stil som Syklusbordet-siden: hva prosjektet er, tesen og kravene med frister, status, kontrollpunkter, slik det virker, analyserte episoder, datakilder, fallgruver og gjenoppretting. Oppdateres manuelt når Frode ber om det.
 * Regimet falt tilbake til Før scenariet: 10-årsrenten 4,99 % 27. okt., under vilkåret 5,00 % for fase 1.
 

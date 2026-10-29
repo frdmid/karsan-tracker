@@ -649,7 +649,7 @@
     "_mal": "phase_targets er mål per fase for fargestyrken i fasestripene: level er et nivå, change er endring fra fasestart i prosentpoeng (mode pp) eller prosent (mode pct). Fremdrift regnes fra verdien da fasen startet. Mørk grønn: målet nådd. Middels grønn: minst halvveis. Lys grønn: på vei. Grå: stillestående. Hvit: ingen mål i denne fasen. Lys rød: beveget seg litt bort. Mørk rød: langt bort. Fire mål er Karsans egne tall: 10-årsrente 5,5 % i fase 1 og 4 % i fase 2 og 3, S&P 500 fall 25 % i fase 2 og KPI 10 % i fase 4. Ikke alle nøkkeltall har mål, svakt begrunnede mål er fjernet. Resten er denne sidens operasjonalisering av tesen."
   },
   "regime": {
-    "_merknad": "Fasene og vilkårene er denne sidens operasjonalisering av tesen, ikke Karsans egne definisjoner. En fase regnes som nådd når vilkårene er oppfylt (require=all: alle, require=any: minst ett). Gjeldende fase er den høyeste fasen som er nådd. Vilkår uten data vises som Ikke dekket og telles ikke.",
+    "_merknad": "Fasene og vilkårene er denne sidens operasjonalisering av tesen, ikke Karsans egne definisjoner. En fase regnes som nådd når vilkårene er oppfylt (require=all: alle, require=any: minst ett). Gjeldende fase er den høyeste fasen som er nådd. Vilkår uten data vises som Ikke dekket og telles ikke. Toleranse: en fase som allerede er nådd, faller først når et vilkår er brutt med mer enn vilkårets tolerance (for eksempel 0,25 prosentpoeng for 10-årsrenten). Vilkår innenfor toleransen vises som Innenfor toleranse.",
     "disclaimer": "Narrativet favoriserer og taler mot: utledet av tesen på denne siden, ikke Karsans egne ord. Karsan nevner selv: hans egne eksempler fra en podcast, med kilde. Ingenting her er investeringsråd eller tilpasset noens situasjon.",
     "phases": [
       {
@@ -679,7 +679,8 @@
             "transform": "level",
             "op": ">=",
             "value": 4.0,
-            "unit": "%"
+            "unit": "%",
+            "tolerance": 0
           },
           {
             "label": "10-årsrenten minst 5,00 %",
@@ -691,7 +692,8 @@
             "transform": "level",
             "op": ">=",
             "value": 5.0,
-            "unit": "%"
+            "unit": "%",
+            "tolerance": 0.25
           },
           {
             "label": "10-årsrenten steget siste 90 dager",
@@ -705,7 +707,8 @@
             "transform": "level",
             "op": ">",
             "value": 0,
-            "unit": "pp"
+            "unit": "pp",
+            "tolerance": 0.25
           }
         ],
         "implications": {
@@ -742,7 +745,8 @@
             "transform": "drawdown",
             "op": ">=",
             "value": 10,
-            "unit": "%"
+            "unit": "%",
+            "tolerance": 2
           },
           {
             "label": "VIX minst 25",
@@ -755,7 +759,8 @@
             "op": ">=",
             "value": 25,
             "unit": "",
-            "pick": "first"
+            "pick": "first",
+            "tolerance": 3
           },
           {
             "label": "High yield OAS minst 5 %",
@@ -766,7 +771,8 @@
             "transform": "level",
             "op": ">=",
             "value": 5,
-            "unit": "%"
+            "unit": "%",
+            "tolerance": 0.5
           }
         ],
         "implications": {
@@ -810,7 +816,8 @@
             "transform": "level",
             "op": ">=",
             "value": 5,
-            "unit": "%"
+            "unit": "%",
+            "tolerance": 1
           },
           {
             "label": "Fed øvre mål kuttet siden opptak",
@@ -822,7 +829,8 @@
             "transform": "level",
             "op": "<=",
             "value": -0.25,
-            "unit": "pp"
+            "unit": "pp",
+            "tolerance": 0
           }
         ],
         "implications": {
@@ -863,7 +871,8 @@
             "transform": "yoy",
             "op": ">=",
             "value": 6,
-            "unit": "%"
+            "unit": "%",
+            "tolerance": 0.5
           },
           {
             "label": "Breakeven 10 år minst 3,00 %",
@@ -874,7 +883,8 @@
             "transform": "level",
             "op": ">=",
             "value": 3.0,
-            "unit": "%"
+            "unit": "%",
+            "tolerance": 0.15
           }
         ],
         "implications": {

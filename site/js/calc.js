@@ -283,28 +283,58 @@ export function evaluateCondition(cond, data, recordingDate) {
   } else {
     throw new Error("Ukjent metric " + cond.metric);
   }
-  if (value === null) return { covered: false, met: null, value: null, seriesId: picked.id };
-  return { covered: true, met: compare(value, cond.op, cond.value), value, asOf, baseDate, seriesId: picked.id };
+  if (value === null) return { covered: false, met: null, metRelaxed: null, value: null, seriesId: picked.id };
+  // Toleranse: en fase som allerede er nådd, faller først når vilkåret er brutt med mer enn tolerance.
+  const tol = cond.tolerance || 0;
+  const relaxed = cond.op === ">=" || cond.op === ">" ? cond.value - tol : cond.value + tol;
+  return { covered: true, met: compare(value, cond.op, cond.value), metRelaxed: compare(value, cond.op, relaxed),
+           value, asOf, baseDate, seriesId: picked.id };
 }
 
 // Fase nådd: require=all krever at alle dekkede vilkår er oppfylt og at ingen
 // mangler data. require=any krever minst ett oppfylt dekket vilkår.
-export function evaluatePhase(phase, data, recordingDate) {
+// relaxed=true bruker toleransen i hvert vilkår (for en fase som allerede var nådd).
+export function evaluatePhase(phase, data, recordingDate, relaxed = false) {
+  const key = relaxed ? "metRelaxed" : "met";
   const results = phase.conditions.map((c) => ({ ...c, result: evaluateCondition(c, data, recordingDate) }));
   const covered = results.filter((r) => r.result.covered);
   let reached;
   if (!phase.conditions.length) reached = true;
   else if (!covered.length) reached = null;
-  else if (phase.require === "any") reached = covered.some((r) => r.result.met) ? true : (covered.length < results.length ? null : false);
-  else reached = covered.length < results.length ? (covered.some((r) => !r.result.met) ? false : null) : covered.every((r) => r.result.met);
+  else if (phase.require === "any") reached = covered.some((r) => r.result[key]) ? true : (covered.length < results.length ? null : false);
+  else reached = covered.length < results.length ? (covered.some((r) => !r.result[key]) ? false : null) : covered.every((r) => r.result[key]);
   return { id: phase.id, name: phase.name, reached, conditions: results, metCount: covered.filter((r) => r.result.met).length, coveredCount: covered.length };
 }
 
-export function evaluateRegime(regime, data, recordingDate) {
-  const phases = regime.phases.map((p) => ({ ...p, eval: evaluatePhase(p, data, recordingDate) }));
+// prevReached: faser som var nådd dagen før. De holdes så lenge vilkårene
+// holder innenfor toleransen (eval.held = true).
+export function evaluateRegime(regime, data, recordingDate, prevReached = null) {
+  const phases = regime.phases.map((p) => {
+    let ev = evaluatePhase(p, data, recordingDate, false);
+    if (ev.reached !== true && prevReached && prevReached.has(p.id)) {
+      const ev2 = evaluatePhase(p, data, recordingDate, true);
+      if (ev2.reached === true) ev = { ...ev2, held: true };
+    }
+    return { ...p, eval: ev };
+  });
   let current = phases[0];
   for (const p of phases) if (p.eval.reached === true) current = p;
   return { phases, current };
+}
+
+// Kjører regimet dag for dag med toleranse. Svar: endringspunkter og regimet på siste dag.
+export function regimeRun(regime, data, recordingDate, fromDate, toDate) {
+  const ids = [...new Set(regime.phases.flatMap((p) => p.conditions.flatMap((c) => c.series)))].filter((id) => data[id]);
+  const history = [];
+  let prevPhase = null, prevReached = null, state = null;
+  for (let d = fromDate; d <= toDate; d = addDays(d, 1)) {
+    const sub = {};
+    for (const id of ids) sub[id] = truncate(data[id], d);
+    state = evaluateRegime(regime, sub, recordingDate, prevReached);
+    prevReached = new Set(state.phases.filter((p) => p.eval.reached === true).map((p) => p.id));
+    if (state.current.id !== prevPhase) { history.push({ date: d, phase: state.current.id }); prevPhase = state.current.id; }
+  }
+  return { history, current: state };
 }
 
 // ---------- Regimehistorikk og fasestriper ----------
@@ -322,16 +352,7 @@ export function truncate(rows, date) {
 // Gjeldende fase dag for dag fra fromDate til toDate, bare med data kjent den dagen.
 // Svar: endringspunkter [{ date, phase }].
 export function regimeHistory(regime, data, recordingDate, fromDate, toDate) {
-  const ids = [...new Set(regime.phases.flatMap((p) => p.conditions.flatMap((c) => c.series)))].filter((id) => data[id]);
-  const out = [];
-  let prev = null;
-  for (let d = fromDate; d <= toDate; d = addDays(d, 1)) {
-    const sub = {};
-    for (const id of ids) sub[id] = truncate(data[id], d);
-    const phase = evaluateRegime(regime, sub, recordingDate).current.id;
-    if (phase !== prev) { out.push({ date: d, phase }); prev = phase; }
-  }
-  return out;
+  return regimeRun(regime, data, recordingDate, fromDate, toDate).history;
 }
 
 // Datoen regimet første gang gikk forbi fasen. Er fasen aldri sett (regimet

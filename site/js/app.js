@@ -103,8 +103,9 @@ function changeText(v, mode) {
 
 // ---------- Regime ----------
 
-function condTag(r) {
+function condTag(r, held) {
   if (!r.covered) return '<span class="tag na">Ikke dekket</span>';
+  if (!r.met && held && r.metRelaxed) return '<span class="tag na">Innenfor toleranse</span>';
   return r.met ? '<span class="tag ok">Oppfylt</span>' : '<span class="tag no">Ikke oppfylt</span>';
 }
 
@@ -121,12 +122,12 @@ function renderRegime(ctx, regime) {
   $("#phases").innerHTML = regime.phases.map((p) => {
     const st = p.eval.reached === true ? "Nådd" : p.eval.reached === false ? "Ikke nådd" : "Kan ikke vurderes";
     const cls = ["phase", p.eval.reached === true ? "reached" : "", p.eval.reached === null ? "unknown" : "", p.id === cur.id ? "current" : ""].join(" ");
-    return `<li class="${cls}"><span class="pname">${esc(p.name)}</span><span class="pstate">${p.id === cur.id ? "Gjeldende fase" : st}</span></li>`;
+    return `<li class="${cls}"><span class="pname">${esc(p.name)}</span><span class="pstate">${p.id === cur.id ? (p.eval.held ? "Gjeldende fase, holdes av toleranse" : "Gjeldende fase") : st}</span></li>`;
   }).join("");
 
   const conds = regime.phases.filter((p) => p.conditions.length).map((p) => `
     <h3 style="margin-top:10px">${esc(p.name)} <span class="muted small">(${p.require === "any" ? "minst ett vilkår" : "alle vilkår"})</span></h3>
-    ${p.eval.conditions.map((c) => `<div class="cond"><span>${esc(c.label)}${c.result.covered ? ` <span class="muted">${condValue(c)}, ${C.fmtDate(c.result.asOf)}</span>` : ` <span class="muted">${esc(missingReason(ctx, c.series).split(":")[0])}</span>`}</span>${condTag(c.result)}</div>`).join("")}`).join("");
+    ${p.eval.conditions.map((c) => `<div class="cond"><span>${esc(c.label)}${c.result.covered ? ` <span class="muted">${condValue(c)}, ${C.fmtDate(c.result.asOf)}</span>` : ` <span class="muted">${esc(missingReason(ctx, c.series).split(":")[0])}</span>`}</span>${condTag(c.result, p.eval.held)}</div>`).join("")}`).join("");
 
   const im = cur.implications || {};
   const list = (xs) => xs && xs.length ? `<ul>${xs.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : '<p class="muted small">Ingen i denne fasen.</p>';
@@ -661,11 +662,13 @@ async function main() {
   }
   $("#thesis").textContent = `Tesen, slik den er gjengitt: ${s.thesis}`;
   const results = Object.fromEntries(s.signals.map((sig) => [sig.id, C.evaluateSignal(sig, ctx.data, today, s.recording_date)]));
-  const regime = C.evaluateRegime(s.regime, ctx.data, s.recording_date);
+  // Regimet kjøres dag for dag fra opptaket, så en nådd fase holdes innenfor toleransen.
+  const run = C.regimeRun(s.regime, ctx.data, s.recording_date, s.recording_date, today);
+  const regime = run.current;
   const rules = Object.fromEntries(s.signals.map((x) => [x.id, x.rule]));
   const rate = results.rente10.actual !== undefined ? { ...rules.rente10, actual: results.rente10.actual } : null;
   const spx = results.spx.status !== C.STATUS.NOT_COVERED ? { ...rules.spx, actual: results.spx.actual } : null;
-  const history = C.regimeHistory(s.regime, ctx.data, s.recording_date, s.recording_date, today);
+  const history = run.history;
   const counts = renderTiles(ctx, regime, history);
   $("#summary").textContent = C.summarySentence(rate, spx, regime.current.name)
     + ` ${counts.toward} av ${counts.counted} nøkkeltall med data har beveget seg i retning narrativet siste ${s.overview.window_days} dager.`;
