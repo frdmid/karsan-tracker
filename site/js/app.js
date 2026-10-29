@@ -14,6 +14,15 @@ const VERDICT = {
   uendret: "Uendret",
   ingen_retning: "Ingen retning i narrativet",
 };
+const LEVEL = { over: "Over Karsans terskel for fasen", toleranse: "Under terskelen, men innenfor toleransen", under: "Under Karsans terskel for fasen" };
+const LEVEL_CLASS = { over: "mot", toleranse: "uendret", under: "bort" };
+
+// Pil for 30-dagers retning, farget etter om den går i retning narrativet.
+function arrow(m) {
+  if (!m) return "";
+  const ch = m.verdict === "uendret" ? "→" : m.change > 0 ? "↑" : "↓";
+  return `<span class="arrow a-${m.verdict}" aria-hidden="true">${ch}</span> `;
+}
 
 async function fetchText(url) {
   const r = await fetch(url, { cache: "no-cache" });
@@ -198,8 +207,9 @@ function renderTiles(ctx, regime, history) {
   const phases = regime.phases.filter((p) => p.conditions.length);
   const phaseIds = phases.map((p) => p.id);
   const cur = regime.current.id;
+  const curPhase = regime.phases.find((p) => p.id === cur);
   const n = phases.length;
-  $("#overview-intro").textContent = `Boksens farge viser om endringen siste ${ov.window_days} dager er i retning narrativet for fasen vi er i nå. Grønn: i retning. Rød: bort fra. Nøytral: uendret eller ingen retning i denne fasen. Lista øverst har ${n} striper, én per fase, og viser fremdrift mot fasens mål siden fasen startet, se fargeforklaringen under. Stripen for en passert fase er frosset på datoen regimet gikk videre. Hold musen over en stripe for mål og fremdrift. Grafen viser siste ${ov.spark_days} dager, stiplet strek markerer startpunktet for endringen.`;
+  $("#overview-intro").textContent = `Når fasen vi er i har en terskel fra Karsan for indikatoren, viser boksens farge nivået: grønn over terskelen, nøytral under terskelen men innenfor toleransen, rød under toleransen. Uten terskel viser fargen om endringen siste ${ov.window_days} dager er i retning narrativet for fasen: grønn i retning, rød bort fra, nøytral uendret eller ingen retning. Pilen viser alltid retningen siste ${ov.window_days} dager, grønn i retning narrativet og rød bort fra. Lista øverst har ${n} striper, én per fase, og viser fremdrift mot fasens mål siden fasen startet, se fargeforklaringen under. Stripen for en passert fase er frosset på datoen regimet gikk videre. Hold musen over en stripe for mål og fremdrift. Grafen viser siste ${ov.spark_days} dager, stiplet strek markerer startpunktet for endringen.`;
   $("#phase-key").style.gridTemplateColumns = `repeat(${n}, 1fr)`;
   $("#phase-key").innerHTML = phases.map((p) => `<span class="${p.id <= cur ? "on" : ""}">${esc(p.name.split(":")[0])}</span>`).join("");
   $("#phase-grades").innerHTML = "<span>Fasestripe:</span>" + ["g3", "g2", "g1", "n", "r1", "r2"]
@@ -221,13 +231,16 @@ function renderTiles(ctx, regime, history) {
     if (m && dir !== "none") { counted++; if (m.verdict === "mot") toward++; }
     const spark = C.between(t, C.addDays(lastObs.date, -ov.spark_days), null);
     const states = C.stripeStates(ind, t, phaseIds, cur, history, ov.window_days);
-    const cls = m ? m.verdict : "";
-    const label = `${m ? VERDICT[m.verdict] + ". " : ""}${ind.why}`;
+    const lv = C.levelVerdict(ind, t, curPhase);
+    const cls = lv ? LEVEL_CLASS[lv.verdict] : m ? m.verdict : "";
+    const levelText = lv ? `${LEVEL[lv.verdict]} (${valueText(ctx, picked.id, ind.transform, lv.threshold)}${lv.tolerance ? `, toleranse ${C.fmtNum(lv.tolerance, 2)}` : ""}). ` : "";
+    const label = `${levelText}${m ? "Siste " + ov.window_days + " dager: " + VERDICT[m.verdict].toLowerCase() + ". " : ""}${ind.why}`;
     return `<div class="tile ${cls}" title="${esc(label)}" aria-label="${esc(ind.title)}: ${esc(label)}">
       ${phasebar(ctx, picked.id, ind, states, phases)}
       <div class="tt"><span>${esc(ind.title)}</span></div>
       <div class="tv">${valueText(ctx, picked.id, ind.transform, lastObs.value)}</div>
-      <div class="tc">${m ? `${changeText(m.change, ind.mode)} siden ${C.fmtDate(m.baseDate)}` : "For kort historikk"}</div>
+      ${lv ? `<div class="tc">${esc(LEVEL[lv.verdict])}, terskel ${valueText(ctx, picked.id, ind.transform, lv.threshold)}</div>` : ""}
+      <div class="tc">${m ? `${arrow(m)}${changeText(m.change, ind.mode)} siden ${C.fmtDate(m.baseDate)}` : "For kort historikk"}</div>
       ${spark.length > 1 ? sparkline(spark, m && m.baseDate) : ""}
       <div class="meta">${C.fmtDate(lastObs.date)}${staleTag(ctx, picked.id, lastObs.date)}, ${esc(sourceLine(ctx, picked.id))}</div>
       ${ind.note ? `<div class="meta">${esc(ind.note)}</div>` : ""}</div>`;

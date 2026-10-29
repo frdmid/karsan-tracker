@@ -183,7 +183,7 @@
     }
   ],
   "overview": {
-    "_merknad": "Retning er hvilken vei serien må bevege seg for å peke i retning Karsans narrativ. direction gjelder alle faser, phase_directions overstyrer for enkeltfaser (up, down eller none). Boksens farge bruker retningen for gjeldende fase. Stripen for en passert fase fryses på datoen regimet gikk videre og bruker retningen for den fasen. Grønn: endringen siste window_days er i narrativets retning og større enn min_move. Rød: motsatt retning og større enn min_move. Grå: mindre enn min_move eller ingen retning. Retningene er denne sidens tolkning av tesen.",
+    "_merknad": "Retning er hvilken vei serien må bevege seg for å peke i retning Karsans narrativ. direction gjelder alle faser, phase_directions overstyrer for enkeltfaser (up, down eller none). Boksens farge følger nivået mot Karsans terskel når gjeldende fase har et regimevilkår for indikatoren (grønn over, nøytral innenfor toleransen, rød under), ellers retningen for gjeldende fase. Pilen viser alltid 30-dagers retning. Stripen for en passert fase fryses på datoen regimet gikk videre og bruker retningen for den fasen. Grønn: endringen siste window_days er i narrativets retning og større enn min_move. Rød: motsatt retning og større enn min_move. Grå: mindre enn min_move eller ingen retning. Retningene er denne sidens tolkning av tesen.",
     "window_days": 30,
     "spark_days": 120,
     "indicators": [

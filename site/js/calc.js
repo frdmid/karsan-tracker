@@ -188,6 +188,23 @@ export function momentum(rows, days, direction, minMove, mode) {
   return { ...c, verdict };
 }
 
+// Nivå mot Karsans terskel i gjeldende fase. Terskelen hentes fra fasens vilkår med
+// metric last, samme transform og felles serie. over: på riktig side, toleranse: innenfor
+// toleransebeltet, under: brutt med mer enn toleransen. null når fasen ikke har terskel for indikatoren.
+export function levelVerdict(ind, rows, phase) {
+  const cond = ((phase && phase.conditions) || []).find((c) => c.metric === "last"
+    && (c.transform || "level") === (ind.transform || "level") && c.series.some((id) => ind.series.includes(id)));
+  const l = last(rows);
+  if (!cond || !l) return null;
+  const up = cond.op === ">=" || cond.op === ">";
+  const tol = cond.tolerance || 0;
+  let verdict;
+  if (compare(l.value, cond.op, cond.value)) verdict = "over";
+  else if (tol && compare(l.value, cond.op, up ? cond.value - tol : cond.value + tol)) verdict = "toleranse";
+  else verdict = "under";
+  return { verdict, threshold: cond.value, op: cond.op, tolerance: tol, value: l.value, date: l.date };
+}
+
 // Avstand til terskel: hvor mye som gjenstår (positivt) eller er passert (negativt).
 export function distance(value, threshold) {
   return threshold - value;

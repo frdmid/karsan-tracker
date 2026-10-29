@@ -248,6 +248,23 @@ test("regime med toleranse holder en nådd fase", () => {
   assert.equal(c.evaluateRegime(regime, { R: rows.slice(0, 3) }, "2026-10-01").current.id, 0);
 });
 
+test("nivå mot terskel i gjeldende fase", () => {
+  const ind = { series: ["UST_10Y", "DGS10"], transform: "level" };
+  const phase = { conditions: [
+    { series: ["DFEDTARU"], metric: "last", transform: "level", op: ">=", value: 4.0 },
+    { series: ["UST_10Y", "DGS10"], metric: "change_days", days: 90, transform: "level", op: ">", value: 0 },
+    { series: ["UST_10Y", "DGS10"], metric: "last", transform: "level", op: ">=", value: 5.0, tolerance: 0.25 },
+  ] };
+  const at = (v) => c.levelVerdict(ind, [{ date: "2026-10-28", value: v }], phase);
+  assert.equal(at(5.05).verdict, "over");
+  assert.equal(at(5.0).verdict, "over");
+  assert.equal(at(4.8).verdict, "toleranse");
+  assert.equal(at(4.7).verdict, "under");
+  assert.equal(at(5.05).threshold, 5.0);
+  assert.equal(c.levelVerdict({ series: ["T10YIE"], transform: "level" }, [{ date: "2026-10-28", value: 2.4 }], phase), null);
+  assert.equal(c.levelVerdict(ind, [{ date: "2026-10-28", value: 5 }], { conditions: [] }), null);
+});
+
 test("norsk formatering", () => {
   assert.equal(c.fmtNum(6747560, 0), "6 747 560");
   assert.equal(c.fmtNum(5.24, 2), "5,24");

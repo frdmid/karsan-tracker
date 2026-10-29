@@ -130,7 +130,7 @@ a { color: var(--s1); }
 
 /* Tiles */
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
-/* Hele boksen har retningsfargen for gjeldende fase. Lista øverst: én stripe per fase. */
+/* Boksens farge: nivå mot Karsans terskel i gjeldende fase, ellers 30-dagers retning. Pilen viser retningen. Lista øverst: én stripe per fase. */
 .tile {
   --tile-bg: var(--surface);
   position: relative; overflow: hidden;
@@ -154,6 +154,10 @@ a { color: var(--s1); }
 .tile .tt { font-size: 13px; color: var(--ink-2); display: flex; justify-content: space-between; gap: 8px; }
 .tile .tv { font-size: 26px; font-weight: 600; line-height: 1.2; margin: 2px 0; font-variant-numeric: normal; }
 .tile .tc { font-size: 13px; }
+.tile .arrow { font-weight: 700; }
+.tile .arrow.a-mot { color: var(--good-ink); }
+.tile .arrow.a-bort { color: var(--bad-ink); }
+.tile .arrow.a-uendret, .tile .arrow.a-ingen_retning { color: var(--ink-2); }
 .tile .meta { font-size: 12px; color: var(--ink-2); margin-top: 4px; }
 .tile svg { display: block; width: 100%; height: 44px; margin-top: 6px; }
 .phase-key { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 0 0 8px; max-width: 260px; font-size: 11px; color: var(--muted); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }

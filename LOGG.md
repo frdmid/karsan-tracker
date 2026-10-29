@@ -4,6 +4,7 @@ Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
 ## 2026-10-29
 
+* Nøkkeltall: boksens farge følger nivået mot Karsans terskel når gjeldende fase har en (grønn over, nøytral innenfor toleransen, rød under), ellers 30-dagers retning som før. Ny pil for 30-dagers retning i alle bokser. Hvorfor: 10-årsrenten på 5,05 % var rød fordi den hadde falt 0,19 pp siden 28. sep., selv om den er over terskelen på 5 %. Ny `levelVerdict` i `calc.js` med test.
 * Toleransebelte i regimet etter valg fra Frode: en nådd fase holdes til et vilkår er brutt med mer enn toleransen. Ny `regimeRun`, `evaluateRegime` med `prevReached`, `metRelaxed` per vilkår, `tolerance` i config for alle ti vilkår, ny test (22 av 22). Effekt nå: fase 1 holdes, 10-årsrenten 4,99 % er innenfor toleransen (faller under 4,75 %).
 * Ny Notion-side "Karsan tracker: prosjektbeskrivelse og status" (https://app.notion.com/p/40865d3cd3458155b852e29ac92a9d54), privat, i samme stil som Syklusbordet-siden: hva prosjektet er, tesen og kravene med frister, status, kontrollpunkter, slik det virker, analyserte episoder, datakilder, fallgruver og gjenoppretting. Oppdateres manuelt når Frode ber om det.
 * Regimet falt tilbake til Før scenariet: 10-årsrenten 4,99 % 27. okt., under vilkåret 5,00 % for fase 1.
