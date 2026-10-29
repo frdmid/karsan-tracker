@@ -584,6 +584,32 @@
       "publish": true,
       "change_mode": "pct",
       "decimals": 4
+    },
+    {
+      "id": "DCOILWTICO",
+      "source": "fred",
+      "source_id": "DCOILWTICO",
+      "title": "Oljepris WTI (EIA via FRED)",
+      "unit": "USD per fat",
+      "frequency": "daglig, publiseres med noen dagers etterslep",
+      "max_age_days": 10,
+      "license": "Offentlig (public domain), U.S. Energy Information Administration",
+      "publish": true,
+      "change_mode": "pct",
+      "decimals": 2
+    },
+    {
+      "id": "OFR_FSI",
+      "source": "ofr",
+      "source_id": "OFR FSI",
+      "title": "OFR Financial Stress Index",
+      "unit": "indeks",
+      "frequency": "daglig, publiseres med et par dagers etterslep",
+      "max_age_days": 8,
+      "license": "Offentlig (Office of Financial Research, U.S. Treasury)",
+      "publish": true,
+      "change_mode": "pp",
+      "decimals": 2
     }
   ]
 }

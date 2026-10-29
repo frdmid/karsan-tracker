@@ -122,6 +122,29 @@ export function rebase(rows, fromDate) {
   return rows.filter((r) => r.date >= b.date).map((r) => ({ date: r.date, value: r.value - b.value }));
 }
 
+// Samleindikator: summen av z-score for flere serier, hver målt mot sin egen
+// historikk. Datoene følger den første serien, de andre tas på eller før datoen.
+export function compositeZ(seriesList) {
+  const stats = seriesList.map((rows) => {
+    const vals = rows.map((r) => r.value);
+    const mean = vals.reduce((a, b) => a + b, 0) / vals.length;
+    const sd = Math.sqrt(vals.reduce((a, b) => a + (b - mean) ** 2, 0) / vals.length);
+    return { mean, sd };
+  });
+  if (!seriesList.length || stats.some((s) => !s.sd)) return [];
+  const out = [];
+  for (const r of seriesList[0]) {
+    let sum = 0, ok = true;
+    for (let i = 0; i < seriesList.length; i++) {
+      const o = i === 0 ? r : onOrBefore(seriesList[i], r.date);
+      if (!o) { ok = false; break; }
+      sum += (o.value - stats[i].mean) / stats[i].sd;
+    }
+    if (ok) out.push({ date: r.date, value: sum });
+  }
+  return out;
+}
+
 export function transform(rows, kind) {
   if (kind === "drawdown") return drawdownSeries(rows);
   if (kind === "yoy") return yoySeries(rows);
@@ -185,7 +208,7 @@ export const STATUS = {
   NOT_COVERED: "Ikke dekket",
 };
 
-const RULE_TRANSFORM = { level_reach: "level", drawdown_reach: "drawdown", yoy_reach: "yoy", change_reach: "level", monitor: "level" };
+const RULE_TRANSFORM = { level_reach: "level", drawdown_reach: "drawdown", yoy_reach: "yoy", change_reach: "level", monitor: "level", not_above_at: "level" };
 
 export function evaluateSignal(signal, data, today, recordingDate) {
   const rule = signal.rule;
@@ -201,6 +224,17 @@ export function evaluateSignal(signal, data, today, recordingDate) {
   const out = { seriesId: picked.id, actual: now ? now.value : null, asOf: now ? now.date : null };
   if (!now) return { ...out, status: STATUS.NOT_COVERED, reason: "For kort historikk" };
   if (rule.type === "monitor") return { ...out, status: STATUS.WATCH };
+  // Prediksjon om at verdien ikke er høyere på check_date enn på baseline_date
+  // (for eksempel: ingen Fed-heving i desember). Avgjøres først når data for check_date finnes.
+  if (rule.type === "not_above_at") {
+    const base = onOrBefore(t, rule.baseline_date);
+    if (!base) return { ...out, status: STATUS.NOT_COVERED, reason: "Mangler baseline" };
+    out.baseDate = base.date;
+    out.distance = base.value - now.value;
+    if (now.date < rule.check_date) return { ...out, status: STATUS.WATCH };
+    const at = onOrBefore(t, rule.check_date);
+    return { ...out, status: at.value <= base.value ? STATUS.MET : STATUS.NOT_MET, metDate: rule.check_date };
+  }
 
   // deadline: fristen slik den er sagt. final_deadline: ytre frist. Mellom de to er signalet forsinket, ikke feilet.
   const deadline = rule.deadline || null;

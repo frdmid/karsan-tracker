@@ -9,7 +9,8 @@
     "yoy_reach": "År over år endring i prosent for månedlig indeks. Oppfylt hvis høyeste år/år fra opptaksmåned er minst threshold.",
     "change_reach": "Prosentvis endring fra baseline (siste observasjon på eller før opptaksdato). Oppfylt hvis høyeste endring før frist er minst threshold.",
     "monitor": "Ingen terskel. Viser siste verdi, status er alltid Overvåkes.",
-    "not_covered": "Ingen gratis og stabil kilde som tillater publisering. Status er Ikke dekket."
+    "not_covered": "Ingen gratis og stabil kilde som tillater publisering. Status er Ikke dekket.",
+    "not_above_at": "Prediksjon: verdien på check_date er ikke høyere enn på baseline_date. Overvåkes til data for check_date finnes, deretter Oppfylt eller Ikke oppfylt."
   },
   "signals": [
     {
@@ -34,7 +35,7 @@
     {
       "id": "spx",
       "title": "S&P 500 fall fra topp",
-      "claim": "Ned 25 til 40 % fra topp i H1 2027, hovedscenario 25 til 35 %, V-formet på en til to måneder. Kommer samtidig med rentetoppen. Mulig i Q4 2026 hvis mellomvalget bestrides, ellers holder markedet seg til en topp rundt desember eller januar.",
+      "claim": "Ned 25 til 40 % fra topp, minst ca. 20 %. Topp mest sannsynlig rundt opsjonsforfallet i januar 2027, ellers desember. Alternativt trappetrinnsfall under 10 % ut året, så akselerasjon i januar. Fallet ventes V-formet på en til to måneder.",
       "series": [
         "SP500"
       ],
@@ -91,6 +92,22 @@
       }
     },
     {
+      "id": "fed_des",
+      "title": "Ingen Fed-heving i desember",
+      "claim": "Fed hever ikke i desember 2026, selv om markedet priset rundt 84 % sjanse etter møtet 28. oktober",
+      "series": [
+        "DFEDTARU"
+      ],
+      "rule": {
+        "type": "not_above_at",
+        "baseline_date": "2026-10-28",
+        "check_date": "2026-12-31",
+        "deadline": "2026-12-31",
+        "unit": "%"
+      },
+      "definition_note": "Oppfylt hvis øvre Fed-mål 31. desember 2026 ikke er høyere enn 28. oktober (4,00 %). Kilde: Karsan i tasty Crumbs (tastylive), 19. til 28. oktober 2026."
+    },
+    {
       "id": "move",
       "title": "MOVE, renteopsjonsvolatilitet",
       "claim": "Følges som signal",
@@ -120,7 +137,8 @@
       "rule": {
         "type": "not_covered"
       },
-      "not_covered_reason": "Løpetidsfordeling i Feds beholdning finnes i H.4.1 tabell 2, men er ikke lagt inn. Manuell oppfølging."
+      "not_covered_reason": "Løpetidsfordeling i Feds beholdning finnes i H.4.1 tabell 2, men er ikke lagt inn. Manuell oppfølging.",
+      "checkpoint": "Neste kontrollpunkt: Treasurys kvartalsvise låneplan (Quarterly Refunding) 4. november 2026: endres løpetider og utstedelse? Karsan kaller den viktigere enn Fed-møtet 28. oktober."
     },
     {
       "id": "ai_cds",
@@ -352,6 +370,58 @@
         "phase_targets": {},
         "why": "Energisjokket fra Hormuz er Karsans viktigste inflasjonsdriver. Opp i fase 1, 2 og 4.",
         "pick": "first"
+      },
+      {
+        "id": "olje",
+        "title": "Oljepris WTI",
+        "series": [
+          "DCOILWTICO"
+        ],
+        "transform": "level",
+        "mode": "pct",
+        "direction": "up",
+        "phase_directions": {
+          "3": "none"
+        },
+        "min_move": 2,
+        "phase_targets": {},
+        "why": "Energisjokket fra Hormuz er Karsans viktigste inflasjonsdriver. Opp i fase 1, 2 og 4, ingen retning i fase 3."
+      },
+      {
+        "id": "press",
+        "title": "Samlet press: olje, 10-årsrente og dollar",
+        "series": [
+          "DCOILWTICO",
+          "UST_10Y",
+          "DTWEXBGS"
+        ],
+        "transform": "composite_z",
+        "mode": "abs",
+        "direction": "up",
+        "phase_directions": {
+          "3": "down",
+          "4": "none"
+        },
+        "min_move": 0.3,
+        "phase_targets": {},
+        "why": "Sum av z-score for oljepris, 10-årsrente og bred dollarindeks mot historikken siden 2015. Karsan sier det samlede presset er det høyeste siden 2008 (tasty Crumbs 21. okt.). Vår historikk går bare til 2015."
+      },
+      {
+        "id": "ofr",
+        "title": "OFR finansielt stressnivå",
+        "series": [
+          "OFR_FSI"
+        ],
+        "transform": "level",
+        "mode": "abs",
+        "direction": "up",
+        "phase_directions": {
+          "3": "down",
+          "4": "none"
+        },
+        "min_move": 0.2,
+        "phase_targets": {},
+        "why": "Over 0 betyr stress over normalen. Stiger mot krisen i fase 1 og 2, faller når QE kommer i fase 3. Omtalt som Karsans favorittmål på risiko på tastylive."
       },
       {
         "id": "breakeven",
@@ -841,7 +911,9 @@
     "THREEFYTP10",
     "CBOE_OVX",
     "CBOE_GVZ",
-    "BOGZ1FL153064486Q"
+    "BOGZ1FL153064486Q",
+    "DCOILWTICO",
+    "OFR_FSI"
   ],
   "falsification": {
     "date": "2027-06-30",

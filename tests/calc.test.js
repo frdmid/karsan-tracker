@@ -212,6 +212,23 @@ test("rentefart i standardavvik og rebase", () => {
   assert.equal(c.rebase(rente, null)[0].date, "2026-08-01");
 });
 
+test("samleindikator og prediksjon om ingen heving", () => {
+  // To serier: a = 1, 2, 3 og b = 3, 2, 1 på samme datoer gir summen 0 hver dag.
+  const a = [{ date: "2026-01-01", value: 1 }, { date: "2026-01-02", value: 2 }, { date: "2026-01-03", value: 3 }];
+  const b = [{ date: "2026-01-01", value: 3 }, { date: "2026-01-02", value: 2 }, { date: "2026-01-03", value: 1 }];
+  const z = c.compositeZ([a, b]);
+  assert.equal(z.length, 3);
+  for (const x of z) near(x.value, 0);
+  // Samme serie to ganger: dobbel z. a har snitt 2 og sd sqrt(2/3).
+  near(c.compositeZ([a, a])[2].value, 2 * (1 / Math.sqrt(2 / 3)));
+  assert.deepEqual(c.compositeZ([a, [{ date: "2026-01-01", value: 5 }]]), []);
+  const fed = [{ date: "2026-10-28", value: 4.0 }, { date: "2026-12-20", value: 4.0 }];
+  const sig = (data, check) => c.evaluateSignal({ series: ["F"], rule: { type: "not_above_at", baseline_date: "2026-10-28", check_date: check } }, { F: data }, "2026-12-31", "2026-09-29");
+  assert.equal(sig(fed, "2027-01-15").status, "Overvåkes");
+  assert.equal(sig(fed, "2026-12-20").status, "Oppfylt");
+  assert.equal(sig([...fed.slice(0, 1), { date: "2026-12-20", value: 4.25 }], "2026-12-20").status, "Ikke oppfylt");
+});
+
 test("norsk formatering", () => {
   assert.equal(c.fmtNum(6747560, 0), "6 747 560");
   assert.equal(c.fmtNum(5.24, 2), "5,24");

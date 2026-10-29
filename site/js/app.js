@@ -7,7 +7,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "
 const today = new Date().toISOString().slice(0, 10);
 
 const STATUS_LABEL = { ok: "OK", utdatert: "Utdatert", feilet: "Feilet", ikke_publisert: "Ikke publisert (lisens)" };
-const SOURCE_LABEL = { fred: "FRED", treasury: "U.S. Treasury", yahoo: "Yahoo (uoffisiell)", cboe: "Cboe", norgesbank: "Norges Bank" };
+const SOURCE_LABEL = { fred: "FRED", treasury: "U.S. Treasury", yahoo: "Yahoo (uoffisiell)", cboe: "Cboe", norgesbank: "Norges Bank", ofr: "Office of Financial Research" };
 const VERDICT = {
   mot: "I retning narrativet",
   bort: "Bort fra narrativet",
@@ -89,7 +89,7 @@ function staleTag(ctx, id, date) {
 function valueText(ctx, id, transform, v) {
   if (transform === "drawdown") return `${C.fmtNum(v, 1)} % under topp`;
   if (transform === "yoy") return `${C.fmtNum(v, 1)} %`;
-  if (transform === "speed_z") return `${C.fmtSigned(v, 2)} sd`;
+  if (transform === "speed_z" || transform === "composite_z") return `${C.fmtSigned(v, 2)} sd`;
   const sc = C.displayScale(unitOf(ctx.meta, id));
   const dec = sc.decimals ?? ctx.meta[id].decimals;
   const u = sc.unit === "%" ? " %" : sc.unit && !sc.unit.startsWith("indeks") ? ` ${sc.unit}` : "";
@@ -206,12 +206,14 @@ function renderTiles(ctx, regime, history) {
     + '<span><i class="g-none"></i>ingen mål i fasen</span><span><i class="s-empty"></i>fase ikke nådd</span>';
   let toward = 0, counted = 0;
   $("#tiles").innerHTML = ov.indicators.map((ind) => {
-    const picked = C.pickSeries(ind.series, ctx.data, ind.pick || "freshest");
+    const picked = ind.transform === "composite_z"
+      ? (ind.series.every((id) => ctx.data[id]) ? { id: ind.series[0], rows: C.compositeZ(ind.series.map((id) => ctx.data[id])), composite: true } : null)
+      : C.pickSeries(ind.series, ctx.data, ind.pick || "freshest");
     if (!picked) {
       return `<div class="tile nodata"><div class="tt"><span>${esc(ind.title)}</span></div>
         <div class="tv muted">Ikke dekket</div><div class="meta">${esc(missingReason(ctx, ind.series))}</div></div>`;
     }
-    const t = C.transform(picked.rows, ind.transform);
+    const t = picked.composite ? picked.rows : C.transform(picked.rows, ind.transform);
     const dir = C.directionFor(ind, cur);
     const m = C.momentum(t, ov.window_days, dir, ind.min_move, ind.mode);
     const lastObs = C.last(t);
@@ -244,12 +246,16 @@ function renderSignals(ctx, results) {
       actual = `${C.fmtNum(r.actual, 1)} % under topp`;
     } else if (rule.type === "yoy_reach") {
       actual = `${C.fmtNum(r.actual, 1)} % år/år`;
+    } else if (rule.type === "not_above_at") {
+      actual = `${valueText(ctx, r.seriesId, "level", r.actual)}, ${C.fmtDate(r.baseDate)}: ${valueText(ctx, r.seriesId, "level", r.actual + r.distance)}`;
     } else if (rule.type === "change_reach") {
       actual = `${C.fmtSigned(r.actual, 1)} % siden ${C.fmtDate(r.baseDate)}`;
     } else {
       actual = valueText(ctx, r.seriesId, "level", r.actual);
     }
-    if (r.distance !== undefined && r.distance !== null) {
+    if (rule.type === "not_above_at") {
+      dist = r.distance >= 0 ? "ikke hevet" : `hevet ${C.fmtNum(-r.distance, 2)} pp`;
+    } else if (r.distance !== undefined && r.distance !== null) {
       dist = r.distance > 0 ? `${C.fmtNum(r.distance, 2)} pp igjen` : `passert med ${C.fmtNum(-r.distance, 2)} pp`;
     }
     const cls = { Oppfylt: "ok", "Ikke oppfylt": "bad", "Overvåkes": "no", "Ikke dekket": "na" }[r.status];
@@ -291,12 +297,15 @@ function chartDefs(ctx) {
     { title: "Fed balanse, reserver og TGA", panels: [{ unit: "mrd. USD", series: [{ id: "WALCL", label: "Totale eiendeler" }, { id: "WRESBAL", label: "Reserver" }, { id: "WTREGEN", label: "TGA" }] }] },
     { title: "Kredittspreader og VIX", panels: [
       { unit: "%", height: 150, series: [{ id: "BAMLH0A0HYM2", label: "HY OAS" }, { id: "BAMLC0A0CM", label: "IG OAS" }] },
-      { unit: "indeks", height: 130, series: [{ id: "CBOE_VIX", label: "VIX" }] }] },
+      { unit: "indeks", height: 130, series: [{ id: "CBOE_VIX", label: "VIX" }] },
+      { unit: "indeks", height: 130, series: [{ id: "OFR_FSI", label: "OFR stressindeks" }], refs: [{ y: 0, label: "0" }] }] },
     { title: "USD/NOK og bred dollarindeks", panels: [
       { unit: "NOK", height: 150, series: [{ id: "NB_USDNOK", label: "USD/NOK" }] },
       { unit: "indeks", height: 130, series: [{ id: "DTWEXBGS", label: "Dollarindeks" }] }] },
     { title: "Inflasjon år/år", panels: [{ unit: "%", series: [{ id: "CPIAUCSL", label: "KPI", transform: "yoy" }, { id: "CPILFESL", label: "Kjerne KPI", transform: "yoy" }],
       refs: [{ y: inf.threshold, label: `${C.fmtNum(inf.threshold, 0)} %` }] }] },
+    { title: "Olje og samlet press fra olje, rente og dollar", panels: [{ unit: "USD per fat", series: [{ id: "DCOILWTICO", label: "WTI" }] },
+      { unit: "sd", height: 130, series: [{ id: "DCOILWTICO", label: "Samlet press, sum z-score", composite: ["DCOILWTICO", "UST_10Y", "DTWEXBGS"] }], refs: [{ y: 0, label: "0" }] }] },
     { title: "Volatilitet i olje og gull", panels: [{ unit: "indeks", series: [{ id: "CBOE_OVX", label: "OVX olje" }, { id: "CBOE_GVZ", label: "GVZ gull" }, { id: "CBOE_VIX", label: "VIX aksjer" }] }] },
     { title: "Husholdningenes aksjeandel av finansielle eiendeler", panels: [{ unit: "%", series: [{ id: "BOGZ1FL153064486Q", label: "Aksjeandel" }] }] },
   ];
@@ -311,7 +320,8 @@ function prepPanel(ctx, panel, from, colorStart) {
     const rows = ctx.data[s.id];
     if (!rows || !rows.length) { missing.push(s); return; }
     const sc = C.displayScale(unitOf(ctx.meta, s.id));
-    const base = s.transform === "rebase" ? C.rebase(rows, from) : C.transform(rows, s.transform || "level");
+    const base = s.composite ? C.compositeZ(s.composite.map((id) => ctx.data[id]).filter(Boolean))
+      : s.transform === "rebase" ? C.rebase(rows, from) : C.transform(rows, s.transform || "level");
     const all = base.map((r) => ({ date: r.date, value: r.value * sc.factor }));
     lines.push({ ...s, color: COLORS[(colorStart + i) % COLORS.length], all, rows: C.between(all, from, null) });
   });

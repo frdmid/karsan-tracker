@@ -78,6 +78,8 @@ FRED-serier: DGS2, DGS5, DGS10, DGS20, DGS30, DFII5, DFII10, DFII20, DFII30, T10
 
 Ferskere originalkilder (15. oktober 2026): `scripts/fetch_direct.py` henter VIX, OVX og GVZ fra Cboe (cdn.cboe.com/api/global/us_indices/daily_prices/{SYM}_History.csv) og USD/NOK fra Norges Bank (data.norges-bank.no, EXR/B.USD.NOK.SP, åpne data). `fetch_treasury.py` henter også Treasurys realrentekurve (daily_treasury_real_yield_curve, kolonnene 5 YR, 10 YR, 20 YR, 30 YR). Disse er en dag (Cboe, Treasury) eller fem dager (Norges Bank) ferskere enn FRED. Nøkkeltall, regimevilkåret for VIX og grafene bruker originalkilden, FRED beholdes som kryssjekk i `build_status.py` (0 avvik over 60 datoer ved innføring). Norges Banks kurs settes rundt 14:15 i Oslo, FREDs DEXNOUS kl. 12 i New York, så de to USD/NOK-seriene kryssjekkes ikke mot hverandre.
 
+Nytt 28. oktober 2026 fra tasty Crumbs: oljepris WTI (DCOILWTICO, EIA via FRED, offentlig), OFR Financial Stress Index (OFR_FSI, financialresearch.gov/financial-stress-index/data/fsi.csv, offentlig, hentes i `fetch_direct.py`), samleindikator for olje, 10-årsrente og dollar (`compositeZ` i `calc.js`: sum av z-score mot historikken siden 2015, nøkkeltall og graf), ny signaltype `not_above_at` (prediksjon: verdien på check_date er ikke høyere enn på baseline_date) brukt for Karsans påstand om ingen Fed-heving i desember, kontrollpunkt for Treasurys låneplan 4. november på signalet om oppkjøp av lange statsobligasjoner, og oppdatert kravtekst for S&P 500.
+
 ## 6. Lisensbeslutning
 
 FREDs seriesider oppgir lisenskategori. Resultat:

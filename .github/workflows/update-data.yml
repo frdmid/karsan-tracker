@@ -44,7 +44,7 @@ jobs:
         run: python scripts/fetch_fred.py
         continue-on-error: true
 
-      - name: Hent direkte fra Cboe og Norges Bank
+      - name: Hent direkte fra Cboe, Norges Bank og OFR
         run: python scripts/fetch_direct.py
         continue-on-error: true
 

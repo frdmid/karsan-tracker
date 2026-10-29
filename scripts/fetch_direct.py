@@ -51,7 +51,21 @@ def fetch_norgesbank(key):
     return rows, url
 
 
-FETCHERS = {"cboe": fetch_cboe, "norgesbank": fetch_norgesbank}
+OFR = "https://www.financialresearch.gov/financial-stress-index/data/fsi.csv"
+
+
+def fetch_ofr(column):
+    """OFR Financial Stress Index. Verifisert 2026-10-28: kolonnene Date (ISO), OFR FSI, Credit, Equity valuation, Safe assets, Funding, Volatility."""
+    reader = csv.DictReader(io.StringIO(http_get(OFR)))
+    rows = {}
+    for r in reader:
+        v = (r.get(column) or "").strip()
+        if v and r["Date"] >= "2015-01-01":
+            rows[r["Date"]] = float(v)
+    return rows, OFR
+
+
+FETCHERS = {"cboe": fetch_cboe, "norgesbank": fetch_norgesbank, "ofr": fetch_ofr}
 
 
 def main():
@@ -68,7 +82,7 @@ def main():
             merged = read_csv(path)
             merged.update(rows)
             write_csv(path, merged)
-            log_result(s["id"], True, url, {"cboe": "Cboe CSV", "norgesbank": "Norges Bank API"}[s["source"]], len(merged))
+            log_result(s["id"], True, url, {"cboe": "Cboe CSV", "norgesbank": "Norges Bank API", "ofr": "OFR CSV"}[s["source"]], len(merged))
             ok += 1
             last = max(merged)
             print(f"{s['id']}: {len(merged)} rader, siste {last} = {merged[last]}")
