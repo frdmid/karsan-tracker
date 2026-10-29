@@ -228,7 +228,8 @@ function renderTiles(ctx, regime, history) {
       <div class="tv">${valueText(ctx, picked.id, ind.transform, lastObs.value)}</div>
       <div class="tc">${m ? `${changeText(m.change, ind.mode)} siden ${C.fmtDate(m.baseDate)}` : "For kort historikk"}</div>
       ${spark.length > 1 ? sparkline(spark, m && m.baseDate) : ""}
-      <div class="meta">${C.fmtDate(lastObs.date)}${staleTag(ctx, picked.id, lastObs.date)}, ${esc(sourceLine(ctx, picked.id))}</div></div>`;
+      <div class="meta">${C.fmtDate(lastObs.date)}${staleTag(ctx, picked.id, lastObs.date)}, ${esc(sourceLine(ctx, picked.id))}</div>
+      ${ind.note ? `<div class="meta">${esc(ind.note)}</div>` : ""}</div>`;
   }).join("");
   return { toward, counted };
 }
@@ -287,8 +288,8 @@ function chartDefs(ctx) {
       { unit: "%", height: 120, series: [{ id: "THREEFYTP10", label: "Term premium 10 år" }] }] },
     { title: "Hva driver 10-årsrenten: endring fra start av perioden", panels: [{ unit: "pp", series: [
       { id: "UST_10Y", label: "Nominell 10 år", transform: "rebase" }, { id: "UST_REAL_10Y", label: "Realrente 10 år", transform: "rebase" }, { id: "T10YIE", label: "Breakeven 10 år", transform: "rebase" }],
-      refs: [{ y: 0, label: "0" }] },
-      { unit: "sd", height: 120, series: [{ id: "UST_10Y", label: "Rentefart, sd over 3 mnd", transform: "speed_z" }], refs: [{ y: 2, label: "2 sd" }] }] },
+      refs: [{ y: 0, label: "0", kind: "ref" }] },
+      { unit: "sd", height: 120, series: [{ id: "UST_10Y", label: "Rentefart, sd over 3 mnd", transform: "speed_z" }], refs: [{ y: 2, label: "2 sd", kind: "ref" }] }] },
     { title: "Realrenter (TIPS) og 10 års breakeven", panels: [{ unit: "%", series: [{ id: "UST_REAL_5Y", label: "Real 5 år" }, { id: "UST_REAL_10Y", label: "Real 10 år" }, { id: "UST_REAL_30Y", label: "Real 30 år" }, { id: "T10YIE", label: "Breakeven 10 år" }] }] },
     { title: "S&P 500 og fall fra topp", panels: [
       { unit: "indekspoeng", series: [{ id: "SP500", label: "S&P 500" }] },
@@ -298,14 +299,16 @@ function chartDefs(ctx) {
     { title: "Kredittspreader og VIX", panels: [
       { unit: "%", height: 150, series: [{ id: "BAMLH0A0HYM2", label: "HY OAS" }, { id: "BAMLC0A0CM", label: "IG OAS" }] },
       { unit: "indeks", height: 130, series: [{ id: "CBOE_VIX", label: "VIX" }] },
-      { unit: "indeks", height: 130, series: [{ id: "OFR_FSI", label: "OFR stressindeks" }], refs: [{ y: 0, label: "0" }] }] },
+      { unit: "indeks", height: 130, series: [{ id: "OFR_FSI", label: "OFR stressindeks" }], refs: [{ y: 0, label: "0", kind: "ref" }] }] },
     { title: "USD/NOK og bred dollarindeks", panels: [
       { unit: "NOK", height: 150, series: [{ id: "NB_USDNOK", label: "USD/NOK" }] },
       { unit: "indeks", height: 130, series: [{ id: "DTWEXBGS", label: "Dollarindeks" }] }] },
     { title: "Inflasjon år/år", panels: [{ unit: "%", series: [{ id: "CPIAUCSL", label: "KPI", transform: "yoy" }, { id: "CPILFESL", label: "Kjerne KPI", transform: "yoy" }],
       refs: [{ y: inf.threshold, label: `${C.fmtNum(inf.threshold, 0)} %` }] }] },
     { title: "Olje og samlet press fra olje, rente og dollar", panels: [{ unit: "USD per fat", series: [{ id: "DCOILWTICO", label: "WTI" }] },
-      { unit: "sd", height: 130, series: [{ id: "DCOILWTICO", label: "Samlet press, sum z-score", composite: ["DCOILWTICO", "UST_10Y", "DTWEXBGS"] }], refs: [{ y: 0, label: "0" }] }] },
+      { unit: "sd", height: 130, series: [{ id: "DCOILWTICO", label: "Samlet press, sum z-score", composite: ["DCOILWTICO", "UST_10Y", "DTWEXBGS"] }], refs: [{ y: 0, label: "0", kind: "ref" }] }] },
+    { title: "Cboe SKEW: pris på forsikring mot krakk", desc: ctx.signals.skew_explanation, panels: [{ unit: "indeks", series: [{ id: "CBOE_SKEW", label: "SKEW" }],
+      refs: [{ y: 100, label: "100: ingen ekstra frykt", kind: "ref" }, { y: 150, label: "150", kind: "ref" }] }] },
     { title: "Volatilitet i olje og gull", panels: [{ unit: "indeks", series: [{ id: "CBOE_OVX", label: "OVX olje" }, { id: "CBOE_GVZ", label: "GVZ gull" }, { id: "CBOE_VIX", label: "VIX aksjer" }] }] },
     { title: "Husholdningenes aksjeandel av finansielle eiendeler", panels: [{ unit: "%", series: [{ id: "BOGZ1FL153064486Q", label: "Aksjeandel" }] }] },
   ];
@@ -341,12 +344,13 @@ function renderChart(ctx, el, def) {
   const seen = new Set();
   const legend = allLines.filter((l) => !seen.has(l.label) && seen.add(l.label))
     .map((l) => `<span><i style="background:${l.color}"></i>${esc(l.label)}</span>`).join("")
-    + (panels.some((p) => p.lines.length && p.refs && p.refs.length) ? '<span><i class="dash"></i>Karsans terskel</span>' : "");
+    + (panels.some((p) => p.lines.length && (p.refs || []).some((r) => r.kind !== "ref")) ? '<span><i class="dash"></i>Karsans terskel</span>' : "")
+    + (panels.some((p) => p.lines.length && (p.refs || []).some((r) => r.kind === "ref")) ? '<span><i class="dash"></i>Referanselinje</span>' : "");
   const missingIds = new Map();
   for (const s of panels.flatMap((p) => p.missing)) if (!missingIds.has(s.id)) missingIds.set(s.id, s);
   const notes = [...missingIds.values()].map((s) => `${ctx.meta[s.id].title}: ${missingReason(ctx, [s.id])}`);
   const srcIds = [...new Set(def.panels.flatMap((p) => p.series.map((s) => s.id)))].filter((id) => ctx.data[id]);
-  el.innerHTML = `<h3>${esc(def.title)}</h3><div class="legend">${legend}</div>
+  el.innerHTML = `<h3>${esc(def.title)}</h3>${def.desc ? `<p class="small muted chart-desc">${esc(def.desc)}</p>` : ""}<div class="legend">${legend}</div>
     ${notes.map((n) => `<div class="note">${esc(n)}</div>`).join("")}<div class="plot"></div>
     <div class="src">Kilde: ${srcIds.map((id) => esc(sourceLine(ctx, id))).join(", ") || "ingen"}</div>`;
   if (!allLines.length) return;

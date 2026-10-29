@@ -610,6 +610,19 @@
       "publish": true,
       "change_mode": "pp",
       "decimals": 2
+    },
+    {
+      "id": "CBOE_SKEW",
+      "source": "cboe",
+      "source_id": "SKEW",
+      "title": "Cboe SKEW-indeks (halerisiko i S&P 500)",
+      "unit": "indeks",
+      "frequency": "daglig",
+      "max_age_days": 5,
+      "license": "Krever kildehenvisning (Chicago Board Options Exchange)",
+      "publish": true,
+      "change_mode": "pct",
+      "decimals": 1
     }
   ]
 }

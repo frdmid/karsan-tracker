@@ -522,6 +522,25 @@
         "pick": "first"
       },
       {
+        "id": "skew",
+        "title": "Cboe SKEW, pris på krakkforsikring",
+        "series": [
+          "CBOE_SKEW"
+        ],
+        "transform": "level",
+        "mode": "abs",
+        "direction": "up",
+        "phase_directions": {
+          "2": "none",
+          "3": "down",
+          "4": "none"
+        },
+        "min_move": 3,
+        "phase_targets": {},
+        "note": "Over 100 betyr ekstra betaling for sikring mot krakk. Vanligvis 100 til 150 (Cboe).",
+        "why": "Hva SKEW sier: prisen på forsikring mot et kraftig fall i S&P 500, utover vanlig svingning. 100 betyr ingen ekstra frykt for krakk. Jo høyere, jo mer betaler investorene for å sikre seg mot store fall. Ifølge Cboe ligger den vanligvis mellom 100 og 150. Karsan: høy skew betyr at mange er sikret, noe som først holder markedet oppe, og pleier å komme en til fire måneder før et større fall."
+      },
+      {
         "id": "hy",
         "title": "High yield OAS",
         "series": [
@@ -913,7 +932,8 @@
     "CBOE_GVZ",
     "BOGZ1FL153064486Q",
     "DCOILWTICO",
-    "OFR_FSI"
+    "OFR_FSI",
+    "CBOE_SKEW"
   ],
   "falsification": {
     "date": "2027-06-30",
@@ -954,5 +974,6 @@
         "source": "FOMC-referatet fra september, publisert 7. oktober 2026"
       }
     ]
-  }
+  },
+  "skew_explanation": "Hva SKEW sier: prisen på forsikring mot et kraftig fall i S&P 500, utover vanlig svingning. 100 betyr ingen ekstra frykt for krakk. Jo høyere, jo mer betaler investorene for å sikre seg mot store fall. Ifølge Cboe ligger den vanligvis mellom 100 og 150. Karsan: høy skew betyr at mange er sikret, noe som først holder markedet oppe, og pleier å komme en til fire måneder før et større fall."
 }

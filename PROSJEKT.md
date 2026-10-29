@@ -80,6 +80,8 @@ Ferskere originalkilder (15. oktober 2026): `scripts/fetch_direct.py` henter VIX
 
 Nytt 28. oktober 2026 fra tasty Crumbs: oljepris WTI (DCOILWTICO, EIA via FRED, offentlig), OFR Financial Stress Index (OFR_FSI, financialresearch.gov/financial-stress-index/data/fsi.csv, offentlig, hentes i `fetch_direct.py`), samleindikator for olje, 10-årsrente og dollar (`compositeZ` i `calc.js`: sum av z-score mot historikken siden 2015, nøkkeltall og graf), ny signaltype `not_above_at` (prediksjon: verdien på check_date er ikke høyere enn på baseline_date) brukt for Karsans påstand om ingen Fed-heving i desember, kontrollpunkt for Treasurys låneplan 4. november på signalet om oppkjøp av lange statsobligasjoner, og oppdatert kravtekst for S&P 500.
 
+Cboe SKEW (CBOE_SKEW, fra 28. oktober 2026): prisen på forsikring mot kraftige fall i S&P 500. 100 betyr ingen ekstra frykt, vanligvis 100 til 150 ifølge Cboe. Vises som nøkkeltall med kort forklaring og som egen graf med forklaringstekst (`skew_explanation` i config).
+
 ## 6. Lisensbeslutning
 
 FREDs seriesider oppgir lisenskategori. Resultat:
