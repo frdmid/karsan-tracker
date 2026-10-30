@@ -1,5 +1,17 @@
 {
   "episodes": {
+    "7e6aef845f2a": {
+      "id": "7e6aef845f2a",
+      "date": "2026-10-26",
+      "show": "The tastylive network",
+      "title": "tasty Crumbs with Cem Karsan - October 26, 2026",
+      "link": "https://podcasts.apple.com/us/podcast/tasty-crumbs-with-cem-karsan-october-26-2026/id496019927?i=1000798776527&uo=4",
+      "audio": "https://feeds.tastylive.com/media/1B8EP9Us/1B8EP9Us.mp4",
+      "minutes": 26,
+      "collection_id": 496019927,
+      "transcript_status": "mangler",
+      "message": "Ingen transkripsjon i feeden. Lydtranskribering er av (TRANSCRIBE_AUDIO)."
+    },
     "14ac7286b939": {
       "id": "14ac7286b939",
       "date": "2026-10-19",
@@ -506,7 +518,7 @@
     },
     "b6e3a291047d": {
       "id": "b6e3a291047d",
-      "date": "2026-10-03",
+      "date": "2026-10-02",
       "show": "Top Traders Unplugged",
       "title": "SI420: The Market Might Be More Fragile Than It Looks ft. Cem Karsan",
       "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/si420-the-market-might-be-more-fragile-than-it-looks-ft-cem-karsan",
@@ -1267,5 +1279,5 @@
       "collection_id": 1128955736
     }
   },
-  "generated": "2026-10-29T19:30:28Z"
+  "generated": "2026-10-30T11:31:14Z"
 }
