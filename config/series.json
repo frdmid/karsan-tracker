@@ -478,6 +478,34 @@
       "decimals": 1
     },
     {
+      "id": "YF_WTI",
+      "source": "yahoo",
+      "source_id": "CL=F",
+      "title": "Oljepris WTI, nærmeste future NYMEX (uoffisiell kilde: Yahoo)",
+      "unit": "USD per fat",
+      "frequency": "daglig",
+      "max_age_days": 6,
+      "license": "Uoffisiell kilde. Kursdata fra CME via Yahoo, vilkårene tillater ikke videredistribusjon.",
+      "publish": false,
+      "unofficial": true,
+      "change_mode": "pct",
+      "decimals": 2
+    },
+    {
+      "id": "YF_DXY",
+      "source": "yahoo",
+      "source_id": "DX-Y.NYB",
+      "title": "Dollarindeks DXY, ICE (uoffisiell kilde: Yahoo)",
+      "unit": "indeks",
+      "frequency": "daglig",
+      "max_age_days": 6,
+      "license": "Uoffisiell kilde. Indeksen eies av ICE, vilkårene tillater ikke videredistribusjon.",
+      "publish": false,
+      "unofficial": true,
+      "change_mode": "pct",
+      "decimals": 2
+    },
+    {
       "id": "UST_REAL_5Y",
       "source": "treasury",
       "source_id": "daily_treasury_real_yield_curve",

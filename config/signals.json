@@ -375,8 +375,10 @@
         "id": "olje",
         "title": "Oljepris WTI",
         "series": [
-          "DCOILWTICO"
+          "DCOILWTICO",
+          "YF_WTI"
         ],
+        "pick": "freshest",
         "transform": "level",
         "mode": "pct",
         "direction": "up",
@@ -601,6 +603,23 @@
         "phase_targets": {},
         "why": "Fase 1: opp, sterk dollar på kort sikt. Fase 2 til 4: ned, Karsan nevner norsk krone blant råvarevalutaene han venter gjør det klart bedre enn dollar.",
         "pick": "first"
+      },
+      {
+        "id": "dxy",
+        "title": "Dollarindeks DXY",
+        "series": [
+          "YF_DXY"
+        ],
+        "transform": "level",
+        "mode": "pct",
+        "direction": "down",
+        "phase_directions": {
+          "1": "up",
+          "2": "down"
+        },
+        "min_move": 0.5,
+        "why": "Daglig dollarindeks mot seks valutaer (euro veier tyngst), bare i lokal visning. Samme retninger som den brede dollarindeksen.",
+        "phase_targets": {}
       },
       {
         "id": "gull",

@@ -43,7 +43,7 @@ Denne usikkerheten vises som synlig fotnote på siden og står i `config/signals
 scripts/common.py                   felles: config, HTTP med gjentak, CSV, hentelogg
 scripts/fetch_fred.py               FRED (API med nøkkel, ellers fredgraph.csv)
 scripts/fetch_treasury.py           Treasury par yields og lang realrente
-scripts/fetch_other.py              Yahoo (MOVE, gull), bare ved PUBLISH_RESTRICTED=true
+scripts/fetch_other.py              Yahoo (MOVE, gull, WTI future, DXY), bare ved PUBLISH_RESTRICTED=true
 scripts/fetch_news.py               Google News RSS og Apple Podcasts søk
 scripts/summarize_news.py           norske oppsummeringer med Claude (valgfritt)
 scripts/build_status.py             data/status.json og kryssjekk FRED mot Treasury
@@ -69,7 +69,7 @@ Hentescriptene skriver resultat per serie til `build/fetch_log.json` (ikke commi
 | Treasury | home.treasury.gov/.../daily-treasury-rates.csv/{ÅR}/all?type=daily_treasury_yield_curve&field_tdr_date_value={ÅR}&page&_format=csv | Kolonner "Date", "2 Yr", "5 Yr", "10 Yr", "20 Yr", "30 Yr"; dato MM/DD/YYYY |
 | Treasury | samme med type=daily_treasury_real_long_term | Kolonne "LT Real Average (10> Yrs)" |
 | Stooq | stooq.com/q/d/l/?s=xauusd&i=d | Virker ikke: krever JavaScript-verifisering |
-| Yahoo | query1.finance.yahoo.com/v8/finance/chart/%5EMOVE og GC%3DF | Svarer lokalt, uoffisiell |
+| Yahoo | query1.finance.yahoo.com/v8/finance/chart/%5EMOVE, GC%3DF, CL%3DF og DX-Y.NYB | Svarer lokalt, uoffisiell. Datoer i børsens tidssone (America/New_York), dagens løpende kurs tas ikke med |
 | Google News | news.google.com/rss/search?q=... | Svarer, gir tittel, kilde, dato, lenke |
 | Apple | itunes.apple.com/search?term=Cem+Karsan&entity=podcastEpisode | Svarer, gir episoder med beskrivelse |
 | X | api.x.com/2/... | 401 uten betalt nøkkel |
@@ -89,11 +89,11 @@ FREDs seriesider oppgir lisenskategori. Resultat:
 * Offentlig: renter, TIPS, Fed-mål, H.4.1, KPI, valuta.
 * Krever kildehenvisning: T10YIE, VIXCLS. Publiseres med kilde.
 * Krever forhåndsgodkjenning: SP500 (S&P Dow Jones Indices: "Reproduction of S&P 500 in any form is prohibited except with the prior written permission"), BAMLH0A0HYM2 og BAMLC0A0CM (ICE Data Indices).
-* Yahoo (MOVE, gull): uoffisiell kilde, vilkårene tillater ikke videredistribusjon.
+* Yahoo (MOVE, gull, WTI nærmeste future, dollarindeks DXY): uoffisiell kilde, vilkårene tillater ikke videredistribusjon.
 
 Beslutning: disse fem har `publish: false` og hentes ikke i et offentlig repo. Siden viser dem som "Ikke publisert (lisens)". Repo-variabelen `PUBLISH_RESTRICTED=true` slår dem på hvis tillatelse foreligger. Logikken er testet lokalt med dataene, som deretter ble slettet.
 
-Søk etter åpen S&P-kilde (12. oktober 2026): FREDs Nasdaq Composite, Nasdaq 100 og Dow Jones krever også forhåndsgodkjenning, Wilshire 5000 finnes ikke lenger hos FRED, Stooq er blokkert, Yahoo og Nasdaqs nettsted (SPY) er uoffisielle med vilkår mot videredistribusjon. Ingen helt åpen kilde finnes. Frode valgte privat lokal visning: `scripts/lokal_visning.py` (eller `Karsan lokal.cmd`) henter de fem seriene til `private/` (aldri committet), og siden leser `private/` bare når mappen finnes, med et banner om at visningen er privat. Forkastede alternativer: publisere bare utledet fall fra topp, bruke SPY fra Nasdaqs uoffisielle API, publisere alt.
+Søk etter åpen S&P-kilde (12. oktober 2026): FREDs Nasdaq Composite, Nasdaq 100 og Dow Jones krever også forhåndsgodkjenning, Wilshire 5000 finnes ikke lenger hos FRED, Stooq er blokkert, Yahoo og Nasdaqs nettsted (SPY) er uoffisielle med vilkår mot videredistribusjon. Ingen helt åpen kilde finnes. Frode valgte privat lokal visning: `scripts/lokal_visning.py` (eller `Karsan lokal.cmd`) henter de lisensbegrensede seriene til `private/` (aldri committet), og siden leser `private/` bare når mappen finnes, med et banner om at visningen er privat. Forkastede alternativer: publisere bare utledet fall fra topp, bruke SPY fra Nasdaqs uoffisielle API, publisere alt.
 
 ## 7. Regler for signaler (config/signals.json)
 

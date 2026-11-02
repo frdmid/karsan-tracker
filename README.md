@@ -60,7 +60,7 @@ python -m http.server 8765
 
 ## Privat lokal visning med S&P 500
 
-S&P 500, ICE OAS, MOVE og gull kan ikke publiseres (lisens). For å se dem selv: dobbeltklikk `Karsan lokal.cmd`, eller kjør
+S&P 500, ICE OAS, MOVE, gull, WTI future og DXY kan ikke publiseres (lisens). For å se dem selv: dobbeltklikk `Karsan lokal.cmd`, eller kjør
 
 ```bash
 python scripts/lokal_visning.py

@@ -2,6 +2,11 @@
 
 Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
+## 2026-11-02
+
+* Daglige tall for olje og dollar i privat lokal visning (Frodes ønske): YF_WTI (CL=F, WTI nærmeste future NYMEX) og YF_DXY (DX-Y.NYB, ICE dollarindeks), begge fra Yahoo, publish false. Oljeboksen bruker den ferskeste av EIAs spotpris og futuren, så den offentlige siden viser fortsatt EIA. Ny boks Dollarindeks DXY med samme retninger som den brede indeksen, Ikke dekket på den offentlige siden. Hvorfor: EIA og Federal Reserve (H.10) publiserer ukentlig, så WTI og bred dollarindeks er 5 til 10 dager gamle. Samlet press bruker fortsatt bare offisielle serier.
+* Feilretting i `parse_yahoo`: datoen ble regnet med dagens UTC forskyvning for hele historikken, så etter overgangen til vintertid 1. nov. havnet alle Yahoo kurser (også gull og MOVE) én dag for tidlig. Bruker nå børsens tidssone per tidsstempel. Dagens løpende kurs tas ikke med før handelsdagen er slutt.
+
 ## 2026-10-29
 
 * Nøkkeltall: boksens farge følger nivået mot Karsans terskel når gjeldende fase har en (grønn over, nøytral innenfor toleransen, rød under), ellers 30-dagers retning som før. Ny pil for 30-dagers retning i alle bokser. Hvorfor: 10-årsrenten på 5,05 % var rød fordi den hadde falt 0,19 pp siden 28. sep., selv om den er over terskelen på 5 %. Ny `levelVerdict` i `calc.js` med test.
