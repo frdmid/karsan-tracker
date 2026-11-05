@@ -1,5 +1,17 @@
 {
   "episodes": {
+    "72fa95b20bb2": {
+      "id": "72fa95b20bb2",
+      "date": "2026-11-05",
+      "show": "Thoughtful Money with Adam Taggart",
+      "title": "Crisis Is Coming In Early 2027 | Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/crisis-is-coming-in-early-2027-cem-karsan/id1715910847?i=1000800066975&uo=4",
+      "audio": "https://traffic.megaphone.fm/APO8862578363.mp3",
+      "minutes": 85,
+      "collection_id": 1715910847,
+      "transcript_status": "mangler",
+      "message": "Ingen transkripsjon i feeden. Lydtranskribering er av (TRANSCRIBE_AUDIO)."
+    },
     "0c933c6f37ab": {
       "id": "0c933c6f37ab",
       "date": "2026-10-30",
@@ -1291,5 +1303,5 @@
       "collection_id": 1128955736
     }
   },
-  "generated": "2026-11-05T13:24:02Z"
+  "generated": "2026-11-05T21:00:02Z"
 }
