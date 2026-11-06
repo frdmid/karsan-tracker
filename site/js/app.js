@@ -7,7 +7,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "
 const today = new Date().toISOString().slice(0, 10);
 
 const STATUS_LABEL = { ok: "OK", utdatert: "Utdatert", feilet: "Feilet", ikke_publisert: "Ikke publisert (lisens)" };
-const SOURCE_LABEL = { fred: "FRED", treasury: "U.S. Treasury", yahoo: "Yahoo (uoffisiell)", cboe: "Cboe", norgesbank: "Norges Bank", ofr: "Office of Financial Research" };
+const SOURCE_LABEL = { fred: "FRED", treasury: "U.S. Treasury", yahoo: "Yahoo (uoffisiell)", cboe: "Cboe", norgesbank: "Norges Bank", ofr: "Office of Financial Research", derived: "Utregnet fra U.S. Treasury" };
 const VERDICT = {
   mot: "I retning narrativet",
   bort: "Bort fra narrativet",

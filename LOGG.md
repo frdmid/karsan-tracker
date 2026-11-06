@@ -2,6 +2,10 @@
 
 Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
+## 2026-11-06
+
+* Forrige handelsdags sluttkurser (Frodes ønske). Kjøreplanen endret til hver tredje time, fordi GitHub forsinket kjøringene 05:30 og 14:00 UTC med 6 til 8 timer (de gikk rundt 13:00 og 20:30 UTC), så Cboe og Treasury fra forrige kveld kom først neste ettermiddag. Ny `scripts/derive.py`: breakeven 10 år utregnet fra Treasury (UST_BE_10Y), lik T10YIE på alle 1712 felles datoer siden 2020, en dag ferskere, kryssjekkes mot T10YIE. Breakevenboksen og regimevilkåret bruker den ferskeste. Privat visning: S&P 500 fra Yahoo (YF_SPX, ^GSPC) når den er ferskere enn FRED. Effekt nå: S&P 500 5. nov. 7 353,73 (minus 4,4 % på dagen), 5,9 % under toppen, mot FREDs siste tall 4. nov.
+
 ## 2026-11-02
 
 * Daglige tall for olje og dollar i privat lokal visning (Frodes ønske): YF_WTI (CL=F, WTI nærmeste future NYMEX) og YF_DXY (DX-Y.NYB, ICE dollarindeks), begge fra Yahoo, publish false. Oljeboksen bruker den ferskeste av EIAs spotpris og futuren, så den offentlige siden viser fortsatt EIA. Ny boks Dollarindeks DXY med samme retninger som den brede indeksen, Ikke dekket på den offentlige siden. Hvorfor: EIA og Federal Reserve (H.10) publiserer ukentlig, så WTI og bred dollarindeks er 5 til 10 dager gamle. Samlet press bruker fortsatt bare offisielle serier.

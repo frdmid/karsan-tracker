@@ -2,11 +2,11 @@ name: Oppdater data
 
 on:
   schedule:
-    # Hver dag 05:30 UTC: henter forrige handelsdags sluttkurser (Treasury og Cboe publiserer om kvelden i USA). Også lørdag, så fredagens tall kommer inn.
-    - cron: "30 5 * * *"
-    # Hverdager 14:00 UTC: etter amerikanske tall kl. 12:30 UTC (KPI, sysselsetting) samme dag.
-    # GitHub kan forsinke planlagte kjøringer med flere timer, derfor to kjøringer.
-    - cron: "0 14 * * 1-5"
+    # Hver tredje time, på et skjevt minutt. GitHub forsinket de faste kjøringene 05:30 og 14:00 UTC
+    # med 6 til 8 timer (okt. og nov. 2026), så forrige handelsdags sluttkurser kom først neste ettermiddag.
+    # Med kjøring hver tredje time kommer tallene inn kort tid etter at kildene publiserer:
+    # Treasury og Cboe om kvelden i USA, FRED morgenen etter, KPI og sysselsetting 12:30 UTC.
+    - cron: "17 */3 * * *"
   workflow_dispatch:
 
 permissions:
@@ -42,6 +42,10 @@ jobs:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
           PUBLISH_RESTRICTED: ${{ vars.PUBLISH_RESTRICTED }}
         run: python scripts/fetch_fred.py
+        continue-on-error: true
+
+      - name: Regn ut serier fra Treasury (breakeven)
+        run: python scripts/derive.py
         continue-on-error: true
 
       - name: Hent direkte fra Cboe, Norges Bank og OFR

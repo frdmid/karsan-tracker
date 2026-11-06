@@ -38,12 +38,13 @@ Denne usikkerheten vises som synlig fotnote på siden og står i `config/signals
 ## 4. Arkitektur
 
 ```
-.github/workflows/update-data.yml   henting, status, tester, commit (hverdager 05:30 UTC + manuelt)
+.github/workflows/update-data.yml   henting, status, tester, commit (hver tredje time + manuelt)
 .github/workflows/pages.yml         tester og publisering til GitHub Pages
 scripts/common.py                   felles: config, HTTP med gjentak, CSV, hentelogg
 scripts/fetch_fred.py               FRED (API med nøkkel, ellers fredgraph.csv)
 scripts/fetch_treasury.py           Treasury par yields og lang realrente
-scripts/fetch_other.py              Yahoo (MOVE, gull, WTI future, DXY), bare ved PUBLISH_RESTRICTED=true
+scripts/fetch_other.py              Yahoo (S&P 500, MOVE, gull, WTI future, DXY), bare ved PUBLISH_RESTRICTED=true
+scripts/derive.py                   breakeven 10 år utregnet fra Treasury (UST_BE_10Y)
 scripts/fetch_news.py               Google News RSS og Apple Podcasts søk
 scripts/summarize_news.py           norske oppsummeringer med Claude (valgfritt)
 scripts/build_status.py             data/status.json og kryssjekk FRED mot Treasury
@@ -77,6 +78,8 @@ Hentescriptene skriver resultat per serie til `build/fetch_log.json` (ikke commi
 FRED-serier: DGS2, DGS5, DGS10, DGS20, DGS30, DFII5, DFII10, DFII20, DFII30, T10YIE, DFEDTARU, DFEDTARL, WALCL, WSHOTSL, WRESBAL, WTREGEN, SP500, VIXCLS, BAMLH0A0HYM2, BAMLC0A0CM, CPIAUCSL, CPILFESL, DEXNOUS, DTWEXBGS. FRED bruker "." for manglende verdier: slike rader droppes.
 
 Ferskere originalkilder (15. oktober 2026): `scripts/fetch_direct.py` henter VIX, OVX og GVZ fra Cboe (cdn.cboe.com/api/global/us_indices/daily_prices/{SYM}_History.csv) og USD/NOK fra Norges Bank (data.norges-bank.no, EXR/B.USD.NOK.SP, åpne data). `fetch_treasury.py` henter også Treasurys realrentekurve (daily_treasury_real_yield_curve, kolonnene 5 YR, 10 YR, 20 YR, 30 YR). Disse er en dag (Cboe, Treasury) eller fem dager (Norges Bank) ferskere enn FRED. Nøkkeltall, regimevilkåret for VIX og grafene bruker originalkilden, FRED beholdes som kryssjekk i `build_status.py` (0 avvik over 60 datoer ved innføring). Norges Banks kurs settes rundt 14:15 i Oslo, FREDs DEXNOUS kl. 12 i New York, så de to USD/NOK-seriene kryssjekkes ikke mot hverandre.
+
+Forrige handelsdag (6. november 2026): breakeven 10 år regnes ut fra Treasury (`scripts/derive.py`, UST_BE_10Y = UST_10Y minus UST_REAL_10Y). Det er FREDs definisjon av T10YIE, lik på alle 1712 felles datoer siden 2020, og en dag ferskere. T10YIE kryssjekkes mot den i `build_status.py`. I privat visning brukes S&P 500 fra Yahoo (^GSPC, YF_SPX) når den er ferskere enn FREDs SP500, som kommer morgenen etter i USA. Planlagte kjøringer ble forsinket 6 til 8 timer av GitHub, så forrige dags sluttkurser kom først neste ettermiddag. Kjøreplanen er derfor endret til hver tredje time. Ukentlige serier (dollarindeks, WTI fra EIA, Feds balanse) og OFR (to dagers etterslep) kan ikke gjøres ferskere fra åpne kilder.
 
 Nytt 28. oktober 2026 fra tasty Crumbs: oljepris WTI (DCOILWTICO, EIA via FRED, offentlig), OFR Financial Stress Index (OFR_FSI, financialresearch.gov/financial-stress-index/data/fsi.csv, offentlig, hentes i `fetch_direct.py`), samleindikator for olje, 10-årsrente og dollar (`compositeZ` i `calc.js`: sum av z-score mot historikken siden 2015, nøkkeltall og graf), ny signaltype `not_above_at` (prediksjon: verdien på check_date er ikke høyere enn på baseline_date) brukt for Karsans påstand om ingen Fed-heving i desember, kontrollpunkt for Treasurys låneplan 4. november på signalet om oppkjøp av lange statsobligasjoner, og oppdatert kravtekst for S&P 500.
 

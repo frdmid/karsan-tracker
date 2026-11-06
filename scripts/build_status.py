@@ -22,7 +22,8 @@ TOLERANCE = 0.01
 CROSS_PAIRS = [("DGS2", "UST_2Y"), ("DGS5", "UST_5Y"), ("DGS10", "UST_10Y"),
                ("DGS20", "UST_20Y"), ("DGS30", "UST_30Y"),
                ("DFII5", "UST_REAL_5Y"), ("DFII10", "UST_REAL_10Y"), ("DFII20", "UST_REAL_20Y"), ("DFII30", "UST_REAL_30Y"),
-               ("VIXCLS", "CBOE_VIX"), ("OVXCLS", "CBOE_OVX"), ("GVZCLS", "CBOE_GVZ")]
+               ("VIXCLS", "CBOE_VIX"), ("OVXCLS", "CBOE_OVX"), ("GVZCLS", "CBOE_GVZ"),
+               ("T10YIE", "UST_BE_10Y")]
 CROSS_WINDOW = 60  # siste N felles datoer som sjekkes
 
 

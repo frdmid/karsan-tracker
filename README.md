@@ -6,8 +6,9 @@ Karsans krav er gjengitt fra sekundære kilder og kan være unøyaktig gjengitt.
 
 ## Slik fungerer det
 
-1. `.github/workflows/update-data.yml` kjører hver dag 05:30 UTC og hverdager 14:00 UTC (og manuelt). GitHub kan forsinke planlagte kjøringer med flere timer:
+1. `.github/workflows/update-data.yml` kjører hver tredje time (minutt 17) og manuelt. GitHub kan forsinke planlagte kjøringer med flere timer, derfor så ofte:
    * `scripts/fetch_treasury.py` henter par yields og lang realrente fra home.treasury.gov
+   * `scripts/derive.py` regner ut breakeven 10 år fra Treasury (UST_10Y minus UST_REAL_10Y), samme definisjon som FREDs T10YIE
    * `scripts/fetch_fred.py` henter FRED serier (API med `FRED_API_KEY`, ellers FREDs åpne CSV)
    * `scripts/fetch_other.py` henter uoffisielle kilder (Yahoo), bare når publisering er tillatt
    * `scripts/fetch_news.py` henter nyhetstitler (Google News RSS) og Karsans podcastepisoder (Apple)
@@ -60,7 +61,7 @@ python -m http.server 8765
 
 ## Privat lokal visning med S&P 500
 
-S&P 500, ICE OAS, MOVE, gull, WTI future og DXY kan ikke publiseres (lisens). For å se dem selv: dobbeltklikk `Karsan lokal.cmd`, eller kjør
+S&P 500 (FRED og Yahoo), ICE OAS, MOVE, gull, WTI future og DXY kan ikke publiseres (lisens). For å se dem selv: dobbeltklikk `Karsan lokal.cmd`, eller kjør
 
 ```bash
 python scripts/lokal_visning.py

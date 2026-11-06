@@ -37,7 +37,8 @@
       "title": "S&P 500 fall fra topp",
       "claim": "Ned 25 til 40 % fra topp, minst ca. 20 %. Topp mest sannsynlig rundt opsjonsforfallet i januar 2027, ellers desember. Alternativt trappetrinnsfall under 10 % ut året, så akselerasjon i januar. Fallet ventes V-formet på en til to måneder.",
       "series": [
-        "SP500"
+        "SP500",
+        "YF_SPX"
       ],
       "rule": {
         "type": "drawdown_reach",
@@ -221,7 +222,8 @@
         "id": "spx_dd",
         "title": "S&P 500 fall fra topp",
         "series": [
-          "SP500"
+          "SP500",
+          "YF_SPX"
         ],
         "transform": "drawdown",
         "mode": "pp",
@@ -429,7 +431,8 @@
         "id": "breakeven",
         "title": "Breakeven inflasjon 10 år",
         "series": [
-          "T10YIE"
+          "T10YIE",
+          "UST_BE_10Y"
         ],
         "transform": "level",
         "mode": "pp",
@@ -758,7 +761,8 @@
           {
             "label": "S&P 500 minst 10 % under topp",
             "series": [
-              "SP500"
+              "SP500",
+              "YF_SPX"
             ],
             "metric": "last",
             "transform": "drawdown",
@@ -896,7 +900,8 @@
           {
             "label": "Breakeven 10 år minst 3,00 %",
             "series": [
-              "T10YIE"
+              "T10YIE",
+              "UST_BE_10Y"
             ],
             "metric": "last",
             "transform": "level",

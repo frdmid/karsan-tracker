@@ -132,6 +132,19 @@
       "decimals": 2
     },
     {
+      "id": "UST_BE_10Y",
+      "source": "derived",
+      "source_id": "UST_10Y-UST_REAL_10Y",
+      "title": "Breakeven inflasjon 10 år, utregnet fra Treasury (nominell minus real)",
+      "unit": "%",
+      "frequency": "daglig",
+      "max_age_days": 6,
+      "license": "Offentlig (public domain), U.S. Department of the Treasury",
+      "publish": true,
+      "change_mode": "pp",
+      "decimals": 2
+    },
+    {
       "id": "DFEDTARU",
       "source": "fred",
       "source_id": "DFEDTARU",
@@ -476,6 +489,20 @@
       "unofficial": true,
       "change_mode": "pct",
       "decimals": 1
+    },
+    {
+      "id": "YF_SPX",
+      "source": "yahoo",
+      "source_id": "^GSPC",
+      "title": "S&P 500 (uoffisiell kilde: Yahoo)",
+      "unit": "indeks",
+      "frequency": "daglig",
+      "max_age_days": 6,
+      "license": "Uoffisiell kilde. Indeksen eies av S&P Dow Jones Indices, vilkårene tillater ikke videredistribusjon.",
+      "publish": false,
+      "unofficial": true,
+      "change_mode": "pct",
+      "decimals": 2
     },
     {
       "id": "YF_WTI",
