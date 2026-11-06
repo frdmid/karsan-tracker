@@ -907,7 +907,7 @@
       "date": "2025-11-05",
       "show": "Top Traders Unplugged",
       "title": "GM90: The Quiet Repricing of Reality ft. Adam Rozencwajg & Cem Karsan",
-      "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/gm90-the-quiet-repricing-of-reality-ft-adam-rozencwajg",
+      "link": "https://podcasts.apple.com/us/podcast/gm90-the-quiet-repricing-of-reality-ft-adam/id888420325?i=1000735342484&uo=4",
       "audio": "https://episodes.captivate.fm/episode/8164db58-3e90-401c-bdc8-06f957dedf82.mp3",
       "minutes": 71,
       "collection_id": 888420325,
@@ -1132,6 +1132,16 @@
       "minutes": 65,
       "collection_id": 1569130932
     },
+    "e237814c19b1": {
+      "id": "e237814c19b1",
+      "date": "2024-02-08",
+      "show": "Excess Returns",
+      "title": "The No Landing Scenario with Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/the-no-landing-scenario-with-cem-karsan/id1490296778?i=1000644617374&uo=4",
+      "audio": "https://anchor.fm/s/9a1dfac/podcast/play/82397554/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-1-8%2F366716006-44100-2-ee5fd9c5a400e.mp3",
+      "minutes": 61,
+      "collection_id": 1490296778
+    },
     "eddcb6e752c9": {
       "id": "eddcb6e752c9",
       "date": "2024-01-24",
@@ -1182,6 +1192,16 @@
       "minutes": 41,
       "collection_id": 1210383304
     },
+    "1f301bc37bf2": {
+      "id": "1f301bc37bf2",
+      "date": "2023-09-28",
+      "show": "Real Vision: Finance & Investing",
+      "title": "What’s Driving Both Stocks and Yields Higher? With Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/whats-driving-both-stocks-and-yields-higher-with-cem-karsan/id1210383304?i=1000629574448&uo=4",
+      "audio": "https://pdst.fm/e/chtbl.com/track/1B146C/traffic.megaphone.fm/ADV2701115979.mp3?updated=1695939930",
+      "minutes": 41,
+      "collection_id": 1210383304
+    },
     "48416a9d9566": {
       "id": "48416a9d9566",
       "date": "2023-08-19",
@@ -1211,6 +1231,16 @@
       "audio": "https://pdst.fm/e/chtbl.com/track/1B146C/traffic.megaphone.fm/ADV6477391466.mp3?updated=1750354098",
       "minutes": 41,
       "collection_id": 1210383304
+    },
+    "c24189b0fbd6": {
+      "id": "c24189b0fbd6",
+      "date": "2023-05-13",
+      "show": "Top Traders Unplugged",
+      "title": "SI243: Sell in May and Go Away...Really ft. Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/si243-sell-in-may-and-go-away-really-ft-cem-karsan/id888420325?i=1000612875214&uo=4",
+      "audio": "https://podcasts.captivate.fm/media/35345425-d638-47e4-954e-16d5a9e9909b/Systematic-Investor-Episode-243-ft-Cem-Karsan.mp3",
+      "minutes": 67,
+      "collection_id": 888420325
     },
     "5ef25090a0ae": {
       "id": "5ef25090a0ae",
@@ -1292,6 +1322,16 @@
       "minutes": 45,
       "collection_id": 1402620531
     },
+    "cb0130927de3": {
+      "id": "cb0130927de3",
+      "date": "2021-04-17",
+      "show": "Pounding The Table: Stocks, Options, And Weekly Market News",
+      "title": "Pounding The Table - Episode 29: Interview w/ Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/pounding-the-table-episode-29-interview-w-cem-karsan/id1520209098?i=1000517558208&uo=4",
+      "audio": "https://anchor.fm/s/113114130/podcast/play/120620373/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-27%2F424993709-48000-1-f5adb70e2af8f3e8.mp3",
+      "minutes": 61,
+      "collection_id": 1520209098
+    },
     "7d8963735a63": {
       "id": "7d8963735a63",
       "date": "2020-09-30",
@@ -1303,5 +1343,5 @@
       "collection_id": 1128955736
     }
   },
-  "generated": "2026-11-05T21:00:02Z"
+  "generated": "2026-11-06T07:54:56Z"
 }
