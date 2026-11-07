@@ -1,5 +1,21 @@
 {
   "episodes": {
+    "97358138cc1a": {
+      "id": "97358138cc1a",
+      "date": "2026-11-07",
+      "show": "Top Traders Unplugged",
+      "title": "SI425: Passive Investing Is About to Face a Real Test ft. Cem Karsan",
+      "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/si425-passive-investing-is-about-to-face-a-real-test-ft-cem-karsan",
+      "audio": "https://episodes.captivate.fm/episode/347cacc8-2870-4997-bb4b-49535cdf3c60.mp3",
+      "minutes": 64,
+      "collection_id": 888420325,
+      "feed_url": "https://feeds.captivate.fm/top-traders-unplugged/",
+      "transcript_status": "ok",
+      "transcript_source": "RSS podcast:transcript (application/json)",
+      "transcript_url": "https://transcripts.captivate.fm/transcript/8b2f0031-ddcf-41c1-a8eb-6f953a913a5b/transcript.json",
+      "transcript_words": 10381,
+      "message": "Transkripsjon funnet. Venter på analyse i Claude Code (be om å analysere nye Karsan-episoder)."
+    },
     "72fa95b20bb2": {
       "id": "72fa95b20bb2",
       "date": "2026-11-05",
@@ -1343,5 +1359,5 @@
       "collection_id": 1128955736
     }
   },
-  "generated": "2026-11-06T23:17:21Z"
+  "generated": "2026-11-07T06:11:31Z"
 }
