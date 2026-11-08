@@ -1,9 +1,8 @@
 {
-  "generated": "2026-11-07T19:31:00Z",
+  "generated": "2026-11-08T00:47:12Z",
   "sources": {
     "karsan_Google News": "https://news.google.com/rss/search?q=%22Cem+Karsan%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "karsan_Apple Podcasts": "https://itunes.apple.com/search?term=Cem+Karsan&entity=podcastEpisode&limit=50",
-    "karsan_Kai Media (YouTube)": "https://www.youtube.com/feeds/videos.xml?channel_id=UChrx0LQWgRhTuVqUXEbM6Cg",
     "rente10": "https://news.google.com/rss/search?q=%2210-year+Treasury+yield%22+OR+%2230-year+Treasury+yield%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "spx": "https://news.google.com/rss/search?q=stock+market+selloff+OR+correction+OR+%22bear+market%22+S%26P+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "qe": "https://news.google.com/rss/search?q=Fed+%22quantitative+easing%22+OR+%22balance+sheet%22+OR+%22Treasury+purchases%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
@@ -12,7 +11,9 @@
     "inflasjon": "https://news.google.com/rss/search?q=US+inflation+CPI+%22rate+hike%22+OR+%22inflation+expectations%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "ai_kreditt": "https://news.google.com/rss/search?q=hyperscaler+capex+OR+%22AI+debt%22+OR+%22credit+default+swap%22+Oracle+OR+Meta+OR+Microsoft+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen"
   },
-  "errors": [],
+  "errors": [
+    "Karsan, Kai Media (YouTube): Henting feilet: HTTP Error 404: Not Found"
+  ],
   "karsan": [
     {
       "date": "2026-11-07",
@@ -1074,7 +1075,7 @@
       },
       {
         "date": "2026-11-06",
-        "title": "Market Movers blog: Oil prices rise again as US indices drop at the open",
+        "title": "Market Movers blog: US employment uptick puts further Fed rate hike on cards as markets recover slightly at open",
         "source": "Investment Week",
         "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5mZHNUUnlOeExDV2hSRjhxWEs0blpwaGhqUzIzQ054d1JaTnNIcGZWbkhtTDVwZFdwUXM5ekRkX2Z5UFJEWW5uMGtRSzVnd2NwZDFRUWZnYm9JWHFlTUptZzJGSHdKOS1oTEJxOUk0bFRWdw?oc=5",
         "kind": "nyhet"
@@ -1342,6 +1343,13 @@
       },
       {
         "date": "2026-10-28",
+        "title": "Fed’s policy committee to weigh balance sheet issues early next year, Warsh says By Reuters",
+        "source": "Investing.com",
+        "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQZGU5VmdlbDkxbnd3MGN1TWVtVVg1M2czMnhVQzNqNk5VTnB5S1JJY01sRm45cWd3N0FqUTRYUnI2UnBFWU5pY2FrZVJHQjJOZHdZSUxDOG9vRHUwZ1VxN2VQNHZpQnB6bmFzdEhSNkRnSlBvQlBQSUpPRnNOT29aQU5QbDJtQXJYNk15SXFwNUt1aEkwa09URmR5S1RMU1Y4c0xWTnFXTDNqQll3U203c2JLSE1KQWp2ZE42eWxLNTJKVS13dUZ5bW1R?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-10-28",
         "title": "Fed’s policy committee to weigh balance sheet issues early next year, Warsh says",
         "source": "Y100 WNCY",
         "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNeEtxeHFpV1U0M0R1TThkM3FPVzZYUy12THdHdDF0RUxCSDA3TWprNDdNdlFadGNBY0J0X3k0U29scnlEcF9oVFhmUGVob0w1Mko4M28tckNoNVFodW9WUlVMYW41UElsYlVCbVdTNG9CU3g4SGpsckd4RHllVUVqbllidFFQSmxRRDgtX2xMZkx0U3I5NkctUmdicVQzNGN4cXQxVUJXa2lWcjQ?oc=5",
@@ -1359,13 +1367,6 @@
         "title": "Federal Funds Rate History 1990 to 2026",
         "source": "Forbes",
         "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBsNEtLYjBNb05hZjBmRkV5NDctYTNrTTF1a0FwQzlpdG42Y3ROZmNVdmROTHRMbTBobHFhTnBzUVVDZEwxdGk5cm9HRWlWMTBCYk5EM0doODFNNnFPb0JfRDR1VVFwSzlsYnV0MUVfeldlTGpw?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-10-28",
-        "title": "Fed's policy committee to weigh balance sheet issues early next year, Warsh says",
-        "source": "Modesto Bee",
-        "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5DSl82NzVHam5VMWNuSFhXa1VjN3VReHVTUW5NeE1zRHV0YzN1Q01rZDU5Y0xGN3Z6ZEUyVzNPM3AzV2xPUVlkR3ZLZFQwdkhLbHd3eHFGWF9rUkZNNzA3a1hqZWtxb3ZEcVNjLXNfWW9PbXczRjUwVHFPdw?oc=5",
         "kind": "nyhet"
       }
     ],
@@ -1452,6 +1453,13 @@
         "title": "US Fed holds interest rates steady despite 'too high' inflation",
         "source": "Yahoo Finance Singapore",
         "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQVEFIU2tDVUF4V0hod2xKdHFiZy13aDNLX1gtaTRRRFRnd1VlckN4R2J3Q3pwM0YwcldvdE1ZT3k3cWx5OWt5WEMxZmEwZDlmSnppZ3F6NEJuaXJrRjNDYnRnT1B2Mm5CZnlMUXFhM193M3VWY296M0tBNFFLMWM3eWpn?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-10-28",
+        "title": "US Fed holds interest rates steady despite 'too high' inflation",
+        "source": "Yahoo",
+        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOV3NDbFNDVkRQLVdkN2gyMGJMX3pyaFdTenZ0RGw0Sl9ndXBkRjRyVms3RG92ZDZGb2VUYURTT1VHSDJURDAyTHF0SUY4MlZDeVBtVC1tUVhQUGNhRGxMeTYtX1F2cWdraUpGLVBDT0dxUFZ5YTRPUHFDV1p6clRzT01Baw?oc=5",
         "kind": "nyhet"
       },
       {
@@ -1719,9 +1727,23 @@
       },
       {
         "date": "2026-11-07",
+        "title": "U.S. October CPI Due Tuesday, December Rate-Hike Bets Approach 80%",
+        "source": "BigGo Finance",
+        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1fU1JWUEF2d3BSYld0eTVNNVJBUDdha0g0T21QaHdWR1NhSEhSaWlwRHRvdFhSUHBvQTdEdTUyMjFBZmM2QmgxbWx5VGlTU1BQeW1iSDA0QXRZRHpTMjJKZ29qX1piSnFwQkNjNUpFdGo0di02WUE?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-07",
         "title": "HRK Roshni(@Square-Creator-1b893aed5b86e)'s insights",
         "source": "Binance",
         "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBNbHRMeEhKOWFhRVdkM2czTXJkR1loYXkxamVJS01fYlZyeUhMbkVqV0NjRFNPTHhxLVNlbndpRlZWWWg0X2Z5UU11ZjhSNUZPTVVuZzg3RDBNeUI0TkVJQmh2THY?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-07",
+        "title": "Dollar-Yen May Test 160 Next Week as U.S. CPI Battles AI Stock Slump; BOJ December Rate Hike Bets Also in Focus",
+        "source": "BigGo Finance",
+        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBtWGtqLXJUZXFVSzg3SGFDMkVndU1MOHVwUEJYVER4dGNwWkZxRUU5OFFCQTAzSUVGLTBESzU2bTJ5RWpId0tMdXUzTThVbnNtZElQSG9rT19HOE9KSlVZYkFlUTAwdEU0MHMxTVUxcjlHRl9ibnc?oc=5",
         "kind": "nyhet"
       },
       {
@@ -1947,26 +1969,12 @@
         "source": "TradingView",
         "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOTmo3Y0k5UGI3QUlnaFpFdUJuNWNTakllLVY4bGlFeXFTQTNoaDVIc0p5b0NoSzNxMTZydURiTjIwbzRxbDdGQkZjSXZYeUpBc1ZEM01jNjdBdmFUMUJlMmw1QjVVZkxsRk1Fc3lrUTIxMnVCX1drc1BjVlVmQ3NMMlZsbU5pejU3eVVXcEJSWE8wZG44ZG1kd0g2c3BYU2U1NVRrR0dVbUlRWVlDZWIxdHd0NUxicEp2WkVTdFJ6ZzRfN2xDVXExbVlCSmpCdzVEcnhuZzdjd3Z5ZmZtek9r?oc=5",
         "kind": "nyhet"
-      },
-      {
-        "date": "2026-10-29",
-        "title": "RBA set to inflict fifth interest rate hike on Cup Day, number six is now a 50-50 bet",
-        "source": "Market Index",
-        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZ2xrT3hzRkRjeERMc1A0SXNsNjJjLUVWcjN6STVrMG15ZzMtc3pQNTFlZHBDYWxIaEs5cFN4b0kyLVA2eHJtT0tWTUg0cDRRVGNHS0JEZXlYYVRHd1lMUHJMeTRWcHNjYThWeWNfTWNKanE1Rmpvc1VyTkNMbUlxWlF3Q3J5Zms1OXRmZkI2bDExdExwTURXUE1fU3M2QzF5T1RfdWtLVl81aDdjc1pyaVR0Vlk5TjRPS1ZqUA?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-10-29",
-        "title": "Households’ anxious wait for inflation number",
-        "source": "News.com.au",
-        "link": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQVjNHXzg0SjlUa0dhLUFLTVd4RlVUQjBsRFRuVHM4b01KZHlDdWRmd1J2eVd3c1BFWTNzbDdPajB1VW9rVXVwUUVDSVBJYnQ5cVJSelJzZV9haTFoc2lQNkVTZ2RramVyazNSZTByWTRrTG5YeVBnbGpvX0g2TGN6SUFnUmVvd1pLLXEtMlNySC1razFqUjZQLW5yRmpIOXFPc25PRE9HVWZ4b3NuMVRncGNxUzF5amloemduNFhPZF8taDlsQjNCWjRnejFrTHBJcUVfZFdTSHdnR09hQl9GcmJYUFhaZklEbENOcHFIRlFHTU1EN29LZktURDduUFJsWnAxaTNEWGdFdUJDR2pSekFoVXNIaFJ0SDVpZy02WUo?oc=5",
-        "kind": "nyhet"
       }
     ],
     "ai_kreditt": [
       {
         "date": "2026-11-07",
-        "title": "AI Boom Long-Term Winners: 4 Stocks, $800B Capex [2026]",
+        "title": "AI Boom: 4 Long-Term Winners, $800B Capex [2026]",
         "source": "https://tech-insider.org/",
         "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQaG1jSXl5MkpNVzY4b1JITmF0MFZNTTlVdTF2by13aXRMSzBNR0F2bGNBRnRweXh5eWNkSFJkSGgwSTdqamk4c2RrQ1hvWlZpNDdVQktzNEVMUnNxUnV4Z3JFLW1rMDJZQ3Y4cnhWdUwtNWVMTFZ0Q1c3RGpleVZWM3RnVG5qeGtrNFdXbTMxSENnLUxHdUE?oc=5",
         "kind": "nyhet"
@@ -2025,6 +2033,13 @@
         "title": "Dan Ives Sees Cash Flow Rebound In MSFT, META, GOOGL, AMZN: Says AI Bubble Fears Thrown Out The Window",
         "source": "TradingView",
         "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOU2lRSzRYSGk0Nnk5QnlJYkI5ZjEwUHNvWGVaWVJlMThQNjJOMHdscVNQWnotNjhpdHZkUGp5bFV4ZzhEMVk5b2YyeDZjaHBvTzFYbTJIcVVkRnUwNzdyaDlPbVJTQWNadG41RHdLSmw0dEZRR3lVZ3lVVmZVaERZSDg5MVliR3lMcmptSHFrelFESXY4blNFWVpBa2JrZFNkSnI4R0N5LUpHS1U4WUZhV3dsb1ZodVU4VVIySWJTcE9vSE9qdzNDcW9NTWhQUEhrYk55bjFEdmszT2U4SVNfR1Rhck9PcURKV3IyRnVtVWw?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-05",
+        "title": "Dan Ives Sees Cash Flow Rebound In MSFT, META, GOOGL, AMZN: Says AI Bubble Fears Thrown Out The Window",
+        "source": "Yahoo Finance",
+        "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOVFlia2lnbVJ2YXJLWjVvVTZyVklqZ3liTjlBUXBvNFRuZHNkTmtWZGIxM0VYRVotUVlaSV9mdDV1aUh6RHJXUzJ0eWR1VFY3RThLUC01ajdWSHBaVWZYY1FmaE1ock8yOWFLbWRtQWtvSzlUMDF1eUVoa2dlUVlxd2hScGhma1dwNEd2bk9Zbmg?oc=5",
         "kind": "nyhet"
       },
       {
@@ -2235,13 +2250,6 @@
         "title": "AI capex surge pushes Big Tech free cash flow below zero",
         "source": "TradingView",
         "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPamtQRzNaTzc2TmRPblhOdEc0XzRTckUxMzVIbjVETW5UcU9za0hhNDZjYldiaGRQZ3dYYUpjUDlXaTNEYzR2ajZuMUJiR1pwMjJLaEExb1YwR1FzeGRJMVdEelBQMjg3NzB4UlpVV3dhMTNxdEVvdXFFcjVvS0ZIcWNPUmh5eFd5UkUtUmZGejc0aWZHVjNISUw5ZF9TMTNXZnZsaHlYcFFTdjItakYzS1JwRTNkT2VIVndF?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-10-31",
-        "title": "Wall Street wipes $1 trillion from the stock market as tech’s $828 billion AI spending spree sparks market fears",
-        "source": "Fortune",
-        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1WaEdkUjE4cFJlX1hGUk9qODZTalAyR0hmci1pdXpQaWQzeU1xbmdqSFZBUXdpWXY4VGVMV3BQaFNEcFFOQWpsUk5YenhBLTJDVGl1dUNHOHZIM3F4UTlKVmEyV0dmZm9rcjM4WHhvdDN1dFlU?oc=5",
         "kind": "nyhet"
       }
     ]
