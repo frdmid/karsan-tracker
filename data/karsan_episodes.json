@@ -948,6 +948,26 @@
       "audio": "https://episodes.captivate.fm/episode/610e544f-90b1-4d82-b6e5-43dd0410740d.mp3",
       "feed_url": "https://feeds.captivate.fm/top-traders-unplugged/"
     },
+    "3edeb66781ea": {
+      "id": "3edeb66781ea",
+      "date": "2025-10-04",
+      "show": "Top Traders Unplugged",
+      "title": "SI368: Valuation Has Left the Room ft. Cem Karsan & Alan Dunne",
+      "link": "https://podcasts.apple.com/us/podcast/si368-valuation-has-left-the-room-ft-cem-karsan-alan-dunne/id888420325?i=1000730058059&uo=4",
+      "audio": "https://episodes.captivate.fm/episode/8c56a349-f3e4-4975-999b-3c15f06dc0dd.mp3",
+      "minutes": 65,
+      "collection_id": 888420325
+    },
+    "943e852ec0f6": {
+      "id": "943e852ec0f6",
+      "date": "2025-07-19",
+      "show": "Top Traders Unplugged",
+      "title": "SI357: Liquidity, Leverage, and the Lie of Calm ft. Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/si357-liquidity-leverage-and-the-lie-of-calm-ft-cem-karsan/id888420325?i=1000718034689&uo=4",
+      "audio": "https://episodes.captivate.fm/episode/55f7972b-9f69-4d45-b314-18f94e92c613.mp3",
+      "minutes": 90,
+      "collection_id": 888420325
+    },
     "dd7ac331cee4": {
       "id": "dd7ac331cee4",
       "date": "2025-05-10",
@@ -997,6 +1017,16 @@
       "audio": "https://traffic.megaphone.fm/APO4818656942.mp3",
       "minutes": 64,
       "collection_id": 1715910847
+    },
+    "6e3bfe73b6d1": {
+      "id": "6e3bfe73b6d1",
+      "date": "2025-01-28",
+      "show": "Pro to Pro Hosted by Darius Dale",
+      "title": "The New Financial Era with Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/the-new-financial-era-with-cem-karsan/id1787591679?i=1000704082532&uo=4",
+      "audio": "https://podcasts.42macro.com/P2P/2025-01-28/audio.mp3",
+      "minutes": 60,
+      "collection_id": 1787591679
     },
     "a3564ac9b19d": {
       "id": "a3564ac9b19d",
@@ -1288,6 +1318,16 @@
       "minutes": 70,
       "collection_id": 888420325
     },
+    "a20518188000": {
+      "id": "a20518188000",
+      "date": "2022-11-01",
+      "show": "Resolve Riffs Investment Podcast",
+      "title": "ReSolve Riffs with Cem Karsan on Regime Change and Strategies to Navigate an Inflationary Decade",
+      "link": "https://podcasts.apple.com/us/podcast/resolve-riffs-with-cem-karsan-on-regime-change/id1463123745?i=1000584679663&uo=4",
+      "audio": "https://podcasts.captivate.fm/media/15792ed4-202e-43b5-99d9-8a7a9f5c1dc6/ep-141-cem-karsan-final.mp3",
+      "minutes": 104,
+      "collection_id": 1463123745
+    },
     "3ac44ac40e5e": {
       "id": "3ac44ac40e5e",
       "date": "2022-10-22",
@@ -1328,6 +1368,16 @@
       "minutes": 83,
       "collection_id": 888420325
     },
+    "2575af4f32ab": {
+      "id": "2575af4f32ab",
+      "date": "2022-01-06",
+      "show": "The Derivative",
+      "title": "2021's Vol moves, 2022's outlook, Meme stocks, Option Flows and KAI with Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/2021s-vol-moves-2022s-outlook-meme-stocks-option-flows/id1497570451?i=1000547140773&uo=4",
+      "audio": "https://anchor.fm/s/11908b3c/podcast/play/45786740/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2022-0-6%2Fef8cedfb-b380-17e9-319b-fac64be55d25.mp3",
+      "minutes": 82,
+      "collection_id": 1497570451
+    },
     "9e465d6ae264": {
       "id": "9e465d6ae264",
       "date": "2021-05-03",
@@ -1359,5 +1409,5 @@
       "collection_id": 1128955736
     }
   },
-  "generated": "2026-11-08T10:33:37Z"
+  "generated": "2026-11-08T18:00:07Z"
 }
