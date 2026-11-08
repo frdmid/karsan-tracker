@@ -1,8 +1,9 @@
 {
-  "generated": "2026-11-08T00:47:12Z",
+  "generated": "2026-11-08T10:33:34Z",
   "sources": {
     "karsan_Google News": "https://news.google.com/rss/search?q=%22Cem+Karsan%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "karsan_Apple Podcasts": "https://itunes.apple.com/search?term=Cem+Karsan&entity=podcastEpisode&limit=50",
+    "karsan_Kai Media (YouTube)": "https://www.youtube.com/feeds/videos.xml?channel_id=UChrx0LQWgRhTuVqUXEbM6Cg",
     "rente10": "https://news.google.com/rss/search?q=%2210-year+Treasury+yield%22+OR+%2230-year+Treasury+yield%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "spx": "https://news.google.com/rss/search?q=stock+market+selloff+OR+correction+OR+%22bear+market%22+S%26P+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "qe": "https://news.google.com/rss/search?q=Fed+%22quantitative+easing%22+OR+%22balance+sheet%22+OR+%22Treasury+purchases%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
@@ -11,9 +12,7 @@
     "inflasjon": "https://news.google.com/rss/search?q=US+inflation+CPI+%22rate+hike%22+OR+%22inflation+expectations%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "ai_kreditt": "https://news.google.com/rss/search?q=hyperscaler+capex+OR+%22AI+debt%22+OR+%22credit+default+swap%22+Oracle+OR+Meta+OR+Microsoft+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen"
   },
-  "errors": [
-    "Karsan, Kai Media (YouTube): Henting feilet: HTTP Error 404: Not Found"
-  ],
+  "errors": [],
   "karsan": [
     {
       "date": "2026-11-07",
@@ -29,6 +28,13 @@
       "link": "https://podcasts.apple.com/us/podcast/si425-passive-investing-is-about-to-face-a-real/id888420325?i=1000800366828&uo=4",
       "kind": "podcast",
       "description": "What happens when the system holding global markets together begins to reach its breaking point? In the wake of the US midterm elections, Niels Kaastrup-Larsen is joined by Cem Karsan for a conversation about the powerful forces converging beneath the surface of the global economy. Mounting debt, rising populism, geopolitical confrontation and the battle for control of the US dollar are creating pressures that Cem believes cannot be contained indefinitely. He lays out a provocative scenario in which a financial crisis becomes the catalyst for a historic transformation of economic policy. As th"
+    },
+    {
+      "date": "2026-11-07",
+      "title": "Cem Karsan Says the Crisis Comes Before June 2027 — and It's the Good News",
+      "source": "BigGo Finance",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1EMUtYS3U5cHcwU0lqUS1CclR2OGlRc0k2Z0ppYnE2ODZKeW1tX1ptaC1BaVEyWVllV0JyNFBIYVZsYlRVUGhKNWlKWFUtNXlQM2FCMDBLWlJVamM?oc=5",
+      "kind": "nyhet"
     },
     {
       "date": "2026-11-06",
@@ -541,6 +547,13 @@
       },
       {
         "date": "2026-11-06",
+        "title": "Treasury Yields Snapshot: November 6, 2026",
+        "source": "Advisor Perspectives",
+        "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQR3o1Wmc4MEtDNnFhMWhTWndCUEd3Y2RFUDJpTklfVlpVVmNkN0ZrQkwtVkhzSjJwVTVqWmliX29EWlI0Ynh0NEJDQXRKWFpETmlWRnFHY3VtdkxwSnhYd2hUZnMzQi1fNVdtQ2lJSjFRQnM5cms0SmNwLTNHNGFDY0QzanVIa042dE1RVFJKc1JIM3Rtcl9NTW1zYlpDRlRsQlQxUQ?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-06",
         "title": "Treasury Rates Today: November 6, 2026",
         "source": "Forbes",
         "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9yck9yOUFWR0FpdE9oMU00NGZWMVVrb25MOWxBWmRuU3Ztc1FvdGJZZlBMXzZwUnpPQVp5Mlg4UzFwX2VZTG00SUFUa3p0VVoxRFZOY2M3V2N3R1ZlLXhCdVVpWHNKd2s?oc=5",
@@ -797,16 +810,37 @@
         "source": "BBN Times",
         "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQZG81TzZadUxsS2VHU1doLWlEalZQclMzUFRnaUtzT2xaYm12YnM4ZzhXRFg3MjR4aHZ3N0hfQS1qMkwzVE90REViVGJRYXdpcDlrMVJ4S2E0Z0FKMkFjWFRmQy14VTlTdDg4RGE2cExQRFJVdEZmX05YQTUxdzhEOFB4dVNIVnExbW1pMmtIUjNqbWxLc2syWTZoekl0amxLMGluOEZwSDlxa3ZBRmt0VjNDVXhyUVdaZ2x4d0R2VTdDZHphQWtzMEFidWNjQ3dOUTJfQUZoTjJla0tHVXZ3Rk5QS0wtcHRCM2ctS2ZzRGc?oc=5",
         "kind": "nyhet"
-      },
-      {
-        "date": "2026-10-31",
-        "title": "10-Year Treasury Yield Falls to 4.98%, Breaking Back Below 5%",
-        "source": "24/7 Wall St.",
-        "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPTy0zM1hkQ0lJaklRa1pzN3RWNkNTN3gtVVBZVjdQTm51c2RndGRyV21RTklnU1h2WkpiUWdvYlBFeThibG54bEFoOW1YRUt0ZHVHcm91YmpzcmRxc0MzTV9VWHc2LTNOUnFZMkdGSFRONXFXUkxrUFdoNUZ2Yy1lVGFJOGtXU0dxNW5GeThVMElIWkpHSjFFR2hhVmVNbzNwSWVvSE4tYXIyUGJYdmFSVVJDcVBwQUF1Vy15S3NjaDNXdFZvX2c?oc=5",
-        "kind": "nyhet"
       }
     ],
     "spx": [
+      {
+        "date": "2026-11-08",
+        "title": "History Says Energy Led All Sectors in the Last Bear Market. Here's What's Different Now.",
+        "source": "The Motley Fool",
+        "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYXhFSXR1S3hKYURiLUdIVnFqTy1IUm1paHhjazk1QXYxcFE3MVFNY25pNkRCOXpMLXMzZE40M3p6OURKcFR4ZVViWmh4My1hVVRTRkNQVmpWSFFIRDhXbWRJMUMwZ0RVWW1WdnlDRjNtQkMwV1hBSG9ZczhfWjhYcjBISkxKbS1haFlVeDh0ZjN5VmtvUExCYg?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-08",
+        "title": "History Says Energy Led All Sectors in the Last Bear Market. Here's What's Different Now.",
+        "source": "The Globe and Mail",
+        "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPRGhHRGVYZ0pTcVNGbXVkMWQ4LVh4RFR3VFRldDRIOW8wYXI3Z0ZVMzdzU2dLRmd5eHlzeG5PT0pYZHV6VVhZYTBONzc2MWV0TXU3WWxsNE1Qb1ppWnBDaGlYZ19sZHFSRWFreUsxYWRCOEpuRm1pNzU0RDY3VV9fUGc4ODM2UXFodnFtWll6bjBuRU9xYlJzV3p5NWV6NUxUUnlyekprd0ZNZVJROVAwNkc3OEZ1eUZ1YmxpRk9XSy1PX0xsaFhIalk4UklwckZaeXVkd2g5My1YamtxTlJCWmlJcnJIdy1fM1AtTGphenE1U3YzakRYSUpB?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-08",
+        "title": "Global AI and Semiconductor Stocks Plunge; S&P 500 Tumbles 4.4% in a Single Day as Markets Watch Whether Three Central Banks Will Raise Rates in December",
+        "source": "BigGo Finance",
+        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBhdXJRSlZRRi1FZUZXTlI1UmNkd3RVcDlNUHhoVmM3Q3BraUtrZGM1T0htQnRNaXROaWFabWNyV1RKQWZkZ0lKeVdOUGxJRW1xRjVsYXktZ0syVlFPLUpBSTBZMWNQc3VJZHRXX245NWVveVNUdVE?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-07",
+        "title": "Wall Street stocks rally after heavy AI-related sell-off",
+        "source": "The Business Times",
+        "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOekhoU054aElYTVY3X2dOcEZDcjlrbTdOM250QUo3NkUzOWhMYUNZOVl3QlJrMGNETmtoNWJqX0JVRDVCc2YyWl9yUTNnRXRSODNFT1V0cHVjNUg3akdib29XOXhESV9fU090ei1uNWFqZHlOYmVRLWRYLWxGSDhacDlobEhycXhBME51TzFfRjhaSExrSzBKTEw4ODJIXzdwZDJPekJkSFZlZVRvVENzX1dEU09tVktOU2duaUFIbFgyeFVMTzZ2Tnp3?oc=5",
+        "kind": "nyhet"
+      },
       {
         "date": "2026-11-07",
         "title": "US: Wall Street stocks rally after heavy AI-related sell-off",
@@ -1058,34 +1092,6 @@
         "source": "Yahoo! Finance Canada",
         "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE81dlEyYzk0cXJLODkyM3FNMlQwOWlLWmc3VHhUSUl5ZWNBdFg0Vm9LVnpMb0s0VjJtMTlFZXN2dXZ0eVRWLURta3VKZE55YjVMZmVQRmp3?oc=5",
         "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-06",
-        "title": "Nasdaq rebounds but posts fourth straight weekly decline",
-        "source": "Reuters",
-        "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQang5czlMS1c0LVRiTWdNdXItcDlKcTgyOXplSVVGRHljMGVrVG1KVGJTclR0TmtjWjFob0t1QWh6OTdkNzltaDJhTi1fdUdkM2tOb01JaVVlaVRWcWVTdkZFbmdBYlgxY2ktWVh6eFdZRVczekVTdFRCSWtOSzBGVnNCWHpFNFFXWFE2WDVQUjFCa19tbUhzNzdlNksyNFBqek4tcXdrcjVIVTQxMkE?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-06",
-        "title": "Nasdaq futures rise after steep AI sell-off as chip stocks stabilise",
-        "source": "The Business Times",
-        "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPeGNHb3VSX3MtanRyQ1k5S2h2bnRRWDZLazRreGQ2R2RkanJ6aDRLdmJwbGh0SlhzZjRkMjh5YlhhdU14Q3pxdEJTVG91Uzg4ZGN1dTJnUENMR1VaUERkN0dFTFJJeGpXTWU1TTJtRktuTERIQ3FsU0ktcXF4S2hKbXRPMER2NWd3dDAwUW1ZZ0VTMjFlT05wbjlSYVhvWlI0RmFYOThjR3J5R3JvSjRKSUxR?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-06",
-        "title": "Market Movers blog: US employment uptick puts further Fed rate hike on cards as markets recover slightly at open",
-        "source": "Investment Week",
-        "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5mZHNUUnlOeExDV2hSRjhxWEs0blpwaGhqUzIzQ054d1JaTnNIcGZWbkhtTDVwZFdwUXM5ekRkX2Z5UFJEWW5uMGtRSzVnd2NwZDFRUWZnYm9JWHFlTUptZzJGSHdKOS1oTEJxOUk0bFRWdw?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-06",
-        "title": "How the Midterm Stock Market Rout Compares With Previous Crashes",
-        "source": "Newsweek",
-        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQSk5aU2YwN09ZbGZFR2hwUXI4SzRYN2x6a0ZldUFtREllMVRlQ2JuRWNyaVFFUVkxY0YyZ1VhTElpZmd6Y1RHdTBmMUZRVXc1VUg0SG1WTm1SMmJweVc0M2l6M2hfLUVSOEFRRm1hYXk2TW1RcTlxczFvcXRCSFA0d2NfQl9CcThWekV3MjV3?oc=5",
-        "kind": "nyhet"
       }
     ],
     "qe": [
@@ -1094,6 +1100,13 @@
         "title": "Stablecoin contraction forces Bitcoin drop despite Fed reserve gains",
         "source": "CryptoSlate",
         "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNMUNZS2pQNmVYM0oxWGhnckFuT3cwak5NejNESlBNNDcyYkE5QjNORkQzVmk4YTBMc0s2WEFDbW1OLUFUTnVtMjZZNzBrZXQtaWhnQXZEbnkwSGVjTVJ4RmR4OG1USzJMNWJPak9oV3N1SHJITVR3NE9qS2pGRVBTdTNCbEZtVENEWFhJSjJua1hzQzk1dTZMNg?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-07",
+        "title": "Fed’s Schmid Warns Against Viewing Oil Shock as Transitory",
+        "source": "EnergyNow.com",
+        "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOb0dkQlJ3Nm5XZEI5OHRFVEUyQ2xrWFJUR3lYSERGSTgzMXd4ejhxVjVJQmFDSThkQWliQXlSOTZ6QVpaVEFZUUtYU3hLaDB0VklwdG1FQjdvZ3gxTVJ6Z0Z5aU1BNlFfd1dEd2lRMmFSYVBIdUdGQndyOEVOZ0ZNdnhPTFk2ZnU5N1ZfazZWWnI0dw?oc=5",
         "kind": "nyhet"
       },
       {
@@ -1119,6 +1132,20 @@
       },
       {
         "date": "2026-11-05",
+        "title": "Treasury’s cash plan points to a possible December liquidity window for Bitcoin",
+        "source": "CryptoSlate",
+        "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPS01BU1VzcFpCbkdvR1V6dFBwUXBVRnZNRFlLYzE1MlJrXzk5ZEFSWXVWTzFxYXV0Y1lNVVd0eXdnMXJZRl9rWFlEVWRCR2h0ckltT3piSUtJWDMtVlhUV1Q1WjljVXRVWVdQaDBXNEh1T1YyelltTE1xYkNMcmZGWGROU1FsbGNEZWFiOWZXNHp4YmI1TVpsa09Pcw?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-05",
+        "title": "Thursday’s Economic Calendar (SP500:)",
+        "source": "Seeking Alpha",
+        "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1ZdDlrWGFGWDRuVm42NEFCZ1E2TlpSTVZFbkFpMVZremxyMTRHZU9uLWJINXF5OENFdXpxYVZWeFFjcnduQllQTTZobGJmS3hjNVI1dy0zVV9nTk1NY2xTZ3lYSkVYcE10UEozTl9ObGY0MTg?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-05",
         "title": "JPMorgan Chase & Co. Warns a Rapid Rate Rise Could Shake the Financial System",
         "source": "TradingView",
         "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOTE1ZZ29Nb1dEVlVlQktTU2trVlVzb1Atd0tscUc1VF92My1OeEtkMFRWODlRV2lzNTVfcFpXUGU0bUZJUjlSOHFRUzQ1cldnX04tbjEyR3NtdGJPcVVRV0FIRnk0QkxRWDFVb1hmVnp0Zll4T3hlZ1dYc1FnNmduSnROaWx2WDNmYmtjSTZhYWYwTXU0b25QZEcwU0hUdjNFYllLUHpLdXJ0QmNROElBMVk5RU1RZWlhVkFlaG5yblJXMVBnWlhaMVNBZWZhYTc5?oc=5",
@@ -1133,23 +1160,9 @@
       },
       {
         "date": "2026-11-04",
-        "title": "Treasury’s cash plan points to a possible December liquidity window for Bitcoin",
-        "source": "CryptoSlate",
-        "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPS01BU1VzcFpCbkdvR1V6dFBwUXBVRnZNRFlLYzE1MlJrXzk5ZEFSWXVWTzFxYXV0Y1lNVVd0eXdnMXJZRl9rWFlEVWRCR2h0ckltT3piSUtJWDMtVlhUV1Q1WjljVXRVWVdQaDBXNEh1T1YyelltTE1xYkNMcmZGWGROU1FsbGNEZWFiOWZXNHp4YmI1TVpsa09Pcw?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-04",
         "title": "NZ dollar little changed, after sinking to 3-week low on US jobs, as Fed cites balance sheet",
         "source": "BusinessDesk",
         "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPR3RBWW9BUTRFampJNHdWeUM5SHVBdExCZnNpYjI5WXlVb1lxRHZFbXdUOHYyX1ZfTzFKNFhtNTdSLV9Uc0lpQWJmYXJBRUcyOHl3Sm5LeHp6aGZxWEZiZ3pzUU5qWW5CcUtCV2Z1NHRnckF0T2lQMURBSEl3dS1PaTRLTVRxNlVqU193akgwQVo5LTB4X1FxNkwza2FSVkRJYXR2QUUyX0Z4NUJRWF9vVjNZZFVBajNBOFdwSjEwVnV0bGR4Y2pWUmtROEZPSHZnZWVXZnUxWlBaQzVOTl9sLTRMdE1TZlRjMFE?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-04",
-        "title": "Fed’s Schmid Warns Against Viewing Oil Shock as Transitory",
-        "source": "EnergyNow.com",
-        "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOb0dkQlJ3Nm5XZEI5OHRFVEUyQ2xrWFJUR3lYSERGSTgzMXd4ejhxVjVJQmFDSThkQWliQXlSOTZ6QVpaVEFZUUtYU3hLaDB0VklwdG1FQjdvZ3gxTVJ6Z0Z5aU1BNlFfd1dEd2lRMmFSYVBIdUdGQndyOEVOZ0ZNdnhPTFk2ZnU5N1ZfazZWWnI0dw?oc=5",
         "kind": "nyhet"
       },
       {
@@ -1360,13 +1373,6 @@
         "title": "Fed’s policy committee to weigh balance sheet issues early next year, Warsh says",
         "source": "101 WIXX",
         "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNY1lZLTQxUHk2Qm9lc1pUQ2JOZkswbTh2SS1ncDJPQThCOC01ZEF3bHlSb3EtRWhOOTdtbUoxWWlCaG8tOWRfMEFiT3gzdHhtV3ExU1FCYXFUMmNZeTJDcldha2I5cjZjN0NYdkM4MUkwV3hXWjU4TmRHZ0NDbTM0WE1lZE0zZUpacnJkZkRjX3Qtc0pYMm5GbmFPa1ZxbHFsUXRBQ2VTRG9CM1k?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-10-28",
-        "title": "Federal Funds Rate History 1990 to 2026",
-        "source": "Forbes",
-        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBsNEtLYjBNb05hZjBmRkV5NDctYTNrTTF1a0FwQzlpdG42Y3ROZmNVdmROTHRMbTBobHFhTnBzUVVDZEwxdGk5cm9HRWlWMTBCYk5EM0doODFNNnFPb0JfRDR1VVFwSzlsYnV0MUVfeldlTGpw?oc=5",
         "kind": "nyhet"
       }
     ],
@@ -1691,6 +1697,20 @@
     ],
     "inflasjon": [
       {
+        "date": "2026-11-08",
+        "title": "Stock Market Today: Dow Soars 500 Points Amid Rate-Hike Bets; Apple Advances",
+        "source": "Investor's Business Daily",
+        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxORzJRNTdMeWZaNzgybTBpVlVuaGJfT0ozeHVzXy13Sm1XVGVJcmxvbUxyT20xeVVaeThJRTd0ZGVPdW5wMUhoVzZpZjFyTmhMSjFjOFVucW9WQmY5c0pJOXkyQWNzbUdwVUVYT2FmMW9TRV9YQmdDcjhaQnFkblpvcGh2a21YdkQybnN1YTBQRjF1cDF3U1BlOVg3OFBQRl93NnBPS2RsMHNMNU5SSFpiSjl5N1hzRHZRTzdoVQ?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-08",
+        "title": "Dow Jones Futures Rise, Oil Prices Fall, Oracle Jumps; CPI Inflation Data To Inform Fed",
+        "source": "Investor's Business Daily",
+        "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPZGdpMlBVbExibHozSndzcGVmRE9SOVdnMnJDbmFSX2NSbjRQamJhd3R6dEkxX2tlaTkwdWRjVlplWkpsQTJoamljRzhQcXZkUmhDTmgtRWY0U1RwRUlEYUdoRmVmVkktM3FDNWpyVXRFNkpEWGl5ZlhHaGNadmVKTUx5NlhlQXE1ejdTUlowM0dGM1lPRkdTb2xRV2pKczR6aWtoLXRMWG11RDlUaXRuZDc3eUh1SDBmQ2NZQ2laTzBXMGtVQ0NpVjNhU2FvZ1ItWDhQWV9n?oc=5",
+        "kind": "nyhet"
+      },
+      {
         "date": "2026-11-07",
         "title": "Weekly Outlook: Will CPI data confirm a December rate hike by the Fed? Gold may once again face the challenge of defending the $4,000 mark.",
         "source": "富途牛牛",
@@ -1723,6 +1743,13 @@
         "title": "U.S. October CPI in Focus as Markets Weigh December Rate Hike Prospects",
         "source": "Binance",
         "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1hZDlsZHAxdUlQemtoYXZDTmhZY1hidlhpZDNWWnB1MllJNWdrVVFkOFFvSEFLbGI2aS1HbTJTakpSai1vVEFhbmRCR0gtQkVpeXRsa2xENzcxWTgydXF5QjFOOE8?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-07",
+        "title": "U.S. October CPI in Focus as Markets Weigh December Rate Hike Prospects",
+        "source": "Binance",
+        "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1YT2pkRDNEYlBUbzR0LWNaS0hPakticWJvTlhKT3BUZnltWmREZUpjTk1oenRvTThXOGZlUDltVGtMLVNrcjg3TkE5ZmFGalhCbUJ0a3AtNnZ5NURMMlg2cFFSeGZOMi1U?oc=5",
         "kind": "nyhet"
       },
       {
@@ -1947,27 +1974,6 @@
         "title": "Australian Dollar edges higher as hot CPI inflation and hawkish RBA lift rate hike bets",
         "source": "www.tmgm.com",
         "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNTGhXcFdPS25lbjVsZnFydkZET0tuVzRSNmNXV2pEalFVdjkyWWpIWWJweEpWdGNzcGRONnFEZVYwM2FwUC1vRVczWVlpV192NVZnYXlpWHc3MjRFdTVNOFhkSjJXdXNXUHNNVWxVQUk1VW5ra2RMNDh4SHA4U3Rhak9yZC1wcW11ak5EZHduTVk0UlNjYzhDOVI2alp5RGtzN0dady1odWJPbm5jakkxLW54TGdINEI2WVBXRVdoelVMYzl3X29uN3o0RnZuVDlCWXVMNjlzd0ZKQjkxekRYSkxGU010bi1R?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-10-30",
-        "title": "Australian Dollar edges higher as hot CPI inflation and hawkish RBA lift rate hike bets",
-        "source": "Mitrade",
-        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQZDVGWHVwZkVBaGlISndRbWIzZGRpNVVTMmRqdU9IdzJDVDkzRnNrUGo0ZUVfUVlZWVB0VmE3T3luaFNMRDJiMERqV0NuUkZMc2JHZWxUenpZYjVCS1paVktJN2JJZWc2ZTJsMHI5YVFLMWFLZU9BNjZ4eXNPanlFVEVFaw?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-10-29",
-        "title": "US Inflation Accelerates in September, Raising Odds of Rate Hike",
-        "source": "Yahoo Finance",
-        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRlZ0TU1MWDJ4OEo3YzR0R2Z1eno2UHlWOUN5TjhYbjZjeHU5cjFJRnhham9Hc0hndWxEZVFILVc5MENiQ3lNSjJGbW1naTBWdGtLb0I4MVZfNk4tRUpCYlFfdkdqRldMaHlYNUY1YmN3NEhjb0h3YXhDYk8zNERzQkY3Q0dyQks1OUljSVBEeGdLYUJRV1ZicUQwRC0xRGNyck1pNVRoWGI1cjg?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-10-29",
-        "title": "RBA set to inflict fifth interest rate hike on Cup Day, number six is now a 50-50 bet",
-        "source": "TradingView",
-        "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOTmo3Y0k5UGI3QUlnaFpFdUJuNWNTakllLVY4bGlFeXFTQTNoaDVIc0p5b0NoSzNxMTZydURiTjIwbzRxbDdGQkZjSXZYeUpBc1ZEM01jNjdBdmFUMUJlMmw1QjVVZkxsRk1Fc3lrUTIxMnVCX1drc1BjVlVmQ3NMMlZsbU5pejU3eVVXcEJSWE8wZG44ZG1kd0g2c3BYU2U1NVRrR0dVbUlRWVlDZWIxdHd0NUxicEp2WkVTdFJ6ZzRfN2xDVXExbVlCSmpCdzVEcnhuZzdjd3Z5ZmZtek9r?oc=5",
         "kind": "nyhet"
       }
     ],
