@@ -14,7 +14,129 @@
       "transcript_source": "RSS podcast:transcript (application/json)",
       "transcript_url": "https://transcripts.captivate.fm/transcript/8b2f0031-ddcf-41c1-a8eb-6f953a913a5b/transcript.json",
       "transcript_words": 10381,
-      "message": "Transkripsjon funnet. Venter på analyse i Claude Code (be om å analysere nye Karsan-episoder)."
+      "message": null,
+      "analysis": {
+        "karsan_deltar": true,
+        "oppsummering": "Tatt opp morgenen 5. november, andre dag etter mellomvalget, mens markedet falt og VIX var opp rundt 25 % på dagen. Demokratene vant med så stor margin at valget ikke kan bestrides, noe Karsan sier overrasket ham. I stedet for et bestridt valg ser han at administrasjonen trekker seg unna: Bessent har vært taus i to uker, og Trump snakker negativt om markedet for første gang siden februar. Han kaller dette begynnelsen på neste bevegelse. Han gjentar planen: trykke penger, kjøpe aksjer og strategiske selskaper, og eksportere inflasjon, og at en betydelig krise kommer før juni 2027. Ingen nye tall for renter eller fall.",
+        "pastander": [
+          {
+            "tema": "Mellomvalget",
+            "pastand": "Demokratene vant så stort at det ikke finnes noen meningsfull måte å bestride valget på. Ved et jevnt resultat ville administrasjonen ha brukt alle virkemidler. Mange sinte republikanske velgere stemte demokratisk.",
+            "tall": "",
+            "tidshorisont": "november 2026",
+            "sitat": "There's no way to contest this election in a meaningful way.",
+            "tid_sek": 0,
+            "forhold": "endrer",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Administrasjonen trekker seg",
+            "pastand": "Bessent har vært taus i to uker inn og ut av valget, og Trump snakker negativt om markedet, noe Karsan ikke har hørt siden februar. Han venter at tapet skyldes på demokratene, og at det åpner for at markedet får mer stress tidligere.",
+            "tall": "to uker uten Bessent",
+            "tidshorisont": "nå",
+            "sitat": "this is the beginning of. Of kind of the next move.",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Markedet 5. november",
+            "pastand": "Markedet faller den andre dagen etter valget, VIX opp rundt 25 % på dagen. Valgresultatet kan bli en utløserventil som akselererer makrostresset.",
+            "tall": "VIX opp ca. 25 % på dagen",
+            "tidshorisont": "5. november 2026",
+            "sitat": "markets are kind of falling apart post the second day post midterm",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Krisen før juni 2027",
+            "pastand": "Før juni 2027 venter han en betydelig krise som tillates å skje, slik at myndighetene kan svare med en massiv respons. Tidslinjene strammes inn når presset øker.",
+            "tall": "",
+            "tidshorisont": "før juni 2027",
+            "sitat": "before June of 27, you know, we believe there'll be a meaningful crisis",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "qe"
+          },
+          {
+            "tema": "Planen",
+            "pastand": "Svaret er å trykke dollar, monetisere gjelden og kjøpe aksjer og strategiske selskaper direkte, som Kina har gjort. Folk skal få aksjer, for eksempel gjennom et statlig formuesfond. Japan eier 8 % av Nikkei. Planen kan bare gjennomføres i en krise.",
+            "tall": "Japan eier 8 % av Nikkei",
+            "tidshorisont": "etter krisen",
+            "sitat": "Let's just summarize that as print money. Buy stocks.",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "formuesfond"
+          },
+          {
+            "tema": "Støtte til lang ende",
+            "pastand": "Myndighetene støtter allerede den lange enden av rentekurven gjennom tilbakekjøp av statsobligasjoner, og støtter yenen så japanske investorer ikke selger. Hank Paulson tok i april til orde for en fasilitet som skal sikre statsobligasjonsmarkedet.",
+            "tall": "",
+            "tidshorisont": "pågår",
+            "sitat": "We have been supporting the long end of the curve through buybacks.",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "lange_kjop"
+          },
+          {
+            "tema": "Inflasjon eksporteres",
+            "pastand": "Pengetrykkingen gir en het økonomi og inflasjon i USA, men verre i resten av verden. Gevinsten havner i amerikanske selskaper og infrastruktur.",
+            "tall": "",
+            "tidshorisont": "etter krisen",
+            "sitat": "Globally, you know, we export massive inflation.",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": "inflasjon"
+          },
+          {
+            "tema": "Dollar og Midtøsten",
+            "pastand": "USA er i Iran for å verne dollaren ved å kontrollere handelen ut av Midtøsten, etter at Kina begynte å handle i yuan med Iran. USA har en lite omtalt avtale med houthiene som gjør at nesten bare amerikanske eller godkjente skip går gjennom Bab el Mandeb.",
+            "tall": "",
+            "tidshorisont": "pågår",
+            "sitat": "trying to draw a, draw a moat around the US dollar",
+            "tid_sek": 0,
+            "forhold": "nytt",
+            "gjelder_krav": ""
+          },
+          {
+            "tema": "Markedet for stort til å falle",
+            "pastand": "Aksjemarkedet, offentlig og privat, er på rundt 300 billioner dollar. Et fall på 20 % trekker enorm likviditet ut av økonomien, som er blitt så finansialisert at markedet ikke kan få falle.",
+            "tall": "ca. 300 billioner USD",
+            "tidshorisont": "",
+            "sitat": "We now have a $300 trillion equity, private and public market.",
+            "tid_sek": 0,
+            "forhold": "bekrefter",
+            "gjelder_krav": ""
+          },
+          {
+            "tema": "Passiv investering",
+            "pastand": "Passiv investering vil ikke fungere like godt fremover. Etter at obligasjonsdelen av 60/40 sviktet, er det neste som ryker. Han trekker frem generelle prinsipper: aktivt eierskap, ukorrelerte aktiva, forsikring som tas hjem, og opsjoner som presise verktøy. Dette er hans generelle syn, ikke råd til noen.",
+            "tall": "",
+            "tidshorisont": "flere år",
+            "sitat": "We said that before the bond part broke, guess what breaks next",
+            "tid_sek": 0,
+            "forhold": "nytt",
+            "gjelder_krav": ""
+          }
+        ],
+        "forslag": [
+          {
+            "hva": "Legg til i tesen hva som nå skal utløse fallet: etter et stort demokratisk flertall i mellomvalget trekker administrasjonen støtten til markedet (taus Bessent, Trump negativ til markedet), i stedet for et bestridt valg.",
+            "begrunnelse": "Karsan sier selv at den store seieren gjør valget umulig å bestride, og flytter forklaringen til at administrasjonen lar markedet få mer stress tidligere."
+          },
+          {
+            "hva": "Nytt nøkkeltall: Treasurys tilbakekjøp av lange statsobligasjoner (volum per operasjon), som mål på støtten til lang ende. Krever verifisering av åpen kilde (Treasury Fiscal Data eller TreasuryDirect).",
+            "begrunnelse": "Karsan peker på tilbakekjøp som et av virkemidlene som allerede holder lange renter nede, og det er målbart."
+          },
+          {
+            "hva": "Ingen endring i terskler eller frister. Brytningspunktet 30. juni 2027 bekreftes.",
+            "begrunnelse": "Han gjentar krise før juni 2027 og gir ingen nye tall for rente eller fall."
+          }
+        ]
+      },
+      "analyzed_at": "2026-11-09T09:48:22Z",
+      "model": "Claude i Claude Code (manuell analyse)"
     },
     "72fa95b20bb2": {
       "id": "72fa95b20bb2",
@@ -1419,5 +1541,5 @@
       "collection_id": 1128955736
     }
   },
-  "generated": "2026-11-09T06:50:28Z"
+  "generated": "2026-11-09T09:47:24Z"
 }
