@@ -1348,6 +1348,16 @@
       "minutes": 94,
       "collection_id": 1569130932
     },
+    "98063bcc4679": {
+      "id": "98063bcc4679",
+      "date": "2022-08-29",
+      "show": "The Pain Trade Podcast",
+      "title": "This Bear Market Is Different With Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/this-bear-market-is-different-with-cem-karsan/id1639931934?i=1000577692618&uo=4",
+      "audio": "https://www.buzzsprout.com/2034153/episodes/11220979-this-bear-market-is-different-with-cem-karsan.mp3",
+      "minutes": 58,
+      "collection_id": 1639931934
+    },
     "cb6f03a68d33": {
       "id": "cb6f03a68d33",
       "date": "2022-08-24",
@@ -1409,5 +1419,5 @@
       "collection_id": 1128955736
     }
   },
-  "generated": "2026-11-08T22:16:35Z"
+  "generated": "2026-11-09T06:50:28Z"
 }
