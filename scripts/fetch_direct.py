@@ -65,7 +65,32 @@ def fetch_ofr(column):
     return rows, OFR
 
 
-FETCHERS = {"cboe": fetch_cboe, "norgesbank": fetch_norgesbank, "ofr": fetch_ofr}
+FISCAL = ("https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/buybacks_operations"
+          "?filter=operation_date:gte:2024-01-01&page[size]=1000&fields=operation_date,security_type,maturity_bucket,total_par_amt_accepted")
+
+
+def fetch_buybacks(buckets):
+    """Treasurys tilbakekjøp (Fiscal Data, datasett 015-BFS-2024Q2-001). Verifisert 2026-11-09: 233 operasjoner
+    fra 2000, gjenopptatt 2024. Summerer akseptert pålydende per kalendermåned for løpetidsbøttene i source_id
+    (kommaseparert), i mrd. USD, datert første dag i måneden. Inneværende måned tas ikke med før den er over."""
+    import json
+    from datetime import date
+    wanted = set(buckets.split(","))
+    data = json.loads(http_get(FISCAL))["data"]
+    this_month = date.today().isoformat()[:7]
+    rows = {}
+    for r in data:
+        m = r["operation_date"][:7]
+        if m >= this_month:
+            continue
+        key = f"{m}-01"
+        rows.setdefault(key, 0.0)
+        if f"{r['security_type']}:{r['maturity_bucket']}" in wanted:
+            rows[key] += float(r["total_par_amt_accepted"]) / 1e9
+    return {k: round(v, 3) for k, v in rows.items()}, FISCAL
+
+
+FETCHERS = {"cboe": fetch_cboe, "norgesbank": fetch_norgesbank, "ofr": fetch_ofr, "fiscaldata": fetch_buybacks}
 
 
 def main():
@@ -82,7 +107,7 @@ def main():
             merged = read_csv(path)
             merged.update(rows)
             write_csv(path, merged)
-            log_result(s["id"], True, url, {"cboe": "Cboe CSV", "norgesbank": "Norges Bank API", "ofr": "OFR CSV"}[s["source"]], len(merged))
+            log_result(s["id"], True, url, {"cboe": "Cboe CSV", "norgesbank": "Norges Bank API", "ofr": "OFR CSV", "fiscaldata": "Treasury Fiscal Data API"}[s["source"]], len(merged))
             ok += 1
             last = max(merged)
             print(f"{s['id']}: {len(merged)} rader, siste {last} = {merged[last]}")

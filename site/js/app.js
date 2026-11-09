@@ -7,7 +7,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (ch) => ({ "&": "&amp;", "
 const today = new Date().toISOString().slice(0, 10);
 
 const STATUS_LABEL = { ok: "OK", utdatert: "Utdatert", feilet: "Feilet", ikke_publisert: "Ikke publisert (lisens)" };
-const SOURCE_LABEL = { fred: "FRED", treasury: "U.S. Treasury", yahoo: "Yahoo (uoffisiell)", cboe: "Cboe", norgesbank: "Norges Bank", ofr: "Office of Financial Research", derived: "Utregnet fra U.S. Treasury" };
+const SOURCE_LABEL = { fred: "FRED", treasury: "U.S. Treasury", yahoo: "Yahoo (uoffisiell)", cboe: "Cboe", norgesbank: "Norges Bank", ofr: "Office of Financial Research", derived: "Utregnet fra U.S. Treasury", fiscaldata: "Treasury Fiscal Data" };
 const VERDICT = {
   mot: "I retning narrativet",
   bort: "Bort fra narrativet",
@@ -634,6 +634,15 @@ function counterData(ctx, item) {
     return { text: `Kjerneinflasjonen faller: ${C.fmtNum(now.value, 2)} % år over år, mot ${C.fmtNum(then.value, 2)} % ${item.months} måneder før.`,
       source: `Beregnet fra FRED CPILFESL, ${C.fmtDate(then.date)} og ${C.fmtDate(now.date)}`, hide: !falling };
   }
+  if (item.metric === "credit_calm") {
+    const ofr = ctx.data.OFR_FSI ? C.last(ctx.data.OFR_FSI) : null;
+    if (!ofr) return null;
+    const hy = ctx.data.BAMLH0A0HYM2 ? C.last(ctx.data.BAMLH0A0HYM2) : null;
+    const calm = ofr.value < 0 && (!hy || hy.value < item.hy_threshold);
+    const hyText = hy ? `, og high yield OAS er ${C.fmtNum(hy.value, 2)} % (${C.fmtDate(hy.date)}), under fasevilkåret på ${C.fmtNum(item.hy_threshold, 0)} %` : "";
+    return { text: `Kredittmarkedet viser ikke stresset Karsan beskriver: OFRs stressindeks er ${C.fmtSigned(ofr.value, 2)} (${C.fmtDate(ofr.date)}), under 0 betyr mindre stress enn normalt${hyText}.`,
+      source: `Beregnet fra OFR Financial Stress Index${hy ? " og ICE BofA HY OAS (privat visning)" : ""}. Karsan sa 5. november 2026 at kredittspreadene begynner å blåse ut (Thoughtful Money).`, hide: !calm };
+  }
   return null;
 }
 
@@ -656,7 +665,7 @@ function renderFootnote(ctx) {
     <p><strong>Ikke dekket, manuell oppfølging.</strong> ${nc.map(esc).join(" ")}</p>
     <p><strong>Ikke publisert på grunn av lisens.</strong> ${restricted.map(esc).join(" ")}</p>
     <p><strong>Regime og implikasjoner.</strong> ${esc(s.regime._merknad)} ${esc(s.regime.disclaimer)}</p>
-    <p>Data hentes automatisk hver hverdag fra FRED (Federal Reserve Bank of St. Louis) og U.S. Treasury. Alle tall kommer fra filene i data/, med serie-id og observasjonsdato.</p>`;
+    <p>Data hentes automatisk hver tredje time fra FRED (Federal Reserve Bank of St. Louis) og U.S. Treasury. Alle tall kommer fra filene i data/, med serie-id og observasjonsdato.</p>`;
 }
 
 // ---------- Oppstart ----------

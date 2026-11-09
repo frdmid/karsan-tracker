@@ -132,6 +132,19 @@
       "decimals": 2
     },
     {
+      "id": "UST_BUYBACK_LONG",
+      "source": "fiscaldata",
+      "source_id": "Nominal Coupons:10Y to 20Y,Nominal Coupons:20Y to 30Y",
+      "title": "Treasurys tilbakekjøp av lange statsobligasjoner (10 til 30 år), per måned",
+      "unit": "mrd. USD",
+      "frequency": "månedlig",
+      "max_age_days": 70,
+      "license": "Offentlig (public domain), U.S. Department of the Treasury, Fiscal Data",
+      "publish": true,
+      "change_mode": "abs",
+      "decimals": 1
+    },
+    {
       "id": "UST_BE_10Y",
       "source": "derived",
       "source_id": "UST_10Y-UST_REAL_10Y",

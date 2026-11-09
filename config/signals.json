@@ -2,7 +2,7 @@
   "recording_date": "2026-09-29",
   "recording": "Top Traders Unplugged, episode SI420 med Cem Karsan, publisert 2. oktober 2026. Innspilt tirsdag ca. 29. september 2026 (CTA-tall per 25. september omtales som forrige uke).",
   "source_note": "Kravene ble først gjengitt fra sekundære kilder og hukommelse. 13. oktober 2026 ble de kontrollert mot den maskinlagde transkripsjonen av SI420 fra Top Traders Unplugged, og tallene stemmer. Transkripsjonen har ikke talernavn, så hvem som sier hva er tolket ut fra sammenhengen. Tersklene for operasjonelle definisjoner og fasemål er denne sidens egne.",
-  "thesis": "Bessent og Warsh samkjører. Fed-hevingen 16. september 2026 til 3,75 til 4,00 % skulle gi bilde av en uavhengig Fed. Målet er å inflatere seg ut av statsgjelden, mens lange renter holdes nede ved å la aksjemarkedet falle.",
+  "thesis": "Bessent og Warsh samkjører. Fed-hevingen 16. september 2026 til 3,75 til 4,00 % skulle gi bilde av en uavhengig Fed. Målet er å inflatere seg ut av statsgjelden, mens lange renter holdes nede ved å la aksjemarkedet falle. Etter et stort demokratisk flertall i mellomvalget 3. november 2026 er utløseren ikke et bestridt valg, men at administrasjonen trekker støtten til markedet (taus Bessent, Trump negativ til markedet) og lar krisen komme (Karsan i SI425, 7. november 2026).",
   "rule_types": {
     "level_reach": "Oppfylt hvis høyeste observasjon fra opptaksdato til frist er minst threshold. Ikke oppfylt hvis fristen er passert uten det. Ellers Overvåkes.",
     "drawdown_reach": "Fall fra løpende topp i prosent. Oppfylt hvis største fall fra opptaksdato til frist er minst threshold. Ikke oppfylt hvis fristen er passert uten det. Ellers Overvåkes.",
@@ -48,6 +48,23 @@
         "deadline": "2027-06-30"
       },
       "key": true
+    },
+    {
+      "id": "spx_start",
+      "title": "Fallet har startet innen april 2027",
+      "claim": "Krisen kommer i vinduet januar til mars 2027 og bør ha startet senest mars eller april. Den skal gå raskt, innen ett til to kvartaler.",
+      "series": [
+        "SP500",
+        "YF_SPX"
+      ],
+      "rule": {
+        "type": "drawdown_reach",
+        "threshold": 10,
+        "unit": "%",
+        "deadline": "2027-04-30",
+        "final_deadline": "2027-06-30"
+      },
+      "definition_note": "Operasjonell definisjon valgt for denne siden: fallet regnes som startet når S&P 500 er minst 10 % under toppen, samme terskel som regimevilkåret for fase 2. Etter 30. april 2027 vises signalet som forsinket, etter 30. juni 2027 (Karsans brytningspunkt) som ikke oppfylt. Kilde: Karsan i Thoughtful Money, 5. november 2026."
     },
     {
       "id": "qe",
@@ -543,7 +560,21 @@
         "min_move": 3,
         "phase_targets": {},
         "note": "Over 100 betyr ekstra betaling for sikring mot krakk. Vanligvis 100 til 150 (Cboe).",
-        "why": "Hva SKEW sier: prisen på forsikring mot et kraftig fall i S&P 500, utover vanlig svingning. 100 betyr ingen ekstra frykt for krakk. Jo høyere, jo mer betaler investorene for å sikre seg mot store fall. Ifølge Cboe ligger den vanligvis mellom 100 og 150. Karsan: høy skew betyr at mange er sikret, noe som først holder markedet oppe, og pleier å komme en til fire måneder før et større fall."
+        "why": "Hva SKEW sier: prisen på forsikring mot et kraftig fall i S&P 500, utover vanlig svingning. 100 betyr ingen ekstra frykt for krakk. Jo høyere, jo mer betaler investorene for å sikre seg mot store fall. Ifølge Cboe ligger den vanligvis mellom 100 og 150. Karsan: høy skew betyr at mange er sikret, noe som først holder markedet oppe, og pleier å komme en til fire måneder før et større fall. Karsan sa 5. november 2026 (Thoughtful Money) at skew bare har vært så høy to ganger på sju år, høsten 2019 og fra sommeren 2021. Det kan ikke bekreftes med Cboe SKEW, som var høyere i 2024 og 2025, så han bruker trolig et annet mål."
+      },
+      {
+        "id": "tilbakekjop",
+        "title": "Treasurys tilbakekjøp, lange obligasjoner",
+        "series": [
+          "UST_BUYBACK_LONG"
+        ],
+        "transform": "level",
+        "mode": "abs",
+        "direction": "up",
+        "min_move": 1,
+        "phase_targets": {},
+        "note": "Sum per måned av akseptert pålydende, nominelle obligasjoner med 10 til 30 års løpetid. Inneværende måned vises når den er over.",
+        "why": "Karsan: myndighetene støtter allerede lang ende av rentekurven gjennom tilbakekjøp (SI425, 7. november 2026). Mer tilbakekjøp av lange obligasjoner er i retning planen i alle faser. Kilde: Treasury Fiscal Data."
       },
       {
         "id": "hy",
@@ -986,6 +1017,11 @@
         "type": "data",
         "metric": "core_cpi_trend",
         "months": 3
+      },
+      {
+        "type": "data",
+        "metric": "credit_calm",
+        "hy_threshold": 5
       },
       {
         "type": "text",
