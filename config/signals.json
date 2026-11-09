@@ -702,7 +702,7 @@
     "_mal": "phase_targets er mål per fase for fargestyrken i fasestripene: level er et nivå, change er endring fra fasestart i prosentpoeng (mode pp) eller prosent (mode pct). Fremdrift regnes fra verdien da fasen startet. Mørk grønn: målet nådd. Middels grønn: minst halvveis. Lys grønn: på vei. Grå: stillestående. Hvit: ingen mål i denne fasen. Lys rød: beveget seg litt bort. Mørk rød: langt bort. Fire mål er Karsans egne tall: 10-årsrente 5,5 % i fase 1 og 4 % i fase 2 og 3, S&P 500 fall 25 % i fase 2 og KPI 10 % i fase 4. Ikke alle nøkkeltall har mål, svakt begrunnede mål er fjernet. Resten er denne sidens operasjonalisering av tesen."
   },
   "regime": {
-    "_merknad": "Fasene og vilkårene er denne sidens operasjonalisering av tesen, ikke Karsans egne definisjoner. En fase regnes som nådd når vilkårene er oppfylt (require=all: alle, require=any: minst ett). Gjeldende fase er den høyeste fasen som er nådd. Vilkår uten data vises som Ikke dekket og telles ikke. Toleranse: en fase som allerede er nådd, faller først når et vilkår er brutt med mer enn vilkårets tolerance (for eksempel 0,25 prosentpoeng for 10-årsrenten). Vilkår innenfor toleransen vises som Innenfor toleranse.",
+    "_merknad": "Fasene og vilkårene er denne sidens operasjonalisering av tesen, ikke Karsans egne definisjoner. En fase regnes som nådd når vilkårene er oppfylt (require=all: alle, require=any: minst ett, require=min: minst så mange som min, fase 2 krever to av tre etter valg fra Frode 9. november 2026). Gjeldende fase er den høyeste fasen som er nådd. Vilkår uten data vises som Ikke dekket og telles ikke. Toleranse: en fase som allerede er nådd, faller først når et vilkår er brutt med mer enn vilkårets tolerance (for eksempel 0,25 prosentpoeng for 10-årsrenten). Vilkår innenfor toleransen vises som Innenfor toleranse.",
     "disclaimer": "Narrativet favoriserer og taler mot: utledet av tesen på denne siden, ikke Karsans egne ord. Karsan nevner selv: hans egne eksempler fra en podcast, med kilde. Ingenting her er investeringsråd eller tilpasset noens situasjon.",
     "phases": [
       {
@@ -787,7 +787,8 @@
         "id": 2,
         "name": "Fase 2: Aksjefall",
         "description": "Aksjemarkedet faller kraftig samtidig med rentetoppen, noe som holder lange renter nede.",
-        "require": "any",
+        "require": "min",
+        "min": 2,
         "conditions": [
           {
             "label": "S&P 500 minst 10 % under topp",

@@ -248,6 +248,17 @@ test("regime med toleranse holder en nådd fase", () => {
   assert.equal(c.evaluateRegime(regime, { R: rows.slice(0, 3) }, "2026-10-01").current.id, 0);
 });
 
+test("fase med require=min krever minst to vilkår", () => {
+  const cond = (id, v) => ({ series: [id], metric: "last", transform: "level", op: ">=", value: v });
+  const phase = { id: 2, require: "min", min: 2, conditions: [cond("A", 10), cond("B", 25), cond("C", 5)] };
+  const d = (a, b, cc) => ({ A: [{ date: "2026-11-05", value: a }], B: [{ date: "2026-11-05", value: b }], ...(cc === null ? {} : { C: [{ date: "2026-11-05", value: cc }] }) });
+  assert.equal(c.evaluatePhase(phase, d(6, 28, 3.5), "2026-10-01").reached, false);
+  assert.equal(c.evaluatePhase(phase, d(11, 28, 3.5), "2026-10-01").reached, true);
+  // Ett oppfylt og ett uten data: ukjent.
+  assert.equal(c.evaluatePhase(phase, d(6, 28, null), "2026-10-01").reached, null);
+  assert.equal(c.evaluatePhase(phase, d(6, 20, null), "2026-10-01").reached, false);
+});
+
 test("nivå mot terskel i gjeldende fase", () => {
   const ind = { series: ["UST_10Y", "DGS10"], transform: "level" };
   const phase = { conditions: [

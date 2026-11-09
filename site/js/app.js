@@ -135,7 +135,7 @@ function renderRegime(ctx, regime) {
   }).join("");
 
   const conds = regime.phases.filter((p) => p.conditions.length).map((p) => `
-    <h3 style="margin-top:10px">${esc(p.name)} <span class="muted small">(${p.require === "any" ? "minst ett vilkår" : "alle vilkår"})</span></h3>
+    <h3 style="margin-top:10px">${esc(p.name)} <span class="muted small">(${p.require === "any" ? "minst ett vilkår" : p.require === "min" ? `minst ${p.min} vilkår` : "alle vilkår"})</span></h3>
     ${p.eval.conditions.map((c) => `<div class="cond"><span>${esc(c.label)}${c.result.covered ? ` <span class="muted">${condValue(c)}, ${C.fmtDate(c.result.asOf)}</span>` : ` <span class="muted">${esc(missingReason(ctx, c.series).split(":")[0])}</span>`}</span>${condTag(c.result, p.eval.held)}</div>`).join("")}`).join("");
 
   const im = cur.implications || {};

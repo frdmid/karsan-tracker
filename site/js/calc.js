@@ -309,7 +309,8 @@ export function evaluateCondition(cond, data, recordingDate) {
 }
 
 // Fase nådd: require=all krever at alle dekkede vilkår er oppfylt og at ingen
-// mangler data. require=any krever minst ett oppfylt dekket vilkår.
+// mangler data. require=any krever minst ett oppfylt dekket vilkår. require=min krever
+// minst phase.min oppfylte vilkår, ukjent (null) hvis vilkår uten data kan avgjøre det.
 // relaxed=true bruker toleransen i hvert vilkår (for en fase som allerede var nådd).
 export function evaluatePhase(phase, data, recordingDate, relaxed = false) {
   const key = relaxed ? "metRelaxed" : "met";
@@ -318,6 +319,10 @@ export function evaluatePhase(phase, data, recordingDate, relaxed = false) {
   let reached;
   if (!phase.conditions.length) reached = true;
   else if (!covered.length) reached = null;
+  else if (phase.require === "min") {
+    const need = phase.min || 1, met = covered.filter((r) => r.result[key]).length;
+    reached = met >= need ? true : met + (results.length - covered.length) >= need ? null : false;
+  }
   else if (phase.require === "any") reached = covered.some((r) => r.result[key]) ? true : (covered.length < results.length ? null : false);
   else reached = covered.length < results.length ? (covered.some((r) => !r.result[key]) ? false : null) : covered.every((r) => r.result[key]);
   return { id: phase.id, name: phase.name, reached, conditions: results, metCount: covered.filter((r) => r.result.met).length, coveredCount: covered.length };
