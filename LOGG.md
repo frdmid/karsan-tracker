@@ -2,6 +2,10 @@
 
 Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
+## 2026-11-09
+
+* Manuell analyse av SI425 (Top Traders Unplugged, publisert 7. nov., tatt opp 5. nov.): 10 påstander, 3 forslag, ingen lagt inn før Frode godkjenner. Hovedpunkt: mellomvalget ble et demokratisk jordskred som ikke kan bestrides, og Karsan ser i stedet at administrasjonen trekker støtten. Krise før juni 2027 gjentas. Venter uten transkripsjon: tasty GUESTS 30. okt., Thoughtful Money 5. nov., tasty Crumbs 21. sep. Tasty Crumbs 26. okt. er dekket av den samlede analysen av klippene 19. til 28. okt.
+
 ## 2026-11-06
 
 * Forrige handelsdags sluttkurser (Frodes ønske). Kjøreplanen endret til hver tredje time, fordi GitHub forsinket kjøringene 05:30 og 14:00 UTC med 6 til 8 timer (de gikk rundt 13:00 og 20:30 UTC), så Cboe og Treasury fra forrige kveld kom først neste ettermiddag. Ny `scripts/derive.py`: breakeven 10 år utregnet fra Treasury (UST_BE_10Y), lik T10YIE på alle 1712 felles datoer siden 2020, en dag ferskere, kryssjekkes mot T10YIE. Breakevenboksen og regimevilkåret bruker den ferskeste. Privat visning: S&P 500 fra Yahoo (YF_SPX, ^GSPC) når den er ferskere enn FRED. Effekt nå: S&P 500 5. nov. 7 353,73 (minus 4,4 % på dagen), 5,9 % under toppen, mot FREDs siste tall 4. nov.
