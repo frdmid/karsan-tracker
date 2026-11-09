@@ -1,5 +1,85 @@
 {
   "episodes": {
+    "fc7767a0119a": {
+      "id": "fc7767a0119a",
+      "date": "2026-11-08",
+      "show": "Real Vision",
+      "title": "Cem Karsan: \"The Fed Is Preparing to Print Again\" with Ash Bennington",
+      "link": "https://www.youtube.com/watch?v=hqOKMdbUaKk",
+      "audio": null,
+      "minutes": 22,
+      "collection_id": null,
+      "transcript_status": "ok",
+      "message": null,
+      "analysis": {
+        "karsan_deltar": true,
+        "oppsummering": "Utdrag publisert 8. november, trolig tatt opp etter Fed-møtet 28. oktober. Karsan kaller Warshs harde ord om inflasjon kabuki-teater for troverdighet før en stor QE i lang ende, som han venter i første kvartal 2027. Han tror ikke på heving i desember, og venter at neste rentetrekk blir et kutt. Strukturell inflasjon kommer fra populisme, finanspolitikk, global konflikt og Hormuz, som i 1970-årene. Han mener 60/40 og passiv investering er et 40 års unntak: realavkastningen var null i tre 20 års perioder mellom 1900 og 1982.",
+        "pastander": [
+          {
+            "tema": "QE i første kvartal",
+            "pastand": "En massiv pengetrykking i lang ende av rentekurven, i praksis en QE-fasilitet, kommer i første kvartal 2027. Fed blir kjøper i siste instans av statsobligasjoner, som i Japan.",
+            "tall": "",
+            "tidshorisont": "første kvartal 2027",
+            "sitat": "I believe we're about to embark on a massive meaning in Q1",
+            "tid_sek": 1,
+            "forhold": "endrer",
+            "gjelder_krav": "qe"
+          },
+          {
+            "tema": "Ingen heving i desember",
+            "pastand": "Warshs harde ord er kabuki-teater for troverdighet. Fed vil ikke heve igjen i desember, markedet vil prise det ut, og neste trekk blir et kutt.",
+            "tall": "",
+            "tidshorisont": "desember 2026",
+            "sitat": "ultimately we will be cutting before the next race",
+            "tid_sek": 401,
+            "forhold": "bekrefter",
+            "gjelder_krav": "fedmal"
+          },
+          {
+            "tema": "Lang ende",
+            "pastand": "Bortsett fra den siste flukten til sikkerhet er obligasjonsmarkedet et enveistog mot høyere renter. Det finnes ingen naturlige kjøpere av amerikanske statsobligasjoner i stort omfang.",
+            "tall": "",
+            "tidshorisont": "",
+            "sitat": "there are no buyers ultimately in the big picture of US bonds",
+            "tid_sek": 344,
+            "forhold": "bekrefter",
+            "gjelder_krav": "rente10"
+          },
+          {
+            "tema": "Strukturell inflasjon",
+            "pastand": "Populisme fra en generasjon som når politisk dominans, finanspolitikk, proteksjonisme og global konflikt gir strukturell inflasjon, som i 1970-årene. Hormuz er en del av dette. Fed har ikke nådd 2 % på 68 måneder.",
+            "tall": "68 måneder over 2 %",
+            "tidshorisont": "flere år",
+            "sitat": "that is structurally inflationary",
+            "tid_sek": 535,
+            "forhold": "bekrefter",
+            "gjelder_krav": "inflasjon"
+          },
+          {
+            "tema": "60/40 og passiv investering",
+            "pastand": "60/40 ga null realavkastning i 1900 til 1920, 1929 til 1949 og 1962 til 1982. Sharpe-raten for S&P 500 over 125 år er 0,35, for 60/40 0,37. Renter og aksjer er strukturelt positivt korrelert gjennom diskonteringsrenten.",
+            "tall": "Sharpe 0,35 og 0,37",
+            "tidshorisont": "",
+            "sitat": "It is not an investment process that works over the long run.",
+            "tid_sek": 895,
+            "forhold": "nytt",
+            "gjelder_krav": ""
+          }
+        ],
+        "forslag": [
+          {
+            "hva": "Ingen endring. QE i første kvartal 2027 ligger innenfor QE-signalets frist (29. mars 2027, endelig 30. juni 2027).",
+            "begrunnelse": "Utdraget bekrefter tidligere krav og gir ingen nye tall som kan måles."
+          }
+        ]
+      },
+      "analyzed_at": "2026-11-09T09:53:21Z",
+      "model": "Claude i Claude Code (manuell analyse)",
+      "transcript_source": "YouTube, automatisk teksting lest i nettleser (bare det åpne utdraget)",
+      "transcript_url": "https://www.youtube.com/watch?v=hqOKMdbUaKk",
+      "display_title": "Real Vision med Ash Bennington: The Fed Is Preparing to Print Again (utdrag, 22 min)",
+      "display_link": "https://www.youtube.com/watch?v=hqOKMdbUaKk"
+    },
     "97358138cc1a": {
       "id": "97358138cc1a",
       "date": "2026-11-07",
@@ -147,8 +227,144 @@
       "audio": "https://traffic.megaphone.fm/APO8862578363.mp3",
       "minutes": 85,
       "collection_id": 1715910847,
-      "transcript_status": "mangler",
-      "message": "Ingen transkripsjon i feeden. Lydtranskribering er av (TRANSCRIBE_AUDIO)."
+      "transcript_status": "ok",
+      "message": null,
+      "analysis": {
+        "karsan_deltar": true,
+        "oppsummering": "Tatt opp 4. november, dagen etter mellomvalget, mens markedet steg etter et fall natten før. Karsan og den nye partneren Null Smith venter positive flyter ut året fordi volatiliteten presses ned når valget er avgjort, og ser første kvartal 2027 som det farlige vinduet, med riktige flyter trolig fra januar. Krisen bør ha startet innen mars eller april og gå raskt, slik at redningen er på plass innen juni til september 2027. Makrobildet er verre: Hormuz åpner ikke, råvareinflasjonen blir lite elastisk, refinansieringsmuren og gjeldsfinansiert AI capex presser lange renter og kredittspreader. Han tror mellomvalget har svekket administrasjonens kontroll, så krisen kan løpe fra dem.",
+        "pastander": [
+          {
+            "tema": "Flyter ut året",
+            "pastand": "Når valget er avgjort, faller volatiliteten og forhandlerne kjøper tilbake sikringer. Sammen med desemberflyter og ny giring i januar gir det strukturell støtte ut året, med en svakere periode rundt Thanksgiving.",
+            "tall": "",
+            "tidshorisont": "november til desember 2026",
+            "sitat": "flows are I would I would characterize them as meaningfully positive",
+            "tid_sek": 1027,
+            "forhold": "bekrefter",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Tidspunktet for krisen",
+            "pastand": "Første kvartal er det farligste vinduet. Administrasjonen vil helst ha krisen i januar til mars, startet senest mars eller april 2027, og løst innen juni eller september 2027 før valget i 2028. Den bør gå raskt, innen ett til to kvartaler.",
+            "tall": "start senest mars til april 2027",
+            "tidshorisont": "første kvartal 2027",
+            "sitat": "you're going to want it to be done by, let's say, or at least have ...",
+            "tid_sek": 3480,
+            "forhold": "endrer",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Størrelsen",
+            "pastand": "Krisen må føles som en krise og gå fort, kanskje rundt 25 % fall. Den blir ikke like stor som i 2008, men redningen blir større enn noen tidligere, med statlig aksjekjøp for over 10 billioner dollar over ti år.",
+            "tall": "ca. 25 %, over 10 billioner USD i aksjekjøp",
+            "tidshorisont": "2027 og ti år frem",
+            "sitat": "Not quite as large. Even every single one has been bigger than the one before",
+            "tid_sek": 3728,
+            "forhold": "bekrefter",
+            "gjelder_krav": "formuesfond"
+          },
+          {
+            "tema": "Skew",
+            "pastand": "Skew er svært høy. De siste sju årene har den bare vært like høy to ganger, høsten 2019 og fra sommeren 2021, begge før urolige perioder. Merk: Cboe SKEW på denne siden viser høyere nivåer i 2024 og 2025, så han bruker trolig et annet mål.",
+            "tall": "",
+            "tidshorisont": "",
+            "sitat": "we've only seen skews this high broadly uh twice",
+            "tid_sek": 1644,
+            "forhold": "nytt",
+            "gjelder_krav": ""
+          },
+          {
+            "tema": "Hormuz og råvarer",
+            "pastand": "Hormuzstredet åpner ikke på lenge. Lagrene er tømt, så råvareprisene blir lite elastiske. Gjødsel og diesel slår inn for fullt utover våren og gir tilbudsdrevet inflasjon.",
+            "tall": "",
+            "tidshorisont": "våren 2027",
+            "sitat": "the straightfor is not opening and it's not opening anytime soon",
+            "tid_sek": 2368,
+            "forhold": "bekrefter",
+            "gjelder_krav": "inflasjon"
+          },
+          {
+            "tema": "Lange renter",
+            "pastand": "Refinansieringsmuren fra lån tatt opp til null rente i 2021, inflasjon og gjeldsfinansiert AI capex presser lange renter. Ved 5,35 % på 10-årsrenten begynte ting å ryke, og fallet etterpå var flukt til sikkerhet.",
+            "tall": "topp 5,35 % (Treasurys høyeste sluttkurs var 5,31 %)",
+            "tidshorisont": "",
+            "sitat": "we got to 5.35 in the 10-year and stuff just started breaking",
+            "tid_sek": 2880,
+            "forhold": "bekrefter",
+            "gjelder_krav": "rente10"
+          },
+          {
+            "tema": "Kreditt",
+            "pastand": "Gjeldsfinansiert capex hos hyperskalerne presser CDS og kredittspreader. Finansieringen av neoclouds har tørket inn. Merk: HY OAS i privat visning var 3,26 % 4. november, langt under fasevilkåret på 5 %.",
+            "tall": "",
+            "tidshorisont": "nå",
+            "sitat": "credit default swaps and credit spreads are starting to blow up",
+            "tid_sek": 2840,
+            "forhold": "bekrefter",
+            "gjelder_krav": "ai_cds"
+          },
+          {
+            "tema": "Kontroll etter valget",
+            "pastand": "Basisscenariet er fortsatt at man ikke kjemper mot Fed og Treasury. Men mellomvalget har svekket administrasjonens kontroll, så krisen de lar skje kan bli verre enn de ønsker.",
+            "tall": "",
+            "tidshorisont": "2027",
+            "sitat": "the midterms has been has made their control like has diminished",
+            "tid_sek": 3755,
+            "forhold": "nytt",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Formuesfond og Trump-kontoer",
+            "pastand": "Et statlig formuesfond på 5 til 10 billioner dollar er under arbeid, mulig med Fannie Mae og Freddie Mac som startkapital. Trump-kontoene utvides, nå diskutert opp til 40 år. Aksjene skal eies i 20 år og kan ikke selges.",
+            "tall": "5 til 10 billioner USD",
+            "tidshorisont": "etter krisen",
+            "sitat": "Imagine Trump with a 10 trillion or $5 trillion sovereign wealth fund.",
+            "tid_sek": 3352,
+            "forhold": "bekrefter",
+            "gjelder_krav": "formuesfond"
+          },
+          {
+            "tema": "Fed-prising",
+            "pastand": "Null Smith: markedet priser bare rundt 50 basispunkter i hevinger frem til september 2027. Rentefølsomme aksjer som boligbyggere stiger.",
+            "tall": "ca. 50 bp hevinger til september 2027",
+            "tidshorisont": "til september 2027",
+            "sitat": "There's only 50 hikes or 50 bips of hikes priced into the marketplace",
+            "tid_sek": 684,
+            "forhold": "nytt",
+            "gjelder_krav": "fedmal"
+          },
+          {
+            "tema": "Karsans egne eksempler",
+            "pastand": "Kai posisjonerer seg med lengre datert salgsopsjoner finansiert av andre posisjoner, produsenter av harde aktiva (gruver, jordbruksland, tømmer, energi) og strategiske amerikanske selskaper som staten kan komme til å kjøpe. Sikringene skal tas hjem i krisen. Dette er hans egne eksempler, ikke råd.",
+            "tall": "",
+            "tidshorisont": "de neste sju til åtte månedene",
+            "sitat": "We're really talking about seven eight months",
+            "tid_sek": 4632,
+            "forhold": "nytt",
+            "gjelder_krav": ""
+          }
+        ],
+        "forslag": [
+          {
+            "hva": "Nytt kontrollpunkt for S&P-signalet: Karsans vindu er januar til mars 2027, med start senest mars eller april. Har fallet ikke begynt innen 30. april 2027, vises det som forsinket. Brytningspunktet 30. juni 2027 beholdes.",
+            "begrunnelse": "Han gir et strammere vindu enn før, og det er målbart."
+          },
+          {
+            "hva": "Legg til et motargument: HY OAS (3,26 %) og OFR stressindeks viser ikke kredittstresset han beskriver.",
+            "begrunnelse": "Påstanden om at kredittspreader blåser ut stemmer ikke med tallene dashbordet viser."
+          },
+          {
+            "hva": "Legg til en merknad på SKEW-boksen: Karsan sier skew er på nivåer bare sett høsten 2019 og 2021, men Cboe SKEW var høyere i 2024 og 2025.",
+            "begrunnelse": "Påstanden kan ikke bekreftes med Cboe SKEW, så leseren bør ikke tolke boksen som bekreftelse."
+          }
+        ]
+      },
+      "analyzed_at": "2026-11-09T09:52:15Z",
+      "model": "Claude i Claude Code (manuell analyse)",
+      "transcript_source": "YouTube, automatisk teksting lest i nettleser",
+      "transcript_url": "https://www.youtube.com/watch?v=VMi5kby6YFA",
+      "display_title": "Thoughtful Money med Adam Taggart: Crisis Is Coming In Early 2027 (med Null Smith)",
+      "display_link": "https://www.youtube.com/watch?v=VMi5kby6YFA"
     },
     "0c933c6f37ab": {
       "id": "0c933c6f37ab",
@@ -1541,5 +1757,5 @@
       "collection_id": 1128955736
     }
   },
-  "generated": "2026-11-09T09:47:24Z"
+  "generated": "2026-11-09T09:53:33Z"
 }

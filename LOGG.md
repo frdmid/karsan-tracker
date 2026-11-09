@@ -5,6 +5,7 @@ Nyeste øverst. Hver endring: dato, hva, hvorfor.
 ## 2026-11-09
 
 * Manuell analyse av SI425 (Top Traders Unplugged, publisert 7. nov., tatt opp 5. nov.): 10 påstander, 3 forslag, ingen lagt inn før Frode godkjenner. Hovedpunkt: mellomvalget ble et demokratisk jordskred som ikke kan bestrides, og Karsan ser i stedet at administrasjonen trekker støtten. Krise før juni 2027 gjentas. Venter uten transkripsjon: tasty GUESTS 30. okt., Thoughtful Money 5. nov., tasty Crumbs 21. sep. Tasty Crumbs 26. okt. er dekket av den samlede analysen av klippene 19. til 28. okt.
+* Analyse via YouTube i nettleseren: Thoughtful Money 5. nov. (tatt opp 4. nov., 11 påstander, 3 forslag: kontrollpunkt for fall innen 30. april 2027, motargument om kreditt, merknad på SKEW) og Real Vision 8. nov. (lagt inn manuelt, bare åpent utdrag på 22 min, 5 påstander, ingen endring). Tasty GUESTS 30. okt. finnes ikke på YouTube.
 
 ## 2026-11-06
 
