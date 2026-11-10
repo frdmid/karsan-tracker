@@ -1,18 +1,18 @@
 {
-  "generated": "2026-11-10T03:40:06Z",
+  "generated": "2026-11-10T15:01:52Z",
   "sources": {
-    "karsan_Google News": "https://news.google.com/rss/search?q=%22Cem+Karsan%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "karsan_Apple Podcasts": "https://itunes.apple.com/search?term=Cem+Karsan&entity=podcastEpisode&limit=50",
-    "rente10": "https://news.google.com/rss/search?q=%2210-year+Treasury+yield%22+OR+%2230-year+Treasury+yield%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
-    "spx": "https://news.google.com/rss/search?q=stock+market+selloff+OR+correction+OR+%22bear+market%22+S%26P+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
-    "qe": "https://news.google.com/rss/search?q=Fed+%22quantitative+easing%22+OR+%22balance+sheet%22+OR+%22Treasury+purchases%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
-    "uavhengighet": "https://news.google.com/rss/search?q=Warsh+Bessent+Fed+independence+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
-    "formuesfond": "https://news.google.com/rss/search?q=%22sovereign+wealth+fund%22+OR+%22Treasury+buyback%22+Bessent+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
-    "inflasjon": "https://news.google.com/rss/search?q=US+inflation+CPI+%22rate+hike%22+OR+%22inflation+expectations%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
-    "ai_kreditt": "https://news.google.com/rss/search?q=hyperscaler+capex+OR+%22AI+debt%22+OR+%22credit+default+swap%22+Oracle+OR+Meta+OR+Microsoft+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen"
+    "karsan_Kai Media (YouTube)": "https://www.youtube.com/feeds/videos.xml?channel_id=UChrx0LQWgRhTuVqUXEbM6Cg"
   },
   "errors": [
-    "Karsan, Kai Media (YouTube): Henting feilet: HTTP Error 404: Not Found"
+    "Karsan, Google News: Henting feilet: HTTP Error 503: Service Unavailable",
+    "Lange renter: Henting feilet: HTTP Error 503: Service Unavailable",
+    "Aksjemarkedet: Henting feilet: HTTP Error 503: Service Unavailable",
+    "QE og Feds balanse: Henting feilet: HTTP Error 503: Service Unavailable",
+    "Fed, Warsh og Bessent: Henting feilet: HTTP Error 503: Service Unavailable",
+    "Statlig formuefond og lange obligasjoner: Henting feilet: HTTP Error 503: Service Unavailable",
+    "Inflasjon: Henting feilet: HTTP Error 503: Service Unavailable",
+    "AI, capex og kreditt: Henting feilet: HTTP Error 503: Service Unavailable"
   ],
   "karsan": [
     {
