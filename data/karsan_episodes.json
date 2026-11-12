@@ -1,5 +1,17 @@
 {
   "episodes": {
+    "f99819393da1": {
+      "id": "f99819393da1",
+      "date": "2026-11-09",
+      "show": "Monetary Matters with Jack Farley",
+      "title": "Structural Flows Will Support Stocks Until the U.S. Treasury Crisis in 2027 | Cem Karsan & Noel Smith | Kai Asset Management",
+      "link": "https://podcasts.apple.com/us/podcast/structural-flows-will-support-stocks-until-the-u-s/id1769093906?i=1000800880155&uo=4",
+      "audio": "https://traffic.megaphone.fm/EWWMN9574622248.mp3",
+      "minutes": 65,
+      "collection_id": 1769093906,
+      "transcript_status": "mangler",
+      "message": "Ingen transkripsjon i feeden. Lydtranskribering er av (TRANSCRIBE_AUDIO)."
+    },
     "fc7767a0119a": {
       "id": "fc7767a0119a",
       "date": "2026-11-08",
@@ -1757,5 +1769,5 @@
       "collection_id": 1128955736
     }
   },
-  "generated": "2026-11-11T17:17:15Z"
+  "generated": "2026-11-12T00:51:52Z"
 }
