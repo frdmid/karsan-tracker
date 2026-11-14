@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-14T10:39:49Z",
+  "generated": "2026-11-14T18:16:41Z",
   "sources": {
     "karsan_Google News": "https://news.google.com/rss/search?q=%22Cem+Karsan%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "karsan_Apple Podcasts": "https://itunes.apple.com/search?term=Cem+Karsan&entity=podcastEpisode&limit=50",
@@ -583,6 +583,13 @@
     "rente10": [
       {
         "date": "2026-11-14",
+        "title": "Will The 10-Year Treasury Yield Hit 5.5% Or Fall To 4.5%?",
+        "source": "Forbes",
+        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQdnlwbWs0ZS03cXBiOWlZazFtUXpVVWVRNk1DSm9VczVpb2pScVlLdGxKc3RYWWdtOTlNV3hwd2hyYXZBTk5iWXU3cExZQTdGNDZpanRCanNramY2OXEwVzg2WXdvaklzSzduMjFzVGFSVldJU05ac2h4Yk1RbnhENS1oM2hZb3pmU2FRMzJhYngwMEVocERSZVpNTmhVUHBwM010SHRrUzZ3dw?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-14",
         "title": "U.S. 10-Year Treasury Yield Holds Above 5% as Market Eyes Year-End Hike : Global : JKN",
         "source": "재경일보",
         "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBPdXM2TzI5dV82LWc4Und2THY2aW50SWxBaEQ2SnJvdUNuY1ZQa1ZLOGQwaVFtQmtCdGljS1NDQmp2d3JnZXFPMlpkTzN3V05VT3BJMmZHLUc1WGYtLWZvcEVR?oc=5",
@@ -853,16 +860,16 @@
         "source": "Yahoo Finance",
         "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQSFhDdjVxTWJmWm01bXNsTjFQekNveDhWSGJ5VUJCaFEtSG9pWnlMUnpacVBiLU5EQTBVcThjQThxWkpNSU5IWjdGempETVhna0JQNWpnZkhiVGxNOGcxZWFXOUZkQnJrOF9HTWVJR2NjWW1tTkZlYVlNNXRGcU9VbUtBYTZWbnY0ZHUxREpSRkhUc1pNVi1uU1pUZ2RyYjY0WTBhVFYxeFg5OWhLbDh2cVZHaC1SY2x4SVNvVlJRS0FMWk10Wmd4SGc1ci05R2NnWGxKWTBDY1NvRV9YLWJjZQ?oc=5",
         "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-10",
-        "title": "10-Year Treasury Yield Spikes as Inflation Spreads across Economy, Driven by Ugly Core Services CPI",
-        "source": "Wolf Street",
-        "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQcmxra2hha1J0SEk1REN6U2NrMTFBT1FSN0hNN3JuY0V3dDlCUDFNYUFReVlsYzVWNGR0OTBkd0FiTHFWNnNCMFBNbTFqZTdZeDI2X085YWMtSUxfVGVFVlNiMmczYTBVMm51UFZ4UEh4eUVIajRuNUR3Zmo3dWphejdKeWFNX1pFYndtNWVEcVhXY19fb3R2ME5tUDd2b3ZzSGZkWnE0ZEdsTk5aUllrZmd4RTE5bHg2QmNVNC1XYi1XREMxdGZvVThnX1Nsdw?oc=5",
-        "kind": "nyhet"
       }
     ],
     "spx": [
+      {
+        "date": "2026-11-14",
+        "title": "Wall Street's next big bet: S&P 500 set to climb 14% despite slowing earnings growth - report",
+        "source": "The Times of India",
+        "link": "https://news.google.com/rss/articles/CBMijgJBVV95cUxPUVp5Z2kwWmkwdEU5OXNFNW5vQk9jWlcxRllpeTU5dHRmSEtRbzFxRHA0MFpBYzlZZkhSTkxWNFJKSjN3NHVXdlo0bk9WQ3EzaGJfcU8zRndIdEltN1cwNUMzSDNJTXJhbjR2YklIakVZS2FjeTFnMFh6MzViUDJ0YjgyYTVvc2QxVUFBek11UDZZX2YtNnVMU1MwOFlwWi1BQ0J4U1BOa3B0N20zanF4ZGVrXzdYeHFMZVIxVGF2U3Zrb1RBMC1LSm1pN25qQXJPZFlzbkRUcHZRSl9tbFRQemhMUnJpMU9MQmptdXJ0ai1qdUFneU9GZjJYWm1jLVI5enFiNEtLeHZBcE1haGfSAZMCQVVfeXFMUDAwUzZFN3o3aWZJQlZlV01RMXkxSTRtX1ZvVF9qOXUtVjdGbFZOR29zTUFBZmxUZ1U0bGM2akdEaUo3clhZU3FSRkVpQjFKakNjZ29ZaFl1RGtBX2ZPSzRhdG42UU1VelQzZXhEQ0VxZHRMc1VQQ1JDWEJZcFRKQXFKakNpZG1nWGl5dVRiV2pDblRFWXp1cnFuWEctSmFvQlF1NTJkWFNpZEZkUVBLcFluSVF2YkhYMnhub3ZqZ2hzeWdSSHRpQWlhMm85YjVRLVA5Z0dLQnR6V1c2SENadkwzdjBMTkw1My1sa0xUWUVDUFZKaF9oZ1lIVW5SQno2cUlMc0s0cVJkVUlBVkZYV0lYazQ?oc=5",
+        "kind": "nyhet"
+      },
       {
         "date": "2026-11-14",
         "title": "Is the US Stock Selloff Over? Wall Street Debates AI Bubble as S&P 500, Chip Stocks Diverge for 2027",
@@ -1135,13 +1142,6 @@
         "source": "AP News",
         "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNYi1oYnVxUmZHNlhJVXBPYk9ITmFxZzBzUWNfUDZPT2tsR0R4SExvcmJzM3I1ZEh0WHV0bHM2amVtQmMzWnpwRWVFRjluOTdETUt2UGtPbUUzamNLcVJ5UHk3Qm5ZMmNlNm16X21EZkZxaktKT3RIUEc4SlJCbnJDbzhxOXFkNVI0ZVFab3JBOGxtSXM?oc=5",
         "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-10",
-        "title": "Value Funds Outrun the S&P 500 as AI Sell-Off Hits Tech-Heavy Benchmarks",
-        "source": "BigGo Finance",
-        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1TT2RXeWZsLW1CVmktX25wdHZXdk1ESlU5RVlvRUpDMWlKSFZiZEZvaDcwQ21jRy0zT1pheTZNWERJV2drZG1SMl91azIyNDVpVEVTOUN3VHY3bXBBSG54UTdXaVdOODZySFVEc0VGeFAwWVp3U1E?oc=5",
-        "kind": "nyhet"
       }
     ],
     "qe": [
@@ -1189,6 +1189,13 @@
       },
       {
         "date": "2026-11-13",
+        "title": "Fed’s Schmid Warns Against Viewing Oil Shock as Transitory",
+        "source": "EnergyNow.com",
+        "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOb0dkQlJ3Nm5XZEI5OHRFVEUyQ2xrWFJUR3lYSERGSTgzMXd4ejhxVjVJQmFDSThkQWliQXlSOTZ6QVpaVEFZUUtYU3hLaDB0VklwdG1FQjdvZ3gxTVJ6Z0Z5aU1BNlFfd1dEd2lRMmFSYVBIdUdGQndyOEVOZ0ZNdnhPTFk2ZnU5N1ZfazZWWnI0dw?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-13",
         "title": "Fed’s Logan Calls For Clearer Separation of Market Operations",
         "source": "Bloomberg.com",
         "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQTFVYS3dlcE1vRFNFSWt2NGtZbVgwOEg5SnRndGN6TERZTF9abEhaM05QNzFidEJpdElGOVdES2w0MV9zMnBmX0FCTWo0c3ZMRVh4WHZWcXM1ekFQWmtSek1pbUJqQk1qYV9JUkpveWdPT0RPRzFGbVo2UzloRGlIazVTLWw5UWhibkVhamVXQjgwZkI5RmVneEVqV3ZLXzI0blhVWTJlLXNPeElOU2VwdktR?oc=5",
@@ -1213,6 +1220,13 @@
         "title": "Dallas Fed's Logan urges Fed to bolster operational readiness before a crisis",
         "source": "TradingView",
         "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPVFVESk5mSjJQRW03QktYQXRiUFMtSDg5cE5fR2l2dWQwY2tWQ01rNXFyeEZzNGJ4b1lUc3J0S1NnOFpjOG45S3g4RzZSbEd5SzJjSXQyWUVpY0FZakYtdjdtUXZaVVhTdWZnSXFwR1hybnZ1RkhSdzRISkpoYWxubUhUSHUwRUZTWFJ1STVTd3pzSDhKLWFPUGdrcU9OeVlOMENDWnU3M3lKNmJ2MXo3Y2JXTldJRnI2SnNGelEyd2xvUHZGU3R5TVB2LVRFaTFCNklrdEd3cw?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-13",
+        "title": "Big Banks Have Nearly $1 Trillion Tied to AI. What If the Boom Cracks?",
+        "source": "BeInCrypto",
+        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5yMTdERmVJLW1iZnlNa3NMaEp5YVo1cW5HckpRTmROakFUdFc4cWFqV3B2REJNN25POURHdE93cHFuWDd6UmVrV1BBU1ZkNERfRkpIcVFtNDMwcHRUZ051T0Q1dDhKNjA?oc=5",
         "kind": "nyhet"
       },
       {
@@ -1329,13 +1343,6 @@
       },
       {
         "date": "2026-11-11",
-        "title": "Fed’s Schmid Warns Against Viewing Oil Shock as Transitory",
-        "source": "EnergyNow.com",
-        "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOb0dkQlJ3Nm5XZEI5OHRFVEUyQ2xrWFJUR3lYSERGSTgzMXd4ejhxVjVJQmFDSThkQWliQXlSOTZ6QVpaVEFZUUtYU3hLaDB0VklwdG1FQjdvZ3gxTVJ6Z0Z5aU1BNlFfd1dEd2lRMmFSYVBIdUdGQndyOEVOZ0ZNdnhPTFk2ZnU5N1ZfazZWWnI0dw?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-11",
         "title": "Anthropic IPO could lead to ‘large correction’ in markets, Fed official says",
         "source": "Semafor",
         "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQRzZTbzJKS01EWkNjeTg2WmhpeWJid09rdjRFZHRGZmRLT1FGNGFFenZQcl83OVlqZl84TzVqd1BQVGwyTTlZZ0gyTkJQTUREaEpCeklqckYtRXV0RVVDVy1zQjJpNFFOdFRmOW9MWEdZc0oxQ0VQTm11WXJOak5qMVRzZDZhNkVpQ2VIckUxdmJxcWVRSFFJLUxGbzhBVVE2MlpUQmlUbXVKU3pLUzZfekVWcUdYekE?oc=5",
@@ -1416,13 +1423,6 @@
         "title": "Liquidity Tightens: Pay Attention, Don’t Panic",
         "source": "Real Investment Advice",
         "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNeWJUX0ZDUjUzODFRMzh2VVdDSFZxbkRpbnhOelVTWVJuUzIxUlV5TzNpalF4NW9Za0d1a2FjVVJZcm1sekNDMlNCWi15ZS1BLU5ETEZfZ0JDZGlhUExFb29aVDhoTjJSaDhEN2NhLTQ2dEFKWGVCcHZVbWxQQTFJZldIQUxZbUtPcVk4eTcxcmloYmJ4b3pr?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-09",
-        "title": "Kevin Warsh",
-        "source": "Britannica",
-        "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBydnNuRkREWkVLOUlkNlBfbnQ2aDBYMndSc2VMZllNblp1SnZpMkNPQ1BiNjdKb1lVMUVwWEVQbFdOWG51dEdZR0l1TG9yVkRqOEk3TVRwVQ?oc=5",
         "kind": "nyhet"
       }
     ],
@@ -2071,17 +2071,17 @@
     ],
     "ai_kreditt": [
       {
-        "date": "2026-11-14",
-        "title": "AI Debt Issuance Hits $687 Bn As Hyperscalers Ramp Up Borrowing",
-        "source": "BW Businessworld",
-        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZFJEYlRRQjhCbmhKUndMTEVoMV82WU9CQUF1SWVEMWZ1VmNPM1otM3dWUXdsQW5OSmNRVGRxRDlkUlA5SkJlUnRHV2ZxdS1WSjZsN1NCN201UkN4cmctTjE5OUcwZWZuWFJDbks2aVZLMFZyWG1oUnlDRGM3TzFjSFAtRk1SblJJcTVCd2FYd0pyczFjOUVLZjNsRndWbGZDUUVFdnpRbUhnZw?oc=5",
-        "kind": "nyhet"
-      },
-      {
         "date": "2026-11-13",
         "title": "Fund Manager Sounds Alarm on AI Trade as Hyperscaler Capex and Debt Pile Up",
         "source": "BigGo Finance",
         "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE93SWxvSzJ0cF9kcU9hMjcwSHZXWU1rOVY4UnI1c2dqc1p6X1NOWlNCLUtaY0RFRjRUbDZobXdvOGhncUVGUGZLRXRoSDFSNWJUOUhLSHlZblJnMlFGc2laRXQ4NXpQdGlLWTBBWG9RMHRmSXRVS2c?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-13",
+        "title": "AI Debt Issuance Hits $687 Bn As Hyperscalers Ramp Up Borrowing",
+        "source": "BW Businessworld",
+        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZFJEYlRRQjhCbmhKUndMTEVoMV82WU9CQUF1SWVEMWZ1VmNPM1otM3dWUXdsQW5OSmNRVGRxRDlkUlA5SkJlUnRHV2ZxdS1WSjZsN1NCN201UkN4cmctTjE5OUcwZWZuWFJDbks2aVZLMFZyWG1oUnlDRGM3TzFjSFAtRk1SblJJcTVCd2FYd0pyczFjOUVLZjNsRndWbGZDUUVFdnpRbUhnZw?oc=5",
         "kind": "nyhet"
       },
       {
