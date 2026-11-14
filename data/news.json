@@ -1,9 +1,8 @@
 {
-  "generated": "2026-11-14T18:16:41Z",
+  "generated": "2026-11-14T22:36:32Z",
   "sources": {
     "karsan_Google News": "https://news.google.com/rss/search?q=%22Cem+Karsan%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "karsan_Apple Podcasts": "https://itunes.apple.com/search?term=Cem+Karsan&entity=podcastEpisode&limit=50",
-    "karsan_Kai Media (YouTube)": "https://www.youtube.com/feeds/videos.xml?channel_id=UChrx0LQWgRhTuVqUXEbM6Cg",
     "rente10": "https://news.google.com/rss/search?q=%2210-year+Treasury+yield%22+OR+%2230-year+Treasury+yield%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "spx": "https://news.google.com/rss/search?q=stock+market+selloff+OR+correction+OR+%22bear+market%22+S%26P+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "qe": "https://news.google.com/rss/search?q=Fed+%22quantitative+easing%22+OR+%22balance+sheet%22+OR+%22Treasury+purchases%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
@@ -12,7 +11,9 @@
     "inflasjon": "https://news.google.com/rss/search?q=US+inflation+CPI+%22rate+hike%22+OR+%22inflation+expectations%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "ai_kreditt": "https://news.google.com/rss/search?q=hyperscaler+capex+OR+%22AI+debt%22+OR+%22credit+default+swap%22+Oracle+OR+Meta+OR+Microsoft+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen"
   },
-  "errors": [],
+  "errors": [
+    "Karsan, Kai Media (YouTube): Henting feilet: HTTP Error 404: Not Found"
+  ],
   "karsan": [
     {
       "date": "2026-11-13",
@@ -963,6 +964,13 @@
       },
       {
         "date": "2026-11-12",
+        "title": "Stock Market Crash: What History Says Comes Next After the Market's Big Single-Day Dip.",
+        "source": "AOL.com",
+        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOWHFkZW9SN2U1Z1NjM1V4aGhxZEpPREFhdkx0NjdvNGw0TFdiV19MWHhlVzc4SjFkZGpmQm5FbXB3b0ZueFpkMEFoZlN4czQ1dEhfWGpYZDVOUjVOSmI4RTV1QU01cThGM3pMLXEzOXh5Zmc0RWhicWotc3RobXVVUw?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-12",
         "title": "S&P 500 (^GSPC) Charts, Data & News - Yahoo Finance",
         "source": "Yahoo! Finance Canada",
         "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE81dlEyYzk0cXJLODkyM3FNMlQwOWlLWmc3VHhUSUl5ZWNBdFg0Vm9LVnpMb0s0VjJtMTlFZXN2dXZ0eVRWLURta3VKZE55YjVMZmVQRmp3?oc=5",
@@ -1134,13 +1142,6 @@
         "title": "Could the Latest Inflation Data Trigger a Stock Market Crash?",
         "source": "The Motley Fool",
         "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNaXg2S0dsUzhXcEQ2TUI4SjFNYkF3dUxPSlFuOHF2SW1yN3N0YnJLM2t3V1VaTFlPX2JQQ3RmS0E2cXBrQ2FDYTRaMzdrTTAtOGM2XzNEdXl2UEpRN0dXS2dXVWlySXlVZUJpcEtOWG5QbEdLY2dmaVFlekUxT1NwQ01MWVE0LXVBR055WFI3QkN0UmlENnhEZWVtcmljWHhnQk9tdWlB?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-11",
-        "title": "AI stocks rebound, and Wall Street nearly returns to where it was before last week’s sell-off",
-        "source": "AP News",
-        "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNYi1oYnVxUmZHNlhJVXBPYk9ITmFxZzBzUWNfUDZPT2tsR0R4SExvcmJzM3I1ZEh0WHV0bHM2amVtQmMzWnpwRWVFRjluOTdETUt2UGtPbUUzamNLcVJ5UHk3Qm5ZMmNlNm16X21EZkZxaktKT3RIUEc4SlJCbnJDbzhxOXFkNVI0ZVFab3JBOGxtSXM?oc=5",
         "kind": "nyhet"
       }
     ],
@@ -1675,6 +1676,13 @@
         "kind": "nyhet"
       },
       {
+        "date": "2026-11-14",
+        "title": "Citadel Securities Critical Of Treasury’s Buyback Plans, Calls It ‘Financial Repression’",
+        "source": "Stocktwits",
+        "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPQ1o4UzFfd0tJdlpia1l4dUZJSlB3SzV4cXREUkFrQnRBTkdOdXpRQ2dLMDlyX091Nmg2eVpHM3RyVVl1elFIWlY4WFZNdzh2UVhQSGJaNDc1ZkhDY243X2VUMmZyb1loR1VPWWtweWFWeFZEamFMY054Ti1aU3V1QkdnaWNnNUI1UFdfbHk1MU1VdF80Yk5iS2toeXRaNzdTaWUxZ2VOd2lZUWVtZndvbUVQOTZXMEthUklYUzBfekNyNVpwbENOM1ZhVUZBeF9vQzRRVXhGd2w3eUd3cXhxY2RCQQ?oc=5",
+        "kind": "nyhet"
+      },
+      {
         "date": "2026-11-12",
         "title": "Heads of Kazakh sovereign wealth fund, state railway company arrested on suspicion of corruption, security service says",
         "source": "Bilyonaryo Business",
@@ -1714,13 +1722,6 @@
         "title": "Treasury Chief Bessent Predicts Oil Price Drop To $40 Following End Of Iran Conflict",
         "source": "Stocktwits",
         "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOQUIxSWtINFFyMEtHT3JLdl9OUzg0RDJxOTY0OTgwODVPZENmV245cGFwUThPVkhvNXdPVjZERDlSbno4clZuMW1lQ3VFY2NiVTFRd0toUThMSFVxYjF2eEJXZ094RHhqamxnQ2pyYVJrR0hsVHBjSUJvNWhaUC1jZjJYV0FmNHhJYzBVQndSNHY4MTJhV2xLZDRrTXQ2NXEyUER3ZnlkMlZUb0IwTGNlU2lMVjFuS0EwcUt4MUFOLXVOUHR4SlVnZFVabDZBejlVNjhsME5CTVVnS0ExRkJhMA?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-10-17",
-        "title": "Citadel Securities Critical Of Treasury’s Buyback Plans, Calls It ‘Financial Repression’",
-        "source": "Stocktwits",
-        "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPQ1o4UzFfd0tJdlpia1l4dUZJSlB3SzV4cXREUkFrQnRBTkdOdXpRQ2dLMDlyX091Nmg2eVpHM3RyVVl1elFIWlY4WFZNdzh2UVhQSGJaNDc1ZkhDY243X2VUMmZyb1loR1VPWWtweWFWeFZEamFMY054Ti1aU3V1QkdnaWNnNUI1UFdfbHk1MU1VdF80Yk5iS2toeXRaNzdTaWUxZ2VOd2lZUWVtZndvbUVQOTZXMEthUklYUzBfekNyNVpwbENOM1ZhVUZBeF9vQzRRVXhGd2w3eUd3cXhxY2RCQQ?oc=5",
         "kind": "nyhet"
       },
       {
@@ -2071,17 +2072,17 @@
     ],
     "ai_kreditt": [
       {
-        "date": "2026-11-13",
-        "title": "Fund Manager Sounds Alarm on AI Trade as Hyperscaler Capex and Debt Pile Up",
-        "source": "BigGo Finance",
-        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE93SWxvSzJ0cF9kcU9hMjcwSHZXWU1rOVY4UnI1c2dqc1p6X1NOWlNCLUtaY0RFRjRUbDZobXdvOGhncUVGUGZLRXRoSDFSNWJUOUhLSHlZblJnMlFGc2laRXQ4NXpQdGlLWTBBWG9RMHRmSXRVS2c?oc=5",
+        "date": "2026-11-14",
+        "title": "AI Debt Issuance Hits $687 Bn As Hyperscalers Ramp Up Borrowing",
+        "source": "BW Businessworld",
+        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZFJEYlRRQjhCbmhKUndMTEVoMV82WU9CQUF1SWVEMWZ1VmNPM1otM3dWUXdsQW5OSmNRVGRxRDlkUlA5SkJlUnRHV2ZxdS1WSjZsN1NCN201UkN4cmctTjE5OUcwZWZuWFJDbks2aVZLMFZyWG1oUnlDRGM3TzFjSFAtRk1SblJJcTVCd2FYd0pyczFjOUVLZjNsRndWbGZDUUVFdnpRbUhnZw?oc=5",
         "kind": "nyhet"
       },
       {
         "date": "2026-11-13",
-        "title": "AI Debt Issuance Hits $687 Bn As Hyperscalers Ramp Up Borrowing",
-        "source": "BW Businessworld",
-        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZFJEYlRRQjhCbmhKUndMTEVoMV82WU9CQUF1SWVEMWZ1VmNPM1otM3dWUXdsQW5OSmNRVGRxRDlkUlA5SkJlUnRHV2ZxdS1WSjZsN1NCN201UkN4cmctTjE5OUcwZWZuWFJDbks2aVZLMFZyWG1oUnlDRGM3TzFjSFAtRk1SblJJcTVCd2FYd0pyczFjOUVLZjNsRndWbGZDUUVFdnpRbUhnZw?oc=5",
+        "title": "Fund Manager Sounds Alarm on AI Trade as Hyperscaler Capex and Debt Pile Up",
+        "source": "BigGo Finance",
+        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE93SWxvSzJ0cF9kcU9hMjcwSHZXWU1rOVY4UnI1c2dqc1p6X1NOWlNCLUtaY0RFRjRUbDZobXdvOGhncUVGUGZLRXRoSDFSNWJUOUhLSHlZblJnMlFGc2laRXQ4NXpQdGlLWTBBWG9RMHRmSXRVS2c?oc=5",
         "kind": "nyhet"
       },
       {
