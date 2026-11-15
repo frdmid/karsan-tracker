@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-14T22:36:32Z",
+  "generated": "2026-11-15T06:47:14Z",
   "sources": {
     "karsan_Google News": "https://news.google.com/rss/search?q=%22Cem+Karsan%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "karsan_Apple Podcasts": "https://itunes.apple.com/search?term=Cem+Karsan&entity=podcastEpisode&limit=50",
@@ -950,6 +950,13 @@
       },
       {
         "date": "2026-11-12",
+        "title": "Stocks Slide on Nvidia Troubles, Oil Edges Lower: Markets Wrap",
+        "source": "Bloomberg.com",
+        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPYmF2Z05ObnRwSVdvWGJrWC1XZlIzVXlYMTV3eVRwQWlScGY3TGpuamVOTEpremJZQnhJU3hkOWl2ck4xNFdzQWM1VTh2OEVBQ3FCTzNiYThfOTlzSHpqX0hHeWQ3dzZTcnRsVzYtMzFWeElmZVdVWUdQcnhIbEp1SS1lejVoM2Y1OGdScGpLbzJPVWhk?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-12",
         "title": "Stock Market Today: Stock Market News And Analysis",
         "source": "Investor's Business Daily",
         "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE8zdGl1MmxTM2JJa2pLNlFSWVhuZUd1ekRIeVpDcGVqckVJcloxaWlnRHJ3b0hqb291NXk4dlo0SmRQNlhDaGpubDh6ZWNTUHZiYVhjOVJINUxSYXE0NHRiNVE2OW51R2h4N1daaXRIdzVBR1UxT0g4?oc=5",
@@ -967,6 +974,13 @@
         "title": "Stock Market Crash: What History Says Comes Next After the Market's Big Single-Day Dip.",
         "source": "AOL.com",
         "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOWHFkZW9SN2U1Z1NjM1V4aGhxZEpPREFhdkx0NjdvNGw0TFdiV19MWHhlVzc4SjFkZGpmQm5FbXB3b0ZueFpkMEFoZlN4czQ1dEhfWGpYZDVOUjVOSmI4RTV1QU01cThGM3pMLXEzOXh5Zmc0RWhicWotc3RobXVVUw?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-12",
+        "title": "Stock Market Crash: What History Says Comes Next After the Market's Big Single-Day Dip.",
+        "source": "The Motley Fool",
+        "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPVXVCRWFRazQ3b094alFiUUl1eVc1WG1EdDVua1NBSURJMnl2QVRSeXpFQkU2WE41MHBLR25wNUhCQ3pTVE5Db3FFNEt6UGZpWWV5X1FJWGNYRDVZeFpmMy1WUy1fUjdyTktnVGduYlRHX2xlR3IwQklQRjd0WEdnYTQ3R1VzWVFfdkNqaHQtWnlBNE1aeWh1STNldExLbFdSbWNMU1ZuYVFWWTRKQnN0Z0lyVHpFZlJqcGJPblZWTkV0Zw?oc=5",
         "kind": "nyhet"
       },
       {
@@ -1037,13 +1051,6 @@
         "title": "TSX futures rise as CoreWeave outlook provides relief after bond market selloff",
         "source": "Yahoo Finance Singapore",
         "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNQlgwNzM2bkxSZWJZZUhxTUY0b1o5WU41VzBEUFdvOVh0Q0RvWHlvWF96ZkdiYmg2THNwdmhWT1pQUmJYRkk1N1VkYmRJU3Bka2pnVVdta0pTVWUyVGlOMUM3WnFTQkc4ZDYtaGdqaElzODZDSkx0V3dMa3l1RVJpOVQzUGZSbkx3WUlR?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-11",
-        "title": "Stocks Slide on Nvidia Troubles, Oil Edges Lower: Markets Wrap",
-        "source": "Bloomberg.com",
-        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPYmF2Z05ObnRwSVdvWGJrWC1XZlIzVXlYMTV3eVRwQWlScGY3TGpuamVOTEpremJZQnhJU3hkOWl2ck4xNFdzQWM1VTh2OEVBQ3FCTzNiYThfOTlzSHpqX0hHeWQ3dzZTcnRsVzYtMzFWeElmZVdVWUdQcnhIbEp1SS1lejVoM2Y1OGdScGpLbzJPVWhk?oc=5",
         "kind": "nyhet"
       },
       {
@@ -1135,13 +1142,6 @@
         "title": "History Says Dividend ETFs Can Protect Your Portfolio if a Stock Market Slump Is Coming",
         "source": "The Motley Fool",
         "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPTGpWOExQZUg2WGZOVzMyQUFycEFCLUpHdnY2R3B0Y2V4TUhja1kxOGswVk8yY0lQUHktMHJXTEtXTmZmd042dmhvTUdRR2ZOUUV4UGhQY3RRZWxfc2p1MHpySHJod2ZfZGRfb2ZaU2Q2SjFHMDN3d2tfdUNNYTZjS0JNeGpwU1I0ck9seU52eXFKUThqX2Z0c0sxdjJUanFQcUc0cHBxZVY1QlFVSXFrZ2VLYTZZeTV0SXUzazBKd2RzQXlvZU1lY2V3?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-11",
-        "title": "Could the Latest Inflation Data Trigger a Stock Market Crash?",
-        "source": "The Motley Fool",
-        "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNaXg2S0dsUzhXcEQ2TUI4SjFNYkF3dUxPSlFuOHF2SW1yN3N0YnJLM2t3V1VaTFlPX2JQQ3RmS0E2cXBrQ2FDYTRaMzdrTTAtOGM2XzNEdXl2UEpRN0dXS2dXVWlySXlVZUJpcEtOWG5QbEdLY2dmaVFlekUxT1NwQ01MWVE0LXVBR055WFI3QkN0UmlENnhEZWVtcmljWHhnQk9tdWlB?oc=5",
         "kind": "nyhet"
       }
     ],
@@ -1833,6 +1833,13 @@
       },
       {
         "date": "2026-11-12",
+        "title": "US October PPI Preview: Fed Rate Hike Expectations Rise, PPI May Be Key Variable; How Will US Stocks, Dollar, and Gold Move?",
+        "source": "TradingKey",
+        "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPanh6SEpJWDdqcEl4YXNRVGZ4NnVwbTRvVlo3cm50aGRkcWtXQTgxaUJFd2loOVNGUThIMkhkdk1lek1IamVoQWhNZHJHUjRvSHZsV0VhSDdHdnFsRThFM3BuQkIyT082VGRnUzBZdHJGT3BVUEdtSll5N2E0b0tzcWt6ZWtaSnJUeXVPQ2pVbHVTNWQ1WXpsWDY2RmlwZi13ZTcxVEJVeWthUmlOQVJvT1NqVTRYS1lZajZjdjlIVV80aHBMYm5zNkd5UndvMlhmTnRUUmpaWQ?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-12",
         "title": "Gold Price Forecast: US CPI Fuels 50bps Fed Hike Fears",
         "source": "www.equiti.com",
         "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPTExvQ3VfZ0dxQ2RJMnFPVlBBcTZpQ29La0dISExDQVFHblA5bm91S3dEOE9pVTd3cmtRcW95Um1JcG9zbjduQjZGdHV1YWJUWG5FQTdVc1EtS09CS2JaZ3pRU2xMaFF3b1paVGJDbEwxUnZqMjNiSnEzRXAwenh5WmNoMkxwSndvOUxaTEloY3JFdEtpTFRYVDNwSG0?oc=5",
@@ -2061,13 +2068,6 @@
         "source": "Free Malaysia Today",
         "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOSXJNOWhoa0dRd2hlaUpmaHltODdUOHZEV3pmaUFCX0hlQlBRaGpNYmx4LThuSjh5NFB6UjFjRloxQ2RqLWVZR3BySWRLNnpBT2QzZzQxVFN0RzM3OHJndlJGMEZaX00tWWVNRXI0bFl4RHZ6eGRKSjlXeU1oakliakJSMzk1cGlDeUt0ZEdZNnlVdkVfZHlGYklaZXRLbGpBZFpjTkx5dkhHMXRTMXRiQU9XRmRSdXpzU0xneUUtanhIR3pPNjBrSjlxYw?oc=5",
         "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-10",
-        "title": "US inflation tops forecasts, fueling December Fed rate hike bets | Daily Sabah",
-        "source": "Daily Sabah",
-        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOYW1aOHNtWjVZUDJxSHRzdTk2ZFdtWUZBOWFBSjdqSElFOFVRVGdMX3hzTkMzMkVONTVhT2pkU2V3TXViNExHZmdrX3BmUng1OE1CLThkNDcwUjlaZlh2X3NiejdQQXhQQVZ2RFV0MnVSNGlRY01SNnliZHVENExlLXI1Z2tpY3dVNFhuYVJoWHJ2ZW1sMW15amNPcHprNlRCblI4TUh1RFg3bEHSAbABQVVfeXFMUEJxUWpuT0J1VGxQXzJLZEZ6ZW1Zc2pVU3NtTktoYzNENWQxeUdWZUNrMkpEekxMdW43SUd4REJfT0NYU2owYUExVl8tc1ZzOVlxajZ3bFlKYUNYN2dJUXIwSU5ieTdKa1JtVDMzRmJIOVhGZFRpM21JcXd0aktabE9fRVZDODBvdTZuRHNRdkVjNmMxTW0zbjVxd05uRWk3Z29sUS1peUpGX2FiN0N5WnU?oc=5",
-        "kind": "nyhet"
       }
     ],
     "ai_kreditt": [
@@ -2111,6 +2111,13 @@
         "title": "Great News for Nvidia, Micron, Broadcom, and AMD Stock Investors -- Wall Street Made a Mistake",
         "source": "The Globe and Mail",
         "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOQnVpdzh6SkVNcG5ycENVdm1TWDk3bGNadm92VGJRQ1o4REs5R255Mm5vYlYyOFAtbnVqNXZ6bEQwZld6Q3hvaV8ycjNKU2hUQ21Wd2xaLThsVmFjSWk0dXBUT3RTdVliWnNMVTQteEhYVVdCdGdZYXhJaVFIWGRQYmlxNjJsS09fX2ZhQW9jVXVSTUNqRWp6Q1RLUVhFdlJUU0gtU1hCZ1hhSkJiUUhUaTFWQ1FZdGJIZUZ0T1VUTzAzXzYyNUhFdV9vNkszNTloZ3h2MXQ2TTNWOGRPMkRoejEyY19ZQzZucUxiY3UwTnBJR0tTRlVVX2xQRzdYX1dUM0E?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-12",
+        "title": "Great News for Nvidia, Micron, Broadcom, and AMD Stock Investors -- Wall Street Made a Mistake",
+        "source": "The Globe and Mail",
+        "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPZTA5TWlBS3NZMmtvcnh4X3NHc0hqSkk3TDRtV3dISnZYaEhrOF9pSkNpRU1PeFZDNE1SbGZZREdPaHhoV2dkOF9mTFU1OWY0NUxsNDVzcy1GS3Y5UXhOZ2J6blNMQk9IUDJBQjVZNUtxTms2T3ROSE5HWjh2N2lkMlM3R1UyVnp5am9CVjhsSnRrcnNORFBoMUhoUjJWT0RVQUNUaFVmNWxPWDVXOFl6WXR1YlVBa09uWW5OQ1VVMEV5M1RmdHlfcHZTcnR4ZFRjS1dLQWNzc1owdlg4ZklkbXdiVWxlMlUyTVMzSENDOVk1TmJGSWU5Y0R5NEIzdGNR?oc=5",
         "kind": "nyhet"
       },
       {
@@ -2206,13 +2213,6 @@
       },
       {
         "date": "2026-11-06",
-        "title": "Hyperscaler stocks stall as capex surge overshadows strong Q3 earnings",
-        "source": "scanx.trade",
-        "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNSWxLb204b2VUMzJTQlNuMnhDVm5lSzczblp6bHh0MG54UTU5R18teGtYa1FycWZPVFRBUnc1SWVZdHJTS1d4M2JmMU9tZndEQmljQjRHOEk1YXpzdWpXX1NENF9GdlNpaUN0Z2I2UDhac21YUDZmbXRCRGRYOWx0Y0hYMXk1SENneldZYUFoSE04Y1dSMjlib19BYTlNRjg1ejYzQkxxNEhncmNSWGJpTHhDc3p6VGpHUUt0WE1n?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-06",
         "title": "Dan Ives Forecasts 25% Drop In Capital Raises for MSFT, META, GOOGL, AMZN as 2027 CapEx Peak Sets Up ‘Mas",
         "source": "Benzinga",
         "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxOX1RMTE1HMnNUV2w3Tm1Rb21TcXJzbzFVcEwtTlJQMVhzVEpOdVhOUE1fd3N2NFlfSzlrLWY3TTlNQmlaMVBMUjh1MTI4bE5aS0E3cG5FbjFXbFctd2hwX1lKUFNTOTlhNnh6UnZpN1VfYTlweWxKSlFDZTZ1VGF4M1ZlSzR1MHRHOERtMFpkQ1lta0VfRzJHdzR5WktwQU9lNVFUR3JJREE1cjN5RjJCemtfZlBFMm5DWHVsVlpkM0VWdXRIQ1pXdlJqU2lXZUpPX3V3NUQxUVVXNGVpVTZ0VXVjblNWYU1IYS1uek50NmdPVEdfdFlYTWF3S3l2TXMwQ1BkcmNjOHY4S2w3UHBBN29R?oc=5",
@@ -2304,9 +2304,9 @@
       },
       {
         "date": "2026-11-04",
-        "title": "Hyperscalers Face “$1.5 Trillion Gap” Between AI Spending and Cash",
-        "source": "TIKR.com",
-        "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOX0NiZjNjUE1ad3ExdTFleEZObkdBeVZ4SUNQQ1dCUnFQNDlRMjZYWG84ME5XaHk3QzVtcEM3Q1pZSFpDR3E3TDdnN1c3SXhicElZVU84UGdOblRuUGlrT19MSDRXSFNZbXgxbThZZjd5VEtkWWdIZG1uSjZtOFVoS3Q1bHRjRzl4eTVpd3VCWi1oUDA?oc=5",
+        "title": "Hyperscaler stocks stall as capex surge overshadows strong Q3 earnings",
+        "source": "scanx.trade",
+        "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNSWxLb204b2VUMzJTQlNuMnhDVm5lSzczblp6bHh0MG54UTU5R18teGtYa1FycWZPVFRBUnc1SWVZdHJTS1d4M2JmMU9tZndEQmljQjRHOEk1YXpzdWpXX1NENF9GdlNpaUN0Z2I2UDhac21YUDZmbXRCRGRYOWx0Y0hYMXk1SENneldZYUFoSE04Y1dSMjlib19BYTlNRjg1ejYzQkxxNEhncmNSWGJpTHhDc3p6VGpHUUt0WE1n?oc=5",
         "kind": "nyhet"
       },
       {
@@ -2341,14 +2341,14 @@
         "date": "2026-11-03",
         "title": "Hyperscalers Face “$1.5 Trillion Gap” Between AI Spending and Cash",
         "source": "TIKR.com",
-        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQU1lPUUQzamNHYmhTcnhDQWFjQ2l3MkpDbWZyMUpRSWlDUjZwcnZhTlFMdlF2WXRkLVkyZUd4RFRnLUZDd1oxVzgzNUhEbVRNTWxuYzVYSzJJY1U0eUtMZUhaTmx3QWgwM2t5Y2lRbVQ3MDdlU1E0UmJuMUtMMGZ1NTZPb2xabUZ5S0VCZHhheWdQeGNu?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOX0NiZjNjUE1ad3ExdTFleEZObkdBeVZ4SUNQQ1dCUnFQNDlRMjZYWG84ME5XaHk3QzVtcEM3Q1pZSFpDR3E3TDdnN1c3SXhicElZVU84UGdOblRuUGlrT19MSDRXSFNZbXgxbThZZjd5VEtkWWdIZG1uSjZtOFVoS3Q1bHRjRzl4eTVpd3VCWi1oUDA?oc=5",
         "kind": "nyhet"
       },
       {
         "date": "2026-11-03",
         "title": "Hyperscalers Face “$1.5 Trillion Gap” Between AI Spending and Cash",
         "source": "TIKR.com",
-        "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOVDUyYkt4dU1CNG5yT1ozMTNaSHV0UHJQRU9XcGRpdDg4dGZfOUl1NDlESDctSFRYWEtTTmtReFppbFpiQTVHQzNHa045SW1Yc3JhWU9QSkxSTzd3SW8zcjJFR0Q5Uk1EZnZ4cUl2N0RpcHdLT0wwc0ZmMG1Nd09xb0gzaUp6QmdQbmNtOGV1WDhzZUV3QURfSU1HczJOV1R0bzA3Tm1GbjJ2emtIXzBDeDZVVTNqMk5LV2otM2hzUXdmNXNMb3h2dWhMRWRKbWFvdGlSN3c5OA?oc=5",
+        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQU1lPUUQzamNHYmhTcnhDQWFjQ2l3MkpDbWZyMUpRSWlDUjZwcnZhTlFMdlF2WXRkLVkyZUd4RFRnLUZDd1oxVzgzNUhEbVRNTWxuYzVYSzJJY1U0eUtMZUhaTmx3QWgwM2t5Y2lRbVQ3MDdlU1E0UmJuMUtMMGZ1NTZPb2xabUZ5S0VCZHhheWdQeGNu?oc=5",
         "kind": "nyhet"
       }
     ]
