@@ -1,9 +1,8 @@
 {
-  "generated": "2026-11-15T23:01:23Z",
+  "generated": "2026-11-16T06:46:06Z",
   "sources": {
     "karsan_Google News": "https://news.google.com/rss/search?q=%22Cem+Karsan%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "karsan_Apple Podcasts": "https://itunes.apple.com/search?term=Cem+Karsan&entity=podcastEpisode&limit=50",
-    "karsan_Kai Media (YouTube)": "https://www.youtube.com/feeds/videos.xml?channel_id=UChrx0LQWgRhTuVqUXEbM6Cg",
     "rente10": "https://news.google.com/rss/search?q=%2210-year+Treasury+yield%22+OR+%2230-year+Treasury+yield%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "spx": "https://news.google.com/rss/search?q=stock+market+selloff+OR+correction+OR+%22bear+market%22+S%26P+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "qe": "https://news.google.com/rss/search?q=Fed+%22quantitative+easing%22+OR+%22balance+sheet%22+OR+%22Treasury+purchases%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
@@ -12,7 +11,9 @@
     "inflasjon": "https://news.google.com/rss/search?q=US+inflation+CPI+%22rate+hike%22+OR+%22inflation+expectations%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "ai_kreditt": "https://news.google.com/rss/search?q=hyperscaler+capex+OR+%22AI+debt%22+OR+%22credit+default+swap%22+Oracle+OR+Meta+OR+Microsoft+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen"
   },
-  "errors": [],
+  "errors": [
+    "Karsan, Kai Media (YouTube): Henting feilet: HTTP Error 404: Not Found"
+  ],
   "karsan": [
     {
       "date": "2026-11-13",
@@ -864,6 +865,20 @@
     ],
     "spx": [
       {
+        "date": "2026-11-16",
+        "title": "Asian Stocks Brace for AI Pressure, Data Dump: Markets Wrap",
+        "source": "Bloomberg.com",
+        "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOU3BQd2lUam5YX1RGekdqV203U1BmRzNUQnlhem10ajRycVpfTUYzRWtOM2h1ZDd5M2tvUnNXeG1VOHRGTEl4VkJsSUhuQk41UlcyNU1EZDJaSTNTd2NvM3lDUDV5NU95SUtxSHZaZEpjSnMxRGgtamUtb0lYWUtHMTFZZDBLblVaeXhVTEhSa2ZPeF9y?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-15",
+        "title": "The Stock Market Is Sending a Rare Warning. Here's Warren Buffett's Best Bear Market Advice.",
+        "source": "Yahoo Finance",
+        "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQLXpWWmwyYjBfOVJkVGZvdXJkdHMxMFlZYkFZTjE3Y0dHVTFXamhOX1l6UUJZcTlPbFl3Vm41WXRRZXo2bmI5Q1FtS3Y4UlZNLWFnU0hQd21JdXhDR1RPMDVEcmJEZHg0T3ZCR2dRb1FQR2VBNUpNaElPR1ZIZEdUXzlWLUhNRHg3UmphMGtvcXVqMUswbmlnNzgyOGg3a2M?oc=5",
+        "kind": "nyhet"
+      },
+      {
         "date": "2026-11-15",
         "title": "The Stock Market Is Doing Something for Only the 6th Time in 156 Years, and History Says It's Clear What Comes Next for Stocks",
         "source": "The Motley Fool",
@@ -1128,20 +1143,6 @@
         "source": "JournalArta",
         "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQUTcwOEgxdm9VR3NwcE1jU1pOMmtFbkFfSm9oTXdINm9UZnZnTW5JRGtWMkdNRGV0SnpwMGxjSHFVTzBjSVJfUGMxNnJoa3ZLejJ3WTZ4S0E5bTNUM0ZGZC1nOTdoaHNzYmtyNWxGZHhsdlVWOHJrTG1DbGJMb3AwZUUyZExLUXM?oc=5",
         "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-11",
-        "title": "S&P 500: Is a Stock Market Crash Coming? Buffett’s Advice",
-        "source": "JournalArta",
-        "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQME5Ic2hmRkVFU1lCRHVlS2NoVzNkSjJvcGtTUzFXR3RTWXpUMFFnTkliZXhTSEl2RGpSYW54SmFLWkYxMnI1TDBpVDBQWC1PR09iRWdtUXYxbGwwWi1xemNkR0xTU1Y3SjdJN2tZWnkwLVhNeXNXQ0hNV05QQjdmVkFCa09QZjA5bzZ2by00aw?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-11",
-        "title": "S&P 500, Nasdaq Futures Rise Premarket — CRWV, GPRO, SPCX, NVDA, NLST Stocks In Focus",
-        "source": "TradingView",
-        "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQNHMwaU9rR2gwOXhhTTliQm5sUWc4Qk1OdEhockV5c3hsbkxiN2c2ZkR3bWUwY1ItR21BR3BTOHZST3Q0cTNRSXBVaGhuWFhERWdNS0ZaWUNsc3V1enhQcVdGZWZiYjl5TG9Zd0wtWl9PWU56bTFjcVFVZi1VYy1uLVY4Z3UzQU1tcDNLOUZBejJoLWZnSjEyVXhwX2FOMk53X1pfQkhmcFlFeVBnNTduM2NGMEVhRVVyVk5YX3pSajYzQ0h0eUppSW81MkpKZEtaVnN0VHRn?oc=5",
-        "kind": "nyhet"
       }
     ],
     "qe": [
@@ -1185,13 +1186,6 @@
         "title": "AI Tops Financial Stability Risks Cited in Fed Survey",
         "source": "The Defiant",
         "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOU3BIazIyS3Q4T1ZBQ1ZOU29fa3RQUmJMVmdIZFo1SkIxNVhkLXlTd28tVVM1X0RxYnlMa09JaWNMSUM5RTFVTzhpNW5DeTdDOWNTZTkyYWdsRkJqeUZtb2F1Z0VwdHAwSkRmNXhVdVB3Y2pHS2VUc1FJVGFOamtwQXRrb3lxNWtNMm1COWFId0Y?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-14",
-        "title": "Dallas Fed Urges Separate Account for Crisis Buys",
-        "source": "Briefs Finance",
-        "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPMmV0dUI3clBxdVFHMWZoODJVSnlYLWN4ejRKMUxJQk1EX2t0ekh1LXo4b25SOHl6R29rTldQbmliRXdSZjJRbkFPYVFqYWJ6dUtGT3E0YUFiMEhNTDVaU0hXcHFpRHZQdlFHMFFjalZhR1I4NmdJd3ByYWZEbk5VOENzZHkwaXJVc2xaR3dhbnhPQQ?oc=5",
         "kind": "nyhet"
       },
       {
@@ -1239,7 +1233,7 @@
       {
         "date": "2026-11-13",
         "title": "Fed’s Logan Calls For Clearer Separation of Market Operations",
-        "source": "Bloomberg.com",
+        "source": "Bloomberg",
         "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQTFVYS3dlcE1vRFNFSWt2NGtZbVgwOEg5SnRndGN6TERZTF9abEhaM05QNzFidEJpdElGOVdES2w0MV9zMnBmX0FCTWo0c3ZMRVh4WHZWcXM1ekFQWmtSek1pbUJqQk1qYV9JUkpveWdPT0RPRzFGbVo2UzloRGlIazVTLWw5UWhibkVhamVXQjgwZkI5RmVneEVqV3ZLXzI0blhVWTJlLXNPeElOU2VwdktR?oc=5",
         "kind": "nyhet"
       },
@@ -1262,6 +1256,13 @@
         "title": "Dallas Fed's Logan urges Fed to bolster operational readiness before a crisis",
         "source": "TradingView",
         "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPVFVESk5mSjJQRW03QktYQXRiUFMtSDg5cE5fR2l2dWQwY2tWQ01rNXFyeEZzNGJ4b1lUc3J0S1NnOFpjOG45S3g4RzZSbEd5SzJjSXQyWUVpY0FZakYtdjdtUXZaVVhTdWZnSXFwR1hybnZ1RkhSdzRISkpoYWxubUhUSHUwRUZTWFJ1STVTd3pzSDhKLWFPUGdrcU9OeVlOMENDWnU3M3lKNmJ2MXo3Y2JXTldJRnI2SnNGelEyd2xvUHZGU3R5TVB2LVRFaTFCNklrdEd3cw?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-13",
+        "title": "Dallas Fed Urges Separate Account for Crisis Buys",
+        "source": "Briefs Finance",
+        "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPMmV0dUI3clBxdVFHMWZoODJVSnlYLWN4ejRKMUxJQk1EX2t0ekh1LXo4b25SOHl6R29rTldQbmliRXdSZjJRbkFPYVFqYWJ6dUtGT3E0YUFiMEhNTDVaU0hXcHFpRHZQdlFHMFFjalZhR1I4NmdJd3ByYWZEbk5VOENzZHkwaXJVc2xaR3dhbnhPQQ?oc=5",
         "kind": "nyhet"
       },
       {
@@ -1451,7 +1452,7 @@
       {
         "date": "2026-11-04",
         "title": "The Federal Reserve’s Independence Is Assured for Now",
-        "source": "Bloomberg.com",
+        "source": "Bloomberg",
         "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNlpyWUJ6RXdiLWEwZWhQNmpZRGdTRHFpZ2lGbWJhV3pqcUR3RDh4NUFRRVU4M19ITmRDbUxCaXRZcVB4M3BJaHBGVXUyVEstblh6RGdHOHBoQnh1eWxkLTltdng1UUlvd2dwT1FfUHFuaFc5bU1hUmlaUi15U0lxaUtmSks1enRHRGR5MGZFV0VvZjlJa3c3X18yMThGRXRJVnZZUmpnWDhwVVRSekEyLWZxd1MxNzNqSkxFbQ?oc=5",
         "kind": "nyhet"
       },
@@ -1797,6 +1798,13 @@
       },
       {
         "date": "2026-11-13",
+        "title": "Why Is the Euro Falling as Inflation Concerns and Fed Rate Hike Bets Lift the US Dollar?",
+        "source": "www.tmgm.com",
+        "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPS24yM29MRVVLZTB6b0NzV3pBVERhUm9OSjY2TmZza1lZRjRFUFBBaGVEWVFDV19TU3hJM005MnpSemdwV1VMSEJHYXdXb0E2WS14aHBnRnVJdGxEc1dDdkxHZ2Z1LVNYak9oaDZ5MmRpTWZ3X1Z4aVd0S0ZzdHFHQXJEWVVrdFpJS2ppN0VFSVlvNGd3YUxEUnp6V0FQUVZxRGs0eFc5MlVBYTBoMUo5SXlreUpVWVVZNHpTdG4yV1RGV2tvZm14cUJGcjR2RHpnWXRqbzB3?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-13",
         "title": "Fed signals December rate hike after hot October inflation data",
         "source": "https://streamlinefeed.co.ke/",
         "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPVV92N1M5Ym52NnAyZjVnOU9SLVFWMFhMNnh2aEp1RU56WWU2cXJGZkExd2xvdVNXX1JZenRzSDRqUnVBTzZ0Qk55U1VJWGFhbU1WazhzSWxNcFZ0VFZXdmdraUJfZW5tNnA1V2NUYWVnVkxRX3BKQ1E3ZEhhYkQ1UXRiZlI0TzRISWs2NDVYWUMyWExEQ084WGltN3A3dw?oc=5",
@@ -1856,13 +1864,6 @@
         "title": "Gold Extends Slide Below $4,000 as Rising US Inflation, Fed December Hike Bets Pressure Prices",
         "source": "TradingKey",
         "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOZkxNNjNtWU1XUGhlakY0bC1Qc0Z0Q1NmY2pTSDJEcmNLcEhEZGV4T1ZoQmlzSGh3VXN2Z3EweUxFczl3a25PV3BXOE9FclE1YUlCQnZkZ0xXOTRRTnZmNWlSeXVlaFVMMjJHeENNQnZybTJ5Rzh0M3ZuZ2RyN2ZRZXRpWm94cFlmV3oxd21lTlMwSDBDb1BMN3pZR2JNeGtvTjFjUzVJeGU5TFFYell0cVdvdlFIU2VNLWw5MC1MVDBCWlk?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-12",
-        "title": "Fed Rate Hike Odds Near 80% Raise the Stakes for U.S. CPI Data",
-        "source": "StoneX",
-        "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNa1ZPSi1ZMjczYU01b3BjTXpsRzZMRUJ1NmY0YWZVaks4aWxVc1AyUnJJUTBhRXdNdlNqN3F2akp4MTZ3QVBtOHlVQnlZUmMyWUs2Qnp4WFpDSUlDTnNiMGEzRTNTRWRUdHZrLTdyZEozVFVnQ1ZIcE9hOW1QQ2JGd09rWkV5dlJHUlF3SzBXUTlkZTlTaktlb3d5ZF9vSlpvZ1lRXw?oc=5",
         "kind": "nyhet"
       },
       {
