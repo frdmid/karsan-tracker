@@ -12,6 +12,18 @@
       "transcript_status": "mangler",
       "message": "Ingen transkripsjon i feeden. Lydtranskribering er av (TRANSCRIBE_AUDIO)."
     },
+    "836a0be3da2f": {
+      "id": "836a0be3da2f",
+      "date": "2026-11-09",
+      "show": "Other People's Money with Max Wiethe",
+      "title": "Structural Flows Will Support Stocks Until the U.S. Treasury Crisis in 2027 | Cem Karsan & Noel Smith | Kai Asset Management",
+      "link": "https://podcasts.apple.com/us/podcast/structural-flows-will-support-stocks-until-the-u-s/id1776646831?i=1000800864660&uo=4",
+      "audio": "https://traffic.megaphone.fm/EWWMN1397441416.mp3",
+      "minutes": 65,
+      "collection_id": 1776646831,
+      "transcript_status": "mangler",
+      "message": "Ingen transkripsjon i feeden. Lydtranskribering er av (TRANSCRIBE_AUDIO)."
+    },
     "fc7767a0119a": {
       "id": "fc7767a0119a",
       "date": "2026-11-08",
@@ -1448,6 +1460,16 @@
       "minutes": 64,
       "collection_id": 888420325
     },
+    "9f355cce82ff": {
+      "id": "9f355cce82ff",
+      "date": "2024-07-24",
+      "show": "Top Traders Unplugged",
+      "title": "GM66: Trump Trade and the 3 Legged Stool ft. MacroAlf & Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/gm66-trump-trade-and-the-3-legged-stool-ft-macroalf/id888420325?i=1000663171267&uo=4",
+      "audio": "https://podcasts.captivate.fm/media/0ad11657-ca10-47b9-8ca1-465406025a64/TTU-Global-Macro-Episode-66-Alfonso-Peccatiello-Niels-Cem.mp3",
+      "minutes": 67,
+      "collection_id": 888420325
+    },
     "1c633c2ea4ea": {
       "id": "1c633c2ea4ea",
       "date": "2024-07-17",
@@ -1567,6 +1589,16 @@
       "audio": "https://podcasts.captivate.fm/media/dceba7a3-dfcc-406b-b782-777876de6ef2/TTU-Global-Macro-Episode-55-Dave-Dredge-Alan-Niels.mp3",
       "minutes": 82,
       "collection_id": 888420325
+    },
+    "b28143be80a5": {
+      "id": "b28143be80a5",
+      "date": "2024-01-09",
+      "show": "Thoughtful Money with Adam Taggart",
+      "title": "Will Stagflation Be The Price We Pay For A 'Soft Landing'? | Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/will-stagflation-be-the-price-we-pay-for-a-soft/id1715910847?i=1000641051225&uo=4",
+      "audio": "https://anchor.fm/s/eca7b164/podcast/play/80997427/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2024-0-9%2F362703507-44100-2-4e702d6a778d8.mp3",
+      "minutes": 63,
+      "collection_id": 1715910847
     },
     "0aa5d6e1cd41": {
       "id": "0aa5d6e1cd41",
@@ -1769,5 +1801,5 @@
       "collection_id": 1128955736
     }
   },
-  "generated": "2026-11-19T02:40:49Z"
+  "generated": "2026-11-19T11:52:33Z"
 }
