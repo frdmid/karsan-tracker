@@ -9,8 +9,20 @@
       "audio": "https://traffic.megaphone.fm/EWWMN9574622248.mp3",
       "minutes": 65,
       "collection_id": 1769093906,
-      "transcript_status": "mangler",
-      "message": "Ingen transkripsjon i feeden. Lydtranskribering er av (TRANSCRIBE_AUDIO)."
+      "transcript_status": "ok",
+      "message": null,
+      "analysis": {
+        "karsan_deltar": true,
+        "oppsummering": "Samme intervju med Karsan og Noel Smith publisert i Monetary Matters-feeden. Se analysen av Other People's Money med Max Wiethe fra samme dato.",
+        "pastander": [],
+        "forslag": []
+      },
+      "analyzed_at": "2026-11-19T12:21:36Z",
+      "model": "Claude i Claude Code (manuell analyse)",
+      "transcript_source": "YouTube, automatisk teksting lest i nettleser",
+      "transcript_url": "https://www.youtube.com/watch?v=VUIv4gAsYqA",
+      "display_title": "Monetary Matters: samme intervju som Other People's Money med Max Wiethe (9. november 2026)",
+      "display_link": "https://www.youtube.com/watch?v=VUIv4gAsYqA"
     },
     "836a0be3da2f": {
       "id": "836a0be3da2f",
@@ -21,8 +33,120 @@
       "audio": "https://traffic.megaphone.fm/EWWMN1397441416.mp3",
       "minutes": 65,
       "collection_id": 1776646831,
-      "transcript_status": "mangler",
-      "message": "Ingen transkripsjon i feeden. Lydtranskribering er av (TRANSCRIBE_AUDIO)."
+      "transcript_status": "ok",
+      "message": null,
+      "analysis": {
+        "karsan_deltar": true,
+        "oppsummering": "Tatt opp fredag 6. november, dagen etter det første store volatilitetsutslaget etter mellomvalget. Karsan kaller fallet et første varselskudd: markedet har en svært fet venstrehale, men holdes oppe av strukturelle flyter. For at halen skulle utløses nå, måtte fallet fortsette innen tirsdag 10. november. Ellers venter han at flytene presser volatiliteten ned mot desemberforfallet, med mulig ny toppnotering. Fallet som skal utløse redningen kommer før juni 2027 og er løst innen desember 2027. Renter er strukturelt høyere, og QE er eneste utvei, i løpet av seks måneder. Noel Smith solgte de fleste sikringene sine på toppen av utslaget.",
+        "pastander": [
+          {
+            "tema": "Første varselskudd",
+            "pastand": "Torsdagens fall var det første bruddet på indeksnivå etter et år med spredning mellom enkeltaksjer. Volatiliteten på indeksen holdes nede av strukturerte produkter som har vokst 100 % i året i fire år.",
+            "tall": "strukturerte produkter +100 % i året i fire år",
+            "tidshorisont": "november 2026",
+            "sitat": "this is kind of the first shot across the bow",
+            "tid_sek": 105,
+            "forhold": "bekrefter",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Kort vindu for halen",
+            "pastand": "Halen utløses bare hvis fallet fortsetter innen tirsdag 10. november. Gjør det ikke det, gir november- og desemberforfallet og Thanksgiving strukturell støtte, og markedet kan raskt være tilbake på toppen. Desemberforfallet blir det største noensinne.",
+            "tall": "",
+            "tidshorisont": "10. november til desember 2026",
+            "sitat": "we could be right back at all-time highs pretty quickly",
+            "tid_sek": 1600,
+            "forhold": "bekrefter",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Tidspunktet for krisen",
+            "pastand": "Fallet som trengs for å rulle ut planen kommer før juni 2027 og er løst innen desember 2027. Det kan starte rundt forfallet i desember eller januar. Kai bruker kalenderstrukturer med salgsopsjoner rundt juni 2027.",
+            "tall": "",
+            "tidshorisont": "før juni 2027, løst innen desember 2027",
+            "sitat": "coming sometime before June of next year, right? and will be resolved by December",
+            "tid_sek": 3355,
+            "forhold": "bekrefter",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Skew",
+            "pastand": "Skew har bare vært så høy tre ganger på ti år: høsten 2019, juli til september 2021 og nå. De to første kom omtrent seks måneder før starten på et større fall. Han definerer skew som prisen på salgsopsjoner 10 % ut av pengene mot kjøpsopsjoner 5 til 10 % ut, 30 til 60 dager frem, altså ikke Cboe SKEW.",
+            "tall": "ca. seks måneder før fall",
+            "tidshorisont": "",
+            "sitat": "they all preceded then let's say six months a decline",
+            "tid_sek": 715,
+            "forhold": "endrer",
+            "gjelder_krav": ""
+          },
+          {
+            "tema": "Renter",
+            "pastand": "Rentene skal strukturelt høyere: strukturell inflasjon i 68 måneder, færre utenlandske kjøpere, refinansiering av gjeld fra 2021 og gjeldsfinansiert AI capex. Trolig også høyere de neste en til to månedene hvis aksjene stiger.",
+            "tall": "68 måneder over 2 %",
+            "tidshorisont": "de neste en til to månedene og strukturelt",
+            "sitat": "The answer is higher. And and the base case is structurally higher.",
+            "tid_sek": 2906,
+            "forhold": "bekrefter",
+            "gjelder_krav": "rente10"
+          },
+          {
+            "tema": "QE innen seks måneder",
+            "pastand": "QE i lang ende eller en fasilitet som støtter gjeldsoppbyggingen er eneste vei ut. Warshs vekt på balansen er kabuki-teater. Det kommer innen seks måneder.",
+            "tall": "",
+            "tidshorisont": "innen seks måneder",
+            "sitat": "That's coming and it's coming in the next six months.",
+            "tid_sek": 3156,
+            "forhold": "bekrefter",
+            "gjelder_krav": "qe"
+          },
+          {
+            "tema": "Fed-prising",
+            "pastand": "Noel Smith: Fed funds-futures gikk fra 2,86 hevinger frem til september 2027 for et par uker siden til under to, så én, før jobbtallene 6. november ga litt mer.",
+            "tall": "fra 2,86 til ca. én heving",
+            "tidshorisont": "til september 2027",
+            "sitat": "they went from three 2.86 rate hikes",
+            "tid_sek": 2563,
+            "forhold": "nytt",
+            "gjelder_krav": "fedmal"
+          },
+          {
+            "tema": "Bessent og Trump",
+            "pastand": "Bessent har vært taus i tre uker, mens Trump sa at markedet går mot en stor depresjon hvis demokratene vinner. Tonen har endret seg kraftig.",
+            "tall": "",
+            "tidshorisont": "nå",
+            "sitat": "The tone has changed dramatically.",
+            "tid_sek": 3668,
+            "forhold": "bekrefter",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Verdi mot vekst",
+            "pastand": "Hvis tapet til Trump utløser en mer populistisk politikk, gir høyere renter verdiaksjer bedre avkastning enn vekstaksjer i 20 år. I 2000 falt Nasdaq 50 % mens S&P falt 15 % og halvparten av aksjene steg.",
+            "tall": "",
+            "tidshorisont": "20 år",
+            "sitat": "the value factor will outperform for the next 20 years",
+            "tid_sek": 2147,
+            "forhold": "nytt",
+            "gjelder_krav": ""
+          }
+        ],
+        "forslag": [
+          {
+            "hva": "Ingen endring i signaler. Juni 2027 for fallet bekreftes, og løsning innen desember 2027 er senere enn i Thoughtful Money (juni til september)",
+            "begrunnelse": "Det strammere vinduet fra Thoughtful Money ligger allerede i signalet Fallet har startet innen april 2027"
+          },
+          {
+            "hva": "Merknaden om skew på SKEW-boksen kan presiseres: Karsan bruker prisforskjellen mellom salgs- og kjøpsopsjoner 30 til 60 dager frem, ikke Cboe SKEW, og venter fall rundt seks måneder etter slike topper",
+            "begrunnelse": "Han definerer målet sitt i denne episoden, så merknaden kan bli presis"
+          }
+        ]
+      },
+      "analyzed_at": "2026-11-19T12:21:36Z",
+      "model": "Claude i Claude Code (manuell analyse)",
+      "transcript_source": "YouTube, automatisk teksting lest i nettleser",
+      "transcript_url": "https://www.youtube.com/watch?v=VUIv4gAsYqA",
+      "display_title": "Other People's Money med Max Wiethe: Why Market Fragility is Building into a Crisis in 2027 (med Noel Smith)",
+      "display_link": "https://www.youtube.com/watch?v=VUIv4gAsYqA"
     },
     "fc7767a0119a": {
       "id": "fc7767a0119a",
@@ -1799,7 +1923,121 @@
       "audio": "https://traffic.megaphone.fm/TIFM7136313716.mp3?updated=1706729904",
       "minutes": 56,
       "collection_id": 1128955736
+    },
+    "fab4358e7724": {
+      "id": "fab4358e7724",
+      "date": "2026-11-17",
+      "show": "tastylive (YouTube)",
+      "title": "tasty Crumbs with Cem Karsan, 14. og 17. november 2026",
+      "link": "https://www.youtube.com/watch?v=xFBNhDRkC6M",
+      "audio": null,
+      "minutes": 39,
+      "collection_id": null,
+      "transcript_status": "ok",
+      "message": null,
+      "analysis": {
+        "karsan_deltar": true,
+        "oppsummering": "To klipp fra tastylive, 14. november (11 min, https://www.youtube.com/watch?v=i0dhEf5U-Ls) og 17. november (28 min). Karsan står ved et fall på 25 til 40 % i vinduet november til juni, mest sannsynlig rundt forfallet i desember eller januar. En rekke dårlige nyheter etter mellomvalget, blant annet om Nvidia, et dataangrep mot Microsoft, en varm KPI og tap av guvernørvalget i Texas, har bare gitt et lite fall fordi opsjonsflytene presser volatiliteten ned. Flytene er sterkest 7. til 18. desember, og makro tar over etter desemberforfallet, trolig tidlig i januar. Om Fed hever i desember betyr lite, sier han nå. Han venter rundt 10 billioner dollar i ny QE i løpet av seks til ni måneder.",
+        "pastander": [
+          {
+            "tema": "Vinduet for fallet",
+            "pastand": "Fra november til juni kommer et fall på 25 til 40 %. Mest sannsynlig start er forfallet i desember eller januar. Vinduet er åpent nå, og halen er fet.",
+            "tall": "25 til 40 %",
+            "tidshorisont": "november 2026 til juni 2027",
+            "sitat": "from November till June there is going to be a 25 to 40% decline",
+            "tid_sek": 290,
+            "forhold": "bekrefter",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Flytene ut året",
+            "pastand": "Strukturelle opsjonsflyter holder indeksen oppe til desemberforfallet, som blir det største noensinne. Flytene er sterkest 7. til 18. desember. For å bryte mønsteret trengs et fall på rundt 10 % i løpet av en uke. Ellers blir det frem og tilbake med lav volatilitet.",
+            "tall": "ca. 10 % fall på en uke",
+            "tidshorisont": "til 18. desember 2026",
+            "sitat": "the highest period of positive flows is coming really uh in this December 7th through ...",
+            "tid_sek": 1166,
+            "forhold": "bekrefter",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Makro tar over i januar",
+            "pastand": "Etter desemberforfallet, trolig tidlig i januar, er flytene langt svakere, og makro blir igjen dominerende. Han eier mest volatilitet i januar til mars.",
+            "tall": "",
+            "tidshorisont": "januar 2027",
+            "sitat": "There will be a moment post dopex probably uh early January",
+            "tid_sek": 590,
+            "forhold": "bekrefter",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Dårlige nyheter uten fall",
+            "pastand": "Etter mellomvalget kom nyheter om Nvidia-sjefen, et dataangrep mot Microsoft, tap av guvernørvalget i Texas og en varm KPI. Markedet var likevel bare rundt 2 % fra toppen 14. november. Han mener nyhetene kan ha blitt holdt tilbake til etter valget.",
+            "tall": "ca. 2 % fra toppen 14. november",
+            "tidshorisont": "november 2026",
+            "sitat": "This is the power of structural flows.",
+            "tid_sek": 143,
+            "forhold": "nytt",
+            "gjelder_krav": ""
+          },
+          {
+            "tema": "Fed i desember",
+            "pastand": "Fed kan heve 25 basispunkter i desember for troverdighetens skyld. Waller har tatt til orde for 50. Det spiller ingen rolle, fordi hevingene blir reversert innen seks måneder. Tidligere sa han at Fed ikke ville heve i desember.",
+            "tall": "25 til 50 bp",
+            "tidshorisont": "desember 2026",
+            "sitat": "The 25 basis points in December doesn't matter.",
+            "tid_sek": 810,
+            "forhold": "endrer",
+            "gjelder_krav": "fed_des"
+          },
+          {
+            "tema": "QE i stor skala",
+            "pastand": "Han venter rundt 10 billioner dollar i ny pengetrykking i løpet av seks til ni måneder, på linje med eller større enn under covid.",
+            "tall": "ca. 10 billioner USD",
+            "tidshorisont": "seks til ni måneder",
+            "sitat": "another10 trillion dollars in the next six to nine months",
+            "tid_sek": 783,
+            "forhold": "bekrefter",
+            "gjelder_krav": "qe"
+          },
+          {
+            "tema": "Bessent",
+            "pastand": "Bessent er ikke bare taus, han har trukket seg tilbake til en militærbase. Karsan tolker det som et varseltegn.",
+            "tall": "",
+            "tidshorisont": "nå",
+            "sitat": "Besson is not only quiet now.",
+            "tid_sek": 1490,
+            "forhold": "bekrefter",
+            "gjelder_krav": "spx"
+          },
+          {
+            "tema": "Fredag og mandag",
+            "pastand": "Brudd skjer oftest fra fredag til mandag, når få vil holde risiko over helgen. Kommer helgen uten nye sjokk, tar flytene over igjen tirsdag til torsdag.",
+            "tall": "",
+            "tidshorisont": "",
+            "sitat": "almost all the crashes in history happen Friday and a Monday",
+            "tid_sek": 400,
+            "forhold": "nytt",
+            "gjelder_krav": ""
+          }
+        ],
+        "forslag": [
+          {
+            "hva": "Legg til i forklaringen på signalet Ingen Fed-heving i desember at Karsan 17. november sa at en heving kan komme og ikke betyr noe. Signalet beholdes og måler hans opprinnelige påstand",
+            "begrunnelse": "Han har myknet påstanden, og leseren bør se det ved siden av signalet"
+          },
+          {
+            "hva": "Nytt kontrollpunkt for S&P: desemberforfallet 18. desember 2026. Karsan venter lite fall før det og at makro tar over tidlig i januar",
+            "begrunnelse": "Han gir en konkret dato som er lett å følge opp"
+          }
+        ]
+      },
+      "analyzed_at": "2026-11-19T12:22:55Z",
+      "model": "Claude i Claude Code (manuell analyse)",
+      "transcript_source": "YouTube, automatisk teksting lest i nettleser (to klipp fra tastylive)",
+      "transcript_url": "https://www.youtube.com/watch?v=xFBNhDRkC6M",
+      "display_title": "tasty Crumbs with Cem Karsan, 14. og 17. november 2026 (to klipp)",
+      "display_link": "https://www.youtube.com/watch?v=xFBNhDRkC6M"
     }
   },
-  "generated": "2026-11-19T11:52:33Z"
+  "generated": "2026-11-19T12:20:12Z"
 }
