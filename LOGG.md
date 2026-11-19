@@ -4,6 +4,7 @@ Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
 ## 2026-11-19
 
+* Godkjent av Frode (forslag 2 og 3): kontrollpunkt for S&P-signalet ved desemberforfallet 18. desember 2026, og presisert SKEW-forklaring med Karsans eget skew-mål (salgs- mot kjøpsopsjoner 30 til 60 dager frem) og seksmånedersmønsteret. Forslag 1 (merknad om Fed i desember) ikke lagt inn.
 * Nye Karsan-episoder analysert via YouTube: Other People's Money med Max Wiethe 9. nov. (samme intervju i Monetary Matters-feeden, markert som duplikat), 9 påstander, 2 forslag; tasty Crumbs 14. og 17. nov. (to klipp, lagt inn manuelt), 8 påstander, 2 forslag. Ingen forslag lagt inn før Frode godkjenner. Hovedpunkter: fall på 25 til 40 % i vinduet november til juni, mest sannsynlig fra forfallet i desember eller januar; flytene sterkest 7. til 18. desember; Fed-heving i desember spiller ingen rolle (myknet fra at den ikke kommer); rundt 10 billioner dollar i QE innen seks til ni måneder. Fortsatt uten transkripsjon: tasty GUESTS 30. okt., tasty Crumbs 21. sep. og 26. okt.
 
 ## 2026-11-09
