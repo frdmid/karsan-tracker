@@ -2,6 +2,10 @@
 
 Nyeste øverst. Hver endring: dato, hva, hvorfor.
 
+## 2026-11-20
+
+* GitHub-handlingene oppdatert til versjoner som kjører på Node.js 24 (Frodes ønske), fordi GitHub varslet at Node.js 20 er utfaset: checkout v5, setup-python v6, setup-node v5, configure-pages v6, upload-pages-artifact v5 og deploy-pages v5. Ingen endring i hva jobbene gjør. upload-pages-artifact tar ikke med filer som starter med punktum, og siden har ingen slike.
+
 ## 2026-11-19
 
 * Godkjent av Frode (forslag 2 og 3): kontrollpunkt for S&P-signalet ved desemberforfallet 18. desember 2026, og presisert SKEW-forklaring med Karsans eget skew-mål (salgs- mot kjøpsopsjoner 30 til 60 dager frem) og seksmånedersmønsteret. Forslag 1 (merknad om Fed i desember) ikke lagt inn.
