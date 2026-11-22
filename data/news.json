@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-22T11:39:25Z",
+  "generated": "2026-11-22T19:50:49Z",
   "sources": {
     "karsan_Google News": "https://news.google.com/rss/search?q=%22Cem+Karsan%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "karsan_Apple Podcasts": "https://itunes.apple.com/search?term=Cem+Karsan&entity=podcastEpisode&limit=50",
@@ -712,6 +712,13 @@
       },
       {
         "date": "2026-11-18",
+        "title": "Mortgage rate predictions for the next 5 years: What buyers can expect",
+        "source": "Yahoo Finance",
+        "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNSGV5UkE4YV9qUTRFRHJ3Rkk3blNHVHNGV0c2MEl1bGJxSmptTzktMTEtMjZhXzAyUlF2UzA5cUNCdFZIRGFyalM1XzlfNk1YaFJYTDhHX2JJWGx3NWRGR2VKMUF4MXFJbXZpQ3gtcE9haE1YUERBMTBHN2UtanB1czh0bGVpdWR5MzFWVTZvZExQUUJMMEwwNEhsd2EyYmRHN0lpQzRtNXNTNDNaNVRKaEVLVHpqM0NsRVlmR2Nvb3M3a0pLdEQ5ZUo5T3dHWVZBVUIzeG9FRjZla3FJUnc?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-18",
         "title": "Gold Stuck Near One-Year Low as 10-Year Treasury Yield Breaches 5%, Draining Capital",
         "source": "BigGo Finance",
         "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1hSXRiZE5aZUZQV1pUN2JPT21McUk0Z1hYTkQtYjlkeERTaHpJblRiUEl2TjBPUGFYX09MeXhMMndSLUNvWlo2ZHlFdEZJbTNWQTRRRGdsTXoyeVRjZi14QUdZR0FzQ1JkTkx3RmgyOEZfZTJpN1E?oc=5",
@@ -884,16 +891,16 @@
         "source": "CNBC",
         "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOQnlvNTc4a3pBZHZZUTlfUUxSS1A2VFl3ZXNpek5zZFJ1ZkNrWThUZjdfYm9xbVROUFNlbFhJOWV5aG5DeUhXQzNwMGJmUXR0ZnJLYWI4eXpTQjcwU0p1SFpCWFhGVzlMTXJuY3d4OTJtZHNXb3ZnZXpQc1EtbEVzOTZoclBWTXNva2pqM09sem16QU5yZDhaTlVLanNGU3F3QVBEYVpkZFp2VFU4UXM0cGJoVVVLRXdYeHA3TjU1NFI4VVpPZ3Fhd0FwVQ?oc=5",
         "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-13",
-        "title": "10-year Treasury yield moves to 5.17% as traders weigh producer price report",
-        "source": "CNBC",
-        "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1iVEhaNGZvZDlvWlBGMldrUE5jUlVpUXp2d0YwdEFzZU5ScmVUOTk0ZDdORVhuMjhvRWZTWVQtR0JXWUlWVWVGVHlfOG4wdWZiZVVQNGZXTzByQ2tCRU5LQmFGajY3VDdtVnZIam9MSdIBdEFVX3lxTE1HYkdxR2dlMXVleXNjckE4Nm4xS1JNU1lQMC1JMGtkQ1FwRU0zWXNsSU45UnpYRjNqeVZkZEVwbmxZYmdnLTlfQkVNRW9iV210ZWtPYjdvRGVUc0ZDSDFMNy1FY2JiLTVjTlJ2eEc1VUxpbGZu?oc=5",
-        "kind": "nyhet"
       }
     ],
     "spx": [
+      {
+        "date": "2026-11-22",
+        "title": "Yardeni Cuts S&P 500 Target Again, Says Bear Market Is Unlikely",
+        "source": "Bloomberg.com",
+        "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcThLY0szV3pPS2IxUHRPYm5NSDNZU25MRWJYZkplcU43YjhEb2JSRm5kdmR2ZWYyN2pDMzhOb2RjUUdiMjFBbFZRMDlDNTZVZDRjYWluVmQ3WElhaFVMNkwzZUxGQ2dBSEI2MU4yTlZ2NDFacEdtUUF2aUYyZm9RZl9JSnBvd2Y2UFhpSmdsNDBSRFUtVDJ5ejJSSXZ3cTAwbEtfYzJFR1ZmWGFYQTBrZTNnUQ?oc=5",
+        "kind": "nyhet"
+      },
       {
         "date": "2026-11-22",
         "title": "US MARKETS CALL: A Bull-Market Correction Or A Tech-Wreck Bear Market? Also: Our New S&P 500 Targets.",
@@ -917,9 +924,58 @@
       },
       {
         "date": "2026-11-22",
+        "title": "The Stock Market Is Doing Something for Only the 5th Time This Century, and History Says It's Obvious What Comes Next for Stocks",
+        "source": "The Motley Fool",
+        "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxORUQtblJfenRtODNzS1I1NTZJTDEtaWgzX1dYSjhYckE2NDlraGpzUFNzXzhPV2F5U3Z4YWNUdXctdE9MamlDUjhpbU1yMW1zd2Z1SUlyUG1sLWpQLXY2RDVfaWE5NjI1Wm56REdTS1lvRHdjVXhmNER2Wl9ITktDMmM2MU9ReG80WnQtTVE1Z0ctM2oyeVg2OWdCYU5EM0VBdmgxUnBhUE9Wc01lVzNNN1lZOTRGMGZTdlpFcnpsTlVKTmpiZ0p3NHhjN3FZblVTa29mUVhPQQ?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-22",
+        "title": "The Stock Market Is Doing Something for Only the 5th Time This Century, and History Says It's Obvious What Comes Next for Stocks",
+        "source": "The Globe and Mail",
+        "link": "https://news.google.com/rss/articles/CBMirwJBVV95cUxPbVIwLWZEWmNSRGRGZ3dPV0tBbVo0ekxfWWNSUkJHdEdyRWFlZkkxWXRSNWdOMHBlZUVkUmlwUWJpSk1wTi1VV053eUVDLXpVRER1LXZjLS1tOUxPb281ZVduQko5QUpvTl9DTE1BWG5SSWRSenI4dXRkQVFnUWxoRG4xczVBQjFzYjJwUmIzUmdsRU1EQ3AtQ3d2UFZjLVdiQWZNMjVtUDdiOTJYNDVkUEZQY2RRaTNXR1BIZ0toQWRWU3JNMnNoVW9jNlFpaFNIVkpGMlZtdXNZd0VYWkU2aFRXRXVpM3N1Mk5ZWHRXbnhLNFpNaUtGVGdQODFFNUxZeXo2MjFjcXIyenpoaHRqR3p4YmdVWE9VbFppbDFlNUhJZ1oySmVEZVVCeklZNDA?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-22",
+        "title": "The S&P 500 and Dow Jones Are Dangerously Close to Joining the Nasdaq in a Correction. Here’s the Level That Would Put the Nasdaq in a Bear Market, and What History Says Investors Should Do During a Stock Market Crash.",
+        "source": "Yahoo Finance",
+        "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPbTZ4Z2JvclhkYUdVajFCUnQzVXlKc2ZRUUQwbThYbC1PbGtoa0pFX0hsVVVFUUhpOEc5NUZ2eVhqM3JzZzhiWkNQYktJVFZRT3NaM2VmVjItclFQWW9wZkNnMUVFQnJhWm8tdUJoVDJTbXlFZEtGVlFyQkFpZWFBUmhRa1pFWHdaYjN1aXF1eE5Wazhzak1F?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-22",
+        "title": "The S&P 500 and Dow Jones Are Dangerously Close to Joining the Nasdaq in a Correction. Here’s the Level That Would Put the Nasdaq in a Bear Market, and What History Says Investors Should Do During a Stock Market Crash.",
+        "source": "The Motley Fool",
+        "link": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxOejN6QzBKa0w3SEFZdHV2aWNuSWNDcS00SWpwZ0c1OVhTZ3VGRTAyaWFaSzRWYnpVYVhCMmZjeURhY2R4VW1zNDNwU3VlWWxNVkVEZ05pNEdUNy1IWTBJU1M5MlNpTGRTMHBjZVZZSGdGdDktQUlkaC1NNUdLVE0xNWJUd2txNnJmWWg0Tl9kQ0ZmaW10T3g2QUlnX0tWZjBkUXlnZ2otQnZaZThnNDdmbjJDSXdzQlRMb2syTXIwS1l6OU4wbEhlSHc3TnVqdjRuVThSQ1d0Rm56V3lvQ0RWR1pBMU16eV9TVUV1Rm5QWEpFNEdrRVhTdjJ0bllfQmJ6bkRQbmh6TzRnNGdBakpYNzZiSDlGZERDX1hVdGNNWldmdGpXcjdRSWt4T0xURmJ3TVhxX295dTJldC1FenRxMVFjOGtPSkxDbGpDV0MxaXFhVFl0eVltcXExWGRJak5Z?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-22",
+        "title": "The S&P 500 and Dow Jones Are Dangerously Close to Joining the Nasdaq in a Correction. Here’s the Level That Would Put the Nasdaq in a Bear Market, and What History Says Investors Should Do During a Stock Market Crash.",
+        "source": "The Globe and Mail",
+        "link": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxPUTdTZzQtcmhZQXgzSmE2YjBaYXh3NWdUNEtjc2JWRXNPVkczTGpuQ2RubERXQzRJcUc4RG9zREMxaE1aaGVvYWhXaWhGd1c2WUhQOU9Ba0VtenFzb0xoc3BGU2tZRlNCOVJWNVAxS2Q2NVVTSVFDSkl6NVJpR0x6SVBlWFBNa3RYT3JidDBrXzlKcmJGLXRaNHJEVWxBazBQemk1WlV4eDh2a1czODctMVlkRWVRaDFFbEdCa20yUmFYMUhHUDcxazJBSjRXM3BHc3FCampoRjc5UEp1RmtQVWpqRzZUYW9xVTlWRG9aT25zX1BCamZzS28tYnhqS3RBQmg0QmpfdHBKNzdnS2NoLWRVaW9raTUzY2FtWlVCVzgzeWs4V2c2cXFaNEJpNzRta0ExSU5mZHlyb0N5SzlfRFliR3Jpb2hrQXc2Qnh4clBCZmRxZDN5azd1T1BVcXFWZDg5LTJxRHRheGxSRUNnbElPZW9CcWp5SUlmbFh1R2lZWlFtclpzUWFfbEdQSGZwNFRYUFUwUHU2a0ZzSmFVMEhwT2NDcFZtVVE?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-22",
+        "title": "Stocks are in a correction heading into the Thanksgiving holiday. What to brace for next.",
+        "source": "MarketWatch",
+        "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOVGVrUGZZdjBaLV9fMGJWdVBnYXlPYV9XS1FDS3VhMWh1alJjaUswR0Y2eGNCSmtoSHhyRTdUY3k4bVR2d2VlMEU0cXh1RTVOTl9wUkhMbktnOUl4XzkwdTVGYkF2a1drbkNXRDZ5aDlpZ1ZHdnF5VDU1QmM5Ym9HeFRDNDl1b2ctWkRYMFZGcmNETVZzZUpYQjlTU2hFaUtHYlo5ZHF6Qm9ZbEJzMnJCZWZ3Qjkwazk3YXJucXZzZi0xMDVFWjMyNjlR?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-22",
         "title": "Stock market correction? This chief investment officer sees the S&P 500 soaring 45% to 10,000",
         "source": "Fortune",
         "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNbWMydm9FbVFNbEVhQVl6RHhuZnVYbzZ3UGE5clZSWWtHd0VnOWZvamxqbGMzVllwaXlqb09Za3FDaFhFMWFGYTN4ZktCSXF4TnNWN0J5VnJ1VFEtUmtIbVBYVVJtWkdxbGRUZ0tmREJtRkhlaVJ0dHlHcU16eEYwdTNvMUpkTEpHVjlqdzNoYk5TMHVtUHFwcjRVc3hGNEJx?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-22",
+        "title": "S&P 500, Nasdaq 100 Drive into Correction Territory",
+        "source": "FOREX.com",
+        "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOTHZDWmtVSXI3aWVsT1EtbUNXRXljUmZrYkdqOUZlQTZORkM0M2hyZmM1UlV4czA0X2JMcEIxVjItRW1GSVRleG1LWGhYYXBJcnRHZDJyTmt3M3JwaXBuV3NUNzJrNVozSXQxYjNLSFVmakxxOUU3Y25xMVBjZXNSOUp4emRxQnBwQlVqbExDcDJpZl9WSHgxZVJfNGZ4RjJH?oc=5",
         "kind": "nyhet"
       },
       {
@@ -962,6 +1018,13 @@
         "title": "If a Stock Market Crash Is Coming, Warren Buffett Says This Is the No. 1 Move All Investors Should Make",
         "source": "The Globe and Mail",
         "link": "https://news.google.com/rss/articles/CBMilAJBVV95cUxQcHNZeVR4bjJfd3hObXFYb1ZrYmF0elZ0dk1WMFRJMDNSd0tjcTRQUWdWWERPMVdCYVFRTjNXRUo1dXlmbW5QbjlKem5BSGFFdHZpZkU1T1FZcFBIcFdKdWRKSkJGTldnc1NVODQzVmx1TW0tSk5TRTdvOGZBSl9sc01ZWUx0VDl4MjlIZ2ZvTlZqZ2I3aFN1TVR6VHk5NjRhNHdtLTlFeGtUcFBnM2VjNGNQVl9tSmNLWWVReEE1RS1jamd1UU1aaEZHT0hqRXRSYTh0b3BoV1lmdVplMHFEWC1kQXpoMXhfRHk3ejhMQW1SSFNiME4zcnV0Sl9aY3FjVTB6OUhYcGFtTUlTWHhOb0ZKOV8?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-22",
+        "title": "Correction or deeper reckoning? Investors seek signs US stock selling will abate",
+        "source": "Reuters",
+        "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSFRxak5ZYUFPNWxVbzlJdy1Mcm9xMTRVZ0ctY205NFVGVEFtcDdFNG1Iem05TjVBcnYzWUVUeXcyWndZNlpnR25GMW5GdkJ2blJjeUdXdlhvZ1VqNWpVSGdYX1RsQ1F3eUhkRUFaX0lxQTNnVFNySmphdG1KM2Y0NTZrdGRoTWxEaE0ybmVSUnBtdDB2VW9tWGtrYkZfUmZUaUdxWDUyUEZGZ2tSajBqSTJydzNhb2xwaTctX21xQmxmXzFyZ1BIWE80ZF8?oc=5",
         "kind": "nyhet"
       },
       {
@@ -1050,6 +1113,13 @@
       },
       {
         "date": "2026-11-21",
+        "title": "The Stock Market Is Declining And The Worst May Be Yet To Come (NYSEARCA:SPY)",
+        "source": "Seeking Alpha",
+        "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNY1AtTi1CU09TQTBwZmNJdkVzdkNSUWUtTnNtNGVfdW9BaXppampmcU10dFpLVzh1U2NTcDIwZVFJS2RmX1dPRWU1LUpPTUw1QWttYklneUpjQVBLbTVHMVBwZXZ2U1puMDNLcXR2eDBzY1JMWHEzLWU3amZQaXhrLUpDZFVoRnhndG96ZFhqRW01V0tiVEpOMVFWNTkwWXFYajFuVmVn?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-21",
         "title": "The S&P 500 and Dow Jones indices ended the trading session in correction territory, while the Nasdaq wiped out all its year-to-date gains",
         "source": "صحيفة مال",
         "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5kbThOWnN6d0wtcUR2ejdvUFdmQV91UkozLWdrcGpXWWZUcUIzSVdTd3V3VllGSDM5MGRhX0JTbjV1TDlyRjRrb3BrY0lnUklDVG01bEItOFVlWnB5ZTBNeGlFbHNOanBwZ0FZ?oc=5",
@@ -1103,79 +1173,16 @@
         "source": "CNN",
         "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOR29JWlBzT0hXWHlkQ0I0ZFRtVl9hQUxXNk9QclFaSWozRWNET1NrdVZWaHh2WEtzZHRoa2tjbTlTYjNVYWZLTnloU2trNWtMZkktcDE1WnpXbnZ5cnktb0dWNFBPQ2lISFNjQWVteHpPWHY4QzNhdWFWNjVyVXB5SXBXWWtyYW5xRHhj?oc=5",
         "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-21",
-        "title": "Stock Market Sell-Off: History Says This Is the Smartest Move Investors Can Make Right Now",
-        "source": "Yahoo Finance",
-        "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNYWRYcjdlYlJ1b2hHdE9VSjQxNGg2TDRza0YxSXZ5dWMtQ2dHMWZBWk8wVjlPdEVQYVd4MF9MVE80cmpvdW9DNlpYbVh2blVUWTNNbjItcG5LNDlQclhIS3h2QnFxXzFoS0xIQjByLWk2V095NVJPVmZXTkdLWXBJb3NJemdaMHZJZ0JFaVFmOWh3T0dyM0toQjVB?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-21",
-        "title": "Stock Market Crash: Nasdaq, S&P 500 Suffer Worst Weekly Losses in Years",
-        "source": "TradingView",
-        "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOZjJ6ZHh3Z08xNlJiSGNqQk5acy11bkFsM3NqQVJ4Q2lON2FVejFJMXhJM093MWYzN1J3M0VLd2NMUHotOVhvbThvWXhFSmFMWUlocUo5RXgwLXc0UkpMdlNFUG9idWs1Q1QyNE9Lc3NTZFpwcmVVTzY1QmRaYUhNMUlyaWdqNExaeDlPSjhmMVB5VnRFU2JkYW5faEZLMDhZTlhPTWx2OS16UGFfSno3OTRoY3dLd1dtVEhvNl9GUUVzZllKOE1Ocw?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-21",
-        "title": "Stock Market Crash: Nasdaq, S&P 500 Suffer Worst Weekly Losses in Years",
-        "source": "CryptoRank",
-        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeGRWOW1VcnREQWtkTXdIWUdpX0FSdGdhaXp2dm9Ubk9iSVVUeXNyekpuLXoxaV9mTjAtbV9IaDJrNjVZOHltbmR5cFE5S2QwdUJyamoxa1NieXVXQ2pyWVhqcnFSVXA0dFAzM1h5VG94b1NFcTlmMVZ0V0dDbnMzcFBjYVREWUdGQTJJSWppNHNFWDV1d0ktVmRCSUNzN0F3QWxJcXIyTjlGQQ?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-21",
-        "title": "S&P 500 sinks 3.7% and Nasdaq composite goes negative for the year as tech sell-off worsens",
-        "source": "The Frederick News-Post",
-        "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPbXA2RHZrV0FyNDhlMFFYdkpxNlQtdWFPNk9weHZSRjZpTkN0bjdzcVZpM0gwVFFaNG01d2pGRzNydGhZTE5oYnk2QzUxZnpjZXg0NW9oZWUzdjBIM2g2UUNsMTFVTmtFQTNYWkNmZkU5TFM3LTdnMUcxM0Yxamd1VFlLTVlvRnRqaHJaRk5hbXhDNHNUS1ZOUENkTVVZSzhDU1ZFNU1hQ0NXRzBTV0NnRms0SURuLVdIMUdTRDVkTnRkRmdrNzQ0X09ENHBtWEZvLW5SRnA1OXhvcWtYVDdudDRtMW5aTnFBUFloWV9hV3FMZzZK?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-21",
-        "title": "S&P 500 forecast for 2027: Wall Street expects a rebound after an 11.6% drop fueled by AI fears",
-        "source": "Beinsure",
-        "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPVUd5RzZ5ZVE5cnYtV3BVUEV5MkEtZExtelRVUUU2MFZBbHBSbmFieVlIM1NQRGh1N0dKWnJKSU9sUHI5VmxtbDVrQWhlZUlJY3ZoYTBzQ091TTk2U01yYnNWb05QaFpxaEdsLUV0bkVwa2F1OUNOQzdJN194ZE1CcUcybUFHbTFBNUJfVA?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-21",
-        "title": "S&P 500 Price Forecast: AI Stock Selloff Puts 7,000 in Focus",
-        "source": "FXEmpire",
-        "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQWklBUEJlbkhzQkk4UGZmM3B1SkxRNExMdVpiN3h3MU0zS0pwaDdmR3VVQWl3YmthTm1vUVJoOTU2MUYzZ2hnQ2VKUlo4U3Z5T3ZkaC1LSl9CMjZSMGY3SnFwSWZ6eU9pNVhuaWY0VjBUU21wdmUteUszaVJuMHRYZnZodUwwdFZrbmo4T2F5clpOdUhwSHNHWHZCY0ItTDlUajlNVUF4MkJLLW9p?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-21",
-        "title": "S&P 500 Has Slumped Into a Correction as Goldman Sachs Panic Index Points to More Downside",
-        "source": "Benzinga",
-        "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOZXJhMXlxSTVvUW9QUEtJbk1hMVZNdjJmM2ZPSUJUanFndzhmNGhlVlFtUHdoZEhMNlVudDNEWTBmTC15dWt6SThkQ2VkM1AxYy04WldOMW1VMGUzU1FheFpQRkRQMWZ1UHJ5aWs5N0ZiU09YT2RFVzMxY1hyeXRGN25IZDVyQVFZSnA3N3FrQWxnbS14VU1TcFlpMGFZRDJlUkk0OEZJZE5GWWpYVHNMVWdhaVBibjRuN3JOV2JFNGlnU2M4UHJPaUt3bmk3TUd6ZElRaXptamttc3hfazd3?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-21",
-        "title": "S&P 500 Falls for Seventh Straight Session, Enters Correction as AI Stock Rally Loses Steam",
-        "source": "BigGo Finance",
-        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5Hdkp5Tk9WRnBlM2JHeEVLZkd5bGkxNnA1T1FkZWp5YWJkTlBFOVVFMFI0NktSVHdocnp1V0hUNmFUZnJpMWlmaU50NlRVWm42SG9sam5fZk5DTmsyRHpkM2RfTW9pQ3pFa2U2WE1TSnh1bTlBb0E?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-21",
-        "title": "Report: Goldman Sachs Predicts the S&P 500 Will Gain 26% in 12 Months",
-        "source": "The Motley Fool",
-        "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPYWsxYkhYT1AxNzY2RGJadHliRC03cnNDQnl0YXpJZnFxQ284VDhqTzItX0JKUlYydzNxSkFFU0psbDB6OEVBN1NiYW9uZVBlak1NNGNzNk9jdXhNVVpXLXJYWXhqd2VXNWYwRXlsMEhJNzVNWUllYkdjN2ROM05uR1pFUWoyckpUX1dPa2tvWWw4cjhqcGg1djNkaEVKMFRPWE9WbXlmYWVQcW5iWnBTMERkdXE?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-21",
-        "title": "Nasdaq has its worst week since 2020; Dow, S&P 500 in correction",
-        "source": "Reuters",
-        "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01YzRiT09nYlU4eGlRUGtzSE1Jd1MyT1BpbUozZWxhNG95LTBqUnNwcTFlQURCcXY2ZTJ5RDd2YWhTR0J4RDhMcVM3ZHUyRGlOSU50TjRwbmk2eUZMNndFNF9hMDBYcVU?oc=5",
-        "kind": "nyhet"
       }
     ],
     "qe": [
+      {
+        "date": "2026-11-22",
+        "title": "Core PCE Inflation: Wednesday's Data Could Shake Markets This Week",
+        "source": "Coin Gabbar",
+        "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQd2lxd0E1bU0tNWZWdmM0RVFCY2ZkZWVOQ3dISTRfa3Azb0FUX2ZTdi01N1lwa3JNUmtRb0c1clp3dnlZX2JTaURjT2JpVmhyN0lEV2dEbEI5VjdoTi1NSDBwdGNzWWRWZmxnYkhTeFVDYmFGWkNicVZ3QjdYbWFiQjBhODNvbEdkWmNIcXFub3FIZw?oc=5",
+        "kind": "nyhet"
+      },
       {
         "date": "2026-11-20",
         "title": "The State of Americans’ Auto Debt: Delinquencies, Loan Length, Amount Financed, Credit Scores, Balances, and Burden",
@@ -1447,13 +1454,6 @@
         "title": "Interactive Brokers, Sallie Mae, Futu Holdings, XP, and Ares shares plummet, what you need to know",
         "source": "TradingView",
         "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQXzRwMWxhcjdVM2FaYm1KdmlBNy1fZXpSRTVuZnZBTktXX1Z3d1BuMXFwRW5raWtNdWs1V2gxV3RvUWdtNElncXRpS0hqUUJvbjNXQnlnaVRWYmZJNkFRNklLVEptOE5QcDUxQnhJM3NnUWt4bEs0MVZma0ZtVndNQUIyS1NCTVhhZUFqcE8wVHhBdnN5ZURmVm9WckxQMmRLTEYtX2lMMzcyM3Q2c0tkdnhKamVSYVVtbElHR1Bka2J3VmloWERMalYxMHFRb1U5Q21JNzJYdlVYd3RYTnNpVFdHMS1kMVBTNkE?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-16",
-        "title": "Hammack Says Fed Interventions Should Be Temporary, Targeted",
-        "source": "Bloomberg.com",
-        "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQRXF4YXRLb0todXdxN2NrSUZITVg2U2hRUWVsU2M5bGNTVkxTOTJiZEtLWjIwSE1RdV81azItMzYwbDlSYmtrT0pvMzlISmM0YXY5dUNMNElxeENMZ2tWYmlEUHRkVThJRDdFNTRFa3lxOW5UdDFhMGhYZUlYRXJEYlBxRHZDZDVNQVdUREhwUV9oNlRtR1E3b1JMRG9OOGkzUGhVR1JoY2tBN2o4Y3c4?oc=5",
         "kind": "nyhet"
       }
     ],
@@ -2159,6 +2159,13 @@
       },
       {
         "date": "2026-11-21",
+        "title": "Hank Paulson Has “Never Seen So Much Money Chasing One Opportunity.” That’s a Problem for Microsoft, Amazon and Alphabet",
+        "source": "Yahoo Finance",
+        "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPUmhlcFIzMEttRkFfYTRNRmFVeV9fY05kOTNvempxeXhtR1BJRHNTb0UzZ0EtZl92QzJfQ2FnWDk5a1o0dWR0RktFM1MtWVFGXzFwcEhmMW84NlFIT0ZjcE9ZMVVqSGxGbUcwMnNvNHF0RG1IZUtyVVNfRkdSVnh6MHIyWUZWV0ZFbjF1R280ZnVTVDhIUi1sQw?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-21",
         "title": "Cramer: Microsoft the “Smartest of the Hyperscalers” With Relentless Focus on Positive Cashflow. That Includes Asking 60,000 Employees to Quit",
         "source": "TIKR.com",
         "link": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQalVocDF3MUFRVzdxaDJtU25oYl90ckRXOFJHVXJ5Z2puTktHaHBTR0NhNWJ1eVBreENsRzVEU1FkWkxfWEk2azNRLXVHY2hVcTZNV0FxNjRxXzFGUnpDd01OeFM1RmRaRWZzTjBwREpNanhna2ZPMEhGRUgxTnZfVm8yejk4bE9sTmhNNWVsQU5hemxCWlBLQWRoNzlfOTEtRzhxc0lBTE1KaVN1V0hHOG1HZjNkeW1ZNWN6YXNXUnUyOEhaYklrQndIOGc5TE5iQ0ZHTnpoNE8tTk01cmdKaW96cmFSV2xyMlFrLVk3MXFIRWdZREhrRlMxYU1qYjVEWHMtZ1Q3Yw?oc=5",
@@ -2204,6 +2211,13 @@
         "title": "Microsoft: The Last Hyperscaler With Positive Free Cash Flow (NASDAQ:MSFT)",
         "source": "Seeking Alpha",
         "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTWp0QjFIbExvR2NXVGFfTDRMa1l5NGhTUkFEQWlxc2Q2NkxzVEExUVl3UlZzLUFKek9fc0FscVptUlBhMGJwalZQaVdPN0lqZ2ZnNkVyUHkwenhQa0pkbmNaRjJPazFhQW5FNWsySGUtZmd6VWZZeXRJM01TOGNqX002R01SamdiM0habmljTTBEbmVaYjRxYmt3SDBHTFF5Ymc?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-19",
+        "title": "Microsoft: Remains My Pick Amongst Hyperscalers",
+        "source": "Seeking Alpha",
+        "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQeGlPQ2Y0R2NqTU9qOS1oUEo3dnBISkxVeGtVR1ZLbjlpV21sbW5HNk5zZ0hXamZFZE1XVTNva0xCaDZXTG93YjB5dTZqUF9UMjVRZEpfUTNHeDlGMUQ2U2xhc21IdWNxODdzdEg0WnpidnhwcXlNaVNtT3ZJNl95TVhXTUNlLU9XVVExcS1wems?oc=5",
         "kind": "nyhet"
       },
       {
@@ -2414,20 +2428,6 @@
         "title": "Morgan Stanley Sees a Buying Window in Top-Tier AI Debt as CoreWeave Fears Ease",
         "source": "BigGo Finance",
         "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE56Y0xhallRVmhIRTZ0Z3dQVGNIWTZfQmZoVDVmNGtxVGlGa1ZDakQ2X3BNVWpFVkFqR3FHWXR3QTY1M3lkQVp1cmo0VEYtSmxXanBLU0ZETFcxaDdVUXh1aDhxRnAyaVlmcUhPOHVoWm1ZaWg5bVE?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-11",
-        "title": "Microsoft free cash flow: only positive hyperscaler",
-        "source": "Opening Bell Daily",
-        "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPeWk5NGZNRmhmOERzMmhYMC15aVV2MFdRLWR1MHRCcVUtR0lxTVRyZFhqWFJLdkNaeTdPZHFWX1NmMjc4Z1N0elp6bjZjeWFkLUVvTDJfRDNnaVdFd0FQcm1EbkVENVJrdVAwa0J1SDJzOGFZejZIM1JvQ1J2TnJleklPNlQ0VE1waFRwbU5hZUZjM1RYdFBUSk5zNUpGRzNLdmVHb1ozUQ?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-11",
-        "title": "Meta to issue first European bonds as AI capex hits $1.3T",
-        "source": "scanx.trade",
-        "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOMHRvNnpPeEk2X05JRTgxS1E5X1VSak12cDA0d0lxdVltbUV4dUxJaUsycVZNTkJxWkNsZ0pLczdNU3dFVXItRHNTbGxWQm42ekI4YkRGREw2ZURwMHZ5ajF5OWpGSlVTTGludGoxWHFaSEZyRkxoLW0tMExtNWczZWlIc0c5aDFDZURZMllGQXNqMlREeTg0ZGhyMGplRjFVaWZnVzhUcXR5VlU2cEJvSXJDMA?oc=5",
         "kind": "nyhet"
       }
     ]
