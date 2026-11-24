@@ -1,5 +1,17 @@
 {
   "episodes": {
+    "fc511c83b566": {
+      "id": "fc511c83b566",
+      "date": "2026-11-24",
+      "show": "The David Lin Report",
+      "title": "Crisis Climax In 6 Months: What Investors Can Do NOW | Cem Karsan",
+      "link": "https://podcasts.apple.com/us/podcast/crisis-climax-in-6-months-what-investors-can-do-now/id1740654463?i=1000803862799&uo=4",
+      "audio": "https://traffic.megaphone.fm/APO9317539285.mp3",
+      "minutes": 51,
+      "collection_id": 1740654463,
+      "transcript_status": "mangler",
+      "message": "Ingen transkripsjon i feeden. Lydtranskribering er av (TRANSCRIBE_AUDIO)."
+    },
     "fab4358e7724": {
       "id": "fab4358e7724",
       "date": "2026-11-17",
@@ -2051,5 +2063,5 @@
       "collection_id": 1128955736
     }
   },
-  "generated": "2026-11-24T13:56:11Z"
+  "generated": "2026-11-24T23:58:29Z"
 }
