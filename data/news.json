@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-23T13:07:56Z",
+  "generated": "2026-11-24T02:19:08Z",
   "sources": {
     "karsan_Google News": "https://news.google.com/rss/search?q=%22Cem+Karsan%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen",
     "karsan_Apple Podcasts": "https://itunes.apple.com/search?term=Cem+Karsan&entity=podcastEpisode&limit=50",
@@ -635,6 +635,13 @@
       },
       {
         "date": "2026-11-20",
+        "title": "Pasadena Rate Watch: 30-Year Mortgage Rate Falls for Fourth Consecutive Week to 7.11% as 10-Year Treasury Yield Rises to 5.10%",
+        "source": "Pasadena Now",
+        "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNblZVTVRELTFIMERnTlVFa2V2TVZ2ZDgzbmN3a3laOEkxYVZ4OWJ6eW5vekVoVG1MWlRJaW1JT2NMZFNmZ0x0UFNPTkd5bFZRdERnQnBxWFRzaUpCVmpkbHQxcENEMC1PLXdmeGNfamFNZ3RrOGRiMUhrbWxfLTFMb2pwTjdPU3YxUURfTVoyamd6NkNMWGlZOUxmNlh2cWhqVTlqNU90ZHg4WVJuMm5EZ3l3V1JLa1FWQ0JQVUQtUHVWcWhCM0J1eVJ3OWVrd3FGWklEeF9Hdnk0YjdLOXpzVVRjdjJyWXRXcTk0NkRsM0xQcjA?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-20",
         "title": "Mohamed A. El-Erian: S&P 500 may face longest losing streak since 2020 as 10-year Treasury yield falls",
         "source": "Traders Union",
         "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQTEtYX0dHbVBOMy1WeUtqbVVtOUlMalRhYUdyeHFnMS1ERWJUamJCYU82SjVObndSdUtnYWFWY200LW9iLXRXQkZxbTdvX19SRWd5aUZfM2I5eUhaNlltRksyWHdOVjNOSmc4bWx4MU5YZTE5NGJIMFNYamVnM3VjOXRWckFBaVB2aGdDLQ?oc=5",
@@ -883,13 +890,6 @@
         "title": "US 10-year Treasury yield 5.15% after 6.5% annual PPI rise",
         "source": "NewsBytes",
         "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPbmxYUWRGU3V3R0traWl3TnhrbEZFZmFyMUlUUDB4ekRoZzBHVzd5a0ZEOHRGTTJrcDBmYUhkcWo0NVB6OVV1R1JLOXpnZ1dZNDdkcklQZDkzQlpNU2xPZzhsaU8yODRVMU1iTzBCQTlPUTNnaUVpMEtxSng5SjgzMVdCLTUyNFZPVXJEZVJuR1kwazBCQlR5UnlPTkhXNGsyWHZKVw?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-13",
-        "title": "US 10-Year Treasury Yield Rises 1.8 Basis Points to 5.12% Early Friday, Highest Level in More Than Three Weeks",
-        "source": "marketscreener.com",
-        "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNYlFXWnBaYm9sRmpkRmlCa2E1TEUyQU5KbVRxdUxRTE44TmJ5cXczNHlxSHh6MHNhcTlJeHZZemI3aEJvdm9HTW9TRnotS3N6cUJ5RnNUcDBtbU5VSTdOYkhzZnNxQWtxNjUyN0xBN0pRMDZBMkdEOWM2a240T3pNWUFxWmlMLWIwUFBncVpqdHFnUktpYklUWGJ6Qm92TEJaUlJoRmRpVm1WTTRtc0RZS1ZLV3BEUjVRR1VBbWRWSWd4MV92dmJ1d2hoUmxJS1AxbjNaTWdXOXNFamx5UlUtR0lYMUhzQQ?oc=5",
         "kind": "nyhet"
       }
     ],
@@ -1178,6 +1178,20 @@
     "qe": [
       {
         "date": "2026-11-23",
+        "title": "Why Alphabet stock is trading up today",
+        "source": "TradingView",
+        "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPcFptQ3RmT1VCa1htc21fY09VX3pyeU9YT0NXeU1UX3JxUFlTMFc1TG1nd3RCVlhPRUdMeTNGNUJTaDVCb2VSb3haQ2lycUFtdUllVmtUVW5rUXhBRmdNMnAzWU9vU2dTYVZZRFdiU0NBYnc3X0J4MlhYTkNIWEw2S0JIWHJKMFk0R0E3WENJWDZhU2lqS0dPX3RsUGh6RDM0?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-23",
+        "title": "Top Fed official probed over whether she breached ‘blackout period’",
+        "source": "Financial Times",
+        "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTmJyOUFmRmd5eE9ua2hLR3dXQmI5WDlzRW1CSy11UUdGTGZLUmZIZlFqWHJJM1YtMkJqMks2Yk1yazExM0VCMlY3WldSdjRkWFpyTW9KRzJOOEdna2lBZmdndXNRVVBHZF9XbXAzMk1xQ3hQWElUSllzbm1ndWtOZWVUSnk?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-23",
         "title": "The Federal Reserve’s balance sheet yo-yo",
         "source": "Financial Times",
         "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1zVWg4dzdvbGJIdk9fOVIxTVBCNUdjVkFMSGQwSTBINldJZWdXQXlhRU9qSGRjZnpZdkRhdERmcFpQX2ZHZkxCUk5nOFZjZWlOWkpIaUFHQW5ZcFIyVGdIcU5xd3pJaFNZXzRZMFAtYXg?oc=5",
@@ -1185,9 +1199,23 @@
       },
       {
         "date": "2026-11-23",
+        "title": "The Fed broods about AI’s impact on inflation and financial stability",
+        "source": "CFO Brew",
+        "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMEtlZlROc0lONklBc252d2NieUhSbzMta0JMNGlOWHFqYzJqZ0EzSzdkbDhDYVB1RnBWdXgxUmF1QVgwaUFlTm5xcmdIcWl6cjE5cUZvYmhuUDhWOWx1VE81WVVPdHFWdUd3TDZ0QndlRmwyMkJUaTd4aWNWUHYxVXdaRmJhSHdXYW5XaURFTmRUcHllWlpGVQ?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-23",
         "title": "Robert Kiyosaki Says a Crash Bigger Than 2008 Has Begun: How Often Has He Been Right?",
         "source": "BeInCrypto",
         "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBZdTZTc2poVDVoZzZlTGtDb2tPcVZtZ0ZNLWhVRkZuMnVUTEkwclZISHVzdkZ3NkI5MEM0TGl5U1JEQWR3MzZZWk52alVSemg3dTNTY2RKMXRsM0JEajdQcHNmd2NnM3lRSll4RElSN2RWcWF0eXg3QzlR?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-23",
+        "title": "Just Be Thankful It’s a Short Week",
+        "source": "Bloomberg.com",
+        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNG1pWURRay16SktNd3hFMzFuVHE1ZF8yelBrSUJsQnBWdWZUVEVubHVGNGtvVm9fNnVEclkxTml1NWh4TTMydG5pbVc2a3pqZWJQYzEyUDh5TUZwNmFxc2htQmhJTm9wNnJnWTVTWlVCd0VKSTU0MTVJZXFrVXAxQm9CREJDaUNUVzkwOUs1aVRHeDRKZHZZZmlTdmhzZGpPdU13eXM0bDNrQQ?oc=5",
         "kind": "nyhet"
       },
       {
@@ -1395,13 +1423,6 @@
       },
       {
         "date": "2026-11-17",
-        "title": "US Federal Reserve finds over $3 trillion in off-balance-sheet AI obligations — Fortune",
-        "source": "UA.NEWS",
-        "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdmxLMFItdGV1cHdnb0lITlZFOXlRLWwzS2x3UW5tY2VOblFXYVd3eEZaQ3huTVhCVnZsVDNyZE9kcG5KSHBQYzk1UW1INGJSYVFUUjBDRFdGTWJVaTU5S0std09RYWdkWjZvUjBKVWxkblBJaldKSUg1aVp2QWYwSTZwdElVZTNFMGcwdHB0QlRQdzlRSVRVM2tnbTN6MG83ZUNBS3dMallLWURubXA0?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-17",
         "title": "Lessons from a Burning River",
         "source": "Federal Reserve Bank of Cleveland",
         "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQTl9XbExLTkNxckM4SVc5UloxNVJ2dXo1QnVkakhMaGs4Q2p4WXcwZWtMMGxtajItVkFtcGZfQjFrN2F6S181RGMyY1hjVy14dGlKaVRMU2gyNVpRSUNyN0h5Nld2N1k4SUM3SE11NERwcjgwUno4YmwzZTFFTEZiOHNTVE1ob0RyOHlFZ0tueUtOWjZ0eEpXaERLdw?oc=5",
@@ -1433,27 +1454,6 @@
         "title": "Fed needs to prepare for bond-market intervention during calm times, Hammack says",
         "source": "WTVB",
         "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxORHY5YjJ3eWNUZXd2R2hDa3Y4SmJ2SVl2VHNpMU9tMWNWbldWdUJ3TWR6NVNoaWpFOGVlWjYwQVctNXk1VGVDS0pwa0twYm92RTQyVkNaM01qc3hwa1JaalFqeld3RVBSazRSNXY4TkJEVWJ6aFZKNi1pSTViLVVnZjluY2RuVHpuc2g0bk9tUmVEY1dQU0ppeXZ1Ymc3S0ZveXhOYkZFWkZ5R1VIVkE5Rg?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-17",
-        "title": "Fed needs to prepare for bond-market intervention during calm times, Hammack says",
-        "source": "StreetInsider",
-        "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPMGdDOGdBVmRDX250SFlxMHNYOU1ycmItRzAxTWdfRV9ybWxvVEVxMlBKNmhic0NlOFUwM2RuM0pSUTB6ZlQ2NDhhakhjV2Fva2pHX2hkS2QxMjFaS0lGS0tSSFZNcEJINnJuTnpDM0hnbGhEYXM2N2dXM05kR2l4MDljWnR2SUxLLWo3MmJBbWdjbHhVR1I3dWplWXZZOEs5UnZpdUNEeERMVmY2QmIxbFNVSmlhdFgyQ1E0TUJJd2dtenF4Qmozd1pCU0RDRVdB?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-17",
-        "title": "Fed needs to prepare for bond-market intervention during calm times, Hammack says",
-        "source": "Kitco",
-        "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNZkN4eGZCYkNwSFp4M2FkbVUtdzlpelNuR3drVmF4X2xHWTk2cVd1bFg1S2VHX01LRmJka2lDREwtRDBwOUdLREM2a2tUUTFBR0F1WUJ3OWg1dFp4bWpDYU5UXzhpb0k5SG9HMC1SVFBYN2NPMnowLU1BdjR1WlZ0OVUxUWlZOGxFNUtNYWtJVGN4YUtObzAzWF9mYUpHbmw2ZjIzVlVqeVZUaHNPN3FlMHdzWkdFTUtmbTdz?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-17",
-        "title": "Fed Should Set Principles for Treasury Market Intervention, Cleveland Fed President Says, Urging Peacetime Preparation",
-        "source": "BigGo Finance",
-        "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9mWVczQjJGUVhnbHc4SzdsVU84WC1RNVRBd3duUGYtbDNhRTZGNThWNGZtSDZOMmZEaWdjdWRTZWZXbDFCVVVBeXJ5S0l2TUxZRU9XWlF4aWk3aHh2UDRONVBudWREOTI3aDBWMWpOUk5oZjFudUE?oc=5",
         "kind": "nyhet"
       }
     ],
@@ -2003,6 +2003,13 @@
       },
       {
         "date": "2026-11-12",
+        "title": "Euro Drops Below $1.1105 Amid Rising US Inflation and Fed Rate Hike Speculation",
+        "source": "112.ua",
+        "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZ0NZVzhxaDIwTktuTlZJZ2lXZ1ROZGMza21ISHQ1UGRYLV9LRGRPQ1h0VHptRnVFMjF2dVgzT0NSUUJ0NUs0Z0dGcmRiUFMtTEdWZVRzRnEzQndMME5aby1OUFRxWVVyNi00SURJbkhaeWM2VDNhYnNQWDg3RC15dy1SeXNrTmwzMlVGNld1bVRwSDVzcldic1Q4bDQwQ2RER2FBcnFtVDVGdnRQOGtqVUpBSmtmWURu?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-12",
         "title": "CPI Pushes Rate Hike Odds To ~100%, But Hikes Aren't The Main Concern (NYSEARCA:SPY)",
         "source": "Seeking Alpha",
         "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQLTJLVm0wa0hQNTljOXpfeWUxZlpIRnN3MUFLS1htVkFIU3FwNWtCX0liY2duT1JPSDltckZDQ1o2R05Sc3F4bGRma3NVTW4ybGdJQWJINFBvajdURm5WRm9jSWlwb2dvcE10OUdtY0o5TllGTWx1UU5TQW93QTNOd0dNcEt3Qk5BRDhjWEpRUmo3SjJLR21PeWx1NHVaT2dNVWFmQll5VUV2SUtxekVib3BERjU?oc=5",
@@ -2140,16 +2147,16 @@
         "source": "The Economic Times",
         "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQdXJDUmZabFRjMkVQU0F2ZEJwX0Vnamgxd0R3NXJ4dXN2cUZBYzZUOUdwQTZQN3JQTEszTjFMdjlmS0M2TVhOWUZrSUg2MVBMZHdSRHJvVWQyd2ltWlJGOWkzakFsMm03YUU1bWpWZFRNSDk2NTVxem5NNkQyTVo2RzFJbHVOT0I2amdQYWk3Qy1ZU0ZTNWVyX2xTQ0xGQ1M5NFc2WmpzZGQ2Q1ZXendFbGFBM0F4bW0zTWhablkteXlpeVB1RWtHXzBkMFJYSHVKWFF3X0ZDUktqSVdHT1k4ZUhPbGFHU1BlWFZHOXViZGt2T0NwUDlv0gH8AUFVX3lxTE1MMXVTN3l6S016d0Y3elVNUklRR1FzbGhxLVR0TGcxdTJPb1BvZnd6bzBnM25wNUNDMEk1SHdOdzZZc0ZlTnlYQzdWUFUzVmdJeU9GODJ2VjQ5Ukd1NkNtNXVuaTU0dUhxcVdKam83V053aFhuaU5acHlIRUZNajFZckRwR3NGZTVOV2E4SEFwVTJfMlNnbnF1YmgxSkVqSnJzaUp2dS1NQ1ptWlFURjRwTGdxZVdWajY4YWZKMjNCMUdXUXdvV2lWWE4tUmdvUWM1VmdVQ2JDMVp5M0VzR2puM3loQkZhLUdyd3IwTTFTRDhtNGd5Wl9BWjctNQ?oc=5",
         "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-11",
-        "title": "Fed officials open door to 50-basis-point rate hike, here’s why",
-        "source": "IDNFinancials",
-        "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNWjlHTTNUa0dsc0YzZHZxdFBMY0dGSzVIN0RGZTZFSmdqZW45VDhIU0hSTk42VUlINHF5dXlSQ0F3Tmt6WFluWC1SQUtGNlBGVVc0RnZuRWJaaVlySF90eVlaeDlSaF95RUwzcV9EbDdaOWFwOFFYdkdVMVRwU3hSb0VIQUtXRk5FMm5vVU9WallJNUtCS0JOZWg4Nk45X0g3UFN3Ng?oc=5",
-        "kind": "nyhet"
       }
     ],
     "ai_kreditt": [
+      {
+        "date": "2026-11-23",
+        "title": "Oracle Stocks Jump 12.02% as Funding Pledge and Nvidia Reversal Ease AI Debt Fears",
+        "source": "TradingView",
+        "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxONTFxWXptZFZlSHJUQXlScWJHWUhOOEdkQnZoRHRicjJOZ201dFprcWx1dWoxSU96c2pQdWZISlMyeHFGN04wNEtjWVJzWGozSlJJUFVzTmRMWUZaaFRSWlBjZUItX2VDX1hIclhQdkQ1VUV2RGhsMlJTZFFxS2xqQzY4amVRY3dxNERydm82YkpqeFR4OUxITzJydjBxR0h3dkNDS0JPME1NcjJPRUJfa2MwSVhtUVp4NGo0MzFHaThlTzZjTjRHZ0gwNXJpTi0ta1lCZHBWV0w?oc=5",
+        "kind": "nyhet"
+      },
       {
         "date": "2026-11-23",
         "title": "Behind the $6 Trillion Global AI Rout: Inside Hong Kong's AI Trio, Who Will Close the Profitability Loop First?",
@@ -2176,13 +2183,6 @@
         "title": "JPMorgan forecasts hyperscaler spending to reach $2 trillion by 2030",
         "source": "Crypto Briefing",
         "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1EVy1TY09qWjJoWFZIeGZkSktWZmZqSXE1VjNZSl9HdVhUcWxsbEFDaWRObm03UXNfZk9fVmRnSXVMczBteDVTVWpqU2hSNjBnYlVnQTR5NXNHSy04QVZGcm0yOV9oN1pPU0ZCYVppQVBpeW1SSHJjWVR4Q1VBQQ?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-22",
-        "title": "AI Debt Risks Mount: Why Borrowing by Meta, Alphabet, Microsoft and Oracle Worries Investors",
-        "source": "TradingKey",
-        "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNaEpPZzJXdWZGekJuTVJaclVjbm9oaUJZZ1U2aVJzenZyVU4yM081TzdQZUoxTXhydldqV0l4ZzItZzBCR3lkZm1hcFEtTFo1bmVvbnphdnAybUpKTDFRYlpuZUpNNjNjb0UzaUUwMmJtTjQ4X1lpeGotbzZtdjRkYzNvZGluN2ZSWWU4dXBySnZ0Umt2d0FDY0JKdUZLVjdZdXE4VHdDSWIwNmF5ZnFVUnV6YUZtXzA1dmxLMzVTTlYteTZQalhpZUdiN1BCX2prVTQ3SEthZW05RUpSajBYOFMyUQ?oc=5",
         "kind": "nyhet"
       },
       {
@@ -2348,6 +2348,13 @@
       },
       {
         "date": "2026-11-15",
+        "title": "AI Debt Risks Mount: Why Borrowing by Meta, Alphabet, Microsoft and Oracle Worries Investors",
+        "source": "TradingKey",
+        "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNaEpPZzJXdWZGekJuTVJaclVjbm9oaUJZZ1U2aVJzenZyVU4yM081TzdQZUoxTXhydldqV0l4ZzItZzBCR3lkZm1hcFEtTFo1bmVvbnphdnAybUpKTDFRYlpuZUpNNjNjb0UzaUUwMmJtTjQ4X1lpeGotbzZtdjRkYzNvZGluN2ZSWWU4dXBySnZ0Umt2d0FDY0JKdUZLVjdZdXE4VHdDSWIwNmF5ZnFVUnV6YUZtXzA1dmxLMzVTTlYteTZQalhpZUdiN1BCX2prVTQ3SEthZW05RUpSajBYOFMyUQ?oc=5",
+        "kind": "nyhet"
+      },
+      {
+        "date": "2026-11-15",
         "title": "AI Capex Tops $740B as Markets Doubt the Boom [2026]",
         "source": "shattered.io",
         "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcnV4SUdlOG9zYjFXcENLTDV4SjFIVHdJMUdqcm5xUjFHMllIS094V0ttQzJacG1nTVFsSzVVV3htR0NrYTJXRDNMdUpHazVhaFlNT2dUSHlJUUlfWVpCYjIxR05IMDFQWkd1WnVrbzZWNm9CUHBXa1JsSHhMd3FBNWl3Mzg1WE11?oc=5",
@@ -2421,13 +2428,6 @@
         "title": "Great News for Nvidia, Micron, Broadcom, and AMD Stock Investors -- Wall Street Made a Mistake",
         "source": "The Globe and Mail",
         "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOQnVpdzh6SkVNcG5ycENVdm1TWDk3bGNadm92VGJRQ1o4REs5R255Mm5vYlYyOFAtbnVqNXZ6bEQwZld6Q3hvaV8ycjNKU2hUQ21Wd2xaLThsVmFjSWk0dXBUT3RTdVliWnNMVTQteEhYVVdCdGdZYXhJaVFIWGRQYmlxNjJsS09fX2ZhQW9jVXVSTUNqRWp6Q1RLUVhFdlJUU0gtU1hCZ1hhSkJiUUhUaTFWQ1FZdGJIZUZ0T1VUTzAzXzYyNUhFdV9vNkszNTloZ3h2MXQ2TTNWOGRPMkRoejEyY19ZQzZucUxiY3UwTnBJR0tTRlVVX2xQRzdYX1dUM0E?oc=5",
-        "kind": "nyhet"
-      },
-      {
-        "date": "2026-11-12",
-        "title": "Great News for Nvidia, Micron, Broadcom, and AMD Stock Investors -- Wall Street Made a Mistake",
-        "source": "The Globe and Mail",
-        "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPZTA5TWlBS3NZMmtvcnh4X3NHc0hqSkk3TDRtV3dISnZYaEhrOF9pSkNpRU1PeFZDNE1SbGZZREdPaHhoV2dkOF9mTFU1OWY0NUxsNDVzcy1GS3Y5UXhOZ2J6blNMQk9IUDJBQjVZNUtxTms2T3ROSE5HWjh2N2lkMlM3R1UyVnp5am9CVjhsSnRrcnNORFBoMUhoUjJWT0RVQUNUaFVmNWxPWDVXOFl6WXR1YlVBa09uWW5OQ1VVMEV5M1RmdHlfcHZTcnR4ZFRjS1dLQWNzc1owdlg4ZklkbXdiVWxlMlUyTVMzSENDOVk1TmJGSWU5Y0R5NEIzdGNR?oc=5",
         "kind": "nyhet"
       }
     ]
