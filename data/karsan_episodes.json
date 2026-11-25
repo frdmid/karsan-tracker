@@ -1,5 +1,19 @@
 {
   "episodes": {
+    "b4e0bd0b6720": {
+      "id": "b4e0bd0b6720",
+      "date": "2026-11-25",
+      "show": "Top Traders Unplugged",
+      "title": "UGO14: Dr. Doom Has Become Dr. Boom ft. Nouriel Roubini & David Brown",
+      "link": "http://localhost:8888/TopTradersUnplugged/ttu-2021/homepage/ugo14-dr-doom-has-become-dr-boom-ft-nouriel-roubini-david-brown",
+      "audio": "https://episodes.captivate.fm/episode/e75e7439-30b7-4f25-b547-f9935b72ae5e.mp3",
+      "feed_url": "https://feeds.captivate.fm/top-traders-unplugged/",
+      "transcript_status": "ok",
+      "transcript_source": "RSS podcast:transcript (application/json)",
+      "transcript_url": "https://transcripts.captivate.fm/transcript/3015d560-6c0a-435e-b564-73384537347e/transcript.json",
+      "transcript_words": 8825,
+      "message": "Transkripsjon funnet. Venter på analyse i Claude Code (be om å analysere nye Karsan-episoder)."
+    },
     "fc511c83b566": {
       "id": "fc511c83b566",
       "date": "2026-11-24",
@@ -2063,5 +2077,5 @@
       "collection_id": 1128955736
     }
   },
-  "generated": "2026-11-24T23:58:29Z"
+  "generated": "2026-11-25T08:49:07Z"
 }
